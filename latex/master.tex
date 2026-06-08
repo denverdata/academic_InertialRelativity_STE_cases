@@ -131,7 +131,7 @@
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
  & \noindent\small{Revision 3.5 May 28, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: The pace of time has meaning only relative to another pace of time. For two uniform spherical systems, the pace-of-time ratio is the ratio of their DeGerlia compactness values $D_1/D_2 = (M_1 R_2)/(M_2 R_1)$, where $D = M/R$. This paper presents the relation and demonstrates numerical agreement with the standard general-relativistic calculation across six worked cases spanning classical-through-relativistic regimes. The static-mass case (a system compared with itself at its Schwarzschild radius) is the standard gravitational time-dilation calculation; the static-radius case (a linear, mass-only comparison) is the standard Lorentz time-dilation calculation.} \\
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: The pace of time has meaning only relative to another pace of time. For two uniform spherical systems, this ratio is the compactness ratio $D_1/D_2 = (M_1 R_2)/(M_2 R_1)$, where $D = M/R$ is the DeGerlia compactness. This paper presents the relation and demonstrates numerical agreement with the standard general-relativistic calculation across six worked cases spanning classical-through-relativistic regimes. The static-mass case (a system compared with itself at its Schwarzschild radius) is the standard gravitational time-dilation calculation; the static-radius case (a linear, mass-only comparison) is the standard Lorentz time-dilation calculation.} \\
  & \vspace{0.3cm} \\
  & \noindent\small{\textbf{Keywords:} time dilation, general relativity, special relativity, gravitational time dilation, Lorentz time dilation, compactness, inertial density, moment of inertia, Schwarzschild radius}
 
@@ -149,7 +149,7 @@
 %%%FOOTNOTES%%%
 \footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
 \section{Introduction}
-This paper compares the relative pace of time between two uniform spherical systems using only their masses and mean radii about the selected axes of comparison. The DeGerlia compactness $D = M/R$ \citep{degerlia202505} is the relevant property, and the ratio of two systems' compactness values gives the ratio of their paces of time.
+This paper compares the relative pace of time between two uniform spherical systems using only their masses and radii. The DeGerlia compactness $D = M/R$ \citep{degerlia202505} is the relevant property, and the ratio of two systems' compactness values gives the ratio of their paces of time.
 
 When one system is compared with itself at its Schwarzschild radius, this ratio is the standard gravitational time-dilation calculation \citep{einstein1915,schwarzschild1916radius}. When two systems share a radius and differ only in mass, the ratio is the standard Lorentz time-dilation calculation \citep{einstein1905}. The six worked cases in Section~\ref{sec:expressions} and the appendix tables (Appendix~\ref{app:pair_table}) demonstrate agreement with the standard general-relativistic calculation across the classical and relativistic regimes.
 \section{Inertial Relativity}\label{sec:inertial_relativity}
@@ -157,11 +157,11 @@ Inertia is relativistic, meaning that without a comparator, any measurement of i
 A system, in this context, is any collection of mass and spatial extent one chooses to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
 
 \subsection{Rotational Inertia}
-Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how an applied torque translates into angular acceleration. Moment of inertia is defined as:
+Moment of inertia dictates how an applied torque translates into angular acceleration. It is defined as:
 \begin{equation} \label{eq:moi}
 I = \sum_i m_i r_i^2
 \end{equation}
-where $r_i$ is the perpendicular distance from each mass element $m_i$ to the chosen axis. Just as mass governs how a system responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
+where $r_i$ is the perpendicular distance from each mass element $m_i$ to the rotation axis. Just as mass governs how a system responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
 
 \subsection{Linear Inertia}
 Linear inertia is mass:
@@ -185,34 +185,34 @@ where $M$ is the mass and $k$ is the linear scale factor.
 \begin{equation} \label{eq:radius_scaling}
 R' = kR
 \end{equation}
-where $R$ is the mean radius about the selected axis.
+where $R$ is the radius.
 
 \begin{equation} \label{eq:inertia_scaling}
 I' = k^5 I
 \end{equation}
-where $I$ is the moment of inertia about a selected axis; $k$ is the linear scale factor.
+where $I$ is the moment of inertia and $k$ is the linear scale factor.
 
 \subsection{Inertia Abstracts Mass and Radius}
-Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude, for all systems that share that same density, regardless of geometry the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
+Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia, then an identical torque applied to each system will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time. From this, we can conclude, for all systems that share that same density, regardless of geometry the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 \subsection{Universality}
-For any two uniform spherical systems about their respective selected axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those axes, multiplied by the ratio of their densities to the $3/10$ power (Equation~\ref{eq:ste_density}). Stated more cleanly, it is the ratio of the respective DeGerlia compactness $D$ values for the compared systems about the compared axes (Equation~\ref{eq:kd}).
+For any two uniform spherical systems, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia, multiplied by the ratio of their densities to the $3/10$ power (Equation~\ref{eq:ste_density}). Stated more cleanly, it is the ratio of the respective DeGerlia compactness $D$ values for the compared systems (Equation~\ref{eq:kd}).
 
 \section{Inertial Density $P$}\label{sec:inertial_density}
-Inertial density $P$ \citep{degerlia202505} is the moment of inertia of a system about a selected axis of rotation, divided by its volume:
+Inertial density $P$ \citep{degerlia202505} is the moment of inertia of a system divided by its volume:
 \begin{equation}
 P = I/V
 \end{equation}
 Since linear inertia is mass, this reduces directly to mass density $\rho = M/V$ in the linear case; inertial density is the rotational generalization of mass density, a quantity already familiar from linear mechanics. Or more accurately, mass density is simply the linear interpretation of inertial density. 
 
-Substituting $I = \frac{2}{5}MR^2$ and $V = \frac{4}{3}\pi R^3$, with $R$ the mean radius about the selected axis, this reduces to:
+Substituting $I = \frac{2}{5}MR^2$ and $V = \frac{4}{3}\pi R^3$, with $R$ the radius, this reduces to:
 \begin{equation}
 P = \frac{M}{R} \times \frac{3}{10\pi}
 \end{equation}
-Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.} Because $P$ is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
+Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}
 
 \subsection{DeGerlia Compactness $D$}
-$D = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over mean radius ratio for a system about the selected axis. Given that this quantity is almost always used in a ratio that would cancel out all geometric vectors and constants, for ease of use, this metric $D$ for inertial density is typically used over the geometrically accurate inertial density, $P$. 
+$D = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over radius ratio for a system. Given that this quantity is almost always used in a ratio that would cancel out all geometric vectors and constants, for ease of use, this metric $D$ for inertial density is typically used over the geometrically accurate inertial density, $P$. 
 
 
 
@@ -231,7 +231,7 @@ The following identity relates the time-dilation ratio of two uniform spherical 
 \begin{equation} \label{eq:kd}
 k_d = \frac{I_1}{I_2} \cdot \left(\frac{R_2}{R_1}\right)^3 = \frac{D_1}{D_2} = \frac{M_1 R_2}{M_2 R_1}
 \end{equation}
-where $I_1, I_2$ are the moments of inertia about the respective selected axes, $R_1, R_2$ are the mean radii about those axes, $M_1, M_2$ are the masses, and $D_i = M_i/R_i$ is the DeGerlia Compactness of system $i$ about its selected axis. The three forms in Equation~\ref{eq:kd} are algebraically identical; $(I_1/I_2)(R_2/R_1)^3$ exposes the inertia-radius structure, $D_1/D_2$ exposes the compactness-ratio structure, and $M_1 R_2/(M_2 R_1)$ is the fully expanded form.
+where $I_1, I_2$ are the moments of inertia, $R_1, R_2$ are the radii, $M_1, M_2$ are the masses, and $D_i = M_i/R_i$ is the DeGerlia Compactness of system $i$. The three forms in Equation~\ref{eq:kd} are algebraically identical; $(I_1/I_2)(R_2/R_1)^3$ exposes the inertia-radius structure, $D_1/D_2$ exposes the compactness-ratio structure, and $M_1 R_2/(M_2 R_1)$ is the fully expanded form.
 
 The pace of time has meaning only relative to another pace of time. The compactness ratio $k_d$ governs the relative time-dilation between two uniform spherical systems. The standard gravitational time-dilation calculation for a single system takes the Schwarzschild form $\sqrt{1 - k_s}$, where $k_s = D/D_{crit} = r_s/R$. The compactness ratio $k_d = D_1/D_2$ and the Schwarzschild form $k_s$ are the same scale factor $k$ evaluated by two routes; the subscript denotes which route produced it.
 
@@ -252,7 +252,7 @@ Via the Schwarzschild radius, the same scale factor is:
 \begin{equation} \label{eq:ks}
 k_s = \frac{D}{D_{crit}} = \frac{r_s}{R}
 \end{equation}
-where $D = M/R$ is the system's DeGerlia Compactness about the selected axis and $r_s = 2GM/c^2$ is its Schwarzschild radius. $k_s$ is the Schwarzschild-route name for $k$ that appears in the standard $\sqrt{1 - k}$ for GTD.
+where $D = M/R$ is the system's DeGerlia Compactness and $r_s = 2GM/c^2$ is its Schwarzschild radius. $k_s$ is the Schwarzschild-route name for $k$ that appears in the standard $\sqrt{1 - k}$ for GTD.
 
 \subsection{Relating Linear Scale Factor $k$ to General Relativity}
 Time dilation is always:
@@ -320,7 +320,7 @@ Schwarzschild gravitational time dilation:
 \begin{equation} \label{eq:schwarzschild}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{r_s}{R}}
 \end{equation}
-where $r_s = 2GM/c^2$ is the Schwarzschild radius and $R$ is the mean radius about the selected axis.
+where $r_s = 2GM/c^2$ is the Schwarzschild radius and $R$ is the radius.
 
 Lorentz time dilation:
 \begin{equation} \label{eq:lorentz}
@@ -328,7 +328,7 @@ Lorentz time dilation:
 \end{equation}
 where $v$ is the velocity of the moving frame and $c$ is the speed of light.
 
-These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the gravitational case and $k = v^2/c^2$ in the velocity case. The two expressions are equivalent: the escape velocity at mean radius $R$ is $v^2 = 2GM/R$ \citep{goldstein2002}, so $v^2/c^2 = 2GM/(Rc^2) = r_s/R$.
+These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the gravitational case and $k = v^2/c^2$ in the velocity case. The two expressions are equivalent: the escape velocity at radius $R$ is $v^2 = 2GM/R$ \citep{goldstein2002}, so $v^2/c^2 = 2GM/(Rc^2) = r_s/R$.
 
 Schwarzschild gravitational time dilation is the STE (Equation~\ref{eq:kd}) evaluated under the constraint $M_1 = M_2$ (same mass, different radii). Lorentz time dilation is the STE evaluated under the constraint $R_1 = R_2$ (same radius, different masses). Both are cases of the same compactness-based relation; the derivations of each are developed in Section~\ref{sec:expressions}.
 
@@ -531,7 +531,7 @@ giving the relative pace of time:
 
 \subsection{Inertia--Time Dilation Identities}
 
-The preceding cases derive time dilation from inertia. The relationship is invertible: given the compactness ratio and the mean radius ratio, the moment of inertia ratio is fully determined. From Equation~\ref{eq:kd}:
+The preceding cases derive time dilation from inertia. The relationship is invertible: given the compactness ratio and the radius ratio, the moment of inertia ratio is fully determined. From Equation~\ref{eq:kd}:
 \begin{equation} \label{eq:inertia_recovery}
 \frac{I_1}{I_2} = k_d \cdot \left(\frac{R_1}{R_2}\right)^3
 \end{equation}
