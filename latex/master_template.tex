@@ -1,0 +1,372 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RSC Article Template with Section Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{siunitx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{makecell}
+\usepackage{array} % Include in the preamble for vertical 
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\mathtoolsset{showonlyrefs}
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1]% 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+%\fancyfoot[CO]{\vspace{-7.1pt}\hspace{11.9cm}\includegraphics{head_foot/RF}}
+%\fancyfoot[CE]{\vspace{-7.2pt}\hspace{-13.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{4.65cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+
+  {  \noindent\includegraphics[height=30pt]{head_foot/dec}}\\
+  \normalsize\text{DOI: \href{https://doi.org/10.55277/researchhub.pjdrq41j.1}{10.55277/researchhub.pjdrq41j.1}}
+{\hfill\raisebox{0pt}[0pt][0pt]{\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}\\[1ex]
+}\par
+\vspace{1em}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{The Fallacy of the Arbitrary - Exploring the Mathematics and Interpretation of Infinities and Singularities}} \\
+\vspace{0.3cm} & \vspace{0.3cm} \\
+ & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\
+ & \noindent\small{Originally published: February 2, 2026 C.E.} \\
+& \noindent\small{Revision 1.00 February 2, 2026 C.E.} \\
+ \vspace{0.3cm} & \vspace{0.3cm} \\
+ 
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: A common mathematical error is regularly invoked in the context of General Relativity, cosmic expansion, and other observed phenomena. And this error relates to a declaration of division by zero and, therefore, a blow-up of a particular formula or function. Specifically, this suggests that if something is very small from our perspective, we can neglect its contribution. And from this one small presumption, we impart a logical fallacy, a mathematical error, and also carry forward a physical misunderstanding. It is to contrive an artificial zero from a number that seems subjectively very small, such that one can declare division by zero or blow up. The explanation for the failure, whether a blow-up, division by zero, or any other number of creative descriptions, always roots in the same logical basis: That something is infinite and therefore something else is zero, and therefore a division by zero occurs, and therefore a system has blown up or gone out of its usable range or has transitioned to another model. In each and every case, the formula presented is valid for every valid input. Meaning, if you want to know its value at $1 \times 10^{\text{100}}$, the formula will return a finite output. In this paper, we provide a categorical decomposition of these arguments and explore their proper interpretation and calculation. From this, we demonstrate that there really is no physical interpretation of a point mass or mass singularity that has any factual basis. Mass must always accompany spatial distribution. While it may feel negligible from some perspectives, it truly is not.}
+\end{tabular}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+
+  ]
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\vspace{-1cm}
+%%%FOOTNOTES%%%
+\footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
+\footnotetext{\dag~Mr. DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S. in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado. Tom brings over 35 years of professional and academic multidisciplinary scientific problem-solving experience across chemistry, physical chemistry, artificial intelligence, software engineering, archaeology, forensics, and psychology.}
+\section{Introduction}
+There is a natural tendency for anyone observing the universe to see things only from their own perspective, which is entirely understandable, because that's the only perspective from which they can observe. But as we grow and learn, we realize that every observer has their own perspective. Describing the same system from two different observational perspectives. We have been guilty many times of extending ourselves a privileged position in the universe. Each time we cross a more nuanced bridge, we must again humbly accept our insignificance. There was a time when we thought the Earth was the center of the universe. Why? Because that's how it looks to us, and we've never looked at it from anyone else's perspective. Spatial scale and physical phenomena associated with such represent the next frontier in physics, from which vast knowledge, clarity, and opportunities will emerge. Not too long ago, we believed that atoms were the smallest unit of matter. We know now that that presumption was incorrect, and we have continued to reveal smaller constituent particles, each of which we, for some period of time, believe is the fundamental unit of matter.\\
+\\
+As is evidenced by the two examples above, humans commonly define anything beyond the periphery of what we can observe as non-existent. If I reach deep, it feels born of existential protectionism; kid gloves for our egos. Something analogous to hiding under a security blanket to protect oneself from the thunder. The unknown is unsettling, and our egos prefer the comfort of believing we know everything. But, as stated above, the fundamental explanaion for human-centricity is: It's easy to presume everyone else sees the world no differently than you do. Self-deception would be very difficult to detect in such circumstances, especially with a significant payout in the form of psychological comfort. These are recurring themes for the pervasive mathematical challenges I describe herein.
+
+\subsection{It's all a matter of perspective}
+If we look up at the night sky, most stars don't stimulate more than one cone (the light detector) in our eyes, which means, from our perspective, a star could get no smaller; it's a point. We see their celestial behavior, so we know celestial objects have mass. Without more information, it would be easy to assume that these could be only point masses. Well, that's not true, but it's approximately true from our perspective. However, if we were to look at how things behave leading up to that limit of detection, they're reasonably consistent; or rather, they evolve in a consistent manner. If we presumed that the only change at the edge of our ability to observe was simply our ability to observe, we would have a much clearer understanding of the universe than we do under the weight of presumed boundaries. We must resist the tendency to think only in terms of our perspective, because that's where the fallacy creeps in. We should look at the trends and ask ourselves: why would the trends stop? Why would spatial extent cease to exist beyond some scale if it existed observably all the way to that scale?\\
+\\
+The simple answer is: It does not cease to exist. It just ceases to be visible to us from our scale of observation, for a variety of reasons. And thus one should never trust one's instinct to disregard something that feels insignificant. To presume negligibility, and then to extend that by rounding to zero, and therefore producing a division by zero error. It's a faulty multi-step logical construct. The commonly used terms ``negligible,'' ``arbitrarily large,'' ``very small,'' and ``singularity,'' are all red flags for potential misunderstanding, signifying that many people today are still at risk of accepting or even representing, God forbid, the ``fallacy of the arbitrary'' as factual interpretation.
+
+\section{The Importance of Context}
+In every case, it's important to understand the practical ``real-world'' context of the problem you're trying to solve. When working with unbounded concepts outside of your personal realm of familiarity, it's critical to understand what those values truly represent.\\
+\\
+For example, consider the calculation of the gravitational force $F$ between two objects of masses $m_1$ and $m_2$ separated by a distance $r$. In Newtonian mechanics, the full, non-estimated formula is:
+\begin{equation}
+F = G \frac{m_1 m_2}{r^2}
+\end{equation}
+Where $G$ is the gravitational constant ($6.674 \times 10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$). From a purely mathematical perspective, if one treats these objects as idealized point masses, the formula suggests the force becomes infinite as $r \to 0$. This idealization is valid for the region outside the physical radii of the objects; however, once the objects collide, the physical scale of the systems becomes a limiting factor, and the $1/r^2$ behavior between the centers of mass no longer describes the net force in the same way (as the mass is no longer situated entirely ``ahead'' of the other object).\\
+\\
+In the context of gravity, $r$ represents distance, and thus a negative input is physically impossible. This defines a realm of applicability extending from the physical boundaries of the objects to infinity. If one attempts to solve for a distance where $r$ is exactly zero or negative, the formula returns an undefined or non-physical result because it's being applied outside the range of its intended logic.\\
+\\
+However, in the consensus view of modern physics, Newton's law is itself a low-speed, weak-field approximation of Albert Einstein's General Theory of Relativity. In the ``full, non-estimated'' relativistic regime, gravity is not a force but a manifestation of spacetime curvature described by the Einstein Field Equations:
+\begin{equation}
+G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+\end{equation}
+Even in this more comprehensive model, the mathematical occurrence of a ``singularity'' at $r=0$ (the Schwarzschild singularity) is widely interpreted by physicists as a signal that the theory has reached the limit of its applicability, rather than a description of an attainable physical state. The reality is that we approach these limits forever, but we encounter physical interaction (like the Schwarzschild radius or the collision of spatial distributions) long before reaching a literal mathematical zero.
+
+\section{Review of Mathematical Concepts}
+Before we dig too deep into the various arguments represent incorrect usage or conclusions, let's briefly review some relevant mathematical concepts. The following are more or less the ``dictionary definitions'' followed by an example that demonstrates the proper usage and interpretation.
+
+\subsection{Asymptotic Limit}
+\textbf{Definition:}
+In analytic geometry, an asymptote of a curve is a line such that the distance between the curve and the line approaches zero as one or both of the $x$ or $y$ coordinates tends to infinity. More generally, it describes the limiting behavior of a function as it approaches a value where it may be undefined. It is the mathematical formalization of a direction of travel rather than a destination; the curve and the asymptote approach each other ``at infinity,'' meaning they get arbitrarily close but the gap never truly closes within any finite range.\\
+
+The following excerpt describes the complexity of understanding asymptotic limits:
+
+\begin{quote}
+``The idea that a curve may come arbitrarily close to a line without actually becoming the same may seem to counter everyday experience. The representations of a line and a curve as marks on a piece of paper or as pixels on a computer screen have a positive width. So if they were to be extended far enough they would seem to merge, at least as far as the eye could discern. But these are physical representations of the corresponding mathematical entities; the line and the curve are idealized concepts whose width is 0. Therefore, the understanding of the idea of an asymptote requires an effort of reason rather than experience.''\cite{wikipedia_asymptote}
+\end{quote}
+
+\noindent\textbf{Formula:}
+The behavior is defined using the limit notation:
+\begin{equation}
+\lim_{x \to c} f(x) = L \quad \text{or} \quad \lim_{x \to \infty} f(x) = L
+\end{equation}
+Where $c$ is the point of approach and $L$ is the trending value. This notation emphasizes the \textit{process} of approaching and explicitly avoids the error of stating $f(c) = L$, which is often where the ``division by zero'' or ``singularity'' fallacies are introduced.\\
+
+\noindent\textbf{Behavior at Extremes:}
+The asymptotic limit describes the behavior of a function as it nears a boundary without ever requiring the function to occupy that boundary. The error in many interpretations lies in treating the limit as a value attained at a specific coordinate, effectively ``rounding to zero'' the remaining distance. 
+
+\begin{table}[H]
+\centering
+\caption{Numerical test for $f(x) = 1/x$ as $x \to 0$.}
+\begin{tabular}{ll}
+\toprule
+Input ($x$) & Output ($1/x$) \\
+\midrule
+$10^{-2}$ & $10^{2}$ \\
+$10^{-3}$ & $10^{3}$ \\
+$10^{-35}$ (Planck) & $10^{35}$ \\
+$10^{-100}$ & $10^{100}$ \\
+$10^{-1000}$ & $10^{1000}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This ignores the infinite progression of values that exist as $x$ approaches $c$. There is always a ``universe of consideration'' between the current state and the limit; to collapse this distance is to commit the fallacy of the arbitrary.
+
+\noindent\textbf{Example: The Inverse Scale}\\
+Consider the function $f(x) = \frac{1}{x}$. As $x$ approaches $0$ from the positive side, $f(x)$ increases toward infinity.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{Hyperbola_one_over_x.svg.png}
+\caption{Graph of the function $y = 1/x$, demonstrating the asymptotic behavior as $x$ approaches zero and as $x$ approaches infinity. The function never reaches $x=0$ or $y=0$, but approaches them asymptotically.\cite{wikimedia_hyperbola}}
+\label{fig:hyperbola}
+\end{figure}
+
+\noindent\textit{Analysis:}
+If we choose an $x = 10^{-100}$, $f(x)$ is $10^{100}$. Whether we label this value ``massive'' or ``negligible'' depends entirely on our chosen scale of reference; if our units are $10^{100}$ meters, this result is merely $1$. If we move to $x = 10^{-1,000,000}$, the output is $10^{1,000,000}$. This is $10^{999,900}$ times larger than the previous state, yet it remains finite. The ``singularity'' at $x=0$ is never reached because $x$ can always be halved, and halved again, forever. The trend toward infinity is the asymptote; the perceived ``blow-up'' is merely a failure of the observer to maintain a consistent relative perspective as the scale shifts.
+
+\subsection{Negligibility}
+\textbf{Definition:}
+It is common for people to think of negligibility from their perspective, which is a typical human-centric way of looking at things. However, making a presumption of negligibility based on one's own scale invites mathematical problems. A negligible function $\mu(n)$ is formally one that decays faster than the reciprocal of any polynomial.
+
+\noindent\textbf{Formula:}
+The condition for negligibility is expressed as:
+\begin{equation}
+\forall c > 0, \exists N_c \text{ such that } \forall x > N_c: |\mu(x)| < \frac{1}{x^c}
+\end{equation}
+Where $\mu(x)$ is the function, $c$ is the polynomial degree, and $N_c$ is the threshold beyond which the bound holds.
+
+\noindent\textbf{Behavior at Extremes:}
+Negligible functions approach zero faster than the reciprocal of any polynomial. You might say that $10^{-50}$ meters is extraordinarily small, but it's not compared to $10^{-100}$ meters. For every number that you can cite, I can cite one that's bigger or smaller in every single circumstance forever.
+
+\begin{table}[H]
+\centering
+\caption{Comparison of $2^{-n}$ (negligible) vs. $1/n$ (not negligible).}
+\begin{tabular}{lll}
+\toprule
+$n$ & $2^{-n}$ & $1/n$ \\
+\midrule
+10 & $9.77 \times 10^{-4}$ & $0.1$ \\
+100 & $7.89 \times 10^{-31}$ & $0.01$ \\
+256 & $8.64 \times 10^{-78}$ & $0.0039$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{Plot-exponential-decay.svg.png}
+\caption{Comparison of negligible decay ($2^{-n}$) against polynomial decay ($1/n$), showing the extreme divergence in behavior as scales shift.\cite{wikimedia_exponential_decay}}
+\label{fig:negligibility}
+\end{figure}
+
+The math will take care of negligibility for you. If you use scientific notation and maintain full precision until the end, you will never run into a problem because things are never negligible in an absolute sense.
+
+\noindent\textbf{Example: The Lorentz Factor}
+In classical mechanics, the Lorentz factor $\gamma = 1/\sqrt{1 - v^2/c^2}$ differs from 1 by the amount $v^2/c^2$. For everyday velocities ($v = 100$ m/s, $c = 3\times10^{8}$ m/s), this gives $v^2/c^2 \approx 10^{-13}$. Physicists routinely drop this term entirely, declaring it ``negligible,'' setting $\gamma = 1$ exactly. But $10^{-13}$ is not zero. At sufficiently precise measurements or over sufficient time/distance scales, this ``negligible'' term accumulates to measurable effects.
+
+\subsection{Infinity}
+\textbf{Definition:}
+Infinity is not a number; it's the absence of a boundary. It's the mathematical formalization of an absence of an upper boundary. In this context, to declare something that is arbitrarily large as infinity is a fallacy. If you think of things contained within a box, the boundary is the box. Infinity isn't the number or the box; it's the absence of the box.
+
+\noindent\textbf{Formula:}
+The limit at infinity is defined using the $\epsilon$-$M$ notation:
+\begin{equation}
+\lim_{x \to \infty} f(x) = L \iff \forall \epsilon > 0, \exists M > 0 \text{ s.t. } \forall x > M, |f(x) - L| < \epsilon
+\end{equation}
+This definition emphasizes that for every distance $\epsilon$ from the limit $L$, there exists a finite point $M$ beyond which the function remains within that closeness.
+
+\noindent\textbf{Behavior at Extremes:}
+There is no number that equals infinity because for every number you can give me, I can come up with one that is much larger or much smaller forever. Infinity is the thing you approach forever, but never occupy.
+
+\begin{table}[H]
+\centering
+\caption{Divergence of the Harmonic Series $H(n) = \sum_{k=1}^n \frac{1}{k}$, showing finite values at extreme scales.}
+\begin{tabular}{ll}
+\toprule
+Terms ($n$) & Sum $H(n) \approx \ln(n) + \gamma$ \\
+\midrule
+$10^{1}$ & $2.9$ \\
+$10^{10}$ & $23.6$ \\
+$10^{100}$ (Googol) & $230.8$ \\
+$10^{(10^{100})}$ (Googolplex) & $2.3 \times 10^{100}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As shown above, even at the scale of a googolplex of terms, the sum remains a finite (albeit large) number. The absence of an upper boundary means the sum can grow forever, but at any specific step $n$, $H(n)$ is always finite.
+
+\noindent\textbf{Example: The Harmonic Series}
+In mathematics, the harmonic series $\sum_{1}^{\infty} 1/n$ is famously divergent. This is often used to illustrate the concept of infinity. However, it also perfectly illustrates the fallacy of the arbitrary: no matter how many terms you add, the sum is always a finite value. The series "goes to infinity," but it is never "at infinity." The claim that a system "breaks down" at infinity is really just a claim that the system has no box around it.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{Limit_Infinity_SVG.svg.png}
+\caption{The concept of a limit at infinity. The function approaches a boundary forever without ever attaining it, illustrating infinity as an "absence of a box."\cite{wikimedia_limit_infinity}}
+\label{fig:infinity}
+\end{figure}
+
+\subsection{Division by Zero and Singularity}
+\textbf{Definition:}
+Division by zero is a mathematical error on the user's part, often born from the incorrect idealization of a physical system (e.g., treating mass as a point). A "singularity" is the mathematical result of this error—a point where a formula returns an undefined or infinite value because a denominator was artificially rounded to zero. In nature, physical values are always finite and representable given sufficient precision.
+
+\noindent\textbf{Formula:}
+Consider Newton's Law of Universal Gravitation:
+\begin{equation}
+F = G \frac{m_1 m_2}{r^2}
+\end{equation}
+Where $r$ is the distance between centers of mass. The "singularity" appears at $r=0$, but $r$ never reaches zero in a physical system with spatial distribution.
+
+\noindent\textbf{Behavior at Extremes:}
+Modern floating-point mathematics treats denominators as scientific notation and presumes infinite precision exists even if it cannot be fully represented. A computer returns an "overflow" or "out of range" error, not a literal division by zero, because $r$ can always be representably small but never absolute zero.
+
+\begin{table}[H]
+\centering
+\caption{Gravitational force between two 1kg masses at extreme scales.}
+\begin{tabular}{ll}
+\toprule
+Distance ($r$) & Force ($F$) in Newtons \\
+\midrule
+$6.37 \times 10^{6}$ m (Earth Radius) & $1.64 \times 10^{-24}$ \\
+$1 \times 10^{-3}$ m (Millimeter) & $6.67 \times 10^{-5}$ \\
+$1 \times 10^{-35}$ m (Planck Length) & $6.67 \times 10^{59}$ \\
+$1 \times 10^{-100}$ m & $6.67 \times 10^{189}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Example: The Gravity Well (Tamasol)}
+The iconic "funnel" or "gravity well" visualization represents the $1/r^2$ curvature as $r \to 0$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{Tamasol_SVG.svg.png}
+\caption{The Tamasol visualization of a gravitational singularity. The "hole" at the center is a limitation of the point-mass model, not a physical reality; the curvature remains finite for every finite $r$.\cite{wikimedia_tamasol}}
+\label{fig:tamasol}
+\end{figure}
+
+Floating-point mathematics makes clear that division by zero is a false assertion. It is merely a number that is too big or too small to represent with a given system of precision. In nature, properties are always infinitely precise, and thus the denominator never occupies the integer zero.
+
+\vspace{1em}
+\section{Review of Physics Principles}
+\nopagebreak[4]
+\subsection{The Relativistic Regime}
+Classical physics is just relativistic physics without the added precision needed at extreme scales. So one need not delineate those two as separate regimes. We simply learned about one before we learned about the details we were missing at near-scale.
+
+\subsection{Quantum Regime}
+Again, there is no actual transition to another regime. These are two equally accurate ways to look at things, one of which is very difficult to observe unless you get a huge difference in scale, and the other is very difficult to observe if you get too big a difference in scale. They are both correct. They describe the same universe.
+
+\subsection{Planck Scale}
+The Planck scale is often erroneously cited as a cutoff beyond which one cannot use classical relativistic formulas. I do understand that there is an observational perspective from which quantum is the only meaningful way to look at things, due to observational challenges. But that doesn't state, or even imply, that the Planck scale is that point. In fact, there's no indication of a point. The Planck scale is considerably smaller than the scale at which we have to transition to indirect observation. So it probably means something slightly different from that. It may not mean much; it might just be the convergence point of three different formulas cross-referenced. There is no reason to believe that it represents a minimum scale, despite the fact that we have not observed anything in that range.
+
+%%%REFERENCES%%%
+\bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
+\balance
+\clearpage
+\end{document}

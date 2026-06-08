@@ -1,0 +1,20 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated data (regenerable from run_all_systems.py)
+systems_output.md
+systems_table.md
