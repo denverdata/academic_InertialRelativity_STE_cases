@@ -186,7 +186,7 @@ def build_table(output_path, table_path):
             'moi': format_sci6(get(r'Moment Of Inertia:\s+([\d.eE+\-]+)\s+kg', body)),
             'rs': format_sci6(get(r'Schwarzschild Radius:\s+([\d.eE+\-]+)\s+m', body)),
             'D': format_sci6(get(r'DeGerlia Compactness \(m/r\):\s+([\d.eE+\-]+)', body)),
-            'D_over_Dcrit': format_sci6(str(float(get(r'DeGerlia Compactness \(m/r\):\s+([\d.eE+\-]+)', body)) / 6.73295e26)),
+            'D_over_Dcrit': format_sci6(str(Decimal(get(r'DeGerlia Compactness \(m/r\):\s+([\d.eE+\-]+)', body)) / constants.D_CRIT)),
             'gtd': format_gtd(get(r'Gravitational Time Dilation:\s+([\d.eE+\-]+)', body)),
             'k': format_sci6(get(r'k = 1 - GTD² = ([\d.eE+\-]+)', body)),
             'r_ratio': format_sci6(get(r'R/R_prev = ([\d.eE+\-]+)', body)),

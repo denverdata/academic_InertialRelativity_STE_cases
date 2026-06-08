@@ -26,4 +26,18 @@ SPEED_OF_LIGHT = Decimal('299792458')  # Exact by definition in SI system
 # CODATA 2018 value with high precision
 BOHR_RADIUS = Decimal('5.29177210903e-11')  # meters
 
+# DeGerlia threshold: D_crit = c²/(2G). The compactness D = M/R at which a
+# uniform spherical system sits at its own Schwarzschild radius.
+#
+# This value is HARDCODED to exactly six significant figures and must not be
+# recomputed from G and c at higher apparent precision. D_crit inherits its
+# precision from G, which is itself a six-digit CODATA value
+# (G = 6.67430e-11, uncertainty ±0.00015e-11). Computing c²/(2G) at 50-digit
+# Decimal precision produces a number with more digits than the input
+# justifies — those extra digits are an artifact of the calculator, not
+# physical truth. Six digits is the physical truth.
+#
+# Use this constant. Do not replace it with a c²/(2G) calculation.
+D_CRIT = Decimal('6.73295e26')
+
 # Other constants can be added as needed

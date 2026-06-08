@@ -207,6 +207,44 @@ class UniformSphere(BasePhysicalSystem):
         
         # DeGerlia Compactness (m/r) - mass divided by radius
         self._properties['degerlia_compactness'] = self.mass / self.radius
+
+        # k_s = r_s / R (Schwarzschild ratio: Schwarzschild radius over radius).
+        # Computed independently from r_s and R, not derived from any other
+        # property. Sits alongside the existing gravitational_time_dilation
+        # property; this is the input to the GTD_s = sqrt(1 - k_s) form.
+        self._properties['k_s'] = self._properties['schwarzschild_radius'] / self.radius
+
+        # k_d = D / D_crit (DeGerlia compactness over the DeGerlia threshold).
+        # Computed independently from D and D_crit. Algebraically equal to k_s,
+        # but reaches the same value via a different formula path for
+        # cross-validation in pair tables.
+        self._properties['k_d'] = self._properties['degerlia_compactness'] / constants.D_CRIT
+
+        # gtd_d = sqrt(1 - D/D_crit) (DeGerlia-form gravitational time dilation).
+        # Independent computation path from gravitational_time_dilation, which
+        # uses the Schwarzschild form sqrt(1 - 2GM/(Rc²)). Should equal that
+        # value when the math agrees.
+        gtd_d_arg = Decimal('1') - self._properties['k_d']
+        if gtd_d_arg < Decimal('1e-50'):
+            self._properties['gtd_d'] = Decimal('1') - (self._properties['k_d'] / Decimal('2'))
+        elif gtd_d_arg > Decimal('0'):
+            self._properties['gtd_d'] = gtd_d_arg.sqrt()
+        else:
+            self._properties['gtd_d'] = Decimal('0')
+
+        # gtd_s = sqrt(1 - k_s) (Schwarzschild-form gravitational time dilation,
+        # computed from k_s = r_s/R). Independent path from
+        # gravitational_time_dilation above, which uses the expanded form
+        # sqrt(1 - 2GM/(Rc²)). The two should agree numerically.
+        k_s_local = self._properties['k_s']
+        if k_s_local < Decimal('1e-50'):
+            self._properties['gtd_s'] = Decimal('1') - (k_s_local / Decimal('2'))
+        else:
+            gtd_s_factor = Decimal('1') - k_s_local
+            if gtd_s_factor > Decimal('0'):
+                self._properties['gtd_s'] = gtd_s_factor.sqrt()
+            else:
+                self._properties['gtd_s'] = Decimal('0')
     
     def print_properties(self):
         """Print the properties of the uniform sphere."""

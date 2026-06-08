@@ -3,9 +3,18 @@
 for the six worked cases. 10 significant digits, compact e-style notation,
 row groups preserved. Output to stdout — redirect to latex/pair_tables.tex."""
 
+import os
 import re
+import sys
 from decimal import Decimal, getcontext, localcontext, ROUND_HALF_EVEN
 getcontext().prec = 50
+
+# Physical constants — single source of truth is system_properties/constants.py.
+# D_CRIT is a six-digit physical value (precision inherited from G); it is
+# never recomputed from c²/(2G) here. See the comment on D_CRIT in
+# system_properties/constants.py.
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from system_properties.constants import G as G_CONST, SPEED_OF_LIGHT, D_CRIT
 
 def parse_md_groups(filepath):
     """Parse the markdown file into groups of (label, values) rows.
@@ -106,8 +115,10 @@ LABELS = {
     'D_2_norm':       r'$D_{2\_norm}$',
     'r_s_1 (m)':      r'$r_{s\_1}$ (m)',
     'r_s_2 (m)':      r'$r_{s\_2}$ (m)',
-    'gtd_1':          r'$gtd_1$',
-    'gtd_2':          r'$gtd_2$',
+    'gtd_1':          r'$\mathrm{GTD}_{s,1}$',
+    'gtd_2':          r'$\mathrm{GTD}_{s,2}$',
+    'GTD_s_1':        r'$\mathrm{GTD}_{s,1}$',
+    'GTD_s_2':        r'$\mathrm{GTD}_{s,2}$',
     'dtd_1':          r'$dtd_1$',
     'dtd_2':          r'$dtd_2$',
 
@@ -124,6 +135,10 @@ LABELS = {
     '(*k) D_1/D_2':                         r'$D_1/D_2$',
     '(I_1/I_2)*(r_2/r_1)³':                 r'$(I_1/I_2)(r_2/r_1)^3$',
 
+    'k_s':                                  r'$k_s$',
+    'k_d':                                  r'$k_d$',
+    'GTD_d_1':                              r'$\mathrm{GTD}_{d,1}$',
+    'GTD_d_2':                              r'$\mathrm{GTD}_{d,2}$',
     'I_1/I_2':                              r'$I_1/I_2$',
     'I_2/I_1':                              r'$I_2/I_1$',
     '(I_1/I_2)^(1/2)':                      r'$(I_1/I_2)^{1/2}$',
@@ -133,7 +148,8 @@ LABELS = {
     '(I_2/I_1)^(1/5)':                      r'$(I_2/I_1)^{1/5}$',
     '(dtd_1/dtd_2)²*(r_1/r_2)³':            r'$(dtd_1/dtd_2)^2(r_1/r_2)^3$',
 
-    '(*G) gtd_1/gtd_2':                     r'$gtd_1/gtd_2$',
+    '(*G) gtd_1/gtd_2':                     r'$\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2}$',
+    'GTD_d_1/GTD_d_2':                      r'$\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2}$',
     'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)':        r'$\sqrt{1-dtd_1^2}/\sqrt{1-dtd_2^2}$',
 
     '(*k) k_m=m_1/m_2':                     r'$m_1/m_2$',
@@ -145,8 +161,8 @@ LABELS = {
     'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{m_2^2 r_2/(m_1^2 r_1)}$',
 }
 
-# Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General, 6=STE Example, 7=General2
-# Keep: M=M, R=R, P=P, I=I, General, STE Example
+# Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General, 6=Classical Static Density Example, 7=General2
+# Keep: M=M, R=R, P=P, I=I, General, Classical Static Density Example
 KEEP = [0, 2, 3, 4, 5, 6]
 COL_NAMES = [
     r'Case 1 ($M\!=\!M$)',
@@ -154,7 +170,7 @@ COL_NAMES = [
     r'Case 3 ($\rho\!=\!\rho$)',
     r'Case 4 ($I\!=\!I$)',
     'General',
-    'STE Example',
+    r'Classical ($\rho\!=\!\rho$)',
 ]
 
 SKIP_LABELS = {
@@ -176,7 +192,10 @@ def project(group):
 GTD_ROWS = {
     'gtd_1', 'gtd_2',
     '(*G) gtd_1/gtd_2',
+    'GTD_d_1/GTD_d_2',
     'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)',
+    'GTD_s_1', 'GTD_s_2',
+    'GTD_d_1', 'GTD_d_2',
 }
 
 def emit_row(label, values):
@@ -249,6 +268,49 @@ def verify_against_source(groups):
             except Exception:
                 pass
 
+def add_top_table_rows(groups):
+    """Rebuild the top table (group 0). All per-system values are read directly
+    from source; no per-system computation happens here. The source carries:
+
+      k_s_1, k_s_2          = r_s / R                  (Schwarzschild path)
+      D_1_norm, D_2_norm    = D / D_crit               (DeGerlia path, = k_d)
+      gtd_1, gtd_2          = sqrt(1 - 2GM/(Rc²))      (Schwarzschild path)
+      gtd_d_1, gtd_d_2      = sqrt(1 - D/D_crit)       (DeGerlia path)
+
+    Each was computed independently by system_properties. This function only
+    relabels them onto the display labels used by the LaTeX table.
+    """
+    if not groups:
+        return groups
+    flat = {label: values for g in groups for label, values in g}
+    placeholder = ['---'] * 8
+    src = lambda key: list(flat.get(key, placeholder))
+
+    groups[0] = [
+        ('m_1 (kg)',     src('m_1 (kg)')),
+        ('m_2 (kg)',     src('m_2 (kg)')),
+        ('r_1 (m)',      src('r_1 (m)')),
+        ('r_2 (m)',      src('r_2 (m)')),
+        ('ρ_1 (kg/m³)',  src('ρ_1 (kg/m³)')),
+        ('ρ_2 (kg/m³)',  src('ρ_2 (kg/m³)')),
+        ('I_1 (kg·m²)',  src('I_1 (kg·m²)')),
+        ('I_2 (kg·m²)',  src('I_2 (kg·m²)')),
+        ('D_1 (kg/m)',   src('D_1 (kg/m)')),
+        ('D_2 (kg/m)',   src('D_2 (kg/m)')),
+        ('D_1_norm',     src('D_1_norm')),
+        ('D_2_norm',     src('D_2_norm')),
+        ('r_s_1 (m)',    src('r_s_1 (m)')),
+        ('r_s_2 (m)',    src('r_s_2 (m)')),
+        ('k_s',          src('k_s_1')),
+        ('k_d',          src('D_1_norm')),
+        ('GTD_s_1',      src('gtd_1')),
+        ('GTD_s_2',      src('gtd_2')),
+        ('GTD_d_1',      src('gtd_d_1')),
+        ('GTD_d_2',      src('gtd_d_2')),
+    ]
+    return groups
+
+
 def main():
     groups = parse_md_groups('../pair_comparisons_v2_cases.md')
 
@@ -258,6 +320,25 @@ def main():
     # Move GTD/GTD group (source idx 4) to be the 3rd bottom-table group.
     if len(groups) > 4:
         groups[3], groups[4] = groups[4], groups[3]
+
+    # Append the GTD_d_1/GTD_d_2 ratio to the gtd-ratio group. This is an
+    # inter-system ratio (legal generator computation per the source-of-truth
+    # rule). Computed from the per-system gtd_d rows that come from source.
+    flat_src = {label: values for g in groups for label, values in g}
+    if 'gtd_d_1' in flat_src and 'gtd_d_2' in flat_src:
+        d1_vals = flat_src['gtd_d_1']
+        d2_vals = flat_src['gtd_d_2']
+        d_ratio = []
+        for a, b in zip(d1_vals, d2_vals):
+            if a in ('---', '') or b in ('---', ''):
+                d_ratio.append('---')
+                continue
+            bd = Decimal(b)
+            d_ratio.append('---' if bd == 0 else str(Decimal(a) / bd))
+        groups[3].append(('GTD_d_1/GTD_d_2', d_ratio))
+
+    # Add k_s, k_d, GTD_d_1, GTD_d_2 placeholder rows to the top table.
+    groups = add_top_table_rows(groups)
 
     # Reorder the last group: m_1/m_2, sqrt(m_1/m_2), r_1/r_2, sqrt(r_1/r_2).
     # m_1/m_2, sqrt(m_1/m_2), and r_1/r_2 come from source; sqrt(r_1/r_2) is

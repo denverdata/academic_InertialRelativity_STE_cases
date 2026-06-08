@@ -129,9 +129,9 @@
 \vspace{0.3cm} & \vspace{0.3cm} \\
  & \noindent\large{Thomas Damon DeGerlia\textit{$^{a}$}} \\
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
- & \noindent\small{Revision 3.5 May 28, 2026 C.E.} \\
+ & \noindent\small{Revision 3.5 June 8, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: General relativity tells us that time is relativistic --- it only has meaning when compared to another system. However, in the standard interpretation of general relativity, it feels very much like one can simply calculate the relativistic time dilation for a single system. That is in fact a misconception; if you look carefully at the Schwarzschild threshold condition for gravitational collapse, it is actually comparing two systems: one, the stated system being evaluated, and two, that same system at its Schwarzschild radius according to its mass. A gravitational time dilation figure is returned; that value is mathematically identical to the ratio of the gravitational time dilation of one system to the gravitational time dilation of the other. We demonstrate and validate this principle for the above example in addition to four other distinct cases that span the classical to relativistic regimes: comparing two systems of constant radius, comparing two systems of constant inertia, comparing two systems of constant density, and comparing two systems of distinct mass and radius.} \\
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: General relativity tells us that time is relativistic; it only has meaning when compared to another system. However, in the standard interpretation of general relativity, it feels very much like one can simply calculate the relativistic time dilation for a single system. That is in fact a misconception; if you look carefully at the Schwarzschild threshold condition for gravitational collapse, it is actually comparing two systems: one, the stated system being evaluated, and two, that same system at its Schwarzschild radius according to its mass. A gravitational time dilation figure is returned; that value is mathematically identical to the ratio of the gravitational time dilation of one system to the gravitational time dilation of the other. We demonstrate and validate this principle for the above example in addition to four other distinct cases that span the classical to relativistic regimes: comparing two systems of constant radius, comparing two systems of constant inertia, comparing two systems of constant density, and comparing two systems of distinct mass and radius.} \\
  & \vspace{0.3cm} \\
  & \noindent\small{\textbf{Keywords:} time dilation, general relativity, special relativity, gravitational time dilation, Lorentz time dilation, DeGerlia compactness, inertial density, moment of inertia, Schwarzschild radius}
 
@@ -151,50 +151,13 @@
 \section{Introduction}
 The Schwarzschild gravitational time-dilation calculation $\sqrt{1 - r_s/R}$ contains two radii: $R$, the radius of a system, and $r_s = 2GM/c^2$, the Schwarzschild radius of the same mass. Same mass at two different radii: the formula compares two systems. The notation places $r_s$ inside one symbol, which gives the formula a single-system appearance, but the calculation is two-system. The single-system reading gives the right number --- the formula carries both systems --- and is incoherent within relativity, where a frame of reference requires a comparator.
 
-This paper writes both systems openly. For each uniform spherical system, the DeGerlia compactness $D = M/R$ (kg/m) is the mass-to-radius ratio \citep{degerlia202505}. The DeGerlia compactness ratio $k_d = D_1/D_2 = M_1 R_2/(M_2 R_1)$ governs the time dilation between two such systems. The static-mass case ($M_1 = M_2$, different radii) is the standard gravitational time-dilation calculation \citep{einstein1915,schwarzschild1916radius}. The static-radius case ($R_1 = R_2$, different masses) is the standard Lorentz time-dilation calculation \citep{einstein1905}. Six worked cases in Section~\ref{sec:expressions} and the appendix tables (Appendix~\ref{app:pair_table}) demonstrate that calculating through the standard Schwarzschild form $\sqrt{1-r_s/R}$ and through the $M_1R_2/(M_2R_1)$ ratio yields the same result across the classical and relativistic regimes. Agreement is not asserted on trust: every input and output is tabulated in the appendix, and each row is reproducible directly from $r_s = 2GM/c^2$ and the standard Schwarzschild form.
-\section{Inertial Relativity}\label{sec:inertial_relativity}
-A system, in this context, is any collection of mass and spatial extent one chooses to define.
+This paper writes both systems openly. For each uniform spherical system, the DeGerlia compactness $D = M/R$ (kg/m) is the mass-to-radius ratio \citep{degerlia202505}. The DeGerlia compactness ratio $k_d = D_1/D_2 = M_1 R_2/(M_2 R_1)$ governs the time dilation between two such systems. The static-mass case ($M_1 = M_2$, different radii) is the standard gravitational time-dilation calculation \citep{einstein1915,schwarzschild1916radius}. The static-radius case ($R_1 = R_2$, different masses) is the standard Lorentz time-dilation calculation \citep{einstein1905}. Six worked cases in Section~\ref{sec:expressions} and the appendix tables (Appendix~\ref{app:pair_table}) tabulate the DeGerlia compactness ratio $k_d$ and the gravitational time-dilation calculation for each pair across the classical and relativistic regimes. Agreement is not asserted on trust: every input and output is tabulated in the appendix, and each row is reproducible directly from $r_s = 2GM/c^2$ and the standard Schwarzschild form.
+\section{General Relativity and Compactness}
 
-\subsection{Rotational Inertia}
-Moment of inertia dictates how an applied torque translates into angular acceleration. It is defined as:
-\begin{equation} \label{eq:moi}
-I = \sum_i m_i r_i^2
-\end{equation}
-where $r_i$ is the perpendicular distance from each mass element $m_i$ to the rotation axis. Just as mass governs how a system responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
+\subsection{Compactness}\label{sec:standard_compactness}
+Compactness is the dimensionless ratio of a system's mass to its radius, scaled by $G/c^2$. The most common forms are $C = GM/(Rc^2)$ and $r_s/R = 2GM/(Rc^2) = 2C$, where $r_s = 2GM/c^2$ is the Schwarzschild radius. Both measure how close a system sits to its Schwarzschild threshold: $r_s/R = 1$ marks the gravitational-collapse condition.
 
-\subsection{Linear Inertia}
-Linear inertia is mass:
-\begin{equation} \label{eq:mass}
-M = \sum_i m_i
-\end{equation}
-where $m_i$ are the constituent mass elements. Linear inertia defines how an applied force translates into translational acceleration. It is quantified entirely by mass ($F = ma$). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
-
-\subsection{Isometric Scaling}
-Isometric scaling is the uniform scaling of a system in all spatial dimensions while maintaining constant density. Under isometric scaling, every length in the system scales by the same factor $k$:
-\begin{equation} \label{eq:length_scaling}
-\ell' = k\ell
-\end{equation}
-where $\ell$ is the characteristic length of the system and $k$ is the linear scale factor. Isometric scaling of a system by a factor of $k$ results in the following changes to mass, radius, and moment of inertia:
-
-\begin{equation} \label{eq:mass_scaling}
-M' = k^3 M
-\end{equation}
-where $M$ is the mass and $k$ is the linear scale factor.
-
-\begin{equation} \label{eq:radius_scaling}
-R' = kR
-\end{equation}
-where $R$ is the radius.
-
-\begin{equation} \label{eq:inertia_scaling}
-I' = k^5 I
-\end{equation}
-where $I$ is the moment of inertia and $k$ is the linear scale factor.
-
-\subsection{Inertia Abstracts Mass and Radius}
-Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia, then an identical torque applied to each system will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually.
-
-\section{Inertial Density $P$}\label{sec:inertial_density}
+\subsection{Inertial Density $P$}\label{sec:inertial_density}
 Inertial density $P$ \citep{degerlia202505} is the moment of inertia of a system divided by its volume:
 \begin{equation}
 P = I/V
@@ -220,7 +183,7 @@ Setting $R = r_s$ (the Schwarzschild condition) \citep{schwarzschild1916radius} 
 \begin{equation}
 D_{crit} = \frac{c^2}{2G} = (6.73295 \pm 0.00015) \times 10^{26} \text{ kg/m}
 \end{equation}
-Note this value is exact and accurate to the limit of precision imposed by $G$, which is accurate to six significant figures with a margin of error of $15/10^6$ \citep{codata2018}. 
+Note this value is exact; its precision is limited by $G = (6.67430 \pm 0.00015) \times 10^{-11}$ m$^3$\,kg$^{-1}$\,s$^{-2}$ \citep{codata2018}. 
 
 \section{The Space-Time Equivalence}
 The following identity relates the time-dilation ratio of two uniform spherical systems to their mass and radius.\footnote{This identity has been previously referred to as the ``space-time equivalence''~\cite{degerlia202501}.}
@@ -249,7 +212,7 @@ where $d\tau/dt$ is the time-dilation factor between the two systems and $k$ is 
 \end{itemize}
 Same $k$ symbol across forms: a given numerical $k$ produces the same time-scale-factor result regardless of which form it appears in.
 
-\subsection{STE Example}
+\subsection{Classical Static Density Example}
 
 \begin{mdframed}
 \textbf{Setup.} A uniform sphere of mass $1$\,kg and radius $1$\,m (System~2) is scaled isometrically by a factor of two, producing a sphere of mass $2^3 = 8$\,kg and radius $2$\,m (System~1). The linear scale factor between them is $k = R_1/R_2 = 2$ by construction.
@@ -276,7 +239,7 @@ so the relative time dilation between the two systems is
 k_d = \frac{D_1}{D_2} = \frac{4}{1} = 4 = k^2, \qquad \sqrt{k_d} = 2 = k.
 \]
 
-This matches the STE Example column of Appendix~\ref{app:pair_table}: the gravitational time dilation ratio is $1 - 2.22785 \times 10^{-27}$ and $\sqrt{k_d} = 2$.
+This matches the Classical Static Density Example column of Appendix~\ref{app:pair_table}: the gravitational time dilation ratio is $1 - 2.22785 \times 10^{-27}$ and $\sqrt{k_d} = 2$.
 
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{ste_example.pdf}
@@ -316,35 +279,33 @@ k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1}
 \]
 The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/R$, this is $D_1/D_2 = R_2/R_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
 
-This case is the standard gravitational time-dilation calculation; the $M_1 R_2/(M_2 R_1)$ ratio reduces to the familiar Schwarzschild factor here. Both systems are written out and computed independently below --- the same Schwarzschild calculation, with the second system (the same mass at its Schwarzschild radius) made visible instead of folded into $r_s$.
+This case is the standard gravitational time-dilation calculation; the $M_1 R_2/(M_2 R_1)$ ratio reduces to the familiar Schwarzschild factor here.
 
 \begin{mdframed}
-\textbf{Example (Static Mass):} $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m (near the Schwarzschild radius). $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = 7.00000 \times 10^{8}$\,m.
+\textbf{Example (Static Mass):} System 1 is the system being measured; System 2 is the same mass at its Schwarzschild radius. $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m. $S_2$: $M_2 = M_1$, $R_2 = r_s = 2GM_1/c^2 = 2.97046 \times 10^{3}$\,m.
 
 DeGerlia compactness ratio:
 \[
-k_d = \frac{R_2}{R_1} = \frac{7.00000 \times 10^{8}}{3.00000 \times 10^{3}} = 2.33333 \times 10^{5}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.90155 \times 10^{-1}
 \]
 
-\textbf{GTD calculation:} Schwarzschild gravitational time dilation directly. With $M_1 = M_2$, both systems share the same Schwarzschild radius:
-\begin{align}
-r_{s,1} = r_{s,2} &= \frac{2GM}{c^2} = \frac{2(6.67430 \times 10^{-11})(2.00000 \times 10^{30})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 2.97046 \times 10^{3}\,\text{m} \notag
-\end{align}
-GTD for each system via $\sqrt{1 - r_s/R}$:
-\begin{align}
-\text{GTD}_1 &= \sqrt{1 - \frac{r_{s,1}}{R_1}} = \sqrt{1 - \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}}} \notag \\
-&= \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1} \notag \\
-\text{GTD}_2 &= \sqrt{1 - \frac{r_{s,2}}{R_2}} = \sqrt{1 - \frac{2.97046 \times 10^{3}}{7.00000 \times 10^{8}}} \notag \\
-&= \sqrt{1 - 4.24352 \times 10^{-6}} = 1 - 2.12176 \times 10^{-6} \notag
-\end{align}
-giving the relative pace of time:
+Schwarzschild ratio:
 \[
-\frac{\text{GTD}_1}{\text{GTD}_2} = \frac{1 - 9.00777 \times 10^{-1}}{1 - 2.12176 \times 10^{-6}} = 1 - 9.00776 \times 10^{-1}
+k_s = \frac{r_s}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.90155 \times 10^{-1}
 \]
-\end{mdframed}
 
-\noindent See Table~\ref{tab:pair_ratios}, column $M = M$.
+GTD via $k_d$:
+\[
+\sqrt{1 - k_d} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1}
+\]
+
+GTD via $k_s$:
+\[
+\sqrt{1 - k_s} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1}
+\]
+
+This case is tabulated in Table~\ref{tab:pair_ratios}, column $M = M$ of Appendix~\ref{app:pair_table}.
+\end{mdframed}
 
 \subsection{Static Radius (Linear) ($R_1 = R_2$)}
 
@@ -355,34 +316,30 @@ k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2}
 The DeGerlia compactness ratio reduces to a ratio of masses. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \begin{mdframed}
-\textbf{Example (Static Radius):} $S_1$: $M_1 = 1.00000 \times 10^{30}$\,kg, $S_2$: $M_2 = 1.00000 \times 10^{24}$\,kg, both at $R = 1.00000 \times 10^{8}$\,m.
+\textbf{Example (Static Radius):} System 1 is the system being measured; System 2 is at its Schwarzschild radius, defining the common radius. $S_1$: $M_1 = 2.00000 \times 10^{28}$\,kg, $R_1 = 2.97046 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = R_1 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m.
 
 DeGerlia compactness ratio:
 \[
-k_d = \frac{M_1}{M_2} = \frac{1.00000 \times 10^{30}}{1.00000 \times 10^{24}} = 1.00000 \times 10^{6}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2} = \frac{2.00000 \times 10^{28}}{2.00000 \times 10^{30}} = 1.00000 \times 10^{-2}
 \]
 
-\textbf{GTD calculation:} Schwarzschild gravitational time dilation directly. Each system's Schwarzschild radius is $r_s = 2GM/c^2$:
-\begin{align}
-r_{s,1} &= \frac{2GM_1}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{30})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{3}\,\text{m} \notag \\
-r_{s,2} &= \frac{2GM_2}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{24})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{-3}\,\text{m} \notag
-\end{align}
-GTD for each system via $\sqrt{1 - r_s/R}$:
-\begin{align}
-\text{GTD}_1 &= \sqrt{1 - \frac{r_{s,1}}{R}} = \sqrt{1 - \frac{1.48523 \times 10^{3}}{1.00000 \times 10^{8}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-5}} = 1 - 7.42619 \times 10^{-6} \notag \\
-\text{GTD}_2 &= \sqrt{1 - \frac{r_{s,2}}{R}} = \sqrt{1 - \frac{1.48523 \times 10^{-3}}{1.00000 \times 10^{8}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-11}} = 1 - 7.42616 \times 10^{-12} \notag
-\end{align}
-giving the relative pace of time:
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{1}$\,m):
 \[
-\frac{\text{GTD}_1}{\text{GTD}_2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42616 \times 10^{-12}} = 1 - 7.42618 \times 10^{-6}
+k_s = \frac{r_{s,1}}{R_1} = \frac{2.97046 \times 10^{1}}{2.97046 \times 10^{3}} = 1.00000 \times 10^{-2}
 \]
-\end{mdframed}
 
-\noindent See Table~\ref{tab:pair_ratios}, column $R = R$.
+GTD via $k_d$:
+\[
+\sqrt{1 - k_d} = \sqrt{1 - 1.00000 \times 10^{-2}} = 1 - 5.01256 \times 10^{-3}
+\]
+
+GTD via $k_s$:
+\[
+\sqrt{1 - k_s} = \sqrt{1 - 1.00000 \times 10^{-2}} = 1 - 5.01256 \times 10^{-3}
+\]
+
+This case is tabulated in Table~\ref{tab:pair_ratios}, column $R = R$ of Appendix~\ref{app:pair_table}.
+\end{mdframed}
 
 \subsection{Constant Density (Isometric) ($\rho_1 = \rho_2$)}
 
@@ -393,34 +350,30 @@ k_d = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_1}{R_2}\right)^3 \cdot \frac{R_2}{
 The DeGerlia compactness ratio reduces to the square of the radius ratio. The linear scale factor follows as $\sqrt{k_d} = R_1/R_2$, recovering the isometric equivalence.
 
 \begin{mdframed}
-\textbf{Example (Constant Density):} $S_1$: $M_1 = 1.00000 \times 10^{30}$\,kg, $R_1 = 1.00000 \times 10^{8}$\,m. $S_2$: $M_2 = 1.00000 \times 10^{27}$\,kg, $R_2 = 1.00000 \times 10^{7}$\,m. Both at $\rho = 2.38732 \times 10^{5}$\,kg/m$^3$.
+\textbf{Example (Constant Density):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 7.63040 \times 10^{28}$\,kg, $R_1 = 1.00000 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both at $\rho = 1.82181 \times 10^{19}$\,kg/m$^3$.
 
-Compactness ratio and linear scale factor:
+DeGerlia compactness ratio:
 \[
-k_d = \left(\frac{R_1}{R_2}\right)^2 = 1.00000 \times 10^{2}, \qquad \sqrt{k_d} = \frac{R_1}{R_2} = 1.00000 \times 10^{1}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(7.63040 \times 10^{28})(2.97046 \times 10^{3})}{(2.00000 \times 10^{30})(1.00000 \times 10^{3})} = 1.13327 \times 10^{-1}
 \]
 
-\textbf{GTD calculation:} Schwarzschild gravitational time dilation directly. Each system's Schwarzschild radius is $r_s = 2GM/c^2$:
-\begin{align}
-r_{s,1} &= \frac{2GM_1}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{30})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{3}\,\text{m} \notag \\
-r_{s,2} &= \frac{2GM_2}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{27})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{0}\,\text{m} \notag
-\end{align}
-GTD for each system via $\sqrt{1 - r_s/R}$:
-\begin{align}
-\text{GTD}_1 &= \sqrt{1 - \frac{r_{s,1}}{R_1}} = \sqrt{1 - \frac{1.48523 \times 10^{3}}{1.00000 \times 10^{8}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-5}} = 1 - 7.42619 \times 10^{-6} \notag \\
-\text{GTD}_2 &= \sqrt{1 - \frac{r_{s,2}}{R_2}} = \sqrt{1 - \frac{1.48523 \times 10^{0}}{1.00000 \times 10^{7}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-7}} = 1 - 7.42616 \times 10^{-8} \notag
-\end{align}
-giving the relative pace of time:
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 1.13327 \times 10^{2}$\,m):
 \[
-\frac{\text{GTD}_1}{\text{GTD}_2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42616 \times 10^{-8}} = 1 - 7.35193 \times 10^{-6}
+k_s = \frac{r_{s,1}}{R_1} = \frac{1.13327 \times 10^{2}}{1.00000 \times 10^{3}} = 1.13327 \times 10^{-1}
 \]
+
+GTD via $k_d$:
+\[
+\sqrt{1 - k_d} = \sqrt{1 - 1.13327 \times 10^{-1}} = 1 - 5.83337 \times 10^{-2}
+\]
+
+GTD via $k_s$:
+\[
+\sqrt{1 - k_s} = \sqrt{1 - 1.13327 \times 10^{-1}} = 1 - 5.83337 \times 10^{-2}
+\]
+
+This case is tabulated in Table~\ref{tab:pair_ratios}, column $\rho = \rho$ of Appendix~\ref{app:pair_table}.
 \end{mdframed}
-
-\noindent See Table~\ref{tab:pair_ratios}, column $\rho = \rho$.
 
 \subsection{Constant Inertia ($I_1 = I_2$)}
 
@@ -431,34 +384,30 @@ k_d = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_2}{R_1}\right)^2 \cdot \frac{R_2}{
 The DeGerlia compactness ratio reduces to the cube of the radius ratio.
 
 \begin{mdframed}
-\textbf{Example (Constant Inertia):} $S_1$: $M_1 = 1.00000 \times 10^{32}$\,kg, $R_1 = 1.00000 \times 10^{7}$\,m. $S_2$: $M_2 = 1.00000 \times 10^{30}$\,kg, $R_2 = 1.00000 \times 10^{8}$\,m. Both have $I = MR^2 = 1.00000 \times 10^{46}$\,kg$\cdot$m$^2$.
+\textbf{Example (Constant Inertia):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 1.76450 \times 10^{29}$\,kg, $R_1 = 1.00000 \times 10^{4}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both have $I = MR^2 = 1.76450 \times 10^{37}$\,kg$\cdot$m$^2$.
 
 DeGerlia compactness ratio:
 \[
-k_d = \left(\frac{R_2}{R_1}\right)^3 = \left(\frac{1.00000 \times 10^{8}}{1.00000 \times 10^{7}}\right)^3 = 1.00000 \times 10^{3}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(1.76450 \times 10^{29})(2.97046 \times 10^{3})}{(2.00000 \times 10^{30})(1.00000 \times 10^{4})} = 2.62034 \times 10^{-2}
 \]
 
-\textbf{GTD calculation:} Schwarzschild gravitational time dilation directly. Each system's Schwarzschild radius is $r_s = 2GM/c^2$:
-\begin{align}
-r_{s,1} &= \frac{2GM_1}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{32})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{5}\,\text{m} \notag \\
-r_{s,2} &= \frac{2GM_2}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{30})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{3}\,\text{m} \notag
-\end{align}
-GTD for each system via $\sqrt{1 - r_s/R}$:
-\begin{align}
-\text{GTD}_1 &= \sqrt{1 - \frac{r_{s,1}}{R_1}} = \sqrt{1 - \frac{1.48523 \times 10^{5}}{1.00000 \times 10^{7}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-2}} = 1 - 7.45394 \times 10^{-3} \notag \\
-\text{GTD}_2 &= \sqrt{1 - \frac{r_{s,2}}{R_2}} = \sqrt{1 - \frac{1.48523 \times 10^{3}}{1.00000 \times 10^{8}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-5}} = 1 - 7.42619 \times 10^{-6} \notag
-\end{align}
-giving the relative pace of time:
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.62034 \times 10^{2}$\,m):
 \[
-\frac{\text{GTD}_1}{\text{GTD}_2} = \frac{1 - 7.45394 \times 10^{-3}}{1 - 7.42619 \times 10^{-6}} = 1 - 7.44657 \times 10^{-3}
+k_s = \frac{r_{s,1}}{R_1} = \frac{2.62034 \times 10^{2}}{1.00000 \times 10^{4}} = 2.62034 \times 10^{-2}
 \]
-\end{mdframed}
 
-\noindent See Table~\ref{tab:pair_ratios}, column $I = I$.
+GTD via $k_d$:
+\[
+\sqrt{1 - k_d} = \sqrt{1 - 2.62034 \times 10^{-2}} = 1 - 1.31836 \times 10^{-2}
+\]
+
+GTD via $k_s$:
+\[
+\sqrt{1 - k_s} = \sqrt{1 - 2.62034 \times 10^{-2}} = 1 - 1.31836 \times 10^{-2}
+\]
+
+This case is tabulated in Table~\ref{tab:pair_ratios}, column $I = I$ of Appendix~\ref{app:pair_table}.
+\end{mdframed}
 
 \subsection{General Case (unconstrained)}
 
@@ -469,34 +418,30 @@ k_d = \frac{M_1 R_2}{M_2 R_1}
 Both mass and radius must be specified independently for each system.
 
 \begin{mdframed}
-\textbf{Example (General Case):} $S_1$: $M_1 = 1.00000 \times 10^{20}$\,kg, $R_1 = 2.00000 \times 10^{-7}$\,m. $S_2$: $M_2 = 1.00000 \times 10^{30}$\,kg, $R_2 = 1.00000 \times 10^{7}$\,m.
+\textbf{Example (General Case):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 1.00000 \times 10^{29}$\,kg, $R_1 = 1.00000 \times 10^{4}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m.
 
 DeGerlia compactness ratio:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(1.00000 \times 10^{20})(1.00000 \times 10^{7})}{(1.00000 \times 10^{30})(2.00000 \times 10^{-7})} = 5.00000 \times 10^{3}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(1.00000 \times 10^{29})(2.97046 \times 10^{3})}{(2.00000 \times 10^{30})(1.00000 \times 10^{4})} = 1.48523 \times 10^{-2}
 \]
 
-\textbf{GTD calculation:} Schwarzschild gravitational time dilation directly. Each system's Schwarzschild radius is $r_s = 2GM/c^2$:
-\begin{align}
-r_{s,1} &= \frac{2GM_1}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{20})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{-7}\,\text{m} \notag \\
-r_{s,2} &= \frac{2GM_2}{c^2} = \frac{2(6.67430 \times 10^{-11})(1.00000 \times 10^{30})}{(2.99792 \times 10^{8})^2} \notag \\
-&= 1.48523 \times 10^{3}\,\text{m} \notag
-\end{align}
-GTD for each system via $\sqrt{1 - r_s/R}$:
-\begin{align}
-\text{GTD}_1 &= \sqrt{1 - \frac{r_{s,1}}{R_1}} = \sqrt{1 - \frac{1.48523 \times 10^{-7}}{2.00000 \times 10^{-7}}} \notag \\
-&= \sqrt{1 - 7.42617 \times 10^{-1}} = 1 - 4.92670 \times 10^{-1} \notag \\
-\text{GTD}_2 &= \sqrt{1 - \frac{r_{s,2}}{R_2}} = \sqrt{1 - \frac{1.48523 \times 10^{3}}{1.00000 \times 10^{7}}} \notag \\
-&= \sqrt{1 - 1.48523 \times 10^{-4}} = 1 - 7.42644 \times 10^{-5} \notag
-\end{align}
-giving the relative pace of time:
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 1.48523 \times 10^{2}$\,m):
 \[
-\frac{\text{GTD}_1}{\text{GTD}_2} = \frac{1 - 4.92670 \times 10^{-1}}{1 - 7.42644 \times 10^{-5}} = 1 - 4.92632 \times 10^{-1}
+k_s = \frac{r_{s,1}}{R_1} = \frac{1.48523 \times 10^{2}}{1.00000 \times 10^{4}} = 1.48523 \times 10^{-2}
 \]
-\end{mdframed}
 
-\noindent See Table~\ref{tab:pair_ratios}, column General.
+GTD via $k_d$:
+\[
+\sqrt{1 - k_d} = \sqrt{1 - 1.48523 \times 10^{-2}} = 1 - 7.45394 \times 10^{-3}
+\]
+
+GTD via $k_s$:
+\[
+\sqrt{1 - k_s} = \sqrt{1 - 1.48523 \times 10^{-2}} = 1 - 7.45394 \times 10^{-3}
+\]
+
+This case is tabulated in Table~\ref{tab:pair_ratios}, column General of Appendix~\ref{app:pair_table}.
+\end{mdframed}
 
 \section*{Acknowledgments}
 This work was conducted independently and received no external funding.

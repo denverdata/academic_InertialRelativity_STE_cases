@@ -6,7 +6,7 @@
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l @{}}
 \toprule
- & \textbf{Case 1 ($M\!=\!M$)} & \textbf{Case 2 ($R\!=\!R$)} & \textbf{Case 3 ($\rho\!=\!\rho$)} & \textbf{Case 4 ($I\!=\!I$)} & \textbf{General} & \textbf{STE Example} \\
+ & \textbf{Case 1 ($M\!=\!M$)} & \textbf{Case 2 ($R\!=\!R$)} & \textbf{Case 3 ($\rho\!=\!\rho$)} & \textbf{Case 4 ($I\!=\!I$)} & \textbf{General} & \textbf{Classical ($\rho\!=\!\rho$)} \\
 \midrule
 $m_1$ (kg) & {\ttfamily 2.00000e+30} & {\ttfamily 1.00000e+30} & {\ttfamily 1.00000e+30} & {\ttfamily 1.00000e+32} & {\ttfamily 1.00000e+20} & {\ttfamily 8.00000e+0} \\
 $m_2$ (kg) & {\ttfamily 2.00000e+30} & {\ttfamily 1.00000e+24} & {\ttfamily 1.00000e+27} & {\ttfamily 1.00000e+30} & {\ttfamily 1.00000e+30} & {\ttfamily 1.00000e+0} \\
@@ -22,8 +22,12 @@ $D_{1\_norm}$ & {\ttfamily 9.90155e-1} & {\ttfamily 1.48523e-5} & {\ttfamily 1.4
 $D_{2\_norm}$ & {\ttfamily 4.24352e-6} & {\ttfamily 1.48523e-11} & {\ttfamily 1.48523e-7} & {\ttfamily 1.48523e-5} & {\ttfamily 1.48523e-4} & {\ttfamily 1.48523e-27} \\
 $r_{s\_1}$ (m) & {\ttfamily 2.97046e+3} & {\ttfamily 1.48523e+3} & {\ttfamily 1.48523e+3} & {\ttfamily 1.48523e+5} & {\ttfamily 1.48523e-7} & {\ttfamily 1.18819e-26} \\
 $r_{s\_2}$ (m) & {\ttfamily 2.97046e+3} & {\ttfamily 1.48523e-3} & {\ttfamily 1.48523e+0} & {\ttfamily 1.48523e+3} & {\ttfamily 1.48523e+3} & {\ttfamily 1.48523e-27} \\
-$gtd_1$ & {\ttfamily 1-9.00777e-1} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.45394e-3} & {\ttfamily 1-4.92670e-1} & {\ttfamily 1-2.97046e-27} \\
-$gtd_2$ & {\ttfamily 1-2.12176e-6} & {\ttfamily 1-7.42616e-12} & {\ttfamily 1-7.42616e-8} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42644e-5} & {\ttfamily 1-7.42616e-28} \\
+$k_s$ & {\ttfamily 9.90155e-1} & {\ttfamily 1.48523e-5} & {\ttfamily 1.48523e-5} & {\ttfamily 1.48523e-2} & {\ttfamily 7.42616e-1} & {\ttfamily 5.94093e-27} \\
+$k_d$ & {\ttfamily 9.90155e-1} & {\ttfamily 1.48523e-5} & {\ttfamily 1.48523e-5} & {\ttfamily 1.48523e-2} & {\ttfamily 7.42617e-1} & {\ttfamily 5.94093e-27} \\
+$\mathrm{GTD}_{s,1}$ & {\ttfamily 1-9.00777e-1} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.45394e-3} & {\ttfamily 1-4.92670e-1} & {\ttfamily 1-2.97046e-27} \\
+$\mathrm{GTD}_{s,2}$ & {\ttfamily 1-2.12176e-6} & {\ttfamily 1-7.42616e-12} & {\ttfamily 1-7.42616e-8} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42644e-5} & {\ttfamily 1-7.42616e-28} \\
+$\mathrm{GTD}_{d,1}$ & {\ttfamily 1-9.00780e-1} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.45395e-3} & {\ttfamily 1-4.92670e-1} & {\ttfamily 1-2.97047e-27} \\
+$\mathrm{GTD}_{d,2}$ & {\ttfamily 1-2.12176e-6} & {\ttfamily 1-7.42617e-12} & {\ttfamily 1-7.42617e-8} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.42644e-5} & {\ttfamily 1-7.42617e-28} \\
 \bottomrule
 \end{tabular*}
 \end{table*}
@@ -36,7 +40,7 @@ $gtd_2$ & {\ttfamily 1-2.12176e-6} & {\ttfamily 1-7.42616e-12} & {\ttfamily 1-7.
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l @{}}
 \toprule
- & \textbf{Case 1 ($M\!=\!M$)} & \textbf{Case 2 ($R\!=\!R$)} & \textbf{Case 3 ($\rho\!=\!\rho$)} & \textbf{Case 4 ($I\!=\!I$)} & \textbf{General} & \textbf{STE Example} \\
+ & \textbf{Case 1 ($M\!=\!M$)} & \textbf{Case 2 ($R\!=\!R$)} & \textbf{Case 3 ($\rho\!=\!\rho$)} & \textbf{Case 4 ($I\!=\!I$)} & \textbf{General} & \textbf{Classical ($\rho\!=\!\rho$)} \\
 \midrule
 $\sqrt{D_1/D_2}$ & {\ttfamily 4.83046e+2} & {\ttfamily 1.00000e+3} & {\ttfamily 1.00000e+1} & {\ttfamily 3.16228e+1} & {\ttfamily 7.07107e+1} & {\ttfamily 2.00000e+0} \\
 $\sqrt{(m_1 r_2)/(m_2 r_1)}$ & {\ttfamily 4.83046e+2} & {\ttfamily 1.00000e+3} & {\ttfamily 1.00000e+1} & {\ttfamily 3.16228e+1} & {\ttfamily 7.07107e+1} & {\ttfamily 2.00000e+0} \\
@@ -47,7 +51,8 @@ $(m_1 r_2)/(m_2 r_1)$ & {\ttfamily 2.33333e+5} & {\ttfamily 1.00000e+6} & {\ttfa
 $D_1/D_2$ & {\ttfamily 2.33333e+5} & {\ttfamily 1.00000e+6} & {\ttfamily 1.00000e+2} & {\ttfamily 1.00000e+3} & {\ttfamily 5.00000e+3} & {\ttfamily 4.00000e+0} \\
 $(I_1/I_2)(r_2/r_1)^3$ & {\ttfamily 2.33333e+5} & {\ttfamily 1.00000e+6} & {\ttfamily 1.00000e+2} & {\ttfamily 1.00000e+3} & {\ttfamily 5.00000e+3} & {\ttfamily 4.00000e+0} \\
 [3pt]\hline\\[-6pt]
-$gtd_1/gtd_2$ & {\ttfamily 1-9.00776e-1} & {\ttfamily 1-7.42618e-6} & {\ttfamily 1-7.35193e-6} & {\ttfamily 1-7.44657e-3} & {\ttfamily 1-4.92632e-1} & {\ttfamily 1-2.22785e-27} \\
+$\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2}$ & {\ttfamily 1-9.00776e-1} & {\ttfamily 1-7.42618e-6} & {\ttfamily 1-7.35193e-6} & {\ttfamily 1-7.44657e-3} & {\ttfamily 1-4.92632e-1} & {\ttfamily 1-2.22785e-27} \\
+$\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2}$ & {\ttfamily 1-9.00780e-1} & {\ttfamily 1-7.42619e-6} & {\ttfamily 1-7.35193e-6} & {\ttfamily 1-7.44658e-3} & {\ttfamily 1-4.92633e-1} & {\ttfamily 1-2.22785e-27} \\
 [3pt]\hline\\[-6pt]
 $I_1/I_2$ & {\ttfamily 1.83673e-11} & {\ttfamily 1.00000e+6} & {\ttfamily 1.00000e+5} & {\ttfamily 1.00000e+0} & {\ttfamily 4.00000e-38} & {\ttfamily 3.20000e+1} \\
 $(I_1/I_2)^{1/2}$ & {\ttfamily 4.28571e-6} & {\ttfamily 1.00000e+3} & {\ttfamily 3.16228e+2} & {\ttfamily 1.00000e+0} & {\ttfamily 2.00000e-19} & {\ttfamily 5.65685e+0} \\
