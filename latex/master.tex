@@ -271,22 +271,38 @@ The universal scale factor between any two systems is the DeGerlia compactness r
 
 Numerical values are reported at six significant figures in e-style notation. Reference constants used throughout: $D_{crit} = 6.73295 \times 10^{26}$ kg/m, $G = 6.67430 \times 10^{-11}$ m$^3$\,kg$^{-1}$\,s$^{-2}$, $c = 2.99792 \times 10^{8}$ m/s. Example parameter sets match the columns of the pair comparison tables (Appendix~\ref{app:pair_table}).
 
-\subsection{Static Mass (Gravitational) ($M_1 = M_2$)}
+\subsection{Static Mass ($M_1 = M_2$)}
 
-When the two systems share the same mass, the mass terms cancel in $k_d$:
+When the two systems share the same mass, $k_d$ is the ratio of their DeGerlia compactness values:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
 \]
-The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/R$, this is $D_1/D_2 = R_2/R_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
+Each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
 
-This case is the standard gravitational time-dilation calculation; the $M_1 R_2/(M_2 R_1)$ ratio reduces to the familiar Schwarzschild factor here.
+This case is the standard gravitational time-dilation calculation; the DeGerlia compactness ratio $D_1/D_2$ produces the familiar Schwarzschild factor here.
 
 \begin{mdframed}
 \textbf{Example (Static Mass):} System 1 is the system being measured; System 2 is the same mass at its Schwarzschild radius. $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m. $S_2$: $M_2 = M_1$, $R_2 = r_s = 2GM_1/c^2 = 2.97046 \times 10^{3}$\,m.
 
+DeGerlia compactness for each system:
+\[
+D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{30}}{3.00000 \times 10^{3}} = 6.66667 \times 10^{26} \text{ kg/m}
+\]
+\[
+D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
+\]
+
+Normalized to the DeGerlia Threshold:
+\[
+D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{6.66667 \times 10^{26}}{6.73295 \times 10^{26}} = 9.90155 \times 10^{-1}
+\]
+\[
+D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
+\]
+
 DeGerlia compactness ratio:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.90155 \times 10^{-1}
+k_d = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 9.90155 \times 10^{-1}
 \]
 
 Schwarzschild ratio:
@@ -296,7 +312,7 @@ k_s = \frac{r_s}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.
 
 GTD via $k_d$:
 \[
-\sqrt{1 - k_d} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1}
+\sqrt{1 - k_d} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 9.00780 \times 10^{-1}
 \]
 
 GTD via $k_s$:
@@ -307,20 +323,36 @@ GTD via $k_s$:
 This case is tabulated in Table~\ref{tab:pair_ratios}, column $M = M$ of Appendix~\ref{app:pair_table}.
 \end{mdframed}
 
-\subsection{Static Radius (Linear) ($R_1 = R_2$)}
+\subsection{Static Radius ($R_1 = R_2$)}
 
-When the two systems share the same radius, the radius terms cancel in $k_d$:
+When the two systems share the same radius, $k_d$ is the ratio of their DeGerlia compactness values:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2}
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
 \]
-The DeGerlia compactness ratio reduces to a ratio of masses. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \begin{mdframed}
 \textbf{Example (Static Radius):} System 1 is the system being measured; System 2 is at its Schwarzschild radius, defining the common radius. $S_1$: $M_1 = 2.00000 \times 10^{28}$\,kg, $R_1 = 2.97046 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = R_1 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m.
 
+DeGerlia compactness for each system:
+\[
+D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{28}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{24} \text{ kg/m}
+\]
+\[
+D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
+\]
+
+Normalized to the DeGerlia Threshold:
+\[
+D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{6.73295 \times 10^{24}}{6.73295 \times 10^{26}} = 1.00000 \times 10^{-2}
+\]
+\[
+D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
+\]
+
 DeGerlia compactness ratio:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2} = \frac{2.00000 \times 10^{28}}{2.00000 \times 10^{30}} = 1.00000 \times 10^{-2}
+k_d = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 1.00000 \times 10^{-2}
 \]
 
 Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{1}$\,m):
@@ -330,7 +362,7 @@ k_s = \frac{r_{s,1}}{R_1} = \frac{2.97046 \times 10^{1}}{2.97046 \times 10^{3}} 
 
 GTD via $k_d$:
 \[
-\sqrt{1 - k_d} = \sqrt{1 - 1.00000 \times 10^{-2}} = 1 - 5.01256 \times 10^{-3}
+\sqrt{1 - k_d} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 5.01256 \times 10^{-3}
 \]
 
 GTD via $k_s$:
