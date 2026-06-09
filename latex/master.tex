@@ -373,35 +373,51 @@ GTD via $k_s$:
 This case is tabulated in Table~\ref{tab:pair_ratios}, column $R = R$ of Appendix~\ref{app:pair_table}.
 \end{mdframed}
 
-\subsection{Constant Density (Isometric) ($\rho_1 = \rho_2$)}
+\subsection{Constant Density ($\rho_1 = \rho_2$)}
 
-When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$. Substituting into $k_d$:
+When the two systems share the same density, $k_d$ is the ratio of their DeGerlia compactness values:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_1}{R_2}\right)^3 \cdot \frac{R_2}{R_1} = \left(\frac{R_1}{R_2}\right)^2
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
 \]
-The DeGerlia compactness ratio reduces to the square of the radius ratio. The linear scale factor follows as $\sqrt{k_d} = R_1/R_2$, recovering the isometric equivalence.
+Since $\rho_1 = \rho_2$ implies $M \propto R^3$, $\sqrt{k_d} = R_1/R_2$ — the isometric linear scale factor between the two systems.
 
 \begin{mdframed}
 \textbf{Example (Constant Density):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 7.63040 \times 10^{28}$\,kg, $R_1 = 1.00000 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both at $\rho = 1.82181 \times 10^{19}$\,kg/m$^3$.
 
-DeGerlia compactness ratio:
+DeGerlia compactness for each system:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(7.63040 \times 10^{28})(2.97046 \times 10^{3})}{(2.00000 \times 10^{30})(1.00000 \times 10^{3})} = 1.13327 \times 10^{-1}
+D_1 = \frac{M_1}{R_1} = \frac{7.63040 \times 10^{28}}{1.00000 \times 10^{3}} = 7.63040 \times 10^{25} \text{ kg/m}
+\]
+\[
+D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
 \]
 
-Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 1.13327 \times 10^{2}$\,m):
+Normalized to the DeGerlia Threshold:
 \[
-k_s = \frac{r_{s,1}}{R_1} = \frac{1.13327 \times 10^{2}}{1.00000 \times 10^{3}} = 1.13327 \times 10^{-1}
+D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{7.63040 \times 10^{25}}{6.73295 \times 10^{26}} = 1.13329 \times 10^{-1}
+\]
+\[
+D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
+\]
+
+DeGerlia compactness ratio:
+\[
+k_d = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 1.13329 \times 10^{-1}
+\]
+
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 1.13329 \times 10^{2}$\,m):
+\[
+k_s = \frac{r_{s,1}}{R_1} = \frac{1.13329 \times 10^{2}}{1.00000 \times 10^{3}} = 1.13329 \times 10^{-1}
 \]
 
 GTD via $k_d$:
 \[
-\sqrt{1 - k_d} = \sqrt{1 - 1.13327 \times 10^{-1}} = 1 - 5.83337 \times 10^{-2}
+\sqrt{1 - k_d} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 5.83680 \times 10^{-2}
 \]
 
 GTD via $k_s$:
 \[
-\sqrt{1 - k_s} = \sqrt{1 - 1.13327 \times 10^{-1}} = 1 - 5.83337 \times 10^{-2}
+\sqrt{1 - k_s} = \sqrt{1 - 1.13329 \times 10^{-1}} = 1 - 5.83680 \times 10^{-2}
 \]
 
 This case is tabulated in Table~\ref{tab:pair_ratios}, column $\rho = \rho$ of Appendix~\ref{app:pair_table}.
@@ -409,33 +425,49 @@ This case is tabulated in Table~\ref{tab:pair_ratios}, column $\rho = \rho$ of A
 
 \subsection{Constant Inertia ($I_1 = I_2$)}
 
-When the two systems share the same moment of inertia, $M_1 R_1^2 = M_2 R_2^2$, so $M_1/M_2 = (R_2/R_1)^2$. Substituting into $k_d$:
+When the two systems share the same moment of inertia, $k_d$ is the ratio of their DeGerlia compactness values:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_2}{R_1}\right)^2 \cdot \frac{R_2}{R_1} = \left(\frac{R_2}{R_1}\right)^3
+k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
 \]
-The DeGerlia compactness ratio reduces to the cube of the radius ratio.
+Since $I_1 = I_2$ implies $M_1 R_1^2 = M_2 R_2^2$, $\sqrt[3]{k_d} = R_2/R_1$ — the radius ratio that preserves moment of inertia.
 
 \begin{mdframed}
 \textbf{Example (Constant Inertia):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 1.76450 \times 10^{29}$\,kg, $R_1 = 1.00000 \times 10^{4}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both have $I = MR^2 = 1.76450 \times 10^{37}$\,kg$\cdot$m$^2$.
 
-DeGerlia compactness ratio:
+DeGerlia compactness for each system:
 \[
-k_d = \frac{M_1 R_2}{M_2 R_1} = \frac{(1.76450 \times 10^{29})(2.97046 \times 10^{3})}{(2.00000 \times 10^{30})(1.00000 \times 10^{4})} = 2.62034 \times 10^{-2}
+D_1 = \frac{M_1}{R_1} = \frac{1.76450 \times 10^{29}}{1.00000 \times 10^{4}} = 1.76450 \times 10^{25} \text{ kg/m}
+\]
+\[
+D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
 \]
 
-Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.62034 \times 10^{2}$\,m):
+Normalized to the DeGerlia Threshold:
 \[
-k_s = \frac{r_{s,1}}{R_1} = \frac{2.62034 \times 10^{2}}{1.00000 \times 10^{4}} = 2.62034 \times 10^{-2}
+D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{1.76450 \times 10^{25}}{6.73295 \times 10^{26}} = 2.62069 \times 10^{-2}
+\]
+\[
+D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
+\]
+
+DeGerlia compactness ratio:
+\[
+k_d = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 2.62069 \times 10^{-2}
+\]
+
+Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.62069 \times 10^{2}$\,m):
+\[
+k_s = \frac{r_{s,1}}{R_1} = \frac{2.62069 \times 10^{2}}{1.00000 \times 10^{4}} = 2.62069 \times 10^{-2}
 \]
 
 GTD via $k_d$:
 \[
-\sqrt{1 - k_d} = \sqrt{1 - 2.62034 \times 10^{-2}} = 1 - 1.31836 \times 10^{-2}
+\sqrt{1 - k_d} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 1.31905 \times 10^{-2}
 \]
 
 GTD via $k_s$:
 \[
-\sqrt{1 - k_s} = \sqrt{1 - 2.62034 \times 10^{-2}} = 1 - 1.31836 \times 10^{-2}
+\sqrt{1 - k_s} = \sqrt{1 - 2.62069 \times 10^{-2}} = 1 - 1.31905 \times 10^{-2}
 \]
 
 This case is tabulated in Table~\ref{tab:pair_ratios}, column $I = I$ of Appendix~\ref{app:pair_table}.
