@@ -352,64 +352,28 @@ k = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2}
 The compactness ratio reduces to a ratio of masses. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \begin{mdframed}
-\textbf{Example (Static Radius):} System 1 is the system being measured; System 2 is at its Schwarzschild radius, defining the common radius. $S_1$: $M_1 = 2.00000 \times 10^{28}$\,kg, $R_1 = 2.97046 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = R_1 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m.
+\textbf{Example (Static Radius, Table Case 2):} System 1 is the system being measured; System 2 is an equal-radius reference system at a different mass.
 
-DeGerlia compactness for each system:
-\[
-D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{28}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{24} \text{ kg/m}
-\]
-\[
-D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
-\]
+System properties:
 
-Normalized to the DeGerlia Threshold:
-\[
-D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{6.73295 \times 10^{24}}{6.73295 \times 10^{26}} = 1.00000 \times 10^{-2}
-\]
-\[
-D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
-\]
+$S_1$: $M_1 = 1.00000 \times 10^{30}$\,kg, $R_1 = 1.00000 \times 10^{8}$\,m, $\rho_1 = 2.38732 \times 10^{5}$\,kg/m$^3$, $I_1 = 4.00000 \times 10^{45}$\,kg$\cdot$m$^2$.
 
-DeGerlia compactness ratio:
-\[
-k = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 1.00000 \times 10^{-2}
-\]
-
-Schwarzschild ratio for System 1 ($r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{1}$\,m):
-\[
-k = \frac{r_{s,1}}{R_1} = \frac{2.97046 \times 10^{1}}{2.97046 \times 10^{3}} = 1.00000 \times 10^{-2}
-\]
-
-GTD via $k$:
-\[
-\sqrt{1 - k} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 5.01256 \times 10^{-3}
-\]
-
-GTD via $k$:
-\[
-\sqrt{1 - k} = \sqrt{1 - 1.00000 \times 10^{-2}} = 1 - 5.01256 \times 10^{-3}
-\]
-
-This case is tabulated in Table~\ref{tab:pair_ratios}, column $R = R$ of \ref{app:pair_table}.
-\end{mdframed}
-
-\begin{mdframed}
-\textbf{Example (Static Radius, Table Case 2):} Two systems of equal radius and different masses. $S_1$: $M_1 = 1.00000 \times 10^{30}$\,kg, $R_1 = 1.00000 \times 10^{8}$\,m. $S_2$: $M_2 = 1.00000 \times 10^{24}$\,kg, $R_2 = 1.00000 \times 10^{8}$\,m.
+$S_2$: $M_2 = 1.00000 \times 10^{24}$\,kg, $R_2 = 1.00000 \times 10^{8}$\,m, $\rho_2 = 2.38732 \times 10^{-1}$\,kg/m$^3$, $I_2 = 4.00000 \times 10^{39}$\,kg$\cdot$m$^2$.
 
 DeGerlia compactness:
 \[
-D_1 = M_1/R_1 = 1.00000 \times 10^{22} \text{ kg/m}
+D_1 = \frac{M_1}{R_1} = \frac{1.00000 \times 10^{30}}{1.00000 \times 10^{8}} = 1.00000 \times 10^{22} \text{ kg/m}
 \]
 \[
-D_2 = M_2/R_2 = 1.00000 \times 10^{16} \text{ kg/m}
+D_2 = \frac{M_2}{R_2} = \frac{1.00000 \times 10^{24}}{1.00000 \times 10^{8}} = 1.00000 \times 10^{16} \text{ kg/m}
 \]
 
 Normalized to the DeGerlia Threshold:
 \[
-D_{norm,1} = D_1/D_{crit} = 1.48523 \times 10^{-5}
+D_{norm,1} = \frac{D_1}{D_{crit}} = 1.48523 \times 10^{-5}
 \]
 \[
-D_{norm,2} = D_2/D_{crit} = 1.48523 \times 10^{-11}
+D_{norm,2} = \frac{D_2}{D_{crit}} = 1.48523 \times 10^{-11}
 \]
 
 Schwarzschild radii:
@@ -420,9 +384,12 @@ r_{s,1} = 2GM_1/c^2 = 1.48523 \times 10^{3} \text{ m}
 r_{s,2} = 2GM_2/c^2 = 1.48523 \times 10^{-3} \text{ m}
 \]
 
-Schwarzschild ratio for System 1:
+Compactness ratio for System 1, computed two ways:
 \[
-k = r_{s,1}/R_1 = 1.48523 \times 10^{-5}
+k_s = r_{s,1}/R_1 = 1.48523 \times 10^{-5}
+\]
+\[
+k_d = D_{norm,1} = 1.48523 \times 10^{-5}
 \]
 
 GTD via $r_s/R$:
@@ -439,6 +406,14 @@ GTD via $D/D_{crit}$:
 \]
 \[
 \mathrm{GTD}_{d,2} = \sqrt{1 - D_{norm,2}} = 1 - 7.42617 \times 10^{-12}
+\]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+\[
+\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42616 \times 10^{-12}} = 1 - 7.42618 \times 10^{-6}
+\]
+\[
+\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42617 \times 10^{-12}} = 1 - 7.42619 \times 10^{-6}
 \]
 
 All values above appear in column $R\!=\!R$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.

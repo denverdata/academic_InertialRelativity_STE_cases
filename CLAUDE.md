@@ -4,27 +4,26 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Purpose
 
-This is a stripped-down companion to the main Inertial Relativity paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/`. It presents the M₁R₂/(M₂R₁) compactness relation that governs the time-dilation ratio between two uniform spherical systems, validated across six worked cases (classical-through-relativistic).
+This paper is **The DeGerlia Time Dilation Framework**: a two-system, scale-free notational and conceptual reframing of general relativity. It introduces no new physics — every relation stated is already contained in GR. The framework makes one relation explicit and convenient: time dilation as the inherently two-system, geometric quantity it already is, with GTD and DTD as orthogonal legs of a single unit relationship bound by GTD² + DTD² = 1.
 
-The paper is an **analysis of general relativity and special relativity as currently stated**. Not a new theory. Not an extension. Nothing is added to GR/SR. The math is drawn directly from the standard formulations.
+Companion to the main Inertial Relativity paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/`. Both stay alive.
 
-## Non-negotiable framing locks
+## Framing
 
-Read `~/.claude/projects/-Users-tomdegerlia-Develop-academic-academic_InertialRelativity_STE_cases/memory/project_scope.md` first — the framing locks are non-negotiable and govern all editing.
+- This is general relativity. No new physics, no new predictions. A re-notation of the same quantities.
+- DTD (DeGerlia time dilation, √k) is a **core paper term** and a defined geometric complement of GTD. Use it freely.
+- The paper presents critiques of the conventional *interpretive presentation* of GR (single-system framing, flat-spacetime habit) — never of the theory itself. Both are explicitly distinguished in the introduction.
+- Numbers: carry full precision, round once at the end to six significant figures. Last-digit differences between the k_s and k_d routes are calculation precision (D_crit precision), not physics.
+- Tone is confident and concrete. Define, present, demonstrate.
 
-In short:
-- **Do not state implications of any kind, anywhere.** Permitted: describe what the math IS or SHOWS. Forbidden: describe what the math MEANS, IMPLIES, SUGGESTS, or CHANGES about how to think about anything.
-- Do not treat anything as speculative or novel.
-- Do not add new derivations or extend equations. Strip-don't-author.
-- Tone is confident and minimal. Define, present, demonstrate, stop.
+## Terminology
 
-## Terminology — specific to this paper
-
-- **DeGerlia compactness** (not "DeGerlia inertial density"). Same quantity, more accessible term for general physics readership.
-- Symbol: italic **`$D$`** (not `\mathrm{DID}$`). Aligns with the appendix tables and with prior `degerlia202505` convention.
-- Threshold: **`$D_{crit}$`**.
-- Compactness ratio: **`$k_d$`** (unchanged).
-- **No DTD anywhere.** Use "gravitational time dilation," "Lorentz time dilation," or "time-dilation ratio."
+- **DeGerlia compactness**: $D = M/\bar{R}$, symbol italic `$D$` (not `\mathrm{DID}$`).
+- **DeGerlia Threshold**: `$D_{\mathrm{crit}} = c^2/2G = 6.73295 \times 10^{26}$ kg/m`.
+- **Scale factor**: `$k$` in three equivalent forms — `$v^2/c^2$`, `$r_s/R$`, `$D/D_{\mathrm{crit}}$`.
+- **Route labels**: `$k_s = r_s/R$` (Schwarzschild route), `$k_d = D/D_{\mathrm{crit}}$` (DeGerlia route). Analytically identical.
+- **GTD**: gravitational time dilation, `$\mathrm{GTD} = \sqrt{1-k}$`.
+- **DTD**: DeGerlia time dilation, `$\mathrm{DTD} = \sqrt{k}$` — the geometric complement of GTD.
 
 ## Build commands
 
@@ -74,4 +73,4 @@ Per `feedback_generator_scripts.md`: never hand-edit `pair_tables.tex` — updat
 - **Always compile from `latex/` directory** — root-level aux files pollute the tree and can break the build.
 - **Read memory files at session start.** The project memory at `~/.claude/projects/-Users-tomdegerlia-Develop-academic-academic_InertialRelativity_STE_cases/memory/MEMORY.md` indexes the relevant feedback memories — open them all up front, not on-demand. The framing locks in `project_scope.md` are non-negotiable.
 - **The `system_properties/` package and `pair_comparisons_v2_cases.md` are copies from the main project** — not symlinks. Edits here will not flow back. If physics calculations or case data need to change, decide whether to update both projects or only this one.
-- **Companion paper, not replacement.** The main paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/` is the long-form derivation with full motivation and DTD construction. This paper is the stripped version. Both stay alive.
+- **Companion paper, not replacement.** The main paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/` is the long-form derivation with full motivation. This paper is the framework re-notation. Both stay alive.
