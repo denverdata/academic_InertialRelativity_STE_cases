@@ -219,13 +219,11 @@ Example parameter sets match the columns of the pair comparison tables in \ref{a
 
 \subsection{Static Mass ($M_1 = M_2$)}
 
-When the two systems share the same mass, $k$ is the ratio of their DeGerlia compactness values:
+When the two systems share the same mass, the mass terms cancel in $k$:
 \[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
+k = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1}
 \]
-Each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
-
-This case is the standard gravitational time-dilation calculation; the DeGerlia compactness ratio $D_1/D_2$ produces the familiar Schwarzschild factor here.
+The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/R$, this is $D_1/D_2 = R_2/R_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
 
 \begin{mdframed}
 \textbf{Example (Static Mass):} System 1 is the system being measured; System 2 is the same mass at its Schwarzschild radius. $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m. $S_2$: $M_2 = M_1$, $R_2 = r_s = 2GM_1/c^2 = 2.97046 \times 10^{3}$\,m.
@@ -322,11 +320,11 @@ All values above appear in column $M\!=\!M$ of Table~\ref{tab:pair_properties} i
 
 \subsection{Static Radius ($R_1 = R_2$)}
 
-When the two systems share the same radius, $k$ is the ratio of their DeGerlia compactness values:
+When the two systems share the same radius, the radius terms cancel in $k$:
 \[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
+k = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2}
 \]
-The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+The compactness ratio reduces to a ratio of masses. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \begin{mdframed}
 \textbf{Example (Static Radius):} System 1 is the system being measured; System 2 is at its Schwarzschild radius, defining the common radius. $S_1$: $M_1 = 2.00000 \times 10^{28}$\,kg, $R_1 = 2.97046 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = R_1 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m.
@@ -423,11 +421,11 @@ All values above appear in column $R\!=\!R$ of Table~\ref{tab:pair_properties} i
 
 \subsection{Constant Density ($\rho_1 = \rho_2$)}
 
-When the two systems share the same density, $k$ is the ratio of their DeGerlia compactness values:
+When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$. Substituting into $k$:
 \[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
+k = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_1}{R_2}\right)^3 \cdot \frac{R_2}{R_1} = \left(\frac{R_1}{R_2}\right)^2
 \]
-Since $\rho_1 = \rho_2$ implies $M \propto R^3$, $\sqrt{k} = R_1/R_2$ — the isometric linear scale factor between the two systems.
+The compactness ratio reduces to the square of the radius ratio. The linear scale factor follows as $\sqrt{k} = R_1/R_2$, recovering the isometric equivalence.
 
 \begin{mdframed}
 \textbf{Example (Constant Density):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 7.63040 \times 10^{28}$\,kg, $R_1 = 1.00000 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both at $\rho = 1.82181 \times 10^{19}$\,kg/m$^3$.
@@ -524,11 +522,11 @@ All values above appear in column $\rho\!=\!\rho$ of Table~\ref{tab:pair_propert
 
 \subsection{Constant Inertia ($I_1 = I_2$)}
 
-When the two systems share the same moment of inertia, $k$ is the ratio of their DeGerlia compactness values:
+When the two systems share the same moment of inertia, $M_1 R_1^2 = M_2 R_2^2$, so $M_1/M_2 = (R_2/R_1)^2$. Substituting into $k$:
 \[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{D_1}{D_2}
+k = \frac{M_1 R_2}{M_2 R_1} = \left(\frac{R_2}{R_1}\right)^2 \cdot \frac{R_2}{R_1} = \left(\frac{R_2}{R_1}\right)^3
 \]
-Since $I_1 = I_2$ implies $M_1 R_1^2 = M_2 R_2^2$, $\sqrt[3]{k} = R_2/R_1$ — the radius ratio that preserves moment of inertia.
+The compactness ratio reduces to the cube of the radius ratio.
 
 \begin{mdframed}
 \textbf{Example (Constant Inertia):} System 1 is the system being measured; System 2 is the comparator at its Schwarzschild radius. $S_1$: $M_1 = 1.76450 \times 10^{29}$\,kg, $R_1 = 1.00000 \times 10^{4}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m. Both have $I = MR^2 = 1.76450 \times 10^{37}$\,kg$\cdot$m$^2$.
