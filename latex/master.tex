@@ -226,9 +226,15 @@ k = \frac{M_1 R_2}{M_2 R_1} = \frac{R_2}{R_1}
 The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/R$, this is $D_1/D_2 = R_2/R_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{crit} = r_s/R$, recovering the Schwarzschild gravitational time dilation parameter.
 
 \begin{mdframed}
-\textbf{Example (Static Mass):} System 1 is the system being measured; System 2 is the same mass at its Schwarzschild radius. $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m. $S_2$: $M_2 = M_1$, $R_2 = r_s = 2GM_1/c^2 = 2.97046 \times 10^{3}$\,m.
+\textbf{Example (Static Mass, benchmark):} System 1 is the system being measured; System 2 is a same-mass reference at its Schwarzschild radius. The benchmark configuration sets $D_{norm,2} = 1$, the condition under which the two-system compactness ratio reduces to the standard one-system Schwarzschild GTD expression.
 
-DeGerlia compactness for each system:
+System properties:
+
+$S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m, $\rho_1 = 1.76839 \times 10^{19}$\,kg/m$^3$, $I_1 = 7.20000 \times 10^{36}$\,kg$\cdot$m$^2$.
+
+$S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = r_s = 2GM_2/c^2 = 2.97046 \times 10^{3}$\,m, $\rho_2 = 1.82166 \times 10^{19}$\,kg/m$^3$, $I_2 = 7.05893 \times 10^{36}$\,kg$\cdot$m$^2$.
+
+DeGerlia compactness:
 \[
 D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{30}}{3.00000 \times 10^{3}} = 6.66667 \times 10^{26} \text{ kg/m}
 \]
@@ -238,52 +244,10 @@ D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6
 
 Normalized to the DeGerlia Threshold:
 \[
-D_{norm,1} = \frac{D_1}{D_{crit}} = \frac{6.66667 \times 10^{26}}{6.73295 \times 10^{26}} = 9.90155 \times 10^{-1}
+D_{norm,1} = \frac{D_1}{D_{crit}} = 9.90155 \times 10^{-1}
 \]
 \[
-D_{norm,2} = \frac{D_2}{D_{crit}} = \frac{6.73295 \times 10^{26}}{6.73295 \times 10^{26}} = 1.00000
-\]
-
-DeGerlia compactness ratio:
-\[
-k = \frac{D_1}{D_2} = \frac{D_{norm,1}}{D_{norm,2}} = 9.90155 \times 10^{-1}
-\]
-
-Schwarzschild ratio:
-\[
-k = \frac{r_s}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.90155 \times 10^{-1}
-\]
-
-GTD via $k$:
-\[
-\sqrt{1 - k} = \sqrt{1 - \frac{D_{norm,1}}{D_{norm,2}}} = 1 - 9.00780 \times 10^{-1}
-\]
-
-GTD via $k$:
-\[
-\sqrt{1 - k} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1}
-\]
-
-This case is tabulated in Table~\ref{tab:pair_ratios}, column $M = M$ of \ref{app:pair_table}.
-\end{mdframed}
-
-\begin{mdframed}
-\textbf{Example (Static Mass, Table Case 1):} Two systems of equal mass at different radii. $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m. $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = 7.00000 \times 10^{8}$\,m.
-
-DeGerlia compactness:
-\[
-D_1 = M_1/R_1 = 6.66667 \times 10^{26} \text{ kg/m}
-\]
-\[
-D_2 = M_2/R_2 = 2.85714 \times 10^{21} \text{ kg/m}
-\]
-
-Normalized to the DeGerlia Threshold:
-\[
-D_{norm,1} = D_1/D_{crit} = 9.90155 \times 10^{-1}
-\]
-\[
-D_{norm,2} = D_2/D_{crit} = 4.24352 \times 10^{-6}
+D_{norm,2} = \frac{D_2}{D_{crit}} = 1.00000
 \]
 
 Schwarzschild radii:
@@ -294,9 +258,62 @@ r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{3} \text{ m}
 r_{s,2} = 2GM_2/c^2 = 2.97046 \times 10^{3} \text{ m}
 \]
 
-Schwarzschild ratio for System 1:
+With $D_{norm,2} = 1$, the two-system compactness ratio reduces to System 1's individual compactness. Computed two ways:
 \[
-k = r_{s,1}/R_1 = 9.90155 \times 10^{-1}
+k_s = r_{s,1}/R_1 = 9.90155 \times 10^{-1}
+\]
+\[
+k_d = D_{norm,1}/D_{norm,2} = D_{norm,1} = 9.90155 \times 10^{-1}
+\]
+
+GTD of System 1 against the benchmark:
+\[
+\mathrm{GTD}_s = \sqrt{1 - k_s} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00777 \times 10^{-1}
+\]
+\[
+\mathrm{GTD}_d = \sqrt{1 - k_d} = \sqrt{1 - 9.90155 \times 10^{-1}} = 1 - 9.00780 \times 10^{-1}
+\]
+\end{mdframed}
+
+\begin{mdframed}
+\textbf{Example (Static Mass, Table Case 1):} System 1 is the system being measured; System 2 is a same-mass reference system at a different radius.
+
+System properties:
+
+$S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m, $\rho_1 = 1.76839 \times 10^{19}$\,kg/m$^3$, $I_1 = 7.20000 \times 10^{36}$\,kg$\cdot$m$^2$.
+
+$S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = 7.00000 \times 10^{8}$\,m, $\rho_2 = 1.39203 \times 10^{3}$\,kg/m$^3$, $I_2 = 3.92000 \times 10^{47}$\,kg$\cdot$m$^2$.
+
+DeGerlia compactness:
+\[
+D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{30}}{3.00000 \times 10^{3}} = 6.66667 \times 10^{26} \text{ kg/m}
+\]
+\[
+D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{7.00000 \times 10^{8}} = 2.85714 \times 10^{21} \text{ kg/m}
+\]
+
+Normalized to the DeGerlia Threshold:
+\[
+D_{norm,1} = \frac{D_1}{D_{crit}} = 9.90155 \times 10^{-1}
+\]
+\[
+D_{norm,2} = \frac{D_2}{D_{crit}} = 4.24352 \times 10^{-6}
+\]
+
+Schwarzschild radii:
+\[
+r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{3} \text{ m}
+\]
+\[
+r_{s,2} = 2GM_2/c^2 = 2.97046 \times 10^{3} \text{ m}
+\]
+
+Compactness ratio for System 1, computed two ways:
+\[
+k_s = r_{s,1}/R_1 = 9.90155 \times 10^{-1}
+\]
+\[
+k_d = D_{norm,1} = 9.90155 \times 10^{-1}
 \]
 
 GTD via $r_s/R$:
@@ -313,6 +330,14 @@ GTD via $D/D_{crit}$:
 \]
 \[
 \mathrm{GTD}_{d,2} = \sqrt{1 - D_{norm,2}} = 1 - 2.12176 \times 10^{-6}
+\]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+\[
+\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2} = \frac{1 - 9.00777 \times 10^{-1}}{1 - 2.12176 \times 10^{-6}} = 1 - 9.00776 \times 10^{-1}
+\]
+\[
+\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2} = \frac{1 - 9.00780 \times 10^{-1}}{1 - 2.12176 \times 10^{-6}} = 1 - 9.00780 \times 10^{-1}
 \]
 
 All values above appear in column $M\!=\!M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
