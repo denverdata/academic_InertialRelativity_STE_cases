@@ -10,7 +10,7 @@ Companion to the main Inertial Relativity paper at `../academic_InertialRelativi
 
 ## Active revision
 
-The current revision plan lives at `latex/local_plan.md` (mirrored at `~/.claude/plans/wondrous-waddling-iverson.md`). It is the authoritative spec for the in-progress merge of Paper A (current `master.tex`) with content from Paper B (`/tmp/degerlia_new/DeGerlia_Time_Dilation_Framework.tex`). The plan's "Operating principles for execution" are binding — read it at session start before touching `master.tex`.
+The current revision plan lives at `latex/local_plan.md` (mirrored at `~/.claude/plans/wondrous-waddling-iverson.md`). It is the authoritative spec for the work in progress. The plan retains Paper A (current `master.tex`) and imparts a defined set of targeted updates, some of which import content from Paper B (`/tmp/degerlia_new/DeGerlia_Time_Dilation_Framework.tex`). It is not a merge of A and B. Read the plan at session start before touching `master.tex`; its "Operating principles for execution" are binding.
 
 ## Operating principles
 

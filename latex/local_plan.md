@@ -34,23 +34,20 @@ Using Paper B's skeleton with Paper A's content where noted:
 - **Introduction** A
 - **Symbol Glossary** from B
 - **General Relativity** sub sections: review compactness, r_s, time dilation, structure of GTD equation. Explain that this is actually a two system comparison, which is what this paper explores.
-- **The DeGerlia Time Dilation Framework** An analogous framework that is directly derived from general relativity, and has a direct relationship to gravitational time dilation. 
- -- **The Scale Factor `k`**\* A ratio of lengths, which ultimately is what all of its uses within time dilation correspond to, whether it's V squared over C squared or R sub S over R or D over D crit. 
- -- **DeGerlia Compactness** Derive DeGerlia compactness from inertial density 
- -- **DeGerlia Threshold** Calculated from the Schwarzschild condition, this is a static global constant, 6.73295 plus or minus point 00015 kilograms per meter. If your system's mass of radio succeeds that, you're a black hole! 
- -- **DeGerlia Time Dilation** DeGerlia time dilation is simply the square root of k, where gravitational time dilation is the square root of 1 minus k. 
- -- **Converting Between GTD to DTD** Pythagorean relationship, DTD squared plus GTD squared equals one. 
-ged.
- -- **Properties of DTD** — trimmed: describe the advantages from paper B.
-
+- **The DeGerlia Time Dilation Framework** An analogous framework that is directly derived from general relativity, and has a direct relationship to gravitational time dilation.
+  - **The Scale Factor `k`**\* A ratio of lengths, which ultimately is what all of its uses within time dilation correspond to, whether it's V squared over C squared or R sub S over R or D over D crit.
+  - **DeGerlia Compactness** Derive DeGerlia compactness from inertial density.
+  - **DeGerlia Threshold** Calculated from the Schwarzschild condition, this is a static global constant, 6.73295 plus or minus point 00015 kilograms per meter. If your system's mass of radio succeeds that, you're a black hole!
+  - **DeGerlia Time Dilation** DeGerlia time dilation is simply the square root of k, where gravitational time dilation is the square root of 1 minus k.
+  - **Converting Between GTD to DTD** Pythagorean relationship, DTD squared plus GTD squared equals one.
+  - **Properties of DTD** — trimmed: describe the advantages from paper B.
 - **Worked Examples** — Paper B's compressed format, six cases total. The gravity-condition example (`M₁=M₂` with `S₂ at r_s`) is Case 1's setup; the other five cases use the table values. Add Paper A's TikZ figure inside the Classical case box.
 - **Pair Comparison Tables** — don't change, keep as exactly 1 page
-- **Analysis** — Lightly revised per the earlier critique (replace "invites error" with "perpetuates a misconception that dilutes the core principle"). From Paper B 
-- **Conclusions** Things we can safely conclude from the work such as did the work meet the hypothesis laid out or not or is more testing required. What was the analysis intended to demonstrate? Do you believe this to be a demonstration of that? Do not include speculative hypotheses of explanation. Those do not belong in conclusions. 
+- **Analysis** — Lightly revised per the earlier critique (replace "invites error" with "perpetuates a misconception that dilutes the core principle"). From Paper B
+- **Conclusions** Things we can safely conclude from the work such as did the work meet the hypothesis laid out or not or is more testing required. What was the analysis intended to demonstrate? Do you believe this to be a demonstration of that? Do not include speculative hypotheses of explanation. Those do not belong in conclusions.
 - **Hypotheses of Explanation.**
-- **Further exploration** 
+- **Further exploration**
 - **Acknowledgments / COI / Data Availability** — Paper A's existing versions are fine.
-- 
 
 ---
 

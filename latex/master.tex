@@ -178,35 +178,16 @@ $G$ & $6.67430\times10^{-11}\ \mathrm{m^3kg^{-1}s^{-2}}$ \\
 \subsection{Compactness}\label{sec:standard_compactness}
 Compactness is the dimensionless ratio of a system's mass to its radius, scaled by $G/c^2$. The most common forms are $C = GM/(Rc^2)$ and $r_s/R = 2GM/(Rc^2) = 2C$, where $r_s = 2GM/c^2$ is the Schwarzschild radius. Both measure how close a system sits to its Schwarzschild threshold: $r_s/R = 1$ marks the gravitational-collapse condition.
 
-\subsection{Inertial Density $P$}\label{sec:inertial_density}
-Inertial density $P$ \citep{degerlia202505} is the moment of inertia of a system divided by its volume:
-\begin{equation}
-P = I/V
-\end{equation}
-Inertia, in a linear context, is simply mass. Inertial density, in this context, reduces directly to mass density $\rho = M/V$. From this perspective, inertial density is simply the rotational analog to mass density, not unlike the relationship between f equals m a and torque equals angular acceleration times m. More succinctly stated: mass density is simply the linear interpretation of inertial density. 
+\subsection{Time Dilation}
+% TODO: review the standard gravitational time-dilation expression $d\tau/dt = \sqrt{1-k}$ and how it is conventionally presented.
 
-Substituting $I = \frac{2}{5}MR^2$ and $V = \frac{4}{3}\pi R^3$, with $R$ the radius, this reduces to:
-\begin{equation}
-P = \frac{M}{R} \times \frac{3}{10\pi}
-\end{equation}
-Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}
+\subsection{Structure of the GTD Equation as a Two-System Comparison}
+% TODO: explain that the standard one-system GTD calculation is actually a comparison between two systems, with the second system silently fixed as the same mass at its Schwarzschild radius. This is the two-system framing this paper makes explicit.
 
-\subsection{DeGerlia Compactness $D$}
-$D = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over radius ratio for a system. Given that this quantity is almost always used in a ratio that would cancel out all geometric vectors and constants, for ease of use, this metric $D$ for inertial density is typically used over the geometrically accurate inertial density, $P$. 
+\section{The DeGerlia Time Dilation Framework}
+An analogous framework that is directly derived from general relativity and has a direct relationship to gravitational time dilation.
 
-
-
-\subsection{DeGerlia Threshold $D_{crit}$}
-
-The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia compactness $D$. There are several advantages to this approach, not the least of which is that you don't have to calculate the threshold for every mass. And, it's much easier to calculate $D$ than $P$. Inertial density is an intuitive metric that's easier to work with. 
-
-Setting $R = r_s$ (the Schwarzschild condition) \citep{schwarzschild1916radius} and solving yields the \textbf{DeGerlia Threshold}: the universal constant of DeGerlia compactness at which the escape velocity equals the speed of light:
-\begin{equation}
-D_{crit} = \frac{c^2}{2G} = (6.73295 \pm 0.00015) \times 10^{26} \text{ kg/m}
-\end{equation}
-Note this value is exact; its precision is limited by $G = (6.67430 \pm 0.00015) \times 10^{-11}$ m$^3$\,kg$^{-1}$\,s$^{-2}$ \citep{codata2018}. 
-
-\section{The Space-Time Equivalence}
+\subsection{The Scale Factor $k$}\label{sec:k}
 The following identity relates the time-dilation ratio of two uniform spherical systems to their mass and radius.\footnote{This identity has been previously referred to as the ``space-time equivalence''~\cite{degerlia202501}.}
 \begin{equation} \label{eq:kd}
 k  = \frac{D_1}{D_2} = \frac{M_1 R_2}{M_2 R_1}
@@ -221,7 +202,6 @@ k = \frac{D}{D_{crit}} = \frac{r_s}{R}
 \end{equation}
 where $D = M/R$ is the system's DeGerlia Compactness and $r_s = 2GM/c^2$ is its Schwarzschild radius. This is the $k$ that appears in the standard $\sqrt{1 - k}$ for GTD.
 
-\subsection{Relating Linear Scale Factor $k$ to General Relativity}
 Time dilation is always:
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
@@ -232,6 +212,46 @@ where $d\tau/dt$ is the time-dilation factor between the two systems and $k$ is 
 \item $k = D/D_{crit} = r_s/R$ (Equation~\ref{eq:ks}) --- via Schwarzschild radius
 \end{itemize}
 Same $k$ symbol across forms: a given numerical $k$ produces the same time-scale-factor result regardless of which form it appears in.
+
+\subsection{DeGerlia Compactness $D$}\label{sec:inertial_density}
+Inertial density $P$ \citep{degerlia202505} is the moment of inertia of a system divided by its volume:
+\begin{equation}
+P = I/V
+\end{equation}
+Inertia, in a linear context, is simply mass. Inertial density, in this context, reduces directly to mass density $\rho = M/V$. From this perspective, inertial density is simply the rotational analog to mass density, not unlike the relationship between f equals m a and torque equals angular acceleration times m. More succinctly stated: mass density is simply the linear interpretation of inertial density.
+
+Substituting $I = \frac{2}{5}MR^2$ and $V = \frac{4}{3}\pi R^3$, with $R$ the radius, this reduces to:
+\begin{equation}
+P = \frac{M}{R} \times \frac{3}{10\pi}
+\end{equation}
+Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}
+
+$D = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over radius ratio for a system. Given that this quantity is almost always used in a ratio that would cancel out all geometric vectors and constants, for ease of use, this metric $D$ for inertial density is typically used over the geometrically accurate inertial density, $P$.
+
+\subsection{DeGerlia Threshold $D_{crit}$}
+The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia compactness $D$. There are several advantages to this approach, not the least of which is that you don't have to calculate the threshold for every mass. And, it's much easier to calculate $D$ than $P$. Inertial density is an intuitive metric that's easier to work with.
+
+Setting $R = r_s$ (the Schwarzschild condition) \citep{schwarzschild1916radius} and solving yields the \textbf{DeGerlia Threshold}: the universal constant of DeGerlia compactness at which the escape velocity equals the speed of light:
+\begin{equation}
+D_{crit} = \frac{c^2}{2G} = (6.73295 \pm 0.00015) \times 10^{26} \text{ kg/m}
+\end{equation}
+Note this value is exact; its precision is limited by $G = (6.67430 \pm 0.00015) \times 10^{-11}$ m$^3$\,kg$^{-1}$\,s$^{-2}$ \citep{codata2018}.
+
+\subsection{DeGerlia Time Dilation}
+DeGerlia Time Dilation is the geometric complement of gravitational time dilation:
+\begin{equation}
+\mathrm{DTD} = \sqrt{k}
+\end{equation}
+where $k$ is the scale factor of Equation~\ref{eq:kd}. Where GTD = $\sqrt{1-k}$ is the surviving proper-time rate $d\tau/dt$, DTD = $\sqrt{k}$ is its complement.
+
+\subsection{Converting Between GTD and DTD}
+GTD and DTD are bound by the Pythagorean identity:
+\begin{equation} \label{eq:pyth}
+\mathrm{GTD}^2 + \mathrm{DTD}^2 = (1-k) + k = 1 .
+\end{equation}
+
+\subsection{Properties of DTD}
+% TODO: trimmed list of the advantages of DTD as a representation, drawn from Paper B's Properties of DTD section.
 
 \section{Relative Time Dilation Examples}\label{sec:expressions}
 
@@ -262,12 +282,26 @@ D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{30}}{3.00000 \times 10^{3}} = 6
 D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{2.97046 \times 10^{3}} = 6.73295 \times 10^{26} \text{ kg/m}
 \]
 
-Normalized to the DeGerlia Threshold:
+Scale factor via the D-ratio. Let $k_{d,i} = D_i/D_{crit}$:
 \[
-D_{norm,1} = \frac{D_1}{D_{crit}} = 9.90155 \times 10^{-1}
+k_{d,1} = \frac{D_1}{D_{crit}} = 9.90155 \times 10^{-1}
 \]
 \[
-D_{norm,2} = \frac{D_2}{D_{crit}} = 1.00000
+k_{d,2} = \frac{D_2}{D_{crit}} = 1.00000
+\]
+
+GTD and DTD for each system, via the D-ratio:
+\[
+\mathrm{GTD}_1 = \sqrt{1 - k_{d,1}} = \sqrt{1 - 9.90155 \times 10^{-1}} = 9.92207 \times 10^{-2}
+\]
+\[
+\mathrm{DTD}_1 = \sqrt{k_{d,1}} = \sqrt{9.90155 \times 10^{-1}} = 9.95065 \times 10^{-1}
+\]
+\[
+\mathrm{GTD}_2 = \sqrt{1 - k_{d,2}} = \sqrt{1 - 1.00000} = 0
+\]
+\[
+\mathrm{DTD}_2 = \sqrt{k_{d,2}} = \sqrt{1.00000} = 1.00000
 \]
 
 Schwarzschild radii:
@@ -278,12 +312,12 @@ r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{3} \text{ m}
 r_{s,2} = 2GM_2/c^2 = 2.97046 \times 10^{3} \text{ m}
 \]
 
-With $D_{norm,2} = 1$, the two-system compactness ratio reduces to System 1's individual compactness. Computed two ways:
+With $k_{d,2} = 1$, the two-system compactness ratio reduces to System 1's individual compactness. Computed two ways:
 \[
 k_s = r_{s,1}/R_1 = 9.90155 \times 10^{-1}
 \]
 \[
-k_d = D_{norm,1}/D_{norm,2} = D_{norm,1} = 9.90155 \times 10^{-1}
+k_d = k_{d,1}/k_{d,2} = k_{d,1} = 9.90155 \times 10^{-1}
 \]
 
 GTD of System 1 against the benchmark:
@@ -304,21 +338,20 @@ $S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m, $\r
 
 $S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = 7.00000 \times 10^{8}$\,m, $\rho_2 = 1.39203 \times 10^{3}$\,kg/m$^3$, $I_2 = 3.92000 \times 10^{47}$\,kg$\cdot$m$^2$.
 
-DeGerlia compactness:
-\[
-D_1 = \frac{M_1}{R_1} = \frac{2.00000 \times 10^{30}}{3.00000 \times 10^{3}} = 6.66667 \times 10^{26} \text{ kg/m}
-\]
-\[
-D_2 = \frac{M_2}{R_2} = \frac{2.00000 \times 10^{30}}{7.00000 \times 10^{8}} = 2.85714 \times 10^{21} \text{ kg/m}
-\]
+Calculate GTD ratio via DTD:
+dtd1=sqrt(k1_d) 
+where k1_D=(m1/r1)/D_crit = 2.00000e30/3000 / 6.73295e26 = 9.90155e-1
+dtd1=sqrt(9.90155e-1) = 9.95065e-1
 
-Normalized to the DeGerlia Threshold:
-\[
-D_{norm,1} = \frac{D_1}{D_{crit}} = 9.90155 \times 10^{-1}
-\]
-\[
-D_{norm,2} = \frac{D_2}{D_{crit}} = 4.24352 \times 10^{-6}
-\]
+dtd2=sqrt(k) 
+where k2_D=(m2/r2)/D_crit = sqrt(2.00000e30kg/7e8m / 6.73295e26kg/m) = 4.24352e-6
+dtd2=sqrt(4.24352e-6) = 2.05998e-3
+
+dtd1/dtd2 = 9.95065e-1 / 2.05998e-3 = 4.82981e2
+
+gtg1/gtg2=sqrt(1-dtd1^2)/sqrt(1-dtd2^2) = sqrt(1-(9.95065e-1)^2)/sqrt(1-(2.05998e-3)^2) = =sqrt(9.84500e-3)/sqrt(1-4.24352e-6) = 9.92220e-2/(1-2.12176e-6) = 9.92222e-2
+
+Verify by calculataing Gtd directly via the Schwarzschild radius ratio:
 
 Schwarzschild radii:
 \[
@@ -328,37 +361,17 @@ r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{3} \text{ m}
 r_{s,2} = 2GM_2/c^2 = 2.97046 \times 10^{3} \text{ m}
 \]
 
-Compactness ratio for System 1, computed two ways:
-\[
-k_s = r_{s,1}/R_1 = 9.90155 \times 10^{-1}
-\]
-\[
-k_d = D_{norm,1} = 9.90155 \times 10^{-1}
-\]
+Calculaete k_r values from the R_s/r ratio:
+k1_r_r=R1_s/r1 = 2.97046e3/3e3 = 9.90155e-1
+k2_r_r=R2_s/r2 = 2.97046e3/7e8 = 4.24352e-6
 
-GTD via $r_s/R$:
-\[
-\mathrm{GTD}_{s,1} = \sqrt{1 - r_{s,1}/R_1} = 1 - 9.00777 \times 10^{-1}
-\]
-\[
-\mathrm{GTD}_{s,2} = \sqrt{1 - r_{s,2}/R_2} = 1 - 2.12176 \times 10^{-6}
-\]
-
-GTD via $D/D_{crit}$:
-\[
-\mathrm{GTD}_{d,1} = \sqrt{1 - D_{norm,1}} = 1 - 9.00780 \times 10^{-1}
-\]
-\[
-\mathrm{GTD}_{d,2} = \sqrt{1 - D_{norm,2}} = 1 - 2.12176 \times 10^{-6}
-\]
+Calculate GTD via Schwarzschild radius ratio:
+gtd1=sqrt(1-k1_r) = sqrt(9.84500e-3) = 9.92220e-2
+gtd2=sqrt(1-k2_r) = sqrt(1-4.24352e-6) = 1-2.12176e-6
 
 Time-dilation ratio between System 1 and System 2, computed two ways:
-\[
-\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2} = \frac{1 - 9.00777 \times 10^{-1}}{1 - 2.12176 \times 10^{-6}} = 1 - 9.00776 \times 10^{-1}
-\]
-\[
-\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2} = \frac{1 - 9.00780 \times 10^{-1}}{1 - 2.12176 \times 10^{-6}} = 1 - 9.00780 \times 10^{-1}
-\]
+gtd1_r/gtd2_r = 9.92222e-2
+how does gtd1_r/gtd2_r compare to gtd1_d/gtd2_d? They are the same, confirming that the same compactness ratio $k$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
 
 All values above appear in column $M\!=\!M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
 \end{mdframed}
@@ -760,6 +773,18 @@ This matches the Classical Static Density Example column of \ref{app:pair_table}
 \end{center}
 \noindent\textit{Two uniform spheres related by isometric scaling, scale factor $k=2$: System~1 ($M_1 = 8$\,kg, $R_1 = 2$\,m) and System~2 ($M_2 = 1$\,kg, $R_2 = 1$\,m). The moment of inertia changes by $2^5 = 32$; the relative time dilation $1 - 2.22785 \times 10^{-27}$ is obtained equivalently from the Schwarzschild and inertial-density formulations.}
 \end{mdframed}
+
+\section{Analysis}
+The reformulation is meant to carry three points, and nothing more ambitious. First, it is a pace-of-time framework that is simply easier to work with: expressed in DTD and compactness, comparing two systems is a direct ratio of geometries, with no benchmark, no subtraction-from-one, and --- because $D_{\mathrm{crit}}$ cancels --- no dependence on $G$. One returns to GTD, the $\sqrt{1-k}$ form, only at the final step, to convert relative pace into relative clock time. Second, general relativity is always two-system; we merely masquerade it as one. Conventional gravitational time dilation looks like a single-system calculation only because it silently fixes the second system --- the same mass at its Schwarzschild radius, where $\mathrm{DTD}=1$. Make that benchmark explicit and the two-system structure, present all along, is plain. Third, treating it as one system is a disservice to the broader mathematics: the collapse to a single system rests on presuming that some property of the hidden second system is a fixed, universal given, a presumption that obscures the real structure and perpetuates a misconception that dilutes the core principle. The honest formulation keeps both systems in view and recognizes the single-system shortcut as a convenience, not as the underlying physics.
+
+\section{Conclusions}
+% TODO: what can be safely concluded from the work --- did it meet the hypothesis laid out? What was the analysis intended to demonstrate? Do we believe this to be a demonstration of that? No speculative hypotheses of explanation here.
+
+\section{Hypotheses of Explanation}
+% TODO
+
+\section{Further Exploration}
+% TODO
 
 \section*{Acknowledgments}
 This work was conducted independently and received no external funding.
