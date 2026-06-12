@@ -329,142 +329,173 @@ GTD of System 1 against the benchmark:
 \]
 \end{mdframed}
 
-\begin{mdframed}
-\textbf{Example (Static Mass, Table Case 1):} System 1 is the system being measured; System 2 is a same-mass reference system at a different radius.
+\begin{mdframed}[
+linewidth=0.8pt,
+roundcorner=4pt,
+innerleftmargin=10pt,
+innerrightmargin=10pt,
+innertopmargin=10pt,
+innerbottommargin=10pt
+]
 
-System properties:
+\noindent\textbf{Example (Static Mass, Table Case 1):}
+System 1 is the system being measured; System 2 is a same-mass reference system at a different radius.
 
-$S_1$: $M_1 = 2.00000 \times 10^{30}$\,kg, $R_1 = 3.00000 \times 10^{3}$\,m, $\rho_1 = 1.76839 \times 10^{19}$\,kg/m$^3$, $I_1 = 7.20000 \times 10^{36}$\,kg$\cdot$m$^2$.
+\medskip
 
-$S_2$: $M_2 = 2.00000 \times 10^{30}$\,kg, $R_2 = 7.00000 \times 10^{8}$\,m, $\rho_2 = 1.39203 \times 10^{3}$\,kg/m$^3$, $I_2 = 3.92000 \times 10^{47}$\,kg$\cdot$m$^2$.
+\noindent\textbf{System properties:}
 
-Calculate GTD ratio via DTD:
 \begin{align*}
-\mathrm{DTD}_1 &= \sqrt{k_{D,1}} \\
-\text{where } k_{D,1} &= \frac{M_1/R_1}{D_{crit}} = \frac{2.00000 \times 10^{30}/3.00000 \times 10^{3}}{6.73295 \times 10^{26}} = 9.9015538 \times 10^{-1} \\
-\mathrm{DTD}_1 &= \sqrt{9.9015538 \times 10^{-1}} = 9.9506552 \times 10^{-1}
-\end{align*}
-\begin{align*}
-\mathrm{DTD}_2 &= \sqrt{k_{D,2}} \\
-\text{where } k_{D,2} &= \frac{M_2/R_2}{D_{crit}} = \frac{2.00000 \times 10^{30}/7.00000 \times 10^{8}}{6.73295 \times 10^{26}} = 4.24352 \times 10^{-6} \\
-\mathrm{DTD}_2 &= \sqrt{4.24352 \times 10^{-6}} = 2.05998 \times 10^{-3}
-\end{align*}
-\[
-\mathrm{DTD}_1/\mathrm{DTD}_2 = \frac{9.9506552 \times 10^{-1}}{2.05998 \times 10^{-3}} = 4.83046 \times 10^{2}
-\]
-\begin{align*}
-\mathrm{GTD}_1/\mathrm{GTD}_2 &= \frac{\sqrt{1 - \mathrm{DTD}_1^2}}{\sqrt{1 - \mathrm{DTD}_2^2}} \\
-  &= \frac{\sqrt{1 - (9.9506552 \times 10^{-1})^2}}{\sqrt{1 - (2.05998 \times 10^{-3})^2}} \\
-  &= \frac{\sqrt{9.84462 \times 10^{-3}}}{\sqrt{1 - 4.24352 \times 10^{-6}}} \\
-  &= \frac{9.9220058 \times 10^{-2}}{1 - 2.12176 \times 10^{-6}} \\
-  &= 1 - 9.00780 \times 10^{-1}
+S_1:\quad
+&M_1 = 2.00000 \times 10^{30},\mathrm{kg},
+&&R_1 = 3.00000 \times 10^{3},\mathrm{m},\
+&\rho_1 = 1.76839 \times 10^{19},\mathrm{kg/m^3},
+&&I_1 = 7.20000 \times 10^{36},\mathrm{kg\cdot m^2}.
 \end{align*}
 
-Verify by calculating GTD directly via the Schwarzschild radius ratio:
-
-Schwarzschild radii:
-\[
-r_{s,1} = 2GM_1/c^2 = 2.97046 \times 10^{3} \text{ m}
-\]
-\[
-r_{s,2} = 2GM_2/c^2 = 2.97046 \times 10^{3} \text{ m}
-\]
-
-Calculate $k_R$ values from the $r_s/R$ ratio:
 \begin{align*}
-k_{R,1} &= \frac{r_{s,1}}{R_1} = \frac{2.97046 \times 10^{3}}{3.00000 \times 10^{3}} = 9.9015333 \times 10^{-1} \\
-k_{R,2} &= \frac{r_{s,2}}{R_2} = \frac{2.97046 \times 10^{3}}{7.00000 \times 10^{8}} = 4.24351 \times 10^{-6}
+S_2:\quad
+&M_2 = 2.00000 \times 10^{30},\mathrm{kg},
+&&R_2 = 7.00000 \times 10^{8},\mathrm{m},\
+&\rho_2 = 1.39203 \times 10^{3},\mathrm{kg/m^3},
+&&I_2 = 3.92000 \times 10^{47},\mathrm{kg\cdot m^2}.
 \end{align*}
 
-Calculate GTD via Schwarzschild radius ratio:
+\medskip
+
+\noindent\textbf{Calculate GTD ratio via DTD:}
+
 \begin{align*}
-\mathrm{GTD}_1 &= \sqrt{1 - k_{R,1}} = \sqrt{9.84667 \times 10^{-3}} = 1 - 9.00770 \times 10^{-1} \\
-\mathrm{GTD}_2 &= \sqrt{1 - k_{R,2}} = \sqrt{1 - 4.24351 \times 10^{-6}} = 1 - 2.12176 \times 10^{-6}
+\mathrm{dtd1} &= \sqrt{k1_d}
 \end{align*}
 
-Time-dilation ratio between System 1 and System 2, computed two ways:
-\[
-\mathrm{GTD}_{R,1}/\mathrm{GTD}_{R,2} = 1 - 9.00770 \times 10^{-1}
-\]
-how does $\mathrm{GTD}_{R,1}/\mathrm{GTD}_{R,2}$ compare to $\mathrm{GTD}_{D,1}/\mathrm{GTD}_{D,2}$? They are the same, confirming that the same compactness ratio $k$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
+\noindent where
+\begin{align*}
+k1_D
+&= \frac{(m1/r1)}{D_\mathrm{crit}}\
+&= \frac{2.00000e30/3000}{6.73295e26}\
+&= 9.90155e-1.
+\end{align*}
 
-All values above appear in column $M\!=\!M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
-\end{mdframed}
+\begin{align*}
+\mathrm{dtd1}
+&= \sqrt{9.90155e-1}\
+&= 9.95065e-1.
+\end{align*}
 
-\subsection{Static Radius ($R_1 = R_2$)}
+\begin{align*}
+\mathrm{dtd2} &= \sqrt{k}
+\end{align*}
 
-When the two systems share the same radius, the radius terms cancel in $k$:
-\[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{M_1}{M_2}
-\]
-The compactness ratio reduces to a ratio of masses. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+\noindent where
+\begin{align*}
+k2_D
+&= \frac{(m2/r2)}{D_\mathrm{crit}}\
+&= \sqrt{\frac{2.00000e30,\mathrm{kg}/7e8,\mathrm{m}}
+{6.73295e26,\mathrm{kg/m}}}\
+&= 4.24352e-6.
+\end{align*}
 
-\begin{mdframed}
-\textbf{Example (Static Radius, Table Case 2):} System 1 is the system being measured; System 2 is an equal-radius reference system at a different mass.
+\begin{align*}
+\mathrm{dtd2}
+&= \sqrt{4.24352e-6}\
+&= 2.05998e-3.
+\end{align*}
 
-System properties:
+\begin{align*}
+\frac{\mathrm{dtd1}}{\mathrm{dtd2}}
+&= \frac{9.95065e-1}{2.05998e-3}\
+&= 4.82981e2.
+\end{align*}
 
-$S_1$: $M_1 = 1.00000 \times 10^{30}$\,kg, $R_1 = 1.00000 \times 10^{8}$\,m, $\rho_1 = 2.38732 \times 10^{5}$\,kg/m$^3$, $I_1 = 4.00000 \times 10^{45}$\,kg$\cdot$m$^2$.
+\medskip
 
-$S_2$: $M_2 = 1.00000 \times 10^{24}$\,kg, $R_2 = 1.00000 \times 10^{8}$\,m, $\rho_2 = 2.38732 \times 10^{-1}$\,kg/m$^3$, $I_2 = 4.00000 \times 10^{39}$\,kg$\cdot$m$^2$.
+\noindent\textbf{GTD ratio from DTD:}
 
-DeGerlia compactness:
-\[
-D_1 = \frac{M_1}{R_1} = \frac{1.00000 \times 10^{30}}{1.00000 \times 10^{8}} = 1.00000 \times 10^{22} \text{ kg/m}
-\]
-\[
-D_2 = \frac{M_2}{R_2} = \frac{1.00000 \times 10^{24}}{1.00000 \times 10^{8}} = 1.00000 \times 10^{16} \text{ kg/m}
-\]
+\begin{align*}
+\frac{\mathrm{gtg1}}{\mathrm{gtg2}}
+&= \frac{\sqrt{1-\mathrm{dtd1}^2}}{\sqrt{1-\mathrm{dtd2}^2}}\
+&= \frac{\sqrt{1-(9.95065e-1)^2}}
+{\sqrt{1-(2.05998e-3)^2}}\
+&= \frac{\sqrt{9.84500e-3}}
+{\sqrt{1-4.24352e-6}}\
+&= \frac{9.92220e-2}{1-2.12176e-6}\
+&= 9.92222e-2.
+\end{align*}
 
-Normalized to the DeGerlia Threshold:
-\[
-D_{norm,1} = \frac{D_1}{D_{crit}} = 1.48523 \times 10^{-5}
-\]
-\[
-D_{norm,2} = \frac{D_2}{D_{crit}} = 1.48523 \times 10^{-11}
-\]
+\medskip
 
-Schwarzschild radii:
-\[
-r_{s,1} = 2GM_1/c^2 = 1.48523 \times 10^{3} \text{ m}
-\]
-\[
-r_{s,2} = 2GM_2/c^2 = 1.48523 \times 10^{-3} \text{ m}
-\]
+\noindent\textbf{Verify by calculataing Gtd directly via the Schwarzschild radius ratio:}
 
-Compactness ratio for System 1, computed two ways:
-\[
-k_s = r_{s,1}/R_1 = 1.48523 \times 10^{-5}
-\]
-\[
-k_d = D_{norm,1} = 1.48523 \times 10^{-5}
-\]
+\noindent\textbf{Schwarzschild radii:}
+\begin{align*}
+r_{s,1}
+&= 2GM_1/c^2\
+&= 2.97046 \times 10^{3},\mathrm{m},
+\end{align*}
 
-GTD via $r_s/R$:
-\[
-\mathrm{GTD}_{s,1} = \sqrt{1 - r_{s,1}/R_1} = 1 - 7.42619 \times 10^{-6}
-\]
-\[
-\mathrm{GTD}_{s,2} = \sqrt{1 - r_{s,2}/R_2} = 1 - 7.42616 \times 10^{-12}
-\]
+\begin{align*}
+r_{s,2}
+&= 2GM_2/c^2\
+&= 2.97046 \times 10^{3},\mathrm{m}.
+\end{align*}
 
-GTD via $D/D_{crit}$:
-\[
-\mathrm{GTD}_{d,1} = \sqrt{1 - D_{norm,1}} = 1 - 7.42619 \times 10^{-6}
-\]
-\[
-\mathrm{GTD}_{d,2} = \sqrt{1 - D_{norm,2}} = 1 - 7.42617 \times 10^{-12}
-\]
+\medskip
 
-Time-dilation ratio between System 1 and System 2, computed two ways:
-\[
-\mathrm{GTD}_{s,1}/\mathrm{GTD}_{s,2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42616 \times 10^{-12}} = 1 - 7.42618 \times 10^{-6}
-\]
-\[
-\mathrm{GTD}_{d,1}/\mathrm{GTD}_{d,2} = \frac{1 - 7.42619 \times 10^{-6}}{1 - 7.42617 \times 10^{-12}} = 1 - 7.42619 \times 10^{-6}
-\]
+\noindent\textbf{Calculaete k\_r values from the R\_s/r ratio:}
 
-All values above appear in column $R\!=\!R$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
+\begin{align*}
+k_{1,r,r}
+&= R_{1,s}/r_1\\
+&= 2.97046e3/3e3\\
+&= 9.9015333e-1.
+\end{align*}
+
+\begin{align*}
+k_{2,r,r}
+&= R_{2,s}/r_2\\
+&= 2.97046e3/7e8\\
+&= 4.24352e-6.
+\end{align*}
+
+\medskip
+
+\noindent\textbf{Calculate GTD via Schwarzschild radius ratio:}
+
+\begin{align*}
+\mathrm{gtd1}
+&= \sqrt{1-k1_r}\
+&= \sqrt{1-9.9015333e-1}\
+&= \sqrt{9.84667e-3}\
+&= 9.92303e-2\
+&= 1-9.007697e-1.
+\end{align*}
+
+\begin{align*}
+\mathrm{gtd2}
+&= \sqrt{1-k2_r}\
+&= \sqrt{1-4.24352e-6}\
+&= \sqrt{9.999957565e-1}\
+&= 9.999978782e-1\
+&= 1 - 2.12180e-6.
+\end{align*}
+
+\medskip
+
+\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
+
+\begin{align*}
+\mathrm{gtd1_r}/\mathrm{gtd2_r}
+&= 9.92222e-2.
+\end{align*}
+
+\noindent how does gtd1\_r/gtd2\_r compare to gtd1\_d/gtd2\_d? They are the same, confirming that the same compactness ratio k is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
+
+\medskip
+
+\noindent
+All values above appear in column M\!=\!M of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
+
 \end{mdframed}
 
 \subsection{Constant Density ($\rho_1 = \rho_2$)}
