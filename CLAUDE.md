@@ -8,6 +8,19 @@ This paper is **The DeGerlia Time Dilation Framework**: a two-system, scale-free
 
 Companion to the main Inertial Relativity paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/`. Both stay alive.
 
+## Active revision
+
+The current revision plan lives at `latex/local_plan.md` (mirrored at `~/.claude/plans/wondrous-waddling-iverson.md`). It is the authoritative spec for the in-progress merge of Paper A (current `master.tex`) with content from Paper B (`/tmp/degerlia_new/DeGerlia_Time_Dilation_Framework.tex`). The plan's "Operating principles for execution" are binding — read it at session start before touching `master.tex`.
+
+## Operating principles
+
+These govern paper-revision work. The full list is in the plan; the four most likely to be violated:
+
+- **The user directs, I execute one step at a time.** No batching beyond what's been explicitly authorized. No "let me also do X while I'm here." Concrete edit, concrete report, then wait.
+- **Compile after every LaTeX edit.** `cd latex && latexmk -pdf master.tex`. Report the result in the same turn as the edit — don't wait to be asked.
+- **Every number is computed, never eyeballed.** Run `system_properties/` (or equivalent). No "approximately" or "matches" without showing the calculation. No claim that two methods agree without computing both.
+- **One-word reset.** If the user says "stop" or "reset," drop whatever's in progress and wait.
+
 ## Framing
 
 - This is general relativity. No new physics, no new predictions. A re-notation of the same quantities.
@@ -71,6 +84,6 @@ Per `feedback_generator_scripts.md`: never hand-edit `pair_tables.tex` — updat
 ## Gotchas
 
 - **Always compile from `latex/` directory** — root-level aux files pollute the tree and can break the build.
-- **Read memory files at session start.** The project memory at `~/.claude/projects/-Users-tomdegerlia-Develop-academic-academic_InertialRelativity_STE_cases/memory/MEMORY.md` indexes the relevant feedback memories — open them all up front, not on-demand. The framing locks in `project_scope.md` are non-negotiable.
+- **Read memory files at session start.** The project memory at `~/.claude/projects/-Users-tomdegerlia-Develop-academic-academic-InertialRelativity-STE-cases/memory/MEMORY.md` indexes the relevant feedback memories — open them all up front, not on-demand. The framing locks in `project_scope.md` are non-negotiable.
 - **The `system_properties/` package and `pair_comparisons_v2_cases.md` are copies from the main project** — not symlinks. Edits here will not flow back. If physics calculations or case data need to change, decide whether to update both projects or only this one.
 - **Companion paper, not replacement.** The main paper at `../academic_InertialRelativity-deriving-gr-sr-from-ste/` is the long-form derivation with full motivation. This paper is the framework re-notation. Both stay alive.
