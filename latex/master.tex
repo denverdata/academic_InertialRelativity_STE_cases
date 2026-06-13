@@ -405,42 +405,28 @@ $R$ (\unit{\meter}) & \num{3.00000e3} & \num{7.00000e8} \\
 \end{center}
 
 \medskip\noindent\textbf{Calculate DTD for each System:}
-  \[
-  \begin{aligned}
-  \mathrm{DTD} &= \sqrt{K} where \quad K = (M/R)/D_{\mathrm{crit}}\\[2pt]
-  \quad K &= (2.00000 \times
-  10^{30}\,\text{kg}/3.00000 \times 10^{3}\,\text{m}) / 6.73295
-  \times 10^{26}\,\text{kg/m}\\
-  &= 9.9015538 \times 10^{-1}\\
-  \mathrm{DTD}_1 &= \sqrt{9.9015538 \times 10^{-1}} = 9.9506552
-  \times 10^{-1}\\[2pt]
-  \quad K &= (2.00000 \times
-  10^{30}\,\text{kg}/7.00000 \times 10^{8}\,\text{m}) / 6.73295
-  \times 10^{26}\,\text{kg/m}\\
-  &= 4.24352 \times 10^{-6}\\
-  \mathrm{DTD}_2 &= \sqrt{4.24352 \times 10^{-6}} = 2.05998
-  \times 10^{-3}\\[2pt]
-  \mathrm{DTD}_1/\mathrm{DTD}_2 &= 9.9506552 \times 10^{-1} /
-  2.05998 \times 10^{-3} = 4.83046 \times 10^{2}
-  \end{aligned}
-  \]
+  \begin{align*}
+  \mathrm{DTD} &= \sqrt{K} \text{ where } \quad K = \dfrac{M}{R\,D_{\mathrm{crit}}}\\[2pt]
+  \quad K_1 &= \dfrac{\num{2.00000e30}\,\text{kg}}{(\num{3.00000e3}\,\text{m})(\num{6.73295e26}\,\text{kg/m})}\\
+  &= \num{9.9015538e-1}\\
+  \mathrm{DTD}_1 &= \sqrt{\num{9.9015538e-1}} = \num{9.9506552e-1}\\[2pt]
+  \quad K_2 &= \dfrac{\num{2.00000e30}\,\text{kg}}{(\num{7.00000e8}\,\text{m})(\num{6.73295e26}\,\text{kg/m})}\\
+  &= \num{4.24352e-6}\\
+  \mathrm{DTD}_2 &= \sqrt{\num{4.24352e-6}} = \num{2.05998e-3}\\[2pt]
+  \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{9.9506552e-1}}{\num{2.05998e-3}} = \num{4.83046e2}
+  \end{align*}
 
  \medskip\noindent\textbf{Calculate GTD ratio from DTD:}
-
-  \[
-  \begin{aligned}
-  \mathrm{GTD}_1/\mathrm{GTD}_2
-  &= \sqrt{1-\mathrm{DTD}_1^2}/\sqrt{1-\mathrm{DTD}_2^2}\\
-  &= \sqrt{1-(9.9506552 \times 10^{-1})^2}/\sqrt{1-(2.05998
-  \times 10^{-3})^2}\\
-  &= \sqrt{1-9.9015539 \times 10^{-1}}/\sqrt{1-4.24352 \times
-  10^{-6}}\\
-  &= \sqrt{9.84461 \times 10^{-3}}/\sqrt{9.999957565 \times
-  10^{-1}}\\
-  &= 9.92200 \times 10^{-2}/(9.999978782 \times 10^{-1})\\
-  &= 9.9220223 \times 10^{-2}
-  \end{aligned}
-  \]
+  \nopagebreak
+  \begin{align*}
+  \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2}
+  &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
+  &= \dfrac{\sqrt{1-(\num{9.9506552e-1})^2}}{\sqrt{1-(\num{2.05998e-3})^2}}\\
+  &= \dfrac{\sqrt{1-\num{9.9015539e-1}}}{\sqrt{1-\num{4.24352e-6}}}\\
+  &= \dfrac{\sqrt{\num{9.84461e-3}}}{\sqrt{\num{9.999957565e-1}}}\\
+  &= \dfrac{\num{9.92200e-2}}{\num{9.999978782e-1}}\\
+  &= \num{9.9220223e-2}
+  \end{align*}
 
 \medskip\noindent\textbf{Verify by calculataing Gtd directly via the Schwarzschild radius ratio:}
 
