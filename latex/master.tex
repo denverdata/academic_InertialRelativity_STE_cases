@@ -446,25 +446,25 @@ k2_r = r2_s/R2 = 2.97046e3/7.00000e8 = 4.24352e-6
 Calculate GTD via Schwarzschild radius ratio:
 \[
 \begin{aligned}
-gtd1 &= \sqrt{1-k1_r} = \sqrt{1-9.9015333e-1} = \sqrt{9.84667e-3}\\
-  &= 9.92303e-2 = 1-9.007697e-1\\
-gtd2 &= \sqrt{1-k2_r} = \sqrt{1-4.24352e-6} = \sqrt{9.999957565e-1}\\
-  &= 9.999978782e-1 = 1 - 2.12180e-6
+\mathrm{GTD}_{r1} &= \sqrt{1-K_{r1}} = \sqrt{1-\num{9.9015333e-1}} = \sqrt{\num{9.84667e-3}}\\
+  &= \num{9.92303e-2} = 1-\num{9.007697e-1}\\
+\mathrm{GTD}_{r2} &= \sqrt{1-K_{r2}} = \sqrt{1-\num{4.24352e-6}} = \sqrt{\num{9.999957565e-1}}\\
+  &= \num{9.999978782e-1} = 1 - \num{2.12180e-6}
 \end{aligned}
 \]
 \[
 \begin{aligned}
-gtd1_r/gtd2_r &= 9.92303e-2\ /\ 9.999978782e-1\\
-  &= 9.92305e-2
+\dfrac{\mathrm{GTD}_{r1}}{\mathrm{GTD}_{r2}} &= \dfrac{\num{9.92303e-2}}{\num{9.999978782e-1}}\\
+  &= \num{9.92305e-2}
 \end{aligned}
 \]
 
 \medskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
 \[
-gtd1_d/gtd2_d = 9.92203e-2
+\dfrac{\mathrm{GTD}_{d1}}{\mathrm{GTD}_{d2}} = \num{9.92203e-2}
 \]
 \[
-gtd1_r/gtd2_r = 9.92305e-2
+\dfrac{\mathrm{GTD}_{r1}}{\mathrm{GTD}_{r2}} = \num{9.92305e-2}
 \]
 \[
 \begin{aligned}
@@ -473,7 +473,7 @@ gtd1_r/gtd2_r = 9.92305e-2
 \end{aligned}
 \]
 
-how does gtd1\_r/gtd2\_r compare to gtd1\_d/gtd2\_d? They are the same, confirming that the same compactness ratio $k$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
+How does $\mathrm{GTD}_{r1}/\mathrm{GTD}_{r2}$ compare to $\mathrm{GTD}_{d1}/\mathrm{GTD}_{d2}$? They are the same, confirming that the same compactness ratio $K$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
 
 All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
 
