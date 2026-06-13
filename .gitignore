@@ -18,3 +18,6 @@ __pycache__/
 # Generated data (regenerable from run_all_systems.py)
 systems_output.md
 systems_table.md
+
+# Claude Code personal settings (machine-specific, not for sharing)
+.claude/settings.local.json
