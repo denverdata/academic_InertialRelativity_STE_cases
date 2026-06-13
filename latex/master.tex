@@ -407,10 +407,10 @@ $R$ (\unit{\meter}) & \num{3.00000e3} & \num{7.00000e8} \\
 \medskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \text{ where } \quad K = \dfrac{M}{R\,D_{\mathrm{crit}}}\\[2pt]
-  \quad K_1 &= \dfrac{\num{2.00000e30}\,\text{kg}}{(\num{3.00000e3}\,\text{m})(\num{6.73295e26}\,\text{kg/m})}\\
+  \quad K_1 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{3.00000e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
   &= \num{9.9015538e-1}\\
   \mathrm{DTD}_1 &= \sqrt{\num{9.9015538e-1}} = \num{9.9506552e-1}\\[2pt]
-  \quad K_2 &= \dfrac{\num{2.00000e30}\,\text{kg}}{(\num{7.00000e8}\,\text{m})(\num{6.73295e26}\,\text{kg/m})}\\
+  \quad K_2 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{7.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
   &= \num{4.24352e-6}\\
   \mathrm{DTD}_2 &= \sqrt{\num{4.24352e-6}} = \num{2.05998e-3}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{9.9506552e-1}}{\num{2.05998e-3}} = \num{4.83046e2}
@@ -432,39 +432,38 @@ $R$ (\unit{\meter}) & \num{3.00000e3} & \num{7.00000e8} \\
 
 Schwarzschild radii:
 \[
-r_{s1} = r_{s1} = GM_1/c^2 
-= 2.97046 \times 10^{3} \text{ m}
+R_{s1} = \dfrac{2GM_1}{c^2} = \num{2.97046e3}\,\unit{\meter}
 \]
-Calculaete k\_r values from the R\_s/r ratio:
+Calculate $K$ values from the $R_s/R$ ratio:
 \[
-k_{r1} = r_{s1}/R_1 = 2.97046e3/3.00000e3 = 9.9015333e-1
+K_1 = \dfrac{R_{s1}}{R_1} = \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{3.00000e3}\,\unit{\meter}} = \num{9.9015333e-1}
 \]
 \[
-k2_r = r2_s/R2 = 2.97046e3/7.00000e8 = 4.24352e-6
+K_2 = \dfrac{R_{s2}}{R_2} = \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{7.00000e8}\,\unit{\meter}} = \num{4.24352e-6}
 \]
 
 Calculate GTD via Schwarzschild radius ratio:
 \[
 \begin{aligned}
-\mathrm{GTD}_{r1} &= \sqrt{1-K_{r1}} = \sqrt{1-\num{9.9015333e-1}} = \sqrt{\num{9.84667e-3}}\\
+\mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{9.9015333e-1}} = \sqrt{\num{9.84667e-3}}\\
   &= \num{9.92303e-2} = 1-\num{9.007697e-1}\\
-\mathrm{GTD}_{r2} &= \sqrt{1-K_{r2}} = \sqrt{1-\num{4.24352e-6}} = \sqrt{\num{9.999957565e-1}}\\
+\mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{4.24352e-6}} = \sqrt{\num{9.999957565e-1}}\\
   &= \num{9.999978782e-1} = 1 - \num{2.12180e-6}
 \end{aligned}
 \]
 \[
 \begin{aligned}
-\dfrac{\mathrm{GTD}_{r1}}{\mathrm{GTD}_{r2}} &= \dfrac{\num{9.92303e-2}}{\num{9.999978782e-1}}\\
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.92303e-2}}{\num{9.999978782e-1}}\\
   &= \num{9.92305e-2}
 \end{aligned}
 \]
 
 \medskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
 \[
-\dfrac{\mathrm{GTD}_{d1}}{\mathrm{GTD}_{d2}} = \num{9.92203e-2}
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} = \num{9.92203e-2} \quad \text{(via DTD)}
 \]
 \[
-\dfrac{\mathrm{GTD}_{r1}}{\mathrm{GTD}_{r2}} = \num{9.92305e-2}
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} = \num{9.92305e-2} \quad \text{(via Schwarzschild radius)}
 \]
 \[
 \begin{aligned}
@@ -473,7 +472,7 @@ Calculate GTD via Schwarzschild radius ratio:
 \end{aligned}
 \]
 
-How does $\mathrm{GTD}_{r1}/\mathrm{GTD}_{r2}$ compare to $\mathrm{GTD}_{d1}/\mathrm{GTD}_{d2}$? They are the same, confirming that the same compactness ratio $K$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
+How do the two results compare? They are the same, confirming that the same compactness ratio $K$ is returned by both the Schwarzschild radius and the DeGerlia compactness ratio, and that both yield the same GTD result.
 
 All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
 
