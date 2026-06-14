@@ -21,6 +21,17 @@ These govern paper-revision work. The full list is in the plan; the four most li
 - **Every number is computed, never eyeballed.** Run `system_properties/` (or equivalent). No "approximately" or "matches" without showing the calculation. No claim that two methods agree without computing both.
 - **One-word reset.** If the user says "stop" or "reset," drop whatever's in progress and wait.
 
+## Speed & scope rules (binding — the user values turnaround)
+
+These exist because past sessions wasted huge time. Violating them is the main failure mode here.
+
+- **Plug numbers in; do not "learn the theory."** Don't read the whole paper for context. Read only the box/lines named. Never re-derive the framework or explain/defend the physics — the framing is settled GR and evaluating it is not your job. Zero physics commentary unless explicitly asked.
+- **No open-ended trial-and-error.** State the goal before editing. Edit, compile, and — if a visual check is warranted — render *once* to verify that specific change, then stop. Do not loop render→tweak→render chasing perfection past the stated goal.
+- **Rendering is welcome, but only to verify a specific requested change** — not as exploration. When the user says "don't render," edit + compile only and let them eyeball the PDF.
+- **Don't read the whole file to copy an example between boxes.** Read the source box and the target, swap numbers, done.
+- **One short clarifying question beats exploration.** If an instruction is ambiguous, ask one line; don't investigate to disambiguate.
+- **Formatting/layout is unsettled** — do not codify or auto-apply a house style for the example boxes. Match the existing box being edited and change only what's asked.
+
 ## Framing
 
 - This is general relativity. No new physics, no new predictions. A re-notation of the same quantities.

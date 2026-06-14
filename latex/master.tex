@@ -2,7 +2,7 @@
 %RSC Article Template with Section Structure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[twoside,twocolumn,9pt]{article}
+\documentclass[twoside,twocolumn,9pt,fleqn]{article}
 \usepackage{extsizes}
 \usepackage[super,sort&compress,comma]{natbib}
 \usepackage[version=3]{mhchem}
@@ -78,6 +78,7 @@
 \setlength{\skip\footins}{0.4cm}
 \setlength{\footnotesep}{0.25cm}
 \setlength{\jot}{10pt}
+\setlength{\mathindent}{1.5em}
 \titlespacing*{\section}{0pt}{4pt}{4pt}
 \titlespacing*{\subsection}{0pt}{15pt}{1pt}
 %%%END OF PAGE SETUP%%%
@@ -300,22 +301,17 @@ $R$ (\unit{\meter}) & $r_s$ & $\tfrac{4}{3}\,r_s$ \\
  \medskip\noindent\textbf{Calculate GTD ratio from DTD:}
   \nopagebreak
   \begin{align*}
-  \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2}
-  &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
-  &= \dfrac{\sqrt{1-(1)^2}}{\sqrt{1-(\num{8.66025e-1})^2}}\\
-  &= \dfrac{\sqrt{1-1}}{\sqrt{1-\tfrac{3}{4}}}\\
-  &= \dfrac{\sqrt{0}}{\sqrt{\tfrac{1}{4}}}\\
-  &= \dfrac{0}{\tfrac{1}{2}}\\
-  &= 0\\
-  \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= 0
+  \mathrm{GTD}_1/\mathrm{GTD}_2 &= \sqrt{1-\mathrm{DTD}_1^2}\,\big/\,\sqrt{1-\mathrm{DTD}_2^2}\\
+  &= \sqrt{1-(1)^2}\big/\sqrt{1-(\num{8.66025e-1})^2}\\
+  &= \sqrt{1-1}\big/\sqrt{1-\tfrac{3}{4}} = \sqrt{0}\big/\sqrt{\tfrac{1}{4}} = 0\big/\tfrac{1}{2} = 0
   \end{align*}
 
 \medskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}
 
 \noindent Schwarzschild radii:
-\begin{flalign*}
-&\hspace*{\parindent} r_{s1} = r_{s2} = \dfrac{2GM_1}{c^2} &
-\end{flalign*}
+\[
+r_{s1} = r_{s2} = \dfrac{2GM_1}{c^2}
+\]
 
 \noindent Calculate $K$ values from the $r_s/R$ ratio:
 \[
@@ -328,22 +324,22 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{r_{s2}}{\tfrac{4}{3}\,r_{s2}} &&= \dfrac{3
 \noindent Calculate GTD via Schwarzschild radius ratio:
 \[
 \begin{aligned}
-\mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-1} = \sqrt{0} = 0\\[4pt]
-\mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\tfrac{3}{4}} = \sqrt{\tfrac{1}{4}} = \tfrac{1}{2}\\[4pt]
-\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{0}{\tfrac{1}{2}} = 0
+&\mathrm{GTD}_1 = \sqrt{1-K_1} = \sqrt{1-1} = \sqrt{0} = 0\\[4pt]
+&\mathrm{GTD}_2 = \sqrt{1-K_2} = \sqrt{1-\tfrac{3}{4}} = \sqrt{\tfrac{1}{4}} = \tfrac{1}{2}\\[4pt]
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \big/ \tfrac{1}{2} = 0
 \end{aligned}
 \]
 
 \medskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
 \[
 \begin{aligned}
-\dfrac{\mathrm{GTD}_{S1}}{\mathrm{GTD}_{S2}} &= 0 \quad \text{(via $r_s$)}\\
-\dfrac{\mathrm{GTD}_{D1}}{\mathrm{GTD}_{D2}} &= 0 \quad \text{(via $D_{\mathrm{crit}}$)}
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \quad \text{(via $r_s$)}\\
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{aligned}
 \]
 \[
 \begin{aligned}
-\text{difference} &= 0 \quad \text{(both routes give the same value)}
+&\text{difference} = 0 \quad \text{(both routes give the same value)}
 \end{aligned}
 \]
 
