@@ -77,7 +77,7 @@
 \setstretch{1.125} %In particular, please do not alter this line.
 \setlength{\skip\footins}{0.4cm}
 \setlength{\footnotesep}{0.25cm}
-\setlength{\jot}{10pt}
+\setlength{\jot}{3pt}
 \setlength{\mathindent}{1.5em}
 \titlespacing*{\section}{0pt}{4pt}{4pt}
 \titlespacing*{\subsection}{0pt}{15pt}{1pt}
@@ -346,9 +346,6 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{r_{s2}}{\tfrac{4}{3}\,r_{s2}} &&= \dfrac{3
 All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
 \end{mdframed}
 
----
-
-
 \subsection{Example (Static Mass, Table Case 1)}
 \label{subsec:example_static_mass_table_case_1}
 
@@ -374,7 +371,8 @@ $R$ (\unit{\meter}) & $r_s$ & \num{7.00000e8} \\
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = \dfrac{M}{R\,D_{\mathrm{crit}}}\\[2pt]
   \quad K_1 &= \dfrac{M_1}{R_1\,D_{\mathrm{crit}}} = \dfrac{r_s}{R_1} = \dfrac{r_s}{r_s} = 1\\
   \mathrm{DTD}_1 &= \sqrt{1} = 1\\[2pt]
-  K_2 &= \dfrac{\num{2.00000e30}}{(\num{7.00000e8})(\num{6.73295e26})} = \num{4.24352e-6}\\
+  \quad K_2 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{7.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{4.24352e-6}\\
   \mathrm{DTD}_2 &= \sqrt{\num{4.24352e-6}} = \num{2.05998e-3}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{1}{\num{2.05998e-3}} = \num{4.85441e2}
   \end{align*}
@@ -463,9 +461,11 @@ $R$ (\unit{\meter}) & \num{3.00000e3} & \num{7.00000e8} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = \dfrac{M}{R\,D_{\mathrm{crit}}}\\[2pt]
-  K_1 &= \dfrac{\num{2.00000e30}}{(\num{3.00000e3})(\num{6.73295e26})} = \num{9.9015538e-1}\\
+  \quad K_1 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{3.00000e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{9.9015538e-1}\\
   \mathrm{DTD}_1 &= \sqrt{\num{9.9015538e-1}} = \num{9.9506552e-1}\\[2pt]
-  K_2 &= \dfrac{\num{2.00000e30}}{(\num{7.00000e8})(\num{6.73295e26})} = \num{4.24352e-6}\\
+  \quad K_2 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{7.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{4.24352e-6}\\
   \mathrm{DTD}_2 &= \sqrt{\num{4.24352e-6}} = \num{2.05998e-3}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{9.9506552e-1}}{\num{2.05998e-3}} = \num{4.83046e2}
   \end{align*}
@@ -527,10 +527,6 @@ All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \r
 
 \end{mdframed}
 
-\noindent See Table~\ref{tab:pair_ratios}, column $M = M$.
-
-
-
 \subsection{Static Radius (Linear) ($R_1 = R_2$)}
 
 When the two systems share the same radius, the radius terms cancel in $k_d$:
@@ -559,9 +555,11 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
-  K_1 &= \dfrac{\num{1.00000e24}}{(\num{1.00000e8})(\num{6.73295e26})} = \num{1.48523e-11}\\
+  \quad K_1 &= \dfrac{\num{1.00000e24}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-11}\\
   \mathrm{DTD}_1 &= \sqrt{\num{1.48523e-11}} = \num{3.85387e-6}\\[2pt]
-  K_2 &= \dfrac{\num{1.00000e30}}{(\num{1.00000e8})(\num{6.73295e26})} = \num{1.48523e-5}\\
+  \quad K_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-5}\\
   \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{3.85387e-6}}{\num{3.85387e-3}} = \num{1.00000e-3}
   \end{align*}
@@ -656,9 +654,11 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e7} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
-  K_1 &= \dfrac{\num{1.00000e30}}{(\num{1.00000e8})(\num{6.73295e26})} = \num{1.48523e-5}\\
+  \quad K_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-5}\\
   \mathrm{DTD}_1 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\[2pt]
-  K_2 &= \dfrac{\num{1.00000e27}}{(\num{1.00000e7})(\num{6.73295e26})} = \num{1.48523e-7}\\
+  \quad K_2 &= \dfrac{\num{1.00000e27}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-7}\\
   \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-7}} = \num{3.85387e-4}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{3.85387e-3}}{\num{3.85387e-4}} = \num{1.00000e1}
   \end{align*}
@@ -755,9 +755,11 @@ $R$ (\unit{\meter}) & \num{1.00000e7} & \num{1.00000e8} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
-  K_1 &= \dfrac{\num{1.00000e32}}{(\num{1.00000e7})(\num{6.73295e26})} = \num{1.48523e-2}\\
+  \quad K_1 &= \dfrac{\num{1.00000e32}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-2}\\
   \mathrm{DTD}_1 &= \sqrt{\num{1.48523e-2}} = \num{1.21870e-1}\\[2pt]
-  K_2 &= \dfrac{\num{1.00000e30}}{(\num{1.00000e8})(\num{6.73295e26})} = \num{1.48523e-5}\\
+  \quad K_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-5}\\
   \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{1.21870e-1}}{\num{3.85387e-3}} = \num{3.16228e1}
   \end{align*}
@@ -854,9 +856,11 @@ $R$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
-  K_1 &= \dfrac{\num{1.00000e20}}{(\num{2.00000e-7})(\num{6.73295e26})} = \num{7.42617e-1}\\
+  \quad K_1 &= \dfrac{\num{1.00000e20}\,\unit{\kilogram}}{(\num{2.00000e-7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{7.42617e-1}\\
   \mathrm{DTD}_1 &= \sqrt{\num{7.42617e-1}} = \num{8.61752e-1}\\[2pt]
-  K_2 &= \dfrac{\num{1.00000e30}}{(\num{1.00000e7})(\num{6.73295e26})} = \num{1.48523e-4}\\
+  \quad K_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-4}\\
   \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-4}} = \num{1.21870e-2}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{8.61752e-1}}{\num{1.21870e-2}} = \num{7.07107e1}
   \end{align*}
@@ -945,9 +949,11 @@ $R$ (\unit{\meter}) & \num{2.00000e0} & \num{1.00000e0} \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
-  K_1 &= \dfrac{\num{8.00000e0}}{(\num{2.00000e0})(\num{6.73295e26})} = \num{5.94093e-27}\\
+  \quad K_1 &= \dfrac{\num{8.00000e0}\,\unit{\kilogram}}{(\num{2.00000e0}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{5.94093e-27}\\
   \mathrm{DTD}_1 &= \sqrt{\num{5.94093e-27}} = \num{7.70774e-14}\\[2pt]
-  K_2 &= \dfrac{\num{1.00000e0}}{(\num{1.00000e0})(\num{6.73295e26})} = \num{1.48523e-27}\\
+  \quad K_2 &= \dfrac{\num{1.00000e0}\,\unit{\kilogram}}{(\num{1.00000e0}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-27}\\
   \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-27}} = \num{3.85387e-14}\\[2pt]
   \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{7.70774e-14}}{\num{3.85387e-14}} = \num{2.00000e0}
   \end{align*}
