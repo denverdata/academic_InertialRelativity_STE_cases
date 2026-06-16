@@ -579,16 +579,14 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
 \smallskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}
 
 \noindent Schwarzschild radii:
-\[
-\begin{aligned}
+\begin{align*}
 r_{s1} &= \dfrac{2GM_1}{c^2}\\
 &= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e24}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e-3}\,\unit{\meter}\\[6pt]
 r_{s2} &= \dfrac{2GM_2}{c^2}\\
 &= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e3}\,\unit{\meter}
-\end{aligned}
-\]
+\end{align*}
 
 \noindent Calculate $K$ values from the $r_s/R$ ratio:
 \[
@@ -1024,7 +1022,6 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e-27}\,\unit{\meter}}{\num{1.0
 &= 1-\num{7.42616e-28}\\[2pt]
 \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \num[group-digits=false]{9.9999999999999999999999999777215e-1}\\
 &= 1-\num{2.22785e-27}
-
 \end{aligned}
 \]
 \smallskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
