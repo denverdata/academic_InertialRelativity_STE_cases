@@ -501,10 +501,11 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{7.000
   &= \sqrt{\num{9.84667e-3}} = \num{9.92303e-2}\\
   &= 1-\num{9.007697e-1}\\
 \mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{4.24352e-6}}\\
-  &= \sqrt{\num{9.999957565e-1}}\\
-  &= \num{9.999978782e-1} = 1 - \num{2.12180e-6}\\[2pt]
-\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.92303e-2}}{\num{9.999978782e-1}}\\
-  &= \num{9.92305e-2}
+  &= \sqrt{\num{9.9999575648e-1}}\\
+  &= \num{9.9999787824e-1} = 1 - \num{2.12180e-6}\\[2pt]
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.92303e-2}}{\num{9.9999787824e-1}}\\
+  &= \num{9.92305e-2}\\
+  &= 1-\num{9.007695e-1}
 \end{aligned}
 \]
 
@@ -569,8 +570,9 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
   \begin{align*}
   \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
   &= \dfrac{\sqrt{1-(\num{3.85387e-6})^2}}{\sqrt{1-(\num{3.85387e-3})^2}}\\
+  &= \dfrac{\sqrt{1-\num{1.48523e-11}}}{\sqrt{1-\num{1.48523e-5}}}\\
   &= \dfrac{\sqrt{\num{9.999999999851477e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
-  &= \dfrac{\num{9.9999999999257384e-1}}{\num{9.9999257381e-1}}\\
+  &= \dfrac{\num{9.9999999999257383e-1}}{\num{9.9999257381e-1}}\\
   &= \num{1.00001e0}
   \end{align*}
 
@@ -579,9 +581,11 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
 \noindent Schwarzschild radii:
 \[
 \begin{aligned}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e24})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e24}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e-3}\,\unit{\meter}\\[6pt]
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e30})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e3}\,\unit{\meter}
 \end{aligned}
 \]
@@ -599,9 +603,11 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.000
 \begin{aligned}
 \mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{1.48523e-11}}\\
 &= \sqrt{\num{9.999999999851477e-1}}\\
+&= \num{9.9999999999257384e-1}\\
 &= 1-\num{7.42616e-12}\\[2pt]
 \mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-5}}\\
 &= \sqrt{\num{9.999851477e-1}}\\
+&= \num{9.9999257381e-1}\\
 &= 1-\num{7.42619e-6}\\[2pt]
 \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.9999999999257384e-1}}{\num{9.9999257381e-1}}\\
 &= \num{1.00001e0}
@@ -668,6 +674,7 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e7} \\
   \begin{align*}
   \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
   &= \dfrac{\sqrt{1-(\num{3.85387e-3})^2}}{\sqrt{1-(\num{3.85387e-4})^2}}\\
+  &= \dfrac{\sqrt{1-\num{1.48523e-5}}}{\sqrt{1-\num{1.48523e-7}}}\\
   &= \dfrac{\sqrt{\num{9.999851477e-1}}}{\sqrt{\num{9.99999851477e-1}}}\\
   &= \dfrac{\num{9.9999257381e-1}}{\num{9.999999257383e-1}}\\
   &= \num{9.9999264807e-1}\\
@@ -679,9 +686,11 @@ $R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e7} \\
 \noindent Schwarzschild radii:
 \[
 \begin{aligned}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e30})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e3}\,\unit{\meter}\\[6pt]
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e27})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e27}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e0}\,\unit{\meter}
 \end{aligned}
 \]
@@ -699,10 +708,12 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e0}\,\unit{\meter}}{\num{1.000
 \begin{aligned}
 \mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{1.48523e-5}}\\
 &= \sqrt{\num{9.999851477e-1}}\\
-&= \num{9.9999257381e-1}\\[2pt]
+&= \num{9.9999257381e-1}\\
+&= 1-\num{7.42619e-6}\\[2pt]
 \mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-7}}\\
 &= \sqrt{\num{9.99999851477e-1}}\\
-&= \num{9.999999257384e-1}\\[2pt]
+&= \num{9.999999257384e-1}\\
+&= 1-\num{7.42616e-8}\\[2pt]
 \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.9999257381e-1}}{\num{9.999999257384e-1}}\\
 &= \num{9.9999264807e-1}\\
 &= 1-\num{7.35193e-6}
@@ -780,9 +791,11 @@ $R$ (\unit{\meter}) & \num{1.00000e7} & \num{1.00000e8} \\
 \noindent Schwarzschild radii:
 \[
 \begin{aligned}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e32})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e32}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e5}\,\unit{\meter}\\[6pt]
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e30})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e3}\,\unit{\meter}
 \end{aligned}
 \]
@@ -800,10 +813,12 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.000
 \begin{aligned}
 \mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{1.48523e-2}}\\
 &= \sqrt{\num{9.851477e-1}}\\
-&= \num{9.9254606e-1}\\[2pt]
+&= \num{9.9254606e-1}\\
+&= 1-\num{7.45394e-3}\\[2pt]
 \mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-5}}\\
 &= \sqrt{\num{9.999851477e-1}}\\
-&= \num{9.9999257381e-1}\\[2pt]
+&= \num{9.9999257381e-1}\\
+&= 1-\num{7.42619e-6}\\[2pt]
 \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{9.9254606e-1}}{\num{9.9999257381e-1}}\\
 &= \num{9.9255343e-1}\\
 &= 1-\num{7.44657e-3}
@@ -870,9 +885,11 @@ $R$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
   \begin{align*}
   \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
   &= \dfrac{\sqrt{1-(\num{8.61752e-1})^2}}{\sqrt{1-(\num{1.21870e-2})^2}}\\
+  &= \dfrac{\sqrt{1-\num{7.42617e-1}}}{\sqrt{1-\num{1.48523e-4}}}\\
   &= \dfrac{\sqrt{\num{2.57383e-1}}}{\sqrt{\num{9.99851477e-1}}}\\
   &= \dfrac{\num{5.07330e-1}}{\num{9.999257356e-1}}\\
-  &= \num{5.07367e-1}
+  &= \num{5.07367e-1}\\
+  &= 1-\num{4.92633e-1}
   \end{align*}
 
 \smallskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}
@@ -880,9 +897,11 @@ $R$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
 \noindent Schwarzschild radii:
 \[
 \begin{aligned}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e20})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e20}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e-7}\,\unit{\meter}\\[6pt]
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e30})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e3}\,\unit{\meter}
 \end{aligned}
 \]
@@ -964,6 +983,9 @@ $R$ (\unit{\meter}) & \num{2.00000e0} & \num{1.00000e0} \\
   \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
   &= \dfrac{\sqrt{1-(\num{7.70774e-14})^2}}{\sqrt{1-(\num{3.85387e-14})^2}}\\
   &= \dfrac{\sqrt{1-\num{5.94093e-27}}}{\sqrt{1-\num{1.48523e-27}}}\\
+  &= \dfrac{\sqrt{\num[group-digits=false]{9.9999999999999999999999999405907e-1}}}{\sqrt{\num[group-digits=false]{9.9999999999999999999999999851477e-1}}}\\
+  &= \dfrac{\num[group-digits=false]{9.9999999999999999999999999702953e-1}}{\num[group-digits=false]{9.9999999999999999999999999257383e-1}}\\
+  &= \num[group-digits=false]{9.9999999999999999999999999777215e-1}\\
   &= 1-\num{2.22785e-27}
   \end{align*}
 
@@ -972,9 +994,11 @@ $R$ (\unit{\meter}) & \num{2.00000e0} & \num{1.00000e0} \\
 \noindent Schwarzschild radii:
 \[
 \begin{aligned}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{8.00000e0})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{8.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.18819e-26}\,\unit{\meter}\\[6pt]
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11})(\num{1.00000e0})}{(\num{2.99792e8})^2}\\[2pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
 &= \num{1.48523e-27}\,\unit{\meter}
 \end{aligned}
 \]
@@ -991,13 +1015,18 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e-27}\,\unit{\meter}}{\num{1.0
 \[
 \begin{aligned}
 \mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{5.94093e-27}}\\
+&= \sqrt{\num[group-digits=false]{9.9999999999999999999999999405907e-1}}\\
+&= \num[group-digits=false]{9.9999999999999999999999999702954e-1}\\
 &= 1-\num{2.97046e-27}\\[2pt]
 \mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-27}}\\
+&= \sqrt{\num[group-digits=false]{9.9999999999999999999999999851477e-1}}\\
+&= \num[group-digits=false]{9.99999999999999999999999999257384e-1}\\
 &= 1-\num{7.42616e-28}\\[2pt]
-\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= 1-\num{2.22785e-27}
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \num[group-digits=false]{9.9999999999999999999999999777215e-1}\\
+&= 1-\num{2.22785e-27}
+
 \end{aligned}
 \]
-
 \smallskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
 \[
 \begin{aligned}
