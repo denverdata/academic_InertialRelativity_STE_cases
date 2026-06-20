@@ -304,18 +304,18 @@ The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGe
 %---
 
 \begin{mdframed}
-\textbf{Example (Static Mass):} System 2 is the system being measured, at $\tfrac{4}{3}$ its Schwarzschild radius; System 1 is a same-mass reference set to its Schwarzschild radius ($R_1 = r_s$).
+\textbf{Example (Static Mass):} System 1 is a same-mass reference at $\tfrac{4}{3}$ its Schwarzschild radius; System 2 is the system being measured, at $R_2 = \num{1.00000e8}$\,\unit{\meter}.
 
 \smallskip\noindent\textbf{System properties:}
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
 $M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e30} \\
-$R$ (\unit{\meter}) & $r_s$ & $\tfrac{4}{3}\,r_s$ \\
+$R$ (\unit{\meter}) & $\tfrac{4}{3}\,r_s$ & \num{1.00000e8} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -323,19 +323,19 @@ $R$ (\unit{\meter}) & $r_s$ & $\tfrac{4}{3}\,r_s$ \\
 \smallskip\noindent\textbf{Calculate DTD for each System:}
   \begin{align*}
   \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = \dfrac{M}{R\,D_{\mathrm{crit}}}\\[2pt]
-  \quad K_1 &= \dfrac{M_1}{R_1\,D_{\mathrm{crit}}} = \dfrac{r_s}{R_1} = \dfrac{r_s}{r_s} = 1\\
-  \mathrm{DTD}_1 &= \sqrt{1} = 1\\[2pt]
-  \quad K_2 &= \dfrac{M_2}{R_2\,D_{\mathrm{crit}}} = \dfrac{r_s}{R_2} = \dfrac{r_s}{\tfrac{4}{3}\,r_s} = \dfrac{3}{4}\\
-  \mathrm{DTD}_2 &= \sqrt{\tfrac{3}{4}} = \num{8.66025e-1}\\[2pt]
-  \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{1}{\num{8.66025e-1}} = \num{1.15470}
+  \quad K_1 &= \dfrac{M_1}{R_1\,D_{\mathrm{crit}}} = \dfrac{r_s}{R_1} = \dfrac{r_s}{\tfrac{4}{3}\,r_s} = \dfrac{3}{4}\\
+  \mathrm{DTD}_1 &= \sqrt{\tfrac{3}{4}} = \num{8.66025e-1}\\[2pt]
+  \quad K_2 &= \dfrac{M_2}{R_2\,D_{\mathrm{crit}}} = \dfrac{r_s}{R_2} = \dfrac{\num{1485.23}}{\num{1.00000e8}} = \num{1.48523e-5}\\
+  \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\[2pt]
+  \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{8.66025e-1}}{\num{3.85387e-3}} = \num{224.716}
   \end{align*}
 
  \smallskip\noindent\textbf{Calculate GTD ratio from DTD:}
   \nopagebreak
   \begin{align*}
   \mathrm{GTD}_1/\mathrm{GTD}_2 &= \sqrt{1-\mathrm{DTD}_1^2}\,\big/\,\sqrt{1-\mathrm{DTD}_2^2}\\
-  &= \sqrt{1-(1)^2}\big/\sqrt{1-(\num{8.66025e-1})^2}\\
-  &= \sqrt{1-1}\big/\sqrt{1-\tfrac{3}{4}} = \sqrt{0}\big/\sqrt{\tfrac{1}{4}} = 0\big/\tfrac{1}{2} = 0
+  &= \sqrt{1-(\num{8.66025e-1})^2}\big/\sqrt{1-(\num{3.85387e-3})^2}\\
+  &= \num{5.00000e-1}\big/\num{9.99993e-1} = \num{5.00004e-1}
   \end{align*}
 
 \smallskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}
@@ -347,27 +347,27 @@ r_{s1} = r_{s2} = \dfrac{2GM_1}{c^2}
 
 \noindent Calculate $K$ values from the $r_s/R$ ratio:
 \begin{align*}
-K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{r_{s1}}{r_{s1}} &&= 1\\[2pt]
-K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{r_{s2}}{\tfrac{4}{3}\,r_{s2}} &&= \dfrac{3}{4}
+K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{r_{s1}}{\tfrac{4}{3}\,r_{s1}} &&= \dfrac{3}{4}\\[2pt]
+K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1485.23}}{\num{1.00000e8}} &&= \num{1.48523e-5}
 \end{align*}
 
 \noindent Calculate GTD via Schwarzschild radius ratio:
 \begin{align*}
-&\mathrm{GTD}_1 = \sqrt{1-K_1} = \sqrt{1-1} = \sqrt{0} = 0\\[2pt]
-&\mathrm{GTD}_2 = \sqrt{1-K_2} = \sqrt{1-\tfrac{3}{4}} = \sqrt{\tfrac{1}{4}} = \tfrac{1}{2}\\[2pt]
-&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \big/ \tfrac{1}{2} = 0
+&\mathrm{GTD}_1 = \sqrt{1-K_1} = \sqrt{1-\tfrac{3}{4}} = \sqrt{\tfrac{1}{4}} = \num{5.00000e-1}\\[2pt]
+&\mathrm{GTD}_2 = \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-5}} = \num{9.99993e-1}\\[2pt]
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = \num{5.00000e-1} \big/ \num{9.99993e-1} = \num{5.00004e-1}
 \end{align*}
 
 \smallskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
 \begin{align*}
-&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \quad \text{(via $r_s$)}\\
-&\mathrm{GTD}_1/\mathrm{GTD}_2 = 0 \quad \text{(via $D_{\mathrm{crit}}$)}
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = \num{5.00004e-1} \quad \text{(via $r_s$)}\\
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = \num{5.00004e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \begin{align*}
 &\text{difference} = 0 \quad \text{(both routes give the same value)}
 \end{align*}
 
-All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \ref{app:pair_table}.
+This pair is a hand-set illustration and is not among the cases tabulated in \ref{app:pair_table}.
 \end{mdframed}
 
 \subsection{Example (Static Mass, Table Case 1)}
@@ -380,7 +380,7 @@ All values above appear in column $M=M$ of Table~\ref{tab:pair_properties} in \r
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -464,7 +464,7 @@ This case is the standard gravitational time-dilation calculation; the $M_1 R_2/
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -551,7 +551,7 @@ The DeGerlia compactness ratio reduces to a ratio of masses. The Lorentz factor 
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -645,7 +645,7 @@ The DeGerlia compactness ratio reduces to the square of the radius ratio; the li
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -741,7 +741,7 @@ The DeGerlia compactness ratio reduces to the cube of the radius ratio.
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -836,7 +836,7 @@ Both mass and radius must be specified independently for each system.
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
@@ -914,6 +914,93 @@ K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.000
 This case is tabulated in Table~\ref{tab:pair_ratios}, column General of \ref{app:pair_table}.
 \end{mdframed}
 
+\medskip
+\noindent\textit{[Below: same case, auto-generated by \texttt{build\_example\_block.py} for comparison against the hand-written block above.]}
+\medskip
+
+\begin{mdframed}
+\textbf{Example (General Case --- Generated):}
+
+\smallskip\noindent\textbf{System properties:}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+ & System 1 ($S_1$) & System 2 ($S_2$) \\
+\midrule
+$M$ (\unit{\kilogram}) & \num{1.00000e20} & \num{1.00000e30} \\
+$R$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\smallskip\noindent\textbf{Calculate DTD for each System:}
+  \begin{align*}
+  \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]
+  \quad K_1 &= \dfrac{\num{1.00000e20}\,\unit{\kilogram}}{(\num{2.00000e-7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{7.42617e-1}\\
+  \mathrm{DTD}_1 &= \sqrt{\num{7.42617e-1}} = \num{8.61752e-1}\\[2pt]
+  \quad K_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})}\\
+  &= \num{1.48523e-4}\\
+  \mathrm{DTD}_2 &= \sqrt{\num{1.48523e-4}} = \num{1.21870e-2}\\[2pt]
+  \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{8.61752e-1}}{\num{1.21870e-2}} = \num{7.07107e1}
+  \end{align*}
+
+ \smallskip\noindent\textbf{Calculate GTD ratio from DTD:}
+  \nopagebreak
+  \begin{align*}
+  \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
+  &= \dfrac{\sqrt{1-(\num{8.61752e-1})^2}}{\sqrt{1-(\num{1.21870e-2})^2}}\\
+  &= \dfrac{\sqrt{1-\num{7.42617e-1}}}{\sqrt{1-\num{1.48523e-4}}}\\
+  &= \dfrac{\sqrt{\num{2.57383e-1}}}{\sqrt{\num{9.99851477e-1}}}\\
+  &= \dfrac{\num{5.07330e-1}}{\num{9.999257356e-1}}\\
+  &= \num{5.07367e-1}\\
+  &= 1-\num{4.92633e-1}
+  \end{align*}
+
+\smallskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}
+
+\noindent Schwarzschild radii:
+\begin{align*}
+r_{s1} &= \dfrac{2GM_1}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e20}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
+&= \num{1.48523e-7}\,\unit{\meter}\\[6pt]
+r_{s2} &= \dfrac{2GM_2}{c^2}\\
+&= \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\[2pt]
+&= \num{1.48523e3}\,\unit{\meter}
+\end{align*}
+
+\noindent Calculate $K$ values from the $r_s/R$ ratio:
+\begin{align*}
+K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e-7}\,\unit{\meter}}{\num{2.00000e-7}\,\unit{\meter}} &&= \num{7.42616e-1}\\[2pt]
+K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-4}
+\end{align*}
+
+\noindent Calculate GTD via Schwarzschild radius ratio:
+\begin{align*}
+\mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-\num{7.42616e-1}}\\
+&= \sqrt{\num{2.57384e-1}}\\
+&= \num{5.07330e-1}\\[2pt]
+\mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-\num{1.48523e-4}}\\
+&= \sqrt{\num{9.99851477e-1}}\\
+&= \num{9.999257356e-1}\\[2pt]
+\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\num{5.07330e-1}}{\num{9.999257356e-1}}\\
+&= \num{5.07368e-1}
+\end{align*}
+
+\smallskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}
+\begin{align*}
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = \num{5.07368e-1} \quad \text{(via $r_s$)}\\
+&\mathrm{GTD}_1/\mathrm{GTD}_2 = \num{5.07367e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
+\end{align*}
+\begin{align*}
+\text{difference} &= \num{5.00857e-7}\\
+&\quad \text{(below the margin of error imparted by $G$,}\\
+&\quad \text{$0.00015$, the gravitational constant's limit)}
+\end{align*}
+\end{mdframed}
+
 \subsection{Classical Static Density Example}
 
 \begin{mdframed}
@@ -923,7 +1010,7 @@ This case is tabulated in Table~\ref{tab:pair_ratios}, column General of \ref{ap
 
 \begin{center}
 \small
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule

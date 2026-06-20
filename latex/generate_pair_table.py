@@ -33,9 +33,9 @@ def parse_md_groups(filepath):
                 continue
             if stripped.startswith('|'):
                 parts = [p.strip() for p in stripped.split('|')[1:-1]]
-                if len(parts) >= 8:
+                if len(parts) >= 9:
                     label = parts[0]
-                    values = parts[1:9]
+                    values = parts[1:10]
                     groups[-1].append((label, values))
     return [g for g in groups if g]
 
@@ -161,14 +161,16 @@ LABELS = {
     'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{m_2^2 r_2/(m_1^2 r_1)}$',
 }
 
-# Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General, 6=Classical Static Density Example, 7=General2
-# Keep: M=M, R=R, P=P, I=I, General, Classical Static Density Example
-KEEP = [0, 2, 3, 4, 5, 6]
+# Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
+#                 6=Classical Static Density Example, 7=General2, 8=M=M R1=4/3 rs
+# Keep (new front column first): 4/3 rs, M=M, R=R, P=P, I=I, General, Classical
+KEEP = [8, 0, 2, 3, 4, 5, 6]
 COL_NAMES = [
-    r'Case 1 ($M\!=\!M$)',
-    r'Case 2 ($R\!=\!R$)',
-    r'Case 3 ($\rho\!=\!\rho$)',
-    r'Case 4 ($I\!=\!I$)',
+    r'$M\!=\!M$, $R_1\!=\!\tfrac{4}{3}r_s$',
+    r'$M\!=\!M$',
+    r'$R\!=\!R$',
+    r'$\rho\!=\!\rho$',
+    r'$I\!=\!I$',
     'General',
     r'Classical ($\rho\!=\!\rho$)',
 ]
@@ -180,7 +182,6 @@ SKIP_LABELS = {
     'dtd_1',
     'dtd_2',
     'dtd_1/dtd_2',
-    'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)',
     '(dtd_1/dtd_2)²*(r_1/r_2)³',
 }
 
@@ -212,9 +213,10 @@ def emit_table_header(caption, label):
     print(r'\centering')
     print(r'\caption{' + caption + '}')
     print(r'\label{' + label + '}')
+    print(r'\fontsize{7}{8.5}\selectfont')
     print(r'\setlength{\tabcolsep}{1pt}')
     print(r'\renewcommand{\arraystretch}{1.1}')
-    print(r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l @{}}')
+    print(r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l l @{}}')
     print(r'\toprule')
     print(r' & ' + ' & '.join([r'\textbf{' + n + '}' for n in COL_NAMES]) + r' \\')
     print(r'\midrule')
@@ -335,7 +337,16 @@ def main():
                 continue
             bd = Decimal(b)
             d_ratio.append('---' if bd == 0 else str(Decimal(a) / bd))
+        # Pull the sqrt(1-dtd²) row out of its source position so we can place
+        # it last; append GTD_d ratio, then re-append the sqrt row after it.
+        sqrt_row = None
+        for i, (label, vals) in enumerate(groups[3]):
+            if label == 'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)':
+                sqrt_row = groups[3].pop(i)
+                break
         groups[3].append(('GTD_d_1/GTD_d_2', d_ratio))
+        if sqrt_row is not None:
+            groups[3].append(sqrt_row)
 
     # Add k_s, k_d, GTD_d_1, GTD_d_2 placeholder rows to the top table.
     groups = add_top_table_rows(groups)
