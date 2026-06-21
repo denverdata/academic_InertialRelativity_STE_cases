@@ -14,8 +14,8 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'system_properties'))
 from decimal import Decimal as D, getcontext
 getcontext().prec = 50
-from uniform_sphere import UniformSphere
 import constants as C
+from pair_calc import pair_metrics
 
 
 def sig(x, n=6):
@@ -29,7 +29,7 @@ def sig(x, n=6):
           0.999851477   -> 9.99851477e-1   (3 nines + 6)
           0.9999257356  -> 9.999257356e-1  (4 nines + 6)
     """
-    from decimal import localcontext, ROUND_HALF_EVEN
+    from decimal import localcontext, ROUND_HALF_UP
     x = D(x)
     if x == 0:
         return '0'
@@ -51,7 +51,7 @@ def sig(x, n=6):
     sign = '-' if x < 0 else ''
     with localcontext() as ctx:
         ctx.prec = prec
-        ctx.rounding = ROUND_HALF_EVEN
+        ctx.rounding = ROUND_HALF_UP
         r = +abs(x)
     exp = r.adjusted()
     _, digits, _ = r.as_tuple()
@@ -73,117 +73,183 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     Dc = C.D_CRIT
     G, c = C.G, C.SPEED_OF_LIGHT
 
-    s1 = UniformSphere(radius=R1, mass=M1)
-    s2 = UniformSphere(radius=R2, mass=M2)
-    p1 = lambda k: s1._properties[k]
-    p2 = lambda k: s2._properties[k]
+    # All numbers come from the single shared core (pair_calc), so the worked
+    # example and the appendix table are guaranteed to show the same values.
+    m = pair_metrics(M1, R1, M2, R2)
 
-    # K via D_crit route (= M/(R*Dcrit) = k_d)
-    K1 = p1('k_d'); K2 = p2('k_d')
-    DTD1 = K1.sqrt(); DTD2 = K2.sqrt()
-    dtd_ratio = DTD1 / DTD2
+    # K via D_crit route (= M/(R*Dcrit) = k_d)  -- this is also what DTD uses.
+    K1 = m['D_1_norm']; K2 = m['D_2_norm']
+    DTD1 = m['dtd_1']; DTD2 = m['dtd_2']
+    dtd_ratio = m['dtd_1/dtd_2']
 
-    # GTD-from-DTD route
+    # GTD-from-DTD route (DeGerlia): gtd_d = sqrt(1 - k_d)
     one_m1 = D(1) - DTD1 ** 2          # = 1 - K1
     one_m2 = D(1) - DTD2 ** 2
-    g1_d = one_m1.sqrt(); g2_d = one_m2.sqrt()
-    gtd_ratio_d = g1_d / g2_d
+    g1_d = m['gtd_d_1']; g2_d = m['gtd_d_2']
 
-    # Schwarzschild route
-    rs1 = p1('schwarzschild_radius'); rs2 = p2('schwarzschild_radius')
-    Ks1 = rs1 / R1; Ks2 = rs2 / R2
-    g1_s = (D(1) - Ks1).sqrt(); g2_s = (D(1) - Ks2).sqrt()
-    gtd_ratio_s = g1_s / g2_s
+    # Schwarzschild route: k_s = r_s/R, gtd_s = sqrt(1 - k_s)
+    rs1 = m['r_s_1 (m)']; rs2 = m['r_s_2 (m)']
+    Ks1 = m['k_s_1']; Ks2 = m['k_s_2']
+    g1_s = m['gtd_1']; g2_s = m['gtd_2']
 
-    diff = abs(gtd_ratio_s - gtd_ratio_d)
+    # GTD ratios: the LARGER GTD always goes in the denominator so the ratio
+    # is <= 1 (a GTD ratio is never inverted to exceed unity). Pick top/bottom
+    # subscripts accordingly, per route. (DTD ratios have no such constraint.)
+    if g1_d <= g2_d:
+        gd_top, gd_bot, gd_topv, gd_botv = '1', '2', g1_d, g2_d
+    else:
+        gd_top, gd_bot, gd_topv, gd_botv = '2', '1', g2_d, g1_d
+    gtd_ratio_d = gd_topv / gd_botv
+    if g1_s <= g2_s:
+        gs_top, gs_bot, gs_topv, gs_botv = '1', '2', g1_s, g2_s
+    else:
+        gs_top, gs_bot, gs_topv, gs_botv = '2', '1', g2_s, g1_s
+    gtd_ratio_s = gs_topv / gs_botv
 
     kgpm = r'\,\unit[per-mode=symbol]{\kilogram\per\meter}'
+    INDENT = r'1.5em'   # one shared indent for all content under headings
     L = []
     A = L.append
+
+    # --- Heading helpers (single source of truth for block typography) -------
+    # Spacing model (deliberately uniform, no per-heading magic):
+    #   * Every heading is flush-left at the box margin.
+    #   * Every piece of content under a heading -- table AND math -- is indented
+    #     by ONE shared amount (INDENT), via \mathindent (fleqn) for math and an
+    #     \hspace* for the table. Two clean horizontal levels, nothing else.
+    #   * The vertical gap above every heading is the previous block's
+    #     \belowdisplayskip; the gap below is \abovedisplayskip. Both are set to
+    #     the SAME value below, so every heading has identical space above and
+    #     below it regardless of what precedes it.
+    # title : large bold name line.  sub : bold section heading.
+    # lbl   : plain (non-bold) inline label for sub-steps within a section.
+    def title(text): A(r'{\large\textbf{' + text + r'}}\par\vspace{\belowdisplayskip}')
+    def sub(text):   A(r'\noindent\textbf{' + text + r'}\par\nobreak')
+    def lbl(text):   A(r'\noindent ' + text + r'\par\nobreak')
+    def eq(*rows):
+        A(r'\begin{align*}')
+        for r in rows:
+            A(r)
+        A(r'\end{align*}')
+
+    # j(): build one aligned equation row "LHS &= p0 = p1 = ...". Pieces are
+    # joined inline with ' = ', EXCEPT a piece is pushed onto a new aligned
+    # continuation line ("\\ &= piece") when it (or the running line) would be
+    # too wide -- so the full-precision nines-heavy numbers never overflow the
+    # column. No digits are ever dropped; only the line wraps. WIDE = max chars
+    # allowed on a line before forcing a break.
+    import re as _re
+    WIDE = 46
+    def _w(s):
+        # rough rendered width: drop trailing annotations (\quad, \text{...})
+        # which don't drive wrapping, strip TeX control words/markup, count
+        # what's left, then add back the thin spaces siunitx inserts every 3
+        # digits (so a 33-digit number reads as wide as it actually renders).
+        t = _re.sub(r'\\quad', '', s)
+        t = _re.sub(r'\\text\{[^}]*\}', '', t)
+        t = _re.sub(r'\\[a-zA-Z]+|[{}\\$]', '', t)
+        digits = sum(c.isdigit() for c in t)
+        t = t.replace(',', '')
+        return len(t) + digits // 3
+    def j(lhs, *pieces):
+        line = lhs + r' &= ' + pieces[0]
+        cur = _w(lhs) + 2 + _w(pieces[0])
+        for p in pieces[1:]:
+            if cur + 3 + _w(p) > WIDE:
+                line += r'\\' + '\n' + r'&\quad = ' + p
+                cur = 4 + _w(p)
+            else:
+                line += r' = ' + p
+                cur += 3 + _w(p)
+        return line
+
     A(r'\begin{mdframed}')
-    A(r'\textbf{Example (' + name + r'):}')
-    A('')
-    A(r'\smallskip\noindent\textbf{System properties:}')
-    A('')
-    A(r'\begin{center}')
-    A(r'\small')
-    A(r'\begin{tabular}{@{}lll@{}}')
+    # Typography: pair-table font size; one symmetric display skip drives all
+    # heading gaps; jot controls inter-row gap inside align; mathindent gives
+    # math the same indent as the table.
+    A(r'\fontsize{7}{8.5}\selectfont')
+    # No gap between a heading and the math right under it (abovedisplayskip=0);
+    # section separation comes from belowdisplayskip above the next heading.
+    A(r'\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}')
+    A(r'\setlength{\abovedisplayshortskip}{0pt}\setlength{\belowdisplayshortskip}{4pt}')
+    A(r'\setlength{\jot}{1pt}')
+    A(r'\setlength{\mathindent}{' + INDENT + r'}')
+
+    title('Example (' + name + '):')
+
+    sub('System properties:')
+    # Left-indented, vertically tight table (reduced row height + zero rule pad).
+    A(r'{\renewcommand{\arraystretch}{0.9}'
+      r'\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}'
+      r'\setlength{\extrarowheight}{0pt}')
+    A(r'\hspace*{' + INDENT + r'}\begin{tabular}{@{}l l@{\hspace{1.5em}} l@{}}')
     A(r'\toprule')
     A(r' & System 1 ($S_1$) & System 2 ($S_2$) \\')
     A(r'\midrule')
     A(r'$M$ (\unit{\kilogram}) & ' + num(M1) + ' & ' + num(M2) + r' \\')
     A(r'$R$ (\unit{\meter}) & ' + num(R1) + ' & ' + num(R2) + r' \\')
     A(r'\bottomrule')
-    A(r'\end{tabular}')
-    A(r'\end{center}')
-    A('')
-    A(r'\smallskip\noindent\textbf{Calculate DTD for each System:}')
-    A(r'  \begin{align*}')
-    A(r'  \mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\[2pt]')
-    A(r'  \quad K_1 &= \dfrac{' + num(M1) + r'\,\unit{\kilogram}}{(' + num(R1) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')}\\')
-    A(r'  &= ' + num(K1) + r'\\')
-    A(r'  \mathrm{DTD}_1 &= \sqrt{' + num(K1) + r'} = ' + num(DTD1) + r'\\[2pt]')
-    A(r'  \quad K_2 &= \dfrac{' + num(M2) + r'\,\unit{\kilogram}}{(' + num(R2) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')}\\')
-    A(r'  &= ' + num(K2) + r'\\')
-    A(r'  \mathrm{DTD}_2 &= \sqrt{' + num(K2) + r'} = ' + num(DTD2) + r'\\[2pt]')
-    A(r'  \dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{' + num(DTD1) + r'}{' + num(DTD2) + r'} = ' + num(dtd_ratio) + r'')
-    A(r'  \end{align*}')
-    A('')
-    A(r' \smallskip\noindent\textbf{Calculate GTD ratio from DTD:}')
-    A(r'  \nopagebreak')
-    A(r'  \begin{align*}')
-    A(r'  \dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\')
-    A(r'  &= \dfrac{\sqrt{1-(' + num(DTD1) + r')^2}}{\sqrt{1-(' + num(DTD2) + r')^2}}\\')
-    A(r'  &= \dfrac{\sqrt{1-' + num(K1) + r'}}{\sqrt{1-' + num(K2) + r'}}\\')
-    A(r'  &= \dfrac{\sqrt{' + num(one_m1) + r'}}{\sqrt{' + num(one_m2) + r'}}\\')
-    A(r'  &= \dfrac{' + num(g1_d) + r'}{' + num(g2_d) + r'}\\')
-    A(r'  &= ' + num(gtd_ratio_d) + r'\\')
-    A(r'  &= 1-' + num(D(1) - gtd_ratio_d) + r'')
-    A(r'  \end{align*}')
-    A('')
-    A(r'\smallskip\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}')
-    A('')
-    A(r'\noindent Schwarzschild radii:')
-    A(r'\begin{align*}')
-    A(r'r_{s1} &= \dfrac{2GM_1}{c^2}\\')
-    A(r'&= \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\[2pt]')
-    A(r'&= ' + num(rs1) + r'\,\unit{\meter}\\[6pt]')
-    A(r'r_{s2} &= \dfrac{2GM_2}{c^2}\\')
-    A(r'&= \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\[2pt]')
-    A(r'&= ' + num(rs2) + r'\,\unit{\meter}')
-    A(r'\end{align*}')
-    A('')
-    A(r'\noindent Calculate $K$ values from the $r_s/R$ ratio:')
-    A(r'\begin{align*}')
-    A(r'K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{' + num(rs1) + r'\,\unit{\meter}}{' + num(R1) + r'\,\unit{\meter}} &&= ' + num(Ks1) + r'\\[2pt]')
-    A(r'K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{' + num(rs2) + r'\,\unit{\meter}}{' + num(R2) + r'\,\unit{\meter}} &&= ' + num(Ks2) + r'')
-    A(r'\end{align*}')
-    A('')
-    A(r'\noindent Calculate GTD via Schwarzschild radius ratio:')
-    A(r'\begin{align*}')
-    A(r'\mathrm{GTD}_1 &= \sqrt{1-K_1} = \sqrt{1-' + num(Ks1) + r'}\\')
-    A(r'&= \sqrt{' + num(D(1) - Ks1) + r'}\\')
-    A(r'&= ' + num(g1_s) + r'\\[2pt]')
-    A(r'\mathrm{GTD}_2 &= \sqrt{1-K_2} = \sqrt{1-' + num(Ks2) + r'}\\')
-    A(r'&= \sqrt{' + num(D(1) - Ks2) + r'}\\')
-    A(r'&= ' + num(g2_s) + r'\\[2pt]')
-    A(r'\dfrac{\mathrm{GTD}_1}{\mathrm{GTD}_2} &= \dfrac{' + num(g1_s) + r'}{' + num(g2_s) + r'}\\')
-    A(r'&= ' + num(gtd_ratio_s) + r'')
-    A(r'\end{align*}')
-    A('')
-    A(r'\smallskip\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}')
-    A(r'\begin{align*}')
-    A(r'&\mathrm{GTD}_1/\mathrm{GTD}_2 = ' + num(gtd_ratio_s) + r' \quad \text{(via $r_s$)}\\')
-    A(r'&\mathrm{GTD}_1/\mathrm{GTD}_2 = ' + num(gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}')
-    A(r'\end{align*}')
-    A(r'\begin{align*}')
-    A(r'\text{difference} &= ' + num(diff) + r'\\')
-    A(r'&\quad \text{(below the margin of error imparted by $G$,}\\')
-    A(r"&\quad \text{$0.00015$, the gravitational constant's limit)}")
-    A(r'\end{align*}')
+    A(r'\end{tabular}}\par\vspace{\belowdisplayskip}')
+
+    sub('Calculate DTD for each System:')
+    eq(
+        r'\mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\',
+        r'\quad K_1 &= \dfrac{' + num(M1) + r'\,\unit{\kilogram}}{(' + num(R1) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K1) + r'\\',
+        r'\mathrm{DTD}_1 &= \sqrt{' + num(K1) + r'} = ' + num(DTD1) + r'\\',
+        r'\quad K_2 &= \dfrac{' + num(M2) + r'\,\unit{\kilogram}}{(' + num(R2) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K2) + r'\\',
+        r'\mathrm{DTD}_2 &= \sqrt{' + num(K2) + r'} = ' + num(DTD2) + r'\\',
+        r'\dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{' + num(DTD1) + r'}{' + num(DTD2) + r'} = ' + num(dtd_ratio),
+    )
+
+    sub('Calculate GTD ratio from DTD:')
+    # Larger GTD in the denominator (gd_top / gd_bot), so the ratio stays <= 1.
+    dtt, dtb = ('DTD_' + gd_top), ('DTD_' + gd_bot)
+    DTt, DTb = (DTD1 if gd_top == '1' else DTD2), (DTD1 if gd_bot == '1' else DTD2)
+    Kt, Kb = (K1 if gd_top == '1' else K2), (K1 if gd_bot == '1' else K2)
+    omt, omb = (one_m1 if gd_top == '1' else one_m2), (one_m1 if gd_bot == '1' else one_m2)
+    eq(
+        j(r'\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'}',
+          r'\dfrac{\sqrt{1-\mathrm{' + dtt + r'}^2}}{\sqrt{1-\mathrm{' + dtb + r'}^2}}',
+          r'\dfrac{\sqrt{1-(' + num(DTt) + r')^2}}{\sqrt{1-(' + num(DTb) + r')^2}}',
+          r'\dfrac{\sqrt{1-' + num(Kt) + r'}}{\sqrt{1-' + num(Kb) + r'}}',
+          r'\dfrac{\sqrt{' + num(omt) + r'}}{\sqrt{' + num(omb) + r'}}',
+          r'\dfrac{' + num(gd_topv) + r'}{' + num(gd_botv) + r'}',
+          num(gtd_ratio_d),
+          r'1-' + num(D(1) - gtd_ratio_d)),
+    )
+
+    sub('Verify by Calculating GTD from Schwarzschild Radius Ratio:')
+    lbl('Schwarzschild radii:')
+    eq(
+        r'r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+        r'&= ' + num(rs1) + r'\,\unit{\meter}\\',
+        r'r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+        r'&= ' + num(rs2) + r'\,\unit{\meter}',
+    )
+    lbl(r'Calculate $K$ values from the $r_s/R$ ratio:')
+    eq(
+        r'K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{' + num(rs1) + r'\,\unit{\meter}}{' + num(R1) + r'\,\unit{\meter}} &&= ' + num(Ks1) + r'\\',
+        r'K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{' + num(rs2) + r'\,\unit{\meter}}{' + num(R2) + r'\,\unit{\meter}} &&= ' + num(Ks2),
+    )
+    lbl('Calculate GTD via Schwarzschild radius ratio:')
+    eq(
+        j(r'\mathrm{GTD}_1', r'\sqrt{1-K_1}', r'\sqrt{' + num(D(1) - Ks1) + r'}', num(g1_s), r'1-' + num(D(1) - g1_s)) + r'\\',
+        j(r'\mathrm{GTD}_2', r'\sqrt{1-K_2}', r'\sqrt{' + num(D(1) - Ks2) + r'}', num(g2_s), r'1-' + num(D(1) - g2_s)) + r'\\',
+        j(r'\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'}', r'\dfrac{' + num(gs_topv) + r'}{' + num(gs_botv) + r'}', num(gtd_ratio_s), r'1-' + num(D(1) - gtd_ratio_s)),
+    )
+
+    # Heading names the systems in the direction actually computed (numerator
+    # first), since that order names the comparator.
+    sub('Time-dilation ratio between System ' + gs_top + ' and System ' + gs_bot + ', computed two ways:')
+    # Reuse the already-computed/presented ratios -- equation use only, no
+    # second 1-x presentation. Larger GTD stays in the denominator (subscripts
+    # match each route's ordering above).
+    eq(
+        r'&\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'} = ' + num(gtd_ratio_s) + r' \quad \text{(via $r_s$)}\\',
+        r'&\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'} = ' + num(gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}',
+    )
     if caption:
-        A('')
-        A(caption)
+        A(r'\par' + caption)
     A(r'\end{mdframed}')
     return '\n'.join(L)
 

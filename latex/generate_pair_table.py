@@ -6,7 +6,7 @@ row groups preserved. Output to stdout — redirect to latex/pair_tables.tex."""
 import os
 import re
 import sys
-from decimal import Decimal, getcontext, localcontext, ROUND_HALF_EVEN
+from decimal import Decimal, getcontext, localcontext, ROUND_HALF_UP
 getcontext().prec = 50
 
 # Physical constants — single source of truth is system_properties/constants.py.
@@ -15,10 +15,54 @@ getcontext().prec = 50
 # system_properties/constants.py.
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from system_properties.constants import G as G_CONST, SPEED_OF_LIGHT, D_CRIT
+from pair_calc import pair_metrics
+
+
+def _core_values_by_label(filepath):
+    """Compute every metric for every column via the single shared core
+    (pair_calc), returning {label: [v0, v1, ..., v8]} as strings. The system
+    parameters (M, R) for each column are read from the .md's own m/r rows, so
+    the table's STRUCTURE (which columns exist) is taken from the .md while all
+    NUMBERS come from pair_calc -- the same core the example blocks use. Columns
+    whose m/r are blank/degenerate (e.g. a system exactly at r_s) keep '---'."""
+    raw = {}
+    with open(filepath) as f:
+        for line in f:
+            s = line.strip()
+            if s.startswith('|') and not s.startswith('|--') and not s.startswith('| metric'):
+                parts = [p.strip() for p in s.split('|')[1:-1]]
+                if len(parts) >= 2:
+                    raw.setdefault(parts[0], parts[1:])
+    ncol = max((len(v) for v in raw.values()), default=0)
+    m1, r1 = raw.get('m_1 (kg)', []), raw.get('r_1 (m)', [])
+    m2, r2 = raw.get('m_2 (kg)', []), raw.get('r_2 (m)', [])
+    by_label = {}
+    # Compute ONLY the columns the table renders (KEEP). Other source columns
+    # are leftover/unused data -- some hold degenerate inputs (e.g. a system
+    # inside its Schwarzschild radius) that are not valid two-system cases and
+    # must not be computed. They stay '---'.
+    for c in range(ncol):
+        def g(arr):
+            return arr[c] if c < len(arr) else ''
+        if c not in KEEP or g(m1) in ('', '---') or g(r1) in ('', '---') \
+                or g(m2) in ('', '---') or g(r2) in ('', '---'):
+            metrics = None
+        else:
+            metrics = pair_metrics(g(m1), g(r1), g(m2), g(r2))
+        for label in raw:
+            cell = '---'
+            if metrics is not None and label in metrics:
+                cell = str(metrics[label])
+            by_label.setdefault(label, ['---'] * ncol)
+            by_label[label][c] = cell
+    return by_label
+
 
 def parse_md_groups(filepath):
-    """Parse the markdown file into groups of (label, values) rows.
-    Groups are separated by blank lines or by repeated header rows."""
+    """Parse the markdown file for its row/group STRUCTURE, but fill every value
+    cell from the shared core (pair_calc), not from the stored text. Groups are
+    separated by blank lines or by repeated header rows."""
+    core = _core_values_by_label(filepath)
     groups = [[]]
     with open(filepath) as f:
         for line in f:
@@ -35,7 +79,10 @@ def parse_md_groups(filepath):
                 parts = [p.strip() for p in stripped.split('|')[1:-1]]
                 if len(parts) >= 9:
                     label = parts[0]
-                    values = parts[1:10]
+                    # Structure from the .md; numbers from the core.
+                    values = core.get(label, parts[1:10])[:9]
+                    if len(values) < 9:
+                        values = values + ['---'] * (9 - len(values))
                     groups[-1].append((label, values))
     return [g for g in groups if g]
 
@@ -58,7 +105,7 @@ def fmt_round_pad(val_str, round_prec, display_width=10):
 
     with localcontext() as ctx:
         ctx.prec = round_prec
-        ctx.rounding = ROUND_HALF_EVEN
+        ctx.rounding = ROUND_HALF_UP
         rounded = +abs_d
 
     exp = rounded.adjusted()
@@ -356,7 +403,8 @@ def main():
     # computed by inversion from sqrt(r_2/r_1) (exact at Decimal precision).
     if len(groups) > 5:
         src = {label: values for label, values in groups[5]}
-        sqrt_r1_r2 = [str(Decimal(1) / Decimal(v)) for v in src['sqrt(r_2/r_1)']]
+        sqrt_r1_r2 = [('---' if v in ('---', '') else str(Decimal(1) / Decimal(v)))
+                      for v in src['sqrt(r_2/r_1)']]
         groups[5] = [
             ('(*k) k_m=m_1/m_2', src['(*k) k_m=m_1/m_2']),
             ('sqrt(m_1/m_2)', src['sqrt(m_1/m_2)']),
