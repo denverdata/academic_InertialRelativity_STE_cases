@@ -187,8 +187,6 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     A(r'\setlength{\jot}{1pt}')
     A(r'\setlength{\mathindent}{' + INDENT + r'}')
 
-    title('Example (' + name + '):')
-
     sub('System properties:')
     # Left-indented, vertically tight table (reduced row height + zero rule pad).
     A(r'{\renewcommand{\arraystretch}{0.9}'
