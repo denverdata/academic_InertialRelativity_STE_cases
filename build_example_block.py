@@ -136,8 +136,8 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     # title : large bold name line.  sub : bold section heading.
     # lbl   : plain (non-bold) inline label for sub-steps within a section.
     def title(text): A(r'{\large\textbf{' + text + r'}}\par\vspace{\belowdisplayskip}')
-    def sub(text):   A(r'\noindent\textbf{' + text + r'}\par\nobreak')
-    def lbl(text):   A(r'\noindent ' + text + r'\par\nobreak')
+    def sub(text):   A(r'\noindent\textbf{' + text + r'}\par')
+    def lbl(text):   A(r'\noindent ' + text + r'\par')
     def eq(*rows):
         A(r'\begin{align*}')
         for r in rows:
@@ -151,18 +151,29 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     # column. No digits are ever dropped; only the line wraps. WIDE = max chars
     # allowed on a line before forcing a break.
     import re as _re
-    WIDE = 46
-    def _w(s):
-        # rough rendered width: drop trailing annotations (\quad, \text{...})
-        # which don't drive wrapping, strip TeX control words/markup, count
-        # what's left, then add back the thin spaces siunitx inserts every 3
-        # digits (so a 33-digit number reads as wide as it actually renders).
-        t = _re.sub(r'\\quad', '', s)
+    WIDE = 68
+    def _flat_w(t):
+        # plain char width of an already-fraction-free string
+        t = _re.sub(r'\\quad', '', t)
         t = _re.sub(r'\\text\{[^}]*\}', '', t)
         t = _re.sub(r'\\[a-zA-Z]+|[{}\\$]', '', t)
         digits = sum(c.isdigit() for c in t)
-        t = t.replace(',', '')
-        return len(t) + digits // 3
+        return len(t.replace(',', '')) + digits // 3
+
+    def _w(s):
+        # Rendered width. A stacked fraction \dfrac{A}{B} occupies the width of
+        # the WIDER of A,B on the page (they sit on top of each other), NOT the
+        # sum -- so collapse each \dfrac{A}{B} to max(width A, width B) before
+        # counting. Otherwise fractions read ~2x too wide and we wrap when there
+        # is plenty of room.
+        def repl(m):
+            a, b = m.group(1), m.group(2)
+            return 'X' * max(_w(a), _w(b))
+        prev = None
+        while prev != s:
+            prev = s
+            s = _re.sub(r'\\d?frac\{([^{}]*)\}\{([^{}]*)\}', repl, s)
+        return _flat_w(s)
     def j(lhs, *pieces):
         line = lhs + r' &= ' + pieces[0]
         cur = _w(lhs) + 2 + _w(pieces[0])
