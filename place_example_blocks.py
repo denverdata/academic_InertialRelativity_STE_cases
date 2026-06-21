@@ -40,7 +40,7 @@ BLOCKS = {
                       'Example (Static Mass, Table Case 1)'),
     'staticmass2':  ('Static Mass',      '2e30', '3e3',  '2e30', '7e8',
                      'Static Mass , Table 2 reference M=M Case'),
-    'staticradius': ('Static Radius',    '1e24', '1e8',  '1e30', '1e8',
+    'staticradius': ('Static Radius',    '1e30', '1e8',  '1e24', '1e8',
                      'Static Radius (Linear)'),
     'density':      ('Constant Density', '1e30', '1e8',  '1e27', '1e7',
                      'Constant Density ($\\rho_1 = \\rho_2$)'),
