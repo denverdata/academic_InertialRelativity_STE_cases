@@ -77,12 +77,12 @@ def parse_md_groups(filepath):
                 continue
             if stripped.startswith('|'):
                 parts = [p.strip() for p in stripped.split('|')[1:-1]]
-                if len(parts) >= 9:
+                if len(parts) >= 10:
                     label = parts[0]
                     # Structure from the .md; numbers from the core.
-                    values = core.get(label, parts[1:10])[:9]
-                    if len(values) < 9:
-                        values = values + ['---'] * (9 - len(values))
+                    values = core.get(label, parts[1:11])[:10]
+                    if len(values) < 10:
+                        values = values + ['---'] * (10 - len(values))
                     groups[-1].append((label, values))
     return [g for g in groups if g]
 
@@ -211,15 +211,16 @@ LABELS = {
 # Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
 #                 6=Classical Static Density Example, 7=General2, 8=M=M R1=4/3 rs
 # Keep (new front column first): 4/3 rs, M=M, R=R, P=P, I=I, General, Classical
-KEEP = [8, 0, 2, 3, 4, 5, 6]
+KEEP = [8, 9, 0, 2, 3, 4, 5, 6]
 COL_NAMES = [
-    r'$M\!=\!M$, $R_1\!=\!\tfrac{4}{3}r_s$',
-    r'$M\!=\!M$',
-    r'$R\!=\!R$',
-    r'$\rho\!=\!\rho$',
-    r'$I\!=\!I$',
-    'General',
-    r'Classical ($\rho\!=\!\rho$)',
+    r'\makecell{Case 1\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_s$}',
+    r'\makecell{Case 2\\$M\!=\!M$, $\sim\!r_s$}',
+    r'\makecell{Case 3\\$M\!=\!M$}',
+    r'\makecell{Case 4\\$R\!=\!R$}',
+    r'\makecell{Case 5\\$\rho\!=\!\rho$}',
+    r'\makecell{Case 6\\$I\!=\!I$}',
+    r'\makecell{Case 7\\General}',
+    r'\makecell{Case 8\\Classical}',
 ]
 
 SKIP_LABELS = {
@@ -263,7 +264,7 @@ def emit_table_header(caption, label):
     print(r'\fontsize{7}{8.5}\selectfont')
     print(r'\setlength{\tabcolsep}{1pt}')
     print(r'\renewcommand{\arraystretch}{1.1}')
-    print(r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l l @{}}')
+    print(r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l l l @{}}')
     print(r'\toprule')
     print(r' & ' + ' & '.join([r'\textbf{' + n + '}' for n in COL_NAMES]) + r' \\')
     print(r'\midrule')
@@ -332,7 +333,7 @@ def add_top_table_rows(groups):
     if not groups:
         return groups
     flat = {label: values for g in groups for label, values in g}
-    placeholder = ['---'] * 8
+    placeholder = ['---'] * 10
     src = lambda key: list(flat.get(key, placeholder))
 
     groups[0] = [
