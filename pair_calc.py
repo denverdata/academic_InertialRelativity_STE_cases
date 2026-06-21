@@ -27,7 +27,10 @@ def pair_metrics(M1, R1, M2, R2):
     p1 = lambda k: s1._properties[k]
     p2 = lambda k: s2._properties[k]
 
-    # Per-system primitives (straight from the engine).
+    # Per-system primitives straight from the engine (UniformSphere /
+    # System Properties / Constants table) -- the SAME calculations the table
+    # uses. Nothing is recomputed from scratch here; D_crit is always the
+    # constant from constants.py.
     m1, m2 = s1.mass, s2.mass
     r1, r2 = s1.radius, s2.radius
     rho1, rho2 = p1('density'), p2('density')
@@ -38,9 +41,6 @@ def pair_metrics(M1, R1, M2, R2):
     gs1, gs2 = p1('gtd_s'), p2('gtd_s')              # sqrt(1 - r_s/R)
     ks1, ks2 = p1('k_s'), p2('k_s')                  # r_s / R
     gd1, gd2 = p1('gtd_d'), p2('gtd_d')              # sqrt(1 - D/D_crit)
-    # DTD = sqrt(k_d) -- the DeGerlia route (D/D_crit via the 6-digit D_crit),
-    # matching how dtd was computed in pair_comparisons_v2_cases.md. Using k_s
-    # (r_s/R) instead would drift in the last digit through D_crit's precision.
     dtd1, dtd2 = D1n.sqrt(), D2n.sqrt()
 
     return {

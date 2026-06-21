@@ -19,34 +19,46 @@ from pair_calc import pair_metrics
 
 
 def sig(x, n=6):
-    """Format Decimal x for siunitx \\num{...}, applying the project precision rule:
+    """Format Decimal x for siunitx \\num{...} at n SIGNIFICANT FIGURES of the
+    real quantity (default n=6, the precision G affords).
 
-      * Default: 6 significant figures (precision limited by G).
-      * Leading-nines exception: if the significand's first digit is 9 (the
-        signature of a value subtracted from 1, e.g. a GTD like 0.9999257356),
-        keep 6 significant digits AFTER the leading run of 9s. So the total
-        precision is (number of leading 9s) + 6. Examples:
-          0.999851477   -> 9.99851477e-1   (3 nines + 6)
-          0.9999257356  -> 9.999257356e-1  (4 nines + 6)
+    The one subtlety is the "1 - x" case. A GTD just below 1, e.g.
+    0.9999257356, is 1 minus a small number. Its leading 9s are NOT significant
+    figures of the physical content -- they are placeholders meaning "this close
+    to 1." The real significant figures live in the digits AFTER the run of 9s
+    (here 257356). So when the value is 0.9... (exponent e-1), we count n
+    significant figures starting after the leading run of 9s:
+        0.999851477   -> 9.99851477e-1    (3 placeholder 9s, then 6 sig figs)
+        0.9999257356  -> 9.999257356e-1   (4 placeholder 9s, then 6 sig figs)
+
+    This applies ONLY at e-1, where the 1-minus-x subtraction puts the 9s in the
+    tenths place. Anywhere else, leading 9s ARE genuine significant figures and
+    get plain n-figure rounding -- e.g. 9.99999940e-6 -> 1.00000e-5 is a correct
+    6-sig-fig round-up, no information lost.
     """
     from decimal import localcontext, ROUND_HALF_UP
     x = D(x)
     if x == 0:
         return '0'
 
-    # Determine effective precision. Look at the leading run of 9s in the
-    # significand (at high precision so we count them honestly before rounding).
     with localcontext() as ctx:
         ctx.prec = 50
         probe = +abs(x)
+
+    # The placeholder-9s extension applies only to a 1-minus-x value: 0.9...,
+    # i.e. magnitude in [0.1, 1) with the significand starting at 9 (adjusted
+    # exponent -1 and first digit 9).
     _, pdigits, _ = probe.as_tuple()
-    lead_nines = 0
-    for d in pdigits:
-        if d == 9:
-            lead_nines += 1
-        else:
-            break
-    prec = (lead_nines + n) if lead_nines > 0 else n
+    if probe.adjusted() == -1 and pdigits[0] == 9:
+        lead_nines = 0
+        for d in pdigits:
+            if d == 9:
+                lead_nines += 1
+            else:
+                break
+        prec = lead_nines + n
+    else:
+        prec = n
 
     sign = '-' if x < 0 else ''
     with localcontext() as ctx:
