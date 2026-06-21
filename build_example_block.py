@@ -199,29 +199,28 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     A(r' & System 1 ($S_1$) & System 2 ($S_2$) \\')
     A(r'\midrule')
     A(r'$M$ (\unit{\kilogram}) & ' + num(M1) + ' & ' + num(M2) + r' \\')
-    A(r'$R$ (\unit{\meter}) & ' + num(R1) + ' & ' + num(R2) + r' \\')
+    A(r'$\overline{R}$ (\unit{\meter}) & ' + num(R1) + ' & ' + num(R2) + r' \\')
     A(r'\bottomrule')
     A(r'\end{tabular}}\par\vspace{\belowdisplayskip}')
 
     sub('Calculate DTD for each System:')
     eq(
-        r'\mathrm{DTD} &= \sqrt{K} \quad\text{where}\quad K = M/(R\,D_{\mathrm{crit}})\\',
-        r'\quad K_1 &= \dfrac{' + num(M1) + r'\,\unit{\kilogram}}{(' + num(R1) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K1) + r'\\',
+        r'\mathrm{DTD} &= \sqrt{k} \quad\text{where}\quad k = M/(\overline{R}\,D_{\mathrm{crit}})\\',
+        r'\quad k_1 &= \dfrac{' + num(M1) + r'\,\unit{\kilogram}}{(' + num(R1) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K1) + r'\\',
         r'\mathrm{DTD}_1 &= \sqrt{' + num(K1) + r'} = ' + num(DTD1) + r'\\',
-        r'\quad K_2 &= \dfrac{' + num(M2) + r'\,\unit{\kilogram}}{(' + num(R2) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K2) + r'\\',
+        r'\quad k_2 &= \dfrac{' + num(M2) + r'\,\unit{\kilogram}}{(' + num(R2) + r'\,\unit{\meter})(' + num(Dc) + kgpm + r')} = ' + num(K2) + r'\\',
         r'\mathrm{DTD}_2 &= \sqrt{' + num(K2) + r'} = ' + num(DTD2) + r'\\',
         r'\dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{' + num(DTD1) + r'}{' + num(DTD2) + r'} = ' + num(dtd_ratio),
     )
 
     sub('Calculate GTD ratio from DTD:')
     # Larger GTD in the denominator (gd_top / gd_bot), so the ratio stays <= 1.
-    dtt, dtb = ('DTD_' + gd_top), ('DTD_' + gd_bot)
     DTt, DTb = (DTD1 if gd_top == '1' else DTD2), (DTD1 if gd_bot == '1' else DTD2)
     Kt, Kb = (K1 if gd_top == '1' else K2), (K1 if gd_bot == '1' else K2)
     omt, omb = (one_m1 if gd_top == '1' else one_m2), (one_m1 if gd_bot == '1' else one_m2)
     eq(
-        j(r'\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'}',
-          r'\dfrac{\sqrt{1-\mathrm{' + dtt + r'}^2}}{\sqrt{1-\mathrm{' + dtb + r'}^2}}',
+        j(r'\dfrac{\mathrm{GTD}_{\mathrm{d}' + gd_top + r'}}{\mathrm{GTD}_{\mathrm{d}' + gd_bot + r'}}',
+          r'\dfrac{\sqrt{1-\mathrm{DTD}_' + gd_top + r'^2}}{\sqrt{1-\mathrm{DTD}_' + gd_bot + r'^2}}',
           r'\dfrac{\sqrt{1-(' + num(DTt) + r')^2}}{\sqrt{1-(' + num(DTb) + r')^2}}',
           r'\dfrac{\sqrt{1-' + num(Kt) + r'}}{\sqrt{1-' + num(Kb) + r'}}',
           r'\dfrac{\sqrt{' + num(omt) + r'}}{\sqrt{' + num(omb) + r'}}',
@@ -235,26 +234,26 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     if M1 == M2:
         # Equal mass -> identical Schwarzschild radius; compute it once.
         eq(
-            r'r_{s1} = r_{s2} &= \dfrac{2GM}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'r_{\mathrm{s}1} = r_{\mathrm{s}2} &= \dfrac{2GM}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
             r'&= ' + num(rs1) + r'\,\unit{\meter}',
         )
     else:
         eq(
-            r'r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'r_{\mathrm{s}1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
             r'&= ' + num(rs1) + r'\,\unit{\meter}\\',
-            r'r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'r_{\mathrm{s}2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
             r'&= ' + num(rs2) + r'\,\unit{\meter}',
         )
-    lbl(r'Calculate $K$ values from the $r_s/R$ ratio:')
+    lbl(r'Calculate $k$ values from the $r_{\mathrm{s}}/R$ ratio:')
     eq(
-        r'K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{' + num(rs1) + r'\,\unit{\meter}}{' + num(R1) + r'\,\unit{\meter}} &&= ' + num(Ks1) + r'\\',
-        r'K_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{' + num(rs2) + r'\,\unit{\meter}}{' + num(R2) + r'\,\unit{\meter}} &&= ' + num(Ks2),
+        r'k_1 &= \dfrac{r_{\mathrm{s}1}}{\overline{R}_1} &&= \dfrac{' + num(rs1) + r'\,\unit{\meter}}{' + num(R1) + r'\,\unit{\meter}} &&= ' + num(Ks1) + r'\\',
+        r'k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{' + num(rs2) + r'\,\unit{\meter}}{' + num(R2) + r'\,\unit{\meter}} &&= ' + num(Ks2),
     )
     lbl('Calculate GTD via Schwarzschild radius ratio:')
     eq(
-        j(r'\mathrm{GTD}_1', r'\sqrt{1-K_1}', r'\sqrt{' + num(D(1) - Ks1) + r'}', num(g1_s), r'1-' + num(D(1) - g1_s)) + r'\\',
-        j(r'\mathrm{GTD}_2', r'\sqrt{1-K_2}', r'\sqrt{' + num(D(1) - Ks2) + r'}', num(g2_s), r'1-' + num(D(1) - g2_s)) + r'\\',
-        j(r'\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'}', r'\dfrac{' + num(gs_topv) + r'}{' + num(gs_botv) + r'}', num(gtd_ratio_s), r'1-' + num(D(1) - gtd_ratio_s)),
+        j(r'\mathrm{GTD}_{\mathrm{s}1}', r'\sqrt{1-k_1}', r'\sqrt{' + num(D(1) - Ks1) + r'}', num(g1_s), r'1-' + num(D(1) - g1_s)) + r'\\',
+        j(r'\mathrm{GTD}_{\mathrm{s}2}', r'\sqrt{1-k_2}', r'\sqrt{' + num(D(1) - Ks2) + r'}', num(g2_s), r'1-' + num(D(1) - g2_s)) + r'\\',
+        j(r'\dfrac{\mathrm{GTD}_{\mathrm{s}' + gs_top + r'}}{\mathrm{GTD}_{\mathrm{s}' + gs_bot + r'}}', r'\dfrac{' + num(gs_topv) + r'}{' + num(gs_botv) + r'}', num(gtd_ratio_s), r'1-' + num(D(1) - gtd_ratio_s)),
     )
 
     # Heading names the systems in the direction actually computed (numerator
@@ -264,8 +263,8 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     # second 1-x presentation. Larger GTD stays in the denominator (subscripts
     # match each route's ordering above).
     eq(
-        r'&\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'} = 1-' + num(D(1) - gtd_ratio_s) + r' \quad \text{(via $r_s$)}\\',
-        r'&\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'} = 1-' + num(D(1) - gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}',
+        r'&\dfrac{\mathrm{GTD}_{\mathrm{s}' + gs_top + r'}}{\mathrm{GTD}_{\mathrm{s}' + gs_bot + r'}} = 1-' + num(D(1) - gtd_ratio_s) + r' \quad \text{(via $r_{\mathrm{s}}$)}\\',
+        r'&\dfrac{\mathrm{GTD}_{\mathrm{d}' + gd_top + r'}}{\mathrm{GTD}_{\mathrm{d}' + gd_bot + r'}} = 1-' + num(D(1) - gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}',
     )
     if caption:
         A(r'\par' + caption)
