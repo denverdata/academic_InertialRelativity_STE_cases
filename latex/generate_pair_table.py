@@ -257,7 +257,7 @@ def emit_row(label, values):
     print(f'{latex_label} & ' + ' & '.join(formatted) + r' \\')
 
 def emit_table_header(caption, label):
-    print(r'\begin{table*}[!ht]')
+    print(r'\begin{table*}[p]')
     print(r'\centering')
     print(r'\caption{' + caption + '}')
     print(r'\label{' + label + '}')

@@ -289,10 +289,13 @@ GTD and DTD are bound by the Pythagorean identity:
 \subsection{Properties of DTD}
 % TODO: trimmed list of the advantages of DTD as a representation, drawn from Paper B's Properties of DTD section.
 
-\section{Relative Time Dilation Examples}\label{sec:expressions}
+\section{Relative Time Dilation Examples}\label{sec:expressions}\label{app:pair_table}
 
-Example parameter sets match the columns of the pair comparison tables in \ref{app:pair_table}.
+Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete system properties and derived ratios for eight system pairs spanning the constraint cases that follow: static mass ($M=M$), static radius ($R=R$), constant density ($\rho=\rho$), constant inertia ($I=I$), an unconstrained general case, and a classical case. Across every case, the three algebraic forms of the scale factor $k$ (Equation~\ref{eq:kd}) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form --- to the precision afforded by $G$. No case requires a separate formula. The worked examples in the subsections that follow show, case by case, exactly how each column of these tables is obtained.
 
+\input{pair_tables}
+
+\newpage
 \subsection{Static Mass ($M_1 = M_2$)}
 
 When the two systems share the same mass, the mass terms cancel in $k$:
@@ -303,6 +306,7 @@ The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGe
 
 This example compares a system at $\tfrac{4}{3}\,r_{\mathrm{s}}$, where $\mathrm{GTD} = \tfrac{1}{2}$, against a system at an ordinary radius far from its Schwarzschild radius.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -365,11 +369,13 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{Example (Static Mass, Table Case 1)}
 \label{subsec:example_static_mass_table_case_1}
 
 In the following example the reference system is placed at $1.00001\,r_{\mathrm{s}}$ rather than exactly at its Schwarzschild radius. Both limits of the gravitational time-dilation range are asymptotic: $R \to r_{\mathrm{s}}$ gives $\mathrm{GTD} \to 0$ and $R \to \infty$ gives $\mathrm{GTD} \to 1$. Neither endpoint is an admissible input --- just as the flat-spacetime reference is approximated by an arbitrarily large finite radius rather than $R = \infty$, the Schwarzschild condition is approximated here by a radius an arbitrarily small increment above $r_{\mathrm{s}}$, yielding a finite value while the offset remains below the sixth significant figure.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -435,6 +441,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{2.97046e3}\,\unit
 %%-------------\
 %%-------------------
 
+\newpage
 \subsection{Example - Static Mass , Table 2 reference M=M Case}
 
 When the two systems share the same mass, the mass terms cancel in $k_{\mathrm{d}}$:
@@ -445,6 +452,7 @@ The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGe
 
 This case is the standard gravitational time-dilation calculation; the $M_1 \overline{R}_2/(M_2 \overline{R}_1)$ ratio reduces to the familiar Schwarzschild factor here. Both systems are written out and computed independently below --- the same Schwarzschild calculation, with the second system (the same mass at its Schwarzschild radius) made visible instead of folded into $r_{\mathrm{s}}$.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -507,6 +515,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{2.97046e3}\,\unit
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{Static Radius (Linear) ($R_1 = R_2$)}
 
 When the two systems share the same radius, the radius terms cancel in $k_{\mathrm{d}}$:
@@ -515,6 +524,7 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{M_1}{M_2}
 \]
 The DeGerlia compactness ratio reduces to a ratio of masses. The Lorentz factor has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_{\mathrm{s}}/\overline{R}$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -580,6 +590,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e-3}\,\uni
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{Constant Density ($\rho_1 = \rho_2$)}
 
 When the two systems share the same density, $M \propto \overline{R}^3$, so $M_1/M_2 = (\overline{R}_1/\overline{R}_2)^3$. Substituting into $k_{\mathrm{d}}$:
@@ -588,6 +599,7 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \left(\frac{\ov
 \]
 The DeGerlia compactness ratio reduces to the square of the radius ratio; the linear scale factor follows as $\sqrt{k_{\mathrm{d}}} = \overline{R}_1/\overline{R}_2$, recovering the isometric equivalence.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -652,6 +664,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e0}\,\unit
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{Constant Inertia ($I_1 = I_2$)}
 
 When the two systems share the same moment of inertia, $M_1 \overline{R}_1^2 = M_2 \overline{R}_2^2$, so $M_1/M_2 = (\overline{R}_2/\overline{R}_1)^2$. Substituting into $k_{\mathrm{d}}$:
@@ -660,6 +673,7 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \left(\frac{\ov
 \]
 The DeGerlia compactness ratio reduces to the cube of the radius ratio.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -724,6 +738,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{General Case (unconstrained)}
 
 When no constraint is applied between the systems, $k_{\mathrm{d}}$ stays in its full form:
@@ -732,6 +747,7 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1}
 \]
 Both mass and radius must be specified independently for each system.
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -796,8 +812,10 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{align*}
 \end{mdframed}
 
+\newpage
 \subsection{Classical Static Density Example}
 
+\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -893,13 +911,5 @@ The complete source materials for this paper, including all \LaTeX{} source file
 \balance
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
 \bibliographystyle{rsc} %the RSC's .bst file
-
-\appendix
-\renewcommand{\thesection}{Appendix~\Alph{section}}
-\section{Pair Comparison Tables} \label{app:pair_table}
-
-Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete system properties and derived ratios for six system pairs spanning the constraint cases from the derivations in Section~\ref{sec:expressions}: static mass (M=M), static radius (R=R), constant density ($\rho=\rho$), constant inertia (I=I), an unconstrained general case, and an STE example. The three algebraic forms of $k$ in Equation~\ref{eq:kd} produce identical values in every case, alongside the gravitational time-dilation ratio computed independently from the standard Schwarzschild form.
-
-\input{pair_tables}
 
 \end{document}
