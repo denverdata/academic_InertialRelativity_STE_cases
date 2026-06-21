@@ -232,12 +232,19 @@ def build_block(name, M1, R1, M2, R2, caption=None):
 
     sub('Verify by Calculating GTD from Schwarzschild Radius Ratio:')
     lbl('Schwarzschild radii:')
-    eq(
-        r'r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
-        r'&= ' + num(rs1) + r'\,\unit{\meter}\\',
-        r'r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
-        r'&= ' + num(rs2) + r'\,\unit{\meter}',
-    )
+    if M1 == M2:
+        # Equal mass -> identical Schwarzschild radius; compute it once.
+        eq(
+            r'r_{s1} = r_{s2} &= \dfrac{2GM}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'&= ' + num(rs1) + r'\,\unit{\meter}',
+        )
+    else:
+        eq(
+            r'r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M1) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'&= ' + num(rs1) + r'\,\unit{\meter}\\',
+            r'r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(' + num(G) + r'\,\unit{\meter\cubed\per\kilogram\per\second\squared})(' + num(M2) + r'\,\unit{\kilogram})}{(' + num(c) + r'\,\unit{\meter\per\second})^2}\\',
+            r'&= ' + num(rs2) + r'\,\unit{\meter}',
+        )
     lbl(r'Calculate $K$ values from the $r_s/R$ ratio:')
     eq(
         r'K_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{' + num(rs1) + r'\,\unit{\meter}}{' + num(R1) + r'\,\unit{\meter}} &&= ' + num(Ks1) + r'\\',
@@ -257,8 +264,8 @@ def build_block(name, M1, R1, M2, R2, caption=None):
     # second 1-x presentation. Larger GTD stays in the denominator (subscripts
     # match each route's ordering above).
     eq(
-        r'&\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'} = ' + num(gtd_ratio_s) + r' \quad \text{(via $r_s$)}\\',
-        r'&\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'} = ' + num(gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}',
+        r'&\dfrac{\mathrm{GTD}_' + gs_top + r'}{\mathrm{GTD}_' + gs_bot + r'} = 1-' + num(D(1) - gtd_ratio_s) + r' \quad \text{(via $r_s$)}\\',
+        r'&\dfrac{\mathrm{GTD}_' + gd_top + r'}{\mathrm{GTD}_' + gd_bot + r'} = 1-' + num(D(1) - gtd_ratio_d) + r' \quad \text{(via $D_{\mathrm{crit}}$)}',
     )
     if caption:
         A(r'\par' + caption)
