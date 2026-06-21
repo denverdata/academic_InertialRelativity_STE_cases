@@ -296,17 +296,13 @@ Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete 
 \input{pair_tables}
 
 \newpage
-\subsection{Static Mass ($M_1 = M_2$)}
+\subsection{Case 1: ($M_1 = M_2$, $\overline{R}_1 = \tfrac{4}{3}r_{\mathrm{s}}$)}
 
-When the two systems share the same mass, the mass terms cancel in $k$:
+The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii. 
 \[
 k = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{\overline{R}_2}{\overline{R}_1}
 \]
-The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/\overline{R}$, this is $D_1/D_2 = \overline{R}_2/\overline{R}_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{\mathrm{crit}} = r_{\mathrm{s}}/\overline{R}$, recovering the Schwarzschild gravitational time dilation parameter.
-
-This example compares a system at $\tfrac{4}{3}\,r_{\mathrm{s}}$, where $\mathrm{GTD} = \tfrac{1}{2}$, against a system at an ordinary radius far from its Schwarzschild radius.
-
-\Needspace*{0.5\textheight}
+Note, this is the gravitational time dilation formula. However, in this case, instead of comparing with $r_{\mathrm{s}}$, we are comparing with $\tfrac{4}{3}r_{\mathrm{s}}$, which equates to a gravitational time dilation of $\mathrm{GTD} = \num{5.00000e-1}$.
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -369,12 +365,15 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{mdframed}
 
 \newpage
-\subsection{Example (Static Mass, Table Case 1)}
+\subsection{Case 2: ($M_1 = M_2$, $\overline{R}_1 \approx r_{\mathrm{s}}$)}
 \label{subsec:example_static_mass_table_case_1}
 
-In the following example the reference system is placed at $1.00001\,r_{\mathrm{s}}$ rather than exactly at its Schwarzschild radius. Both limits of the gravitational time-dilation range are asymptotic: $R \to r_{\mathrm{s}}$ gives $\mathrm{GTD} \to 0$ and $R \to \infty$ gives $\mathrm{GTD} \to 1$. Neither endpoint is an admissible input --- just as the flat-spacetime reference is approximated by an arbitrarily large finite radius rather than $R = \infty$, the Schwarzschild condition is approximated here by a radius an arbitrarily small increment above $r_{\mathrm{s}}$, yielding a finite value while the offset remains below the sixth significant figure.
+The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii.
+\[
+k = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{\overline{R}_2}{\overline{R}_1}
+\]
+Note, this is the gravitational time dilation formula, where we are comparing with $r_{\mathrm{s}}$. Because there is no valid value for $\mathrm{GTD}$ exactly at $r_{\mathrm{s}}$, we set the comparison radius to $1.00001\,r_{\mathrm{s}}$, a negligible amount above $r_{\mathrm{s}}$.
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -440,17 +439,14 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{2.97046e3}\,\unit
 %%-------------------
 
 \newpage
-\subsection{Example - Static Mass , Table 2 reference M=M Case}
+\subsection{Case 3: ($M_1 = M_2$)}
 
-When the two systems share the same mass, the mass terms cancel in $k_{\mathrm{d}}$:
+The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii.
 \[
-k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{\overline{R}_2}{\overline{R}_1}
+k = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{\overline{R}_2}{\overline{R}_1}
 \]
-The compactness ratio reduces to a ratio of radii. Equivalently in terms of DeGerlia compactness $D = M/\overline{R}$, this is $D_1/D_2 = \overline{R}_2/\overline{R}_1$; each system's normalized DeGerlia compactness against the DeGerlia Threshold yields $D/D_{\mathrm{crit}} = r_{\mathrm{s}}/\overline{R}$, recovering the Schwarzschild gravitational time dilation parameter.
+Note, this is the gravitational time dilation formula. However, in this case, instead of comparing with $r_{\mathrm{s}}$, we are comparing with $\tfrac{4}{3}r_{\mathrm{s}}$, which equates to a gravitational time dilation of $\mathrm{GTD} = \num{5.00000e-1}$.
 
-This case is the standard gravitational time-dilation calculation; the $M_1 \overline{R}_2/(M_2 \overline{R}_1)$ ratio reduces to the familiar Schwarzschild factor here. Both systems are written out and computed independently below --- the same Schwarzschild calculation, with the second system (the same mass at its Schwarzschild radius) made visible instead of folded into $r_{\mathrm{s}}$.
-
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -513,7 +509,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{2.97046e3}\,\unit
 \end{mdframed}
 
 \newpage
-\subsection{Static Radius (Linear) ($R_1 = R_2$)}
+\subsection{Case 4: ($R_1 = R_2$)}
 
 When the two systems share the same radius, the radius terms cancel in $k_{\mathrm{d}}$:
 \[
@@ -521,7 +517,6 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \frac{M_1}{M_2}
 \]
 The DeGerlia compactness ratio reduces to a ratio of masses. The Lorentz factor has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_{\mathrm{s}}/\overline{R}$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -587,7 +582,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e-3}\,\uni
 \end{mdframed}
 
 \newpage
-\subsection{Constant Density ($\rho_1 = \rho_2$)}
+\subsection{Case 5: ($\rho_1 = \rho_2$)}
 
 When the two systems share the same density, $M \propto \overline{R}^3$, so $M_1/M_2 = (\overline{R}_1/\overline{R}_2)^3$. Substituting into $k_{\mathrm{d}}$:
 \[
@@ -595,7 +590,6 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \left(\frac{\ov
 \]
 The DeGerlia compactness ratio reduces to the square of the radius ratio; the linear scale factor follows as $\sqrt{k_{\mathrm{d}}} = \overline{R}_1/\overline{R}_2$, recovering the isometric equivalence.
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -660,7 +654,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e0}\,\unit
 \end{mdframed}
 
 \newpage
-\subsection{Constant Inertia ($I_1 = I_2$)}
+\subsection{Case 6: ($I_1 = I_2$)}
 
 When the two systems share the same moment of inertia, $M_1 \overline{R}_1^2 = M_2 \overline{R}_2^2$, so $M_1/M_2 = (\overline{R}_2/\overline{R}_1)^2$. Substituting into $k_{\mathrm{d}}$:
 \[
@@ -668,7 +662,6 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1} = \left(\frac{\ov
 \]
 The DeGerlia compactness ratio reduces to the cube of the radius ratio.
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -733,7 +726,7 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{mdframed}
 
 \newpage
-\subsection{General Case (unconstrained)}
+\subsection{Case 7: (General, unconstrained)}
 
 When no constraint is applied between the systems, $k_{\mathrm{d}}$ stays in its full form:
 \[
@@ -741,7 +734,6 @@ k_{\mathrm{d}} = \frac{M_1 \overline{R}_2}{M_2 \overline{R}_1}
 \]
 Both mass and radius must be specified independently for each system.
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -806,9 +798,8 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e3}\,\unit
 \end{mdframed}
 
 \newpage
-\subsection{Classical Static Density Example}
+\subsection{Case 8: (Classical)}
 
-\Needspace*{0.5\textheight}
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
