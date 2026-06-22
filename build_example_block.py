@@ -174,16 +174,47 @@ def build_block(name, M1, R1, M2, R2, caption=None):
             prev = s
             s = _re.sub(r'\\d?frac\{([^{}]*)\}\{([^{}]*)\}', repl, s)
         return _flat_w(s)
-    def j(lhs, *pieces):
+    def _long_nines(p):
+        run = mx = 0
+        for ch in p:
+            run = run + 1 if ch == '9' else 0
+            mx = max(mx, run)
+        return mx > 15
+    def _vis(p):
+        # Visible character count of a piece: strip LaTeX markup so only what is
+        # actually printed remains. \sqrt -> one visible character (the radical);
+        # \dfrac/\num/braces/sub-super markers contribute nothing; digits, '-',
+        # 'e', '.', '(' ')' count as themselves.
+        t = _re.sub(r'\\sqrt', 'R', p)          # radical = 1 visible char
+        t = _re.sub(r'\\dfrac', '', t)
+        t = _re.sub(r'\\num', '', t)
+        t = _re.sub(r'\\[a-zA-Z]+', '', t)      # any other control words
+        t = _re.sub(r'[{}\\$^]', '', t)         # braces, escapes, sup/sub marks
+        return len(t)
+    def j(lhs, *pieces, budget=None):
+        # budget=None -> width-estimate wrapping (shared default for most rows).
+        # budget=<n>  -> a piece may concatenate only if its VISIBLE length is
+        #                <= n characters (the rule for the GTD-ratio row).
         line = lhs + r' &= ' + pieces[0]
         cur = _w(lhs) + 2 + _w(pieces[0])
         for p in pieces[1:]:
-            if cur + 3 + _w(p) > WIDE:
+            # The final "1 - x" form always breaks to its own line, with its '='
+            # aligned under the other '=' signs ("&=", not the indented
+            # "&\quad ="). Only active in the budgeted (GTD-ratio) section.
+            is_final_oneminus = budget is not None and p.lstrip().startswith('1-')
+            if budget is not None:
+                concat = _vis(p) <= budget and not is_final_oneminus
+            else:
+                concat = cur + 3 + _w(p) <= WIDE and not _long_nines(p)
+            if concat:
+                line += r' = ' + p
+                cur += 3 + _w(p)
+            elif is_final_oneminus:
                 line += r'\\' + '\n' + r'&\quad = ' + p
                 cur = 4 + _w(p)
             else:
-                line += r' = ' + p
-                cur += 3 + _w(p)
+                line += r'\\' + '\n' + r'&\quad = ' + p
+                cur = 4 + _w(p)
         return line
 
     A(r'\begin{mdframed}')
@@ -235,7 +266,8 @@ def build_block(name, M1, R1, M2, R2, caption=None):
           r'\dfrac{\sqrt{' + num(omt) + r'}}{\sqrt{' + num(omb) + r'}}',
           r'\dfrac{' + num(gd_topv) + r'}{' + num(gd_botv) + r'}',
           num(gtd_ratio_d),
-          r'1-' + num(D(1) - gtd_ratio_d)),
+          r'1-' + num(D(1) - gtd_ratio_d),
+          budget=18),
     )
 
     sub('Verify by Calculating GTD from Schwarzschild Radius Ratio:')

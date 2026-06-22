@@ -332,7 +332,8 @@ $\overline{R}$ (\unit{\meter}) & \num{1.98031e3} & \num{1.00000e8} \\
 \begin{align*}
 \dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
 &\quad = \dfrac{\sqrt{1-(\num{8.66026e-1})^2}}{\sqrt{1-(\num{3.85387e-3})^2}}\\
-&\quad = \dfrac{\sqrt{1-\num{7.50001e-1}}}{\sqrt{1-\num{1.48523e-5}}} = \dfrac{\sqrt{\num{2.49999e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
+&\quad = \dfrac{\sqrt{1-\num{7.50001e-1}}}{\sqrt{1-\num{1.48523e-5}}}\\
+&\quad = \dfrac{\sqrt{\num{2.49999e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
 &\quad = \dfrac{\num{4.99999e-1}}{\num{9.9999257381e-1}} = \num{5.00003e-1}\\
 &\quad = 1-\num{4.99997e-1}
 \end{align*}
@@ -544,8 +545,7 @@ $\overline{R}$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
 &\quad = \dfrac{\sqrt{1-(\num{3.85387e-3})^2}}{\sqrt{1-(\num{3.85387e-6})^2}}\\
 &\quad = \dfrac{\sqrt{1-\num{1.48523e-5}}}{\sqrt{1-\num{1.48523e-11}}}\\
 &\quad = \dfrac{\sqrt{\num{9.999851477e-1}}}{\sqrt{\num{9.999999999851477e-1}}}\\
-&\quad = \dfrac{\num{9.9999257381e-1}}{\num{9.9999999999257383e-1}}\\
-&\quad = \num{9.9999257381e-1}\\
+&\quad = \dfrac{\num{9.9999257381e-1}}{\num{9.9999999999257383e-1}} = \num{9.9999257381e-1}\\
 &\quad = 1-\num{7.42619e-6}
 \end{align*}
 \noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}\par
@@ -687,7 +687,8 @@ $\overline{R}$ (\unit{\meter}) & \num{1.00000e7} & \num{1.00000e8} \\
 \begin{align*}
 \dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
 &\quad = \dfrac{\sqrt{1-(\num{1.21870e-1})^2}}{\sqrt{1-(\num{3.85387e-3})^2}}\\
-&\quad = \dfrac{\sqrt{1-\num{1.48523e-2}}}{\sqrt{1-\num{1.48523e-5}}} = \dfrac{\sqrt{\num{9.851477e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
+&\quad = \dfrac{\sqrt{1-\num{1.48523e-2}}}{\sqrt{1-\num{1.48523e-5}}}\\
+&\quad = \dfrac{\sqrt{\num{9.851477e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
 &\quad = \dfrac{\num{9.9254605e-1}}{\num{9.9999257381e-1}} = \num{9.9255342e-1}\\
 &\quad = 1-\num{7.44658e-3}
 \end{align*}
@@ -757,7 +758,8 @@ $\overline{R}$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
 \begin{align*}
 \dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}}\\
 &\quad = \dfrac{\sqrt{1-(\num{8.61752e-1})^2}}{\sqrt{1-(\num{1.21870e-2})^2}}\\
-&\quad = \dfrac{\sqrt{1-\num{7.42617e-1}}}{\sqrt{1-\num{1.48523e-4}}} = \dfrac{\sqrt{\num{2.57383e-1}}}{\sqrt{\num{9.99851477e-1}}}\\
+&\quad = \dfrac{\sqrt{1-\num{7.42617e-1}}}{\sqrt{1-\num{1.48523e-4}}}\\
+&\quad = \dfrac{\sqrt{\num{2.57383e-1}}}{\sqrt{\num{9.99851477e-1}}}\\
 &\quad = \dfrac{\num{5.07330e-1}}{\num{9.999257356e-1}} = \num{5.07367e-1}\\
 &\quad = 1-\num{4.92633e-1}
 \end{align*}
@@ -842,10 +844,12 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{\overline{R}_2} &&= \dfrac{\num{1.48523e-27}\,\un
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
-\mathrm{GTD}_{\mathrm{s}1} &= \sqrt{1-k_1} = \sqrt{\num{9.9999999999999999999999999405907e-1}}\\
+\mathrm{GTD}_{\mathrm{s}1} &= \sqrt{1-k_1}\\
+&\quad = \sqrt{\num{9.9999999999999999999999999405907e-1}}\\
 &\quad = \num{9.9999999999999999999999999702954e-1}\\
 &\quad = 1-\num{2.97046e-27}\\
-\mathrm{GTD}_{\mathrm{s}2} &= \sqrt{1-k_2} = \sqrt{\num{9.9999999999999999999999999851477e-1}}\\
+\mathrm{GTD}_{\mathrm{s}2} &= \sqrt{1-k_2}\\
+&\quad = \sqrt{\num{9.9999999999999999999999999851477e-1}}\\
 &\quad = \num{9.99999999999999999999999999257384e-1}\\
 &\quad = 1-\num{7.42616e-28}\\
 \dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} &= \dfrac{\num{9.9999999999999999999999999702954e-1}}{\num{9.99999999999999999999999999257384e-1}}\\
