@@ -4,7 +4,7 @@
 
 \documentclass[twoside,twocolumn,9pt,fleqn]{article}
 \usepackage{extsizes}
-\usepackage[super,sort&compress,comma]{natbib}
+\usepackage[round,sort&compress,authoryear]{natbib}
 \usepackage[version=3]{mhchem}
 \usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{soul}
@@ -134,7 +134,7 @@
  & \noindent\large{Thomas DeGerlia\textit{$^{a}$}} \\
  & \noindent\small{Originally published: June 16 , 2026 C.E.} \\
  & \noindent\small{Revision 2.0 June 16, 2026 C.E.} \\
- \vspace{0.3cm} & \vspace{0.3cm} \\
+ \vspace{0.3cm}  \\
 \includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: In this paper, we reveal that the time dilation between two systems is equal to the ratio of their respective DeGerlia inertial density $D$, defined as mass over radius. Fundamental to this exploration is the recognition that relativity is always relativistic, meaning there is no single privileged frame of observation: no measurement, whether of time or anything else, has any meaning without a comparator. We reveal this by taking our relative compactness equation, plugging in a system compared to that same system at its Schwarzschild radius, and demonstrating that we obtain the same exact result as the gravitational time dilation equation. In order to present this equivalence and demonstrate the relativistic principle, we utilize a framework developed by the author called the DeGerlia Time Dilation framework, a simple, mathematically equivalent time dilation framework that is directly derived from general relativity.} \\
 
 
@@ -192,9 +192,9 @@ where $k=r_{\mathrm{s}}/R=2GM/(Rc^2)$.
 While the above equation requires only a mass and radius, "flat space-time" actually describes a second system, which is the same mass at its Schwarzschild radius. This is a two-system comparison, and the second system is silently approximated as the same mass at its Schwarzschild radius. This is a concrete reference to an arbitrarily determined comparison system. The DeGerlia framework makes this two-system comparison explicit and concrete. Because the radius is calculated from the inout mass, it is already a relative reference, relative to its own Schwarzschild radius. 
 
 \section{The DeGerlia Time Dilation Framework}
-The DeGerlia Time Dilation Framework is an analogous framework that is directly derived from general relativity and has a direct relationship to gravitational time dilation. DeGerlia Time Dilation DTD shares a Pythagorean relationship with GTD.
+The DeGerlia Time Dilation Framework is an analogous framework that is directly derived from general relativity and has a direct relationship to gravitational time dilation. DeGerlia Time Dilation DTD shares a Pythagorean relationship with GTD such that $\mathrm{DTD}^2+\mathrm{GTD}^2=1$.
 
-\subsection{Definitions used within the Deerlia Time Dilation Framework  }
+\subsection{Definitions used within the DeGerlia Time Dilation Framework  }
 
 \noindent
 \begin{tabular}{@{}ll@{}}
@@ -444,7 +444,7 @@ When the two systems share the same radius, the radius terms cancel in $k_{\math
 \[
 k_{\mathrm{d}} = \frac{M_1 R_2}{M_2 R_1\, D_{\mathrm{crit}}} = \frac{M_1}{M_2\, D_{\mathrm{crit}}}
 \]
-The DeGerlia inertial density ratio reduces to a ratio of masses. The Lorentz factor has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_{\mathrm{s}}/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+The Lorentz factor has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
@@ -815,6 +815,6 @@ The complete source materials for this paper, including all \LaTeX{} source file
 \balance
 \nocite{einstein1905,einstein1915,kerr1963,goldstein2002}
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
-\bibliographystyle{rsc} %the RSC's .bst file
+\bibliographystyle{plainnat} %author-year style (parenthetical citations)
 
 \end{document}
