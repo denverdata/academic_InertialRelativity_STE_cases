@@ -211,11 +211,11 @@ LABELS = {
 # Source columns: 0=M=M (3.0e3), 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
 #                 6=Classical Static Density Example, 7=General2, 8=M=M R1=4/3 rs,
 #                 9=M=M R1≈r_s (2.97049e3)
-# Keep (new front column first): 4/3 rs, ≈r_s, R=R, P=P, I=I, General, Classical
-KEEP = [8, 9, 2, 3, 4, 5, 6]
+# Keep (new front column first): ≈r_s, 4/3 rs, R=R, P=P, I=I, General, Classical
+KEEP = [9, 8, 2, 3, 4, 5, 6]
 COL_NAMES = [
-    r'\makecell{Case 1\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
-    r'\makecell{Case 2\\$M\!=\!M$, $\sim\!r_{\mathrm{s}}$}',
+    r'\makecell{Case 1\\$M\!=\!M$, $\sim\!r_{\mathrm{s}}$}',
+    r'\makecell{Case 2\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
     r'\makecell{Case 3\\$R\!=\!R$}',
     r'\makecell{Case 4\\$\rho\!=\!\rho$}',
     r'\makecell{Case 5\\$I\!=\!I$}',

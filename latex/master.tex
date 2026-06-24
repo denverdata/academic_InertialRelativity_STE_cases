@@ -302,74 +302,7 @@ Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete 
 \input{pair_tables}
 
 \newpage
-\subsection{Case 1: ($M_1 = M_2$, $R_1 = \tfrac{4}{3}r_{\mathrm{s}}$)}
-
-The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii.
-\[
-k_{\mathrm{d}} = \frac{M_1 R_2}{M_2 R_1\, D_{\mathrm{crit}}} = \frac{R_2}{R_1\, D_{\mathrm{crit}}}
-\]
-Note, This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{\mathrm{s}}$, we are comparing with $\tfrac{4}{3}r_{\mathrm{s}}$, which equates to a gravitational time dilation of $\mathrm{GTD} = \num{5.00000e-1}$.
-\begin{mdframed}
-\fontsize{7}{8.5}\selectfont
-\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
-\setlength{\abovedisplayshortskip}{0pt}\setlength{\belowdisplayshortskip}{4pt}
-\setlength{\jot}{1pt}
-\setlength{\mathindent}{1.5em}
-\noindent\textbf{System properties:}\par
-{\renewcommand{\arraystretch}{0.9}\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}\setlength{\extrarowheight}{0pt}
-\hspace*{1.5em}\begin{tabular}{@{}l l@{\hspace{1.5em}} l@{}}
-\toprule
- & System 1 ($S_1$) & System 2 ($S_2$) \\
-\midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e30} \\
-$R$ (\unit{\meter}) & \num{1.98031e3} & \num{1.00000e8} \\
-\bottomrule
-\end{tabular}}\par\vspace{\belowdisplayskip}
-\noindent\textbf{Calculate DTD for each System:}\par
-\begin{align*}
-\mathrm{DTD} &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{\mathrm{crit}})\\
-\quad k_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.98031e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{7.50001e-1}\\
-\mathrm{DTD}_1 &= \sqrt{\num{7.50001e-1}} = \num{8.66026e-1}\\
-\quad k_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
-\mathrm{DTD}_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
-\dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{8.66026e-1}}{\num{3.85387e-3}} = \num{2.24716e2}
-\end{align*}
-\noindent\textbf{Calculate GTD ratio from DTD:}\par
-\begin{align*}
-\dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}} = \dfrac{\sqrt{1-(\num{8.66026e-1})^2}}{\sqrt{1-(\num{3.85387e-3})^2}}\\
-&\quad = \dfrac{\sqrt{1-\num{7.50001e-1}}}{\sqrt{1-\num{1.48523e-5}}}\\
-&\quad = \dfrac{\sqrt{\num{2.49999e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
-&\quad = \dfrac{\num{4.99999e-1}}{\num{9.9999257381e-1}} = \num{5.00003e-1}\\
-&\quad = 1-\num{4.99997e-1}
-\end{align*}
-\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}\par
-\noindent Schwarzschild radii:\par
-\begin{align*}
-r_{\mathrm{s}1} = r_{\mathrm{s}2} &= \dfrac{2GM}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
-&= \num{1.48523e3}\,\unit{\meter}
-\end{align*}
-\noindent Calculate $k$ values from the $r_{\mathrm{s}}/R$ ratio:\par
-\begin{align*}
-k_1 &= \dfrac{r_{\mathrm{s}1}}{R_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.98031e3}\,\unit{\meter}} &&= \num{7.50000e-1}\\
-k_2 &= \dfrac{r_{\mathrm{s}2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
-\end{align*}
-\noindent Calculate GTD via Schwarzschild radius ratio:\par
-\begin{align*}
-\mathrm{GTD}_{\mathrm{s}1} &= \sqrt{1-k_1} = \sqrt{\num{2.50000e-1}} = \num{5.00000e-1} = 1-\num{5.00000e-1}\\
-\mathrm{GTD}_{\mathrm{s}2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
-&\quad = 1-\num{7.42619e-6}\\
-\dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} &= \dfrac{\num{5.00000e-1}}{\num{9.9999257381e-1}} = \num{5.00004e-1}\\
-&\quad = 1-\num{4.99996e-1}
-\end{align*}
-\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
-\begin{align*}
-&\dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} = 1-\num{4.99996e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
-&\dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} = 1-\num{4.99997e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
-\end{align*}
-\end{mdframed}
-
-\newpage
-\subsection{Case 2: ($M_1 = M_2$, $R_1 \approx r_{\mathrm{s}}$)}
+\subsection{Case 1: ($M_1 = M_2$, $R_1 \approx r_{\mathrm{s}}$)}
 \label{subsec:example_static_mass_table_case_1}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii.
@@ -434,6 +367,73 @@ k_2 &= \dfrac{r_{\mathrm{s}2}}{R_2} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\
 \begin{align*}
 &\dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} = 1-\num{9.9683773e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
 &\dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} = 1-\num{9.9694785e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
+\end{align*}
+\end{mdframed}
+
+\newpage
+\subsection{Case 2: ($M_1 = M_2$, $R_1 = \tfrac{4}{3}r_{\mathrm{s}}$)}
+
+The two identical masses cancel, reducing the DeGerlia inertial density ratio down to a ratio of radii.
+\[
+k_{\mathrm{d}} = \frac{M_1 R_2}{M_2 R_1\, D_{\mathrm{crit}}} = \frac{R_2}{R_1\, D_{\mathrm{crit}}}
+\]
+Note, This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{\mathrm{s}}$, we are comparing with $\tfrac{4}{3}r_{\mathrm{s}}$, which equates to a gravitational time dilation of $\mathrm{GTD} = \num{5.00000e-1}$.
+\begin{mdframed}
+\fontsize{7}{8.5}\selectfont
+\setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
+\setlength{\abovedisplayshortskip}{0pt}\setlength{\belowdisplayshortskip}{4pt}
+\setlength{\jot}{1pt}
+\setlength{\mathindent}{1.5em}
+\noindent\textbf{System properties:}\par
+{\renewcommand{\arraystretch}{0.9}\setlength{\aboverulesep}{0pt}\setlength{\belowrulesep}{0pt}\setlength{\extrarowheight}{0pt}
+\hspace*{1.5em}\begin{tabular}{@{}l l@{\hspace{1.5em}} l@{}}
+\toprule
+ & System 1 ($S_1$) & System 2 ($S_2$) \\
+\midrule
+$M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e30} \\
+$R$ (\unit{\meter}) & \num{1.98031e3} & \num{1.00000e8} \\
+\bottomrule
+\end{tabular}}\par\vspace{\belowdisplayskip}
+\noindent\textbf{Calculate DTD for each System:}\par
+\begin{align*}
+\mathrm{DTD} &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{\mathrm{crit}})\\
+\quad k_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.98031e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{7.50001e-1}\\
+\mathrm{DTD}_1 &= \sqrt{\num{7.50001e-1}} = \num{8.66026e-1}\\
+\quad k_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
+\mathrm{DTD}_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
+\dfrac{\mathrm{DTD}_1}{\mathrm{DTD}_2} &= \dfrac{\num{8.66026e-1}}{\num{3.85387e-3}} = \num{2.24716e2}
+\end{align*}
+\noindent\textbf{Calculate GTD ratio from DTD:}\par
+\begin{align*}
+\dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} &= \dfrac{\sqrt{1-\mathrm{DTD}_1^2}}{\sqrt{1-\mathrm{DTD}_2^2}} = \dfrac{\sqrt{1-(\num{8.66026e-1})^2}}{\sqrt{1-(\num{3.85387e-3})^2}}\\
+&\quad = \dfrac{\sqrt{1-\num{7.50001e-1}}}{\sqrt{1-\num{1.48523e-5}}}\\
+&\quad = \dfrac{\sqrt{\num{2.49999e-1}}}{\sqrt{\num{9.999851477e-1}}}\\
+&\quad = \dfrac{\num{4.99999e-1}}{\num{9.9999257381e-1}} = \num{5.00003e-1}\\
+&\quad = 1-\num{4.99997e-1}
+\end{align*}
+\noindent\textbf{Verify by Calculating GTD from Schwarzschild Radius Ratio:}\par
+\noindent Schwarzschild radii:\par
+\begin{align*}
+r_{\mathrm{s}1} = r_{\mathrm{s}2} &= \dfrac{2GM}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+&= \num{1.48523e3}\,\unit{\meter}
+\end{align*}
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/R$ ratio:\par
+\begin{align*}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{R_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.98031e3}\,\unit{\meter}} &&= \num{7.50000e-1}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
+\end{align*}
+\noindent Calculate GTD via Schwarzschild radius ratio:\par
+\begin{align*}
+\mathrm{GTD}_{\mathrm{s}1} &= \sqrt{1-k_1} = \sqrt{\num{2.50000e-1}} = \num{5.00000e-1} = 1-\num{5.00000e-1}\\
+\mathrm{GTD}_{\mathrm{s}2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
+&\quad = 1-\num{7.42619e-6}\\
+\dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} &= \dfrac{\num{5.00000e-1}}{\num{9.9999257381e-1}} = \num{5.00004e-1}\\
+&\quad = 1-\num{4.99996e-1}
+\end{align*}
+\noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
+\begin{align*}
+&\dfrac{\mathrm{GTD}_{\mathrm{s}1}}{\mathrm{GTD}_{\mathrm{s}2}} = 1-\num{4.99996e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{\mathrm{GTD}_{\mathrm{d}1}}{\mathrm{GTD}_{\mathrm{d}2}} = 1-\num{4.99997e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
