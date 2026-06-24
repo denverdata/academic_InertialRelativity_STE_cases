@@ -150,8 +150,8 @@ LABELS = {
     # System Properties
     'm_1 (kg)':       r'$M_1$ (kg)',
     'm_2 (kg)':       r'$M_2$ (kg)',
-    'r_1 (m)':        r'$\overline{R}_1$ (m)',
-    'r_2 (m)':        r'$\overline{R}_2$ (m)',
+    'r_1 (m)':        r'$R_1$ (m)',
+    'r_2 (m)':        r'$R_2$ (m)',
     'ρ_1 (kg/m³)':    r'$\rho_1$ (kg/m$^3$)',
     'ρ_2 (kg/m³)':    r'$\rho_2$ (kg/m$^3$)',
     'I_1 (kg·m²)':    r'$I_1$ (kg$\cdot$m$^2$)',
@@ -172,15 +172,15 @@ LABELS = {
     # Derived ratios
     'dtd_1/dtd_2':                          r'$\mathrm{DTD}_1/\mathrm{DTD}_2$',
     'sqrt(D_1/D_2)':                        r'$\sqrt{D_1/D_2}$',
-    'sqrt((m_1·r_2)/(m_2·r_1))':            r'$\sqrt{(M_1 \overline{R}_2)/(M_2 \overline{R}_1)}$',
-    'sqrt((I_1/I_2)*(r_2/r_1)³)':           r'$\sqrt{(I_1/I_2)(\overline{R}_2/\overline{R}_1)^3}$',
+    'sqrt((m_1·r_2)/(m_2·r_1))':            r'$\sqrt{(M_1 R_2)/(M_2 R_1)}$',
+    'sqrt((I_1/I_2)*(r_2/r_1)³)':           r'$\sqrt{(I_1/I_2)(R_2/R_1)^3}$',
     '(I_1/I_2)^(1/5)*(ρ_1/ρ_2)^(3/10)':     r'$(I_1/I_2)^{1/5}(\rho_1/\rho_2)^{3/10}$',
 
-    '(m_2·r_1)/(m_1·r_2)':                  r'$(M_2 \overline{R}_1)/(M_1 \overline{R}_2)$',
-    '(m_1·r_2)/(m_2·r_1)':                  r'$(M_1 \overline{R}_2)/(M_2 \overline{R}_1)$',
+    '(m_2·r_1)/(m_1·r_2)':                  r'$(M_2 R_1)/(M_1 R_2)$',
+    '(m_1·r_2)/(m_2·r_1)':                  r'$(M_1 R_2)/(M_2 R_1)$',
     '(*k) D_2/D_1':                         r'$D_2/D_1$',
     '(*k) D_1/D_2':                         r'$D_1/D_2$',
-    '(I_1/I_2)*(r_2/r_1)³':                 r'$(I_1/I_2)(\overline{R}_2/\overline{R}_1)^3$',
+    '(I_1/I_2)*(r_2/r_1)³':                 r'$(I_1/I_2)(R_2/R_1)^3$',
 
     'k_s':                                  r'$k_{\mathrm{s}}$',
     'k_d':                                  r'$k_{\mathrm{d}}$',
@@ -190,46 +190,42 @@ LABELS = {
     'I_2/I_1':                              r'$I_2/I_1$',
     '(I_1/I_2)^(1/2)':                      r'$(I_1/I_2)^{1/2}$',
     '(I_2/I_1)^(1/2)':                      r'$(I_2/I_1)^{1/2}$',
-    'k_i=(ρ_1/ρ_2)^(1/5)*(r_1/r_2)':        r'$(\rho_1/\rho_2)^{1/5}(\overline{R}_1/\overline{R}_2)$',
+    'k_i=(ρ_1/ρ_2)^(1/5)*(r_1/r_2)':        r'$(\rho_1/\rho_2)^{1/5}(R_1/R_2)$',
     '(I_1/I_2)^(1/5)':                      r'$(I_1/I_2)^{1/5}$',
     '(I_2/I_1)^(1/5)':                      r'$(I_2/I_1)^{1/5}$',
-    '(dtd_1/dtd_2)²*(r_1/r_2)³':            r'$(\mathrm{DTD}_1/\mathrm{DTD}_2)^2(\overline{R}_1/\overline{R}_2)^3$',
+    '(dtd_1/dtd_2)²*(r_1/r_2)³':            r'$(\mathrm{DTD}_1/\mathrm{DTD}_2)^2(R_1/R_2)^3$',
 
     '(*G) gtd_1/gtd_2':                     r'$\mathrm{GTD}_{\mathrm{s}1}/\mathrm{GTD}_{\mathrm{s}2}$',
     'GTD_d_1/GTD_d_2':                      r'$\mathrm{GTD}_{\mathrm{d}1}/\mathrm{GTD}_{\mathrm{d}2}$',
     'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)':        r'$\sqrt{1-\mathrm{DTD}_1^2}/\sqrt{1-\mathrm{DTD}_2^2}$',
 
     '(*k) k_m=m_1/m_2':                     r'$M_1/M_2$',
-    '(*k) k_r=r_1/r_2':                     r'$\overline{R}_1/\overline{R}_2$',
-    'r_2/r_1':                              r'$\overline{R}_2/\overline{R}_1$',
-    'sqrt(r_2/r_1)':                        r'$\sqrt{\overline{R}_2/\overline{R}_1}$',
-    'sqrt(r_1/r_2)':                        r'$\sqrt{\overline{R}_1/\overline{R}_2}$',
+    '(*k) k_r=r_1/r_2':                     r'$R_1/R_2$',
+    'r_2/r_1':                              r'$R_2/R_1$',
+    'sqrt(r_2/r_1)':                        r'$\sqrt{R_2/R_1}$',
+    'sqrt(r_1/r_2)':                        r'$\sqrt{R_1/R_2}$',
     'sqrt(m_1/m_2)':                        r'$\sqrt{M_1/M_2}$',
-    'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{M_2^2 \overline{R}_2/(M_1^2 \overline{R}_1)}$',
+    'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{M_2^2 R_2/(M_1^2 R_1)}$',
 }
 
 # Source columns: 0=M=M, 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
 #                 6=Classical Static Density Example, 7=General2, 8=M=M R1=4/3 rs
 # Keep (new front column first): 4/3 rs, M=M, R=R, P=P, I=I, General, Classical
-KEEP = [8, 9, 0, 2, 3, 4, 5, 6]
+KEEP = [8, 0, 2, 3, 4, 5, 6]
 COL_NAMES = [
     r'\makecell{Case 1\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
-    r'\makecell{Case 2\\$M\!=\!M$, $\sim\!r_{\mathrm{s}}$}',
-    r'\makecell{Case 3\\$M\!=\!M$}',
-    r'\makecell{Case 4\\$R\!=\!R$}',
-    r'\makecell{Case 5\\$\rho\!=\!\rho$}',
-    r'\makecell{Case 6\\$I\!=\!I$}',
-    r'\makecell{Case 7\\General}',
-    r'\makecell{Case 8\\Classical}',
+    r'\makecell{Case 2\\$M\!=\!M$}',
+    r'\makecell{Case 3\\$R\!=\!R$}',
+    r'\makecell{Case 4\\$\rho\!=\!\rho$}',
+    r'\makecell{Case 5\\$I\!=\!I$}',
+    r'\makecell{Case 6\\General}',
+    r'\makecell{Case 7\\Classical}',
 ]
 
 SKIP_LABELS = {
     '(m_2·r_1)/(m_1·r_2)',
     '(*k) D_2/D_1',
     # DTD rows omitted in the lean paper:
-    'dtd_1',
-    'dtd_2',
-    'dtd_1/dtd_2',
     '(dtd_1/dtd_2)²*(r_1/r_2)³',
 }
 
@@ -357,6 +353,8 @@ def add_top_table_rows(groups):
         ('GTD_s_2',      src('gtd_2')),
         ('GTD_d_1',      src('gtd_d_1')),
         ('GTD_d_2',      src('gtd_d_2')),
+        ('dtd_1',        src('dtd_1')),
+        ('dtd_2',        src('dtd_2')),
     ]
     return groups
 
