@@ -244,6 +244,14 @@ GTD_ROWS = {
     'GTD_d_1', 'GTD_d_2',
 }
 
+# The two GTD-ratio rows computed two ways (Schwarzschild vs DeGerlia route).
+# These agree across every case and are highlighted to draw the comparison.
+HIGHLIGHT_ROWS = {
+    '(*G) gtd_1/gtd_2',
+    'GTD_d_1/GTD_d_2',
+}
+HIGHLIGHT_COLOR = 'cyan!12'
+
 def emit_row(label, values):
     latex_label = LABELS.get(label, label)
     use_1mx = label in GTD_ROWS
@@ -251,9 +259,14 @@ def emit_row(label, values):
     for v in values:
         cell = fmt_1mx(v, 6) if use_1mx else fmt_round_pad(v, 6, 6)
         formatted.append(r'{\ttfamily ' + cell + r'}')
+    if label in HIGHLIGHT_ROWS:
+        print(r'\rowcolor{' + HIGHLIGHT_COLOR + '}')
     print(f'{latex_label} & ' + ' & '.join(formatted) + r' \\')
 
-def emit_table_header(caption, label):
+LABEL_COL_W = '2.4cm'  # fixed label-column width, identical in both tables
+DATA_INDENT = '1.2em'  # left indent of numbers, so digits sit right of "Case N"
+
+def emit_table_header(caption, label, corner):
     print(r'\begin{table*}[p]')
     print(r'\centering')
     print(r'\caption{' + caption + '}')
@@ -261,14 +274,35 @@ def emit_table_header(caption, label):
     print(r'\fontsize{7}{8.5}\selectfont')
     print(r'\setlength{\tabcolsep}{1pt}')
     print(r'\renewcommand{\arraystretch}{1.1}')
-    print(r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l l l l l @{}}')
+    # Fixed widths so Table 1 and Table 2 line up identically: a fixed label
+    # column (wide enough for the widest label across both tables) plus N equal
+    # LEFT-justified data columns that fill the remaining width. The label
+    # column is widened so the left-pushed numbers clear the row labels.
+    ndata = len(COL_NAMES)
+    data_w = (r'\dimexpr (\textwidth - ' + LABEL_COL_W + ' - ' +
+              str(2 * (ndata + 1)) + r'\tabcolsep) / ' + str(ndata) + r'\relax')
+    # Numbers left-justified with a small left indent (DATA_INDENT) so the first
+    # digit starts a couple characters right of the column's left edge. The
+    # "Case N" header is left-aligned flush to that left edge, so "Case" lands a
+    # couple characters left of the first digit.
+    colspec = ('p{\\dimexpr ' + LABEL_COL_W + r'\relax}' +
+               ('>{\\raggedright\\arraybackslash\\hspace*{' + DATA_INDENT +
+                '}}p{' + data_w + '}') * ndata)
+    print(r'\begin{tabular}{@{}' + colspec + r'@{}}')
     print(r'\toprule')
-    print(r' & ' + ' & '.join([r'\textbf{' + n + '}' for n in COL_NAMES]) + r' \\')
+    # Corner heading over the label column ("Property"/"Ratio"); Case headers
+    # left-aligned via \makecell[l] so "Case N" sits flush above the digits
+    # (the data column's \raggedright + \hspace* indent positions both alike).
+    header_cells = [r'\textbf{' + corner + '}']
+    for n in COL_NAMES:
+        n_left = n.replace(r'\makecell{', r'\makecell[l]{')
+        header_cells.append(r'\textbf{' + n_left + '}')
+    print(' & '.join(header_cells) + r' \\')
     print(r'\midrule')
 
 def emit_table_footer():
     print(r'\bottomrule')
-    print(r'\end{tabular*}')
+    print(r'\end{tabular}')
     print(r'\end{table*}')
 
 def verify_against_source(groups):
@@ -424,7 +458,7 @@ def main():
 
     # Table 1: System Properties (first group)
     emit_table_header('System properties for each pair comparison case.',
-                      'tab:pair_properties')
+                      'tab:pair_properties', 'Property')
     for label, values in groups[0]:
         emit_row(label, values)
     emit_table_footer()
@@ -432,7 +466,7 @@ def main():
 
     # Table 2: Derived Ratios (remaining groups, separated by \hline)
     emit_table_header('Derived ratios across constraint cases.',
-                      'tab:pair_ratios')
+                      'tab:pair_ratios', 'Ratio')
     for gi, group in enumerate(groups[1:]):
         if gi > 0:
             print(r'[3pt]\hline\\[-6pt]')
