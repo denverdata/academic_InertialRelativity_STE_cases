@@ -465,7 +465,7 @@ def main():
     print()
 
     # Table 2: Derived Ratios (remaining groups, separated by \hline)
-    emit_table_header('Derived ratios across constraint cases.',
+    emit_table_header('Derived ratios across cases.',
                       'tab:pair_ratios', 'Ratio')
     for gi, group in enumerate(groups[1:]):
         if gi > 0:
