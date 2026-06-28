@@ -1,0 +1,34 @@
+% ===== PAGE 1 MOCKUP — "The Framework in Brief" =====
+% Column 1: the six lines. Column 2: mini-table excerpt.
+% Numbers below are pulled VERBATIM from the computed pair_tables.tex (not hand-typed):
+%   Case 1 (M=M, ~r_s):  sqrt(D1/D2) = 4.85439e+2   GTD_s = 1-9.96838e-1   GTD_d = 1-9.96948e-1
+%   Case 4 (rho=rho):    sqrt(D1/D2) = 1.00000e+1   GTD_s = 1-7.35193e-6   GTD_d = 1-7.35193e-6
+%   Case 7 (Classical):  sqrt(D1/D2) = 2.00000e+0   GTD_s = 1-2.22785e-27  GTD_d = 1-2.22785e-27
+
+\subsection*{The Framework in Brief}
+
+\begin{align*}
+D        &= M/R                      &&\text{(inertial density)}\\
+D_{crit} &= c^2/2G = \num{6.73295e26}\,\unit{\kilogram\per\meter} &&\text{(threshold)}\\
+k        &= D/D_{crit} = r_{s}/R = v^2/c^2 &&\text{(scale factor)}\\
+GTD      &= \sqrt{1-k}               &&\text{(gravitational TD)}\\
+DTD      &= \sqrt{k}                 &&\text{(DeGerlia TD)}\\
+DTD^2 &+ GTD^2 = 1                   &&\text{(unit relation)}
+\end{align*}
+
+% ----- mini-table excerpt (column 2) -----
+\begin{center}
+\small
+\begin{tabular}{@{}l ccc@{}}
+\toprule
+ & \makecell{Case 1\\$\sim r_{s}$} & \makecell{Case 4\\$\rho=\rho$} & \makecell{Case 7\\classical}\\
+\midrule
+$\sqrt{D_1/D_2}$ (DeGerlia)        & \texttt{4.85439e2} & \texttt{1.00000e1} & \texttt{2.00000e0}\\
+$\sqrt{\tfrac{M_1R_2}{M_2R_1}}$ (Schwarzschild) & \texttt{4.85439e2} & \texttt{1.00000e1} & \texttt{2.00000e0}\\
+\midrule
+GTD ratio (via $r_s$)             & \texttt{1-9.96838e-1} & \texttt{1-7.35193e-6} & \texttt{1-2.22785e-27}\\
+GTD ratio (via $D_{crit}$)        & \texttt{1-9.96948e-1} & \texttt{1-7.35193e-6} & \texttt{1-2.22785e-27}\\
+\bottomrule
+\end{tabular}
+\end{center}
+{\footnotesize Excerpt --- full comparison across seven regimes in Table~2.}
