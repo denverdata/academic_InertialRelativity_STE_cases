@@ -1,0 +1,231 @@
+Introduction
+General relativity is a model for observing our universe that is fundamentally comparative: no quantity has physical meaning without a comparator. The pace of time is no exception: the time dilation between two systems is a product of the systems' respective geometric mass distribution. Directly from the gravitational time dilation formula one can derive the underlying two-system logic and ultimately GTD is simply a comparison between a system's pace of time relative to the pace of time of an arbitrarily selected benchmark system, which in this case is the same system at its Schwarzschild radius. The formula requires only one mass and one radius, the second system being derived directly from the first. This obscures the comparative nature of relativity and implies that one need not compare two systems to characterize time. That implication is incorrect: it rests on the selection of an arbitrary comparator, when in fact no privileged perspective from which to characterize time exists. In this paper we evaluate the physical property responsible for relativistic time dilation and derive the underlying formulation that quantifies the relative time dilation between two systems.
+
+The relative flow of time between two systems is dictated by their relative DeGerlia inertial density . In this paper we utilize a principle developed by the author, , which is an abstracted measure explained herein, that retains the proper unit of this property and that is mass over radius. Thus  is defined as a system's mass over radius, . We do a comparative analysis and tabulate relative time dilation across a variety of systems from classical to relativistic regimes, and show that the same  ratio  returns the Schwarzschild time-dilation ratio exactly across every tested constraint class, including the fully general case. This establishes that the relative rate of time between systems is not an ad hoc relativistic output requiring separate formulas, but a direct consequence of comparative mass-radius geometry. The result makes explicit a simple relation already contained in general relativity: given two systems’ masses and radii, their relative time dilation is determined by their respective geometric distribution of mass alone.
+
+Several common forms of time dilation share the same expression, . In general relativity the scale factor is ; in special relativity it is ; and in general relativity  may equivalently be written . These forms are equivalent.
+
+General and special relativity follow a closely parallel form, and their distinction mirrors that between linear and rotational inertia, suggesting a logical unification of the two.
+
+General relativity establishes that time dilation is fundamentally a comparison of the pace of time between two systems. In the gravitational time dilation formula, , closer examination shows that the comparison is between the given system and an identical mass at its Schwarzschild radius.
+
+Experimental Model
+
+The experimental model employed in this study comprises several components. The framework is derived directly from general relativity and is therefore mechanically and mathematically equivalent to established general-relativistic calculations. It neither relies upon nor introduces any principle not already established within the theories of general and special relativity; it constitutes a reformulation of the existing theory of general relativity for exploratory purposes.
+
+We begin by introducing the DeGerlia Framework and then demonstrate its complete mathematical equivalence with general relativity. We then work through a series of examples, each one demonstrating a different comparative case, and in each case we validate the result using standard gravitational time dilation calculations.
+
+The first example is the most familiar: the case in which both systems have the same mass. Gravitational time dilation is such a case, because to calculate it one must compare a system with an identical system at its Schwarzschild radius. This example demonstrates the two-system nature of all relativistic calculations by comparing two systems of equal mass. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation reflects the comparison of systems of equal mass, where the compared radius is the collapse-condition radius . A second equal-mass calculation follows, comparing an arbitrarily large system to a system of equal mass at four-thirds the Schwarzschild radius, for which . Two systems of equal radius are then treated, recovering the Lorentz factor of special relativity. Calculations are also performed for systems of equal density and equal moment of inertia, for the classical case comparing near-scale objects, and for a general unconstrained case, in which the relative pace of time may be determined between any two systems bearing no similarity to one another.
+
+Revisiting Key Concepts in Physics
+Inertia and Moment of Inertia
+Inertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
+In rotational dynamics, the "moment of inertia"  dictates how the angular motion of a system about a specific axis changes when a torque is applied, and is defined as the sum of each mass element multiplied by the square of its distance from the axis of rotation.
+
+Using Equation eq:momentofinertia, one can determine how motion changes for any system when energy is applied about an axis (torque). As it pertains to linear motion, inertia () is characterized solely by the system's mass.
+
+General Relativity and Time Dilation
+General Relativity defines the formula to calculate a system's time dilation:
+
+where ,  is the system's mass,  its radius,  its Schwarzschild radius,  the speed of light , and  the gravitational constant, .
+
+The equation requires only a single system's mass and radius, yet  is itself a ratio of two radii: the system's radius  and the Schwarzschild radius  of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
+
+The DeGerlia Time Dilation Framework
+
+Why the DeGerlia Time Dilation Framework
+This section describes the process by which the Pythagorean complement of gravitational time dilation was identified. What follows introduces no new physics; it is a reframing of the same general relativity already in use.
+
+The conventional form presents two concerns. First, its reference points are misplaced: the gravitational time dilation form  situates the Schwarzschild radius at the zero point, yet the Schwarzschild radius is not the singularity. Second, it is inconvenient to manipulate, both in carrying the subtraction through a calculation and in the values it produces, which accumulate near unity. Removing the "" addresses both concerns simultaneously, yielding the complementary quantity .
+
+This single step exposes the Pythagorean complement already present within general relativity:  and  constitute the two orthogonal legs of a single unit relationship, . Either form may be recovered from the other at any point, establishing their equivalence. In this representation, zero corresponds to the singularity and  takes the value , a familiar reference point, and the Schwarzschild threshold (the black hole condition) is expressed as a single universal constant, , rather than a quantity that must be recomputed for each mass.
+
+Together these yield a single, real-valued scale across the full domain. The  form is confined to the interval between zero and one and returns imaginary values for , whereas the  form remains real and increases without bound as  exceeds  and approaches the singularity. Only the outer limit, approaching flat space, constitutes a true asymptotic approach. This representation also keeps computed values away from the limit of available numerical precision, where they would otherwise accumulate near unity, a consideration relevant to applications such as the timing corrections for GPS satellites and the International Space Station.
+
+Definitions used within the DeGerlia Time Dilation Framework
+
+System
+A system is defined as any discrete collection of particles and the space between them, or equivalently, any unit of space and the particles contained within it. The framework regards the universe not as a clean separation of discrete material systems divided by the vacuum of space, but as a gradient of material density pervasive throughout. The most extreme densities reside not within near-scale systems but within the cores of highly dense gravitational objects far from the human scale, such as black holes or sub-atomic particles, and form a gradient extending to the near-scale "vacuum of space" at which another gravitational source begins to dominate. The framework imposes no requirement of uniformity or symmetry, of a clean boundary separating matter from vacuum, or of any particular density profile. It requires only a mass and a radius about a chosen axis. A system may be specified, for example, as the Earth out to the mean radius of its surface. For a body such as Jupiter, which lacks a clear boundary separating surface from atmosphere, the system may instead be specified out to a chosen radius or a chosen density. For a large system, a spherical sample may be taken from within it to characterize the behavior of particular regions.
+
+System Time
+For a whole system (as distinct from any subsystem) the pace of time is static, and serves as the benchmark for the pace of time of other systems from the perspective of that system. A subsystem possesses different physical properties and consequently exhibits different behavior than the system as a whole. In general relativity, time dilation scales precisely with the mass-to-radius ratio; a part of a system therefore cannot be expected to share the pace of time of the whole. Because the underlying relationship is simultaneously one of inertia and density, the inertia component imparts dimensionality to time. Consequently, although the present exploration is restricted to uniform spherical systems, the framework extends to asymmetrical systems, including large low-density black holes, Kerr black holes, and the observable universe.
+
+Inertial Density
+Inertial density  as shown in eq:longinertialdensity is a fundamental system property characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as  (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where .
+
+Inertial density may be characterized as the hollowness, or foaminess, of a system. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits and concentrated at the outer edge. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Conversely, a configuration of equal radius with its mass concentrated as an approximate point mass at the center represents the opposite limit: as the mass concentrates toward the center, the moment of inertia approaches zero. The uniform solid sphere lies between these limits. Subdividing such a sphere into smaller hollow spheres redistributes mass toward the periphery, so that the resulting foam-like structure retains a high moment of inertia for its volume.
+
+Mathematics of Inertial Density
+To derive the inertial density relationship, we begin with the established relationship between mass and density  as shown in eq:massdensity:
+
+where  is density,  is mass, and  is volume.
+Because mass is equivalent to linear inertia, and because density is , we define inertial density  in terms of moment of inertia over volume:
+
+where inertial density  is equal to inertia  over volume . Note, the moment of inertia  for a system is distinct about every axis for systems that are not uniform.
+For a uniform sphere, we substitute  and :
+
+Which can be simplified as follows:
+
+Therefore, for spherical systems,  can be calculated from the ratio of mass to radius multiplied by the conversion factor  as shown in eq:massinertialdensity.
+
+DeGerlia Inertial Density For all spherical systems,  multiplied by the geometric factor  yields the inertial density. DeGerlia inertial density is a simplified analog of inertial density , equal to the mass-to-radius ratio  with the  geometric conversion factor omitted:
+
+DeGerlia inertial density eq:degerliainertialdensity  is related to inertial density  by the geometric factor  as shown in eq:ptod:
+
+In a linear context, inertia is mass, and inertial density reduces directly to mass density . From this perspective, inertial density is the rotational analog of mass density, paralleling the relationship between  and . Equivalently, mass density is the linear interpretation of inertial density.
+
+Just as ordinary density () is linear inertia (mass) distributed over volume, DeGerlia inertial density is rotational inertia distributed over volume. As stated in the prior work: mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.
+
+Because  is almost always used in a ratio that cancels all geometric constants, for ease of use this metric is typically preferred over the geometrically accurate inertial density .
+
+DeGerlia Threshold
+The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia inertial density , rather than as a value that must be recalculated for every mass.
+
+Setting  (the Schwarzschild condition), the DeGerlia inertial density  becomes the threshold :
+
+Recall the Schwarzschild radius:
+
+Substitute  into the expression for :
+
+Insert the fundamental constants,  and :
+*
+
+This is the universal constant of DeGerlia inertial density at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant, . Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
+
+Rapid evaluation of the black hole condition. Because the threshold is a single constant, , the black hole condition may be estimated directly from the order of magnitude of . Taking the difference of the exponents of  and : a difference of  or greater guarantees the black hole condition; a difference of  or less precludes it; and a difference of exactly  is indeterminate and requires explicit calculation. For a system with  and , the exponent difference is , well below , and the system does not satisfy the black hole condition.
+
+DeGerlia Time Dilation
+DeGerlia Time Dilation is the geometric complement of gravitational time dilation:
+
+where  is the scale factor of Equation . Whereas  is the surviving proper-time rate ,  is its complement.
+
+The Linear Scale Factor The following identity relates the time-dilation ratio of two uniform spherical systems to their mass and radius.
+
+where  are the radii,  are the masses, and  is the DeGerlia inertial density of system . The three forms in Equation  are algebraically identical;  exposes the inertia-radius structure,  is the DeGerlia inertial density  ratio, and  is the fully expanded form.
+A system's pace of time has meaning only relative to another pace of time. The scale factor  governs the relative time-dilation between two uniform spherical systems. The standard gravitational time-dilation calculation takes the Schwarzschild form , where . The  ratio  and the Schwarzschild form give the same value.
+Via the Schwarzschild radius, the same scale factor is:
+
+where  is the system's DeGerlia inertial density and  is its Schwarzschild radius. This is the  that appears in the standard  for GTD.
+
+Time dilation is always:
+
+where  is the time-dilation factor between the two systems and  is the DeGerlia inertial density ratio for the case being computed. The specific forms are:
+
+ (Equation ), via inertial density ratio
+ (Equation ), via Schwarzschild radius
+A given numerical value of  produces the same time-dilation result irrespective of the form in which it is expressed.
+
+Properties of DTD
+
+DTD is the geometric complement of gravitational time dilation and is part of the same general relativity. The translation between GTD and DTD is effected through the Pythagorean relationship between the two quantities.
+
+GTD and DTD are bound by the Pythagorean identity:
+
+Relative Time Dilation Examples
+Tables  and  present the complete system properties and derived ratios for seven system pairs spanning the cases that follow: static mass at the Schwarzschild radius (, ), static mass at four-thirds the Schwarzschild radius (, ), static radius (), constant density (), constant inertia (), an unconstrained general case, and a classical case. Across every case, the three algebraic forms of the scale factor  (Equation ) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the precision afforded by . No case requires a separate formula. The worked examples in the following subsections demonstrate, case by case, how each column of these tables is obtained.
+
+Case 1: (, )
+
+The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
+
+Note, this reflects the  calculation for gravitational time dilation, where we are comparing with . Because  exactly at , we set the comparison radius to , an "arbitrarily" small amount above .
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 2: (, )
+
+The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
+
+Note, This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with , we are comparing with , which equates to a gravitational time dilation of .
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 3: ()
+
+When the two systems share the same radius, the radius terms cancel in :
+
+The Lorentz factor has the same form as Equation , with . Since velocity is distance per unit time,  is the square of a ratio of two lengths, with the shared time unit cancelling.
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 4: ()
+
+When the two systems share the same density, , so . Substituting into :
+
+The DeGerlia inertial density ratio reduces to the square of the radius ratio; the linear scale factor follows as , recovering the isometric equivalence.
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 5: ()
+
+When the two systems share the same moment of inertia, , so . Substituting into :
+
+The DeGerlia inertial density ratio reduces to the cube of the radius ratio.
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 6: (General, unconstrained)
+
+When no constraint is applied between the systems,  retains its full form:
+
+Both mass and radius must be specified independently for each system.
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Case 7: (Classical)
+
+78.5System properties:
+Calculate DTD for each System:*
+Calculate GTD ratio from DTD:*
+Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
+Calculate  values from the  ratio:*
+Calculate GTD via Schwarzschild radius ratio:*
+Time-dilation ratio between System 1 and System 2, computed two ways:*
+
+Acknowledgments
+This work was conducted independently and received no external funding.
+
+Conflicts of Interest
+The author declares no competing interests.
+
+Data Availability
+The complete source materials for this paper, including all  source files, derivation documents, and revision history, are publicly available at: https://github.com/denverdata/academic_InertialRelativity_STE_cases.
+
+rsc
+
