@@ -1,13 +1,24 @@
+Explaining the Relativistic Nature of General and Special Relativity
+
+Thomas DeGerlia
+
+Originally published: June 26, 2026 C.E.
+
+ABSTRACT: In this paper, we reveal that the time dilation between two systems is equal to the ratio of their respective DeGerlia inertial density D, defined as mass over radius. Fundamental to this exploration is the recognition that relativity is always relativistic, meaning there is no single privileged frame of observation: no measurement, whether of time or anything else, has any meaning without a comparator. We reveal this by taking our relative inertial density equation, plugging in a system compared to that same system at its Schwarzschild radius, and demonstrating that we obtain the same exact result as the gravitational time dilation equation. In order to present this equivalence and demonstrate the relativistic principle, we utilize a framework developed by the author called the DeGerlia Time Dilation framework, a simple, mathematically equivalent time dilation framework that is directly derived from general relativity.
+
+Keywords: time dilation, general relativity, special relativity, gravitational time dilation, Lorentz time dilation, DeGerlia inertial density, inertial density, moment of inertia, Schwarzschild radius
+
 Introduction
-General relativity is a model for observing our universe that is fundamentally comparative: no quantity has physical meaning without a comparator. The pace of time is no exception: the time dilation between two systems is a product of the systems' respective geometric mass distribution. Directly from the gravitational time dilation formula one can derive the underlying two-system logic and ultimately GTD is simply a comparison between a system's pace of time relative to the pace of time of an arbitrarily selected benchmark system, which in this case is the same system at its Schwarzschild radius. The formula requires only one mass and one radius, the second system being derived directly from the first. This obscures the comparative nature of relativity and implies that one need not compare two systems to characterize time. That implication is incorrect: it rests on the selection of an arbitrary comparator, when in fact no privileged perspective from which to characterize time exists. In this paper we evaluate the physical property responsible for relativistic time dilation and derive the underlying formulation that quantifies the relative time dilation between two systems.
 
-The relative flow of time between two systems is dictated by their relative DeGerlia inertial density . In this paper we utilize a principle developed by the author, , which is an abstracted measure explained herein, that retains the proper unit of this property and that is mass over radius. Thus  is defined as a system's mass over radius, . We do a comparative analysis and tabulate relative time dilation across a variety of systems from classical to relativistic regimes, and show that the same  ratio  returns the Schwarzschild time-dilation ratio exactly across every tested constraint class, including the fully general case. This establishes that the relative rate of time between systems is not an ad hoc relativistic output requiring separate formulas, but a direct consequence of comparative mass-radius geometry. The result makes explicit a simple relation already contained in general relativity: given two systems’ masses and radii, their relative time dilation is determined by their respective geometric distribution of mass alone.
+General relativity is a model for observing our universe that is fundamentally comparative: no quantity has physical meaning without a comparator. The pace of time is no exception: the time dilation between two systems is a product of the systems' respective geometric mass distribution. Directly from the gravitational time dilation formula one can derive the underlying two-system logic and ultimately GTD is simply a comparison between a system's pace of time relative to the pace of time of an arbitrarily selected benchmark system, which in this case is the same system at its Schwarzschild radius. The formula requires only one mass and one radius, the second system being derived directly from the first. This obscures the comparative nature of relativity and implies that one need not compare two systems to characterize time. That implication is incorrect: it rests on the selection of an arbitrary comparator, when in fact no privileged perspective from which to characterize time exists. In this paper we evaluate the physical property responsible for relativistic time dilation and derive the underlying formulation that quantifies the relative time dilation between two systems. 
 
-Several common forms of time dilation share the same expression, . In general relativity the scale factor is ; in special relativity it is ; and in general relativity  may equivalently be written . These forms are equivalent.
+The relative flow of time between two systems is dictated by their relative DeGerlia inertial density D. In this paper we utilize a principle developed by the author, D, which is an abstracted measure explained herein, that retains the proper unit of this property and that is mass over radius. Thus D is defined as a system's mass over radius, D = M/R. We do a comparative analysis and tabulate relative time dilation across a variety of systems from classical to relativistic regimes, and show that the same D ratio k = D_1/D_2 = M_1 R_2/(M_2 R_1) returns the Schwarzschild time-dilation ratio exactly across every tested constraint class, including the fully general case. This establishes that the relative rate of time between systems is not an ad hoc relativistic output requiring separate formulas, but a direct consequence of comparative mass-radius geometry. The result makes explicit a simple relation already contained in general relativity: given two systems’ masses and radii, their relative time dilation is determined by their respective geometric distribution of mass alone.
+
+Several common forms of time dilation share the same expression, √1-k. In general relativity the scale factor is k = r_s/R; in special relativity it is k = v^2/c^2; and in general relativity r_s/R may equivalently be written D/D_crit. These forms are equivalent.
 
 General and special relativity follow a closely parallel form, and their distinction mirrors that between linear and rotational inertia, suggesting a logical unification of the two.
 
-General relativity establishes that time dilation is fundamentally a comparison of the pace of time between two systems. In the gravitational time dilation formula, , closer examination shows that the comparison is between the given system and an identical mass at its Schwarzschild radius.
+General relativity establishes that time dilation is fundamentally a comparison of the pace of time between two systems. In the gravitational time dilation formula, dτ/dt = √1 - r_s/R, closer examination shows that the comparison is between the given system and an identical mass at its Schwarzschild radius.
 
 Experimental Model
 
@@ -15,105 +26,171 @@ The experimental model employed in this study comprises several components. The 
 
 We begin by introducing the DeGerlia Framework and then demonstrate its complete mathematical equivalence with general relativity. We then work through a series of examples, each one demonstrating a different comparative case, and in each case we validate the result using standard gravitational time dilation calculations.
 
-The first example is the most familiar: the case in which both systems have the same mass. Gravitational time dilation is such a case, because to calculate it one must compare a system with an identical system at its Schwarzschild radius. This example demonstrates the two-system nature of all relativistic calculations by comparing two systems of equal mass. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation reflects the comparison of systems of equal mass, where the compared radius is the collapse-condition radius . A second equal-mass calculation follows, comparing an arbitrarily large system to a system of equal mass at four-thirds the Schwarzschild radius, for which . Two systems of equal radius are then treated, recovering the Lorentz factor of special relativity. Calculations are also performed for systems of equal density and equal moment of inertia, for the classical case comparing near-scale objects, and for a general unconstrained case, in which the relative pace of time may be determined between any two systems bearing no similarity to one another.
+The first example is the most familiar: the case in which both systems have the same mass. Gravitational time dilation is such a case, because to calculate it one must compare a system with an identical system at its Schwarzschild radius. This example demonstrates the two-system nature of all relativistic calculations by comparing two systems of equal mass. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation reflects the comparison of systems of equal mass, where the compared radius is the collapse-condition radius r_s. A second equal-mass calculation follows, comparing an arbitrarily large system to a system of equal mass at four-thirds the Schwarzschild radius, for which dτ/dt = 0.5. Two systems of equal radius are then treated, recovering the Lorentz factor of special relativity. Calculations are also performed for systems of equal density and equal moment of inertia, for the classical case comparing near-scale objects, and for a general unconstrained case, in which the relative pace of time may be determined between any two systems bearing no similarity to one another.
 
 Revisiting Key Concepts in Physics
-Inertia and Moment of Inertia
-Inertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
-In rotational dynamics, the "moment of inertia"  dictates how the angular motion of a system about a specific axis changes when a torque is applied, and is defined as the sum of each mass element multiplied by the square of its distance from the axis of rotation.
 
-Using Equation eq:momentofinertia, one can determine how motion changes for any system when energy is applied about an axis (torque). As it pertains to linear motion, inertia () is characterized solely by the system's mass.
+Inertia and Moment of Inertia
+
+Inertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
+In rotational dynamics, the "moment of inertia" I dictates how the angular motion of a system about a specific axis changes when a torque is applied, and is defined as the sum of each mass element multiplied by the square of its distance from the axis of rotation.
+
+[ Moment of Inertia: I = _i m_i r_i^2 ]
+
+Using Equation (eq.), one can determine how motion changes for any system when energy is applied about an axis (torque). As it pertains to linear motion, inertia (I) is characterized solely by the system's mass.
 
 General Relativity and Time Dilation
+
 General Relativity defines the formula to calculate a system's time dilation:
 
-where ,  is the system's mass,  its radius,  its Schwarzschild radius,  the speed of light , and  the gravitational constant, .
+[ dτ/dt = √1-k ]
 
-The equation requires only a single system's mass and radius, yet  is itself a ratio of two radii: the system's radius  and the Schwarzschild radius  of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
+where k = r_s/R = 2GM/(Rc^2), M is the system's mass, R its radius, r_s = 2GM/c^2 its Schwarzschild radius, c the speed of light = 2.99792458e8, and G the gravitational constant, G = 6.67430e-11 ± 1.5e-15.
+
+The equation requires only a single system's mass and radius, yet k is itself a ratio of two radii: the system's radius R and the Schwarzschild radius r_s of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
 
 The DeGerlia Time Dilation Framework
 
 Why the DeGerlia Time Dilation Framework
+
 This section describes the process by which the Pythagorean complement of gravitational time dilation was identified. What follows introduces no new physics; it is a reframing of the same general relativity already in use.
 
-The conventional form presents two concerns. First, its reference points are misplaced: the gravitational time dilation form  situates the Schwarzschild radius at the zero point, yet the Schwarzschild radius is not the singularity. Second, it is inconvenient to manipulate, both in carrying the subtraction through a calculation and in the values it produces, which accumulate near unity. Removing the "" addresses both concerns simultaneously, yielding the complementary quantity .
+The conventional form presents two concerns. First, its reference points are misplaced: the gravitational time dilation form GTD = √1-k situates the Schwarzschild radius at the zero point, yet the Schwarzschild radius is not the singularity. Second, it is inconvenient to manipulate, both in carrying the subtraction through a calculation and in the values it produces, which accumulate near unity. Removing the "1-" addresses both concerns simultaneously, yielding the complementary quantity DTD = √k.
 
-This single step exposes the Pythagorean complement already present within general relativity:  and  constitute the two orthogonal legs of a single unit relationship, . Either form may be recovered from the other at any point, establishing their equivalence. In this representation, zero corresponds to the singularity and  takes the value , a familiar reference point, and the Schwarzschild threshold (the black hole condition) is expressed as a single universal constant, , rather than a quantity that must be recomputed for each mass.
+This single step exposes the Pythagorean complement already present within general relativity: DTD and GTD constitute the two orthogonal legs of a single unit relationship, DTD^2 + GTD^2 = 1. Either form may be recovered from the other at any point, establishing their equivalence. In this representation, zero corresponds to the singularity and r_s takes the value 1, a familiar reference point, and the Schwarzschild threshold (the black hole condition) is expressed as a single universal constant, D_crit, rather than a quantity that must be recomputed for each mass.
 
-Together these yield a single, real-valued scale across the full domain. The  form is confined to the interval between zero and one and returns imaginary values for , whereas the  form remains real and increases without bound as  exceeds  and approaches the singularity. Only the outer limit, approaching flat space, constitutes a true asymptotic approach. This representation also keeps computed values away from the limit of available numerical precision, where they would otherwise accumulate near unity, a consideration relevant to applications such as the timing corrections for GPS satellites and the International Space Station.
+Together these yield a single, real-valued scale across the full domain. The GTD form is confined to the interval between zero and one and returns imaginary values for k > 1, whereas the DTD form remains real and increases without bound as k exceeds r_s and approaches the singularity. Only the outer limit, approaching flat space, constitutes a true asymptotic approach. This representation also keeps computed values away from the limit of available numerical precision, where they would otherwise accumulate near unity, a consideration relevant to applications such as the timing corrections for GPS satellites and the International Space Station.
 
 Definitions used within the DeGerlia Time Dilation Framework
 
+{@{}l p{6.7cm}@{}}
+
+Symbol & Definition / Value 
+
+c & Light Speed 299792458 
+D & DeGerlia Inertial Density M/R_axis 
+D_crit & DeGerlia Threshold c^2/2G = 6.73295e26 
+DTD & DeGerlia Time Dilation DTD=√k 
+G & Gravitational Constant 6.67430e-11 ± 1.5e-15 
+GTD & Gravitational Time Dilation dτ/dt = √1-k 
+k & Linear Scale Factor v^2/c^2=r_s/R=D/D_crit 
+k_D & Linear Scale Factor (DeGerlia inertial density) D/D_crit 
+k_s & Linear Scale Factor (Schwarzschild) r_s/R 
+k_v & Linear Scale Factor (velocity) v^2/c^2 
+P & Inertial Density I/V =D 3/10π 
+r_s & Schwarzschild Radius 2GM/c^2 
+STE & Space-time Equivalence k_D = M_1 R_2 / M_2 R_1 
+
 System
+
 A system is defined as any discrete collection of particles and the space between them, or equivalently, any unit of space and the particles contained within it. The framework regards the universe not as a clean separation of discrete material systems divided by the vacuum of space, but as a gradient of material density pervasive throughout. The most extreme densities reside not within near-scale systems but within the cores of highly dense gravitational objects far from the human scale, such as black holes or sub-atomic particles, and form a gradient extending to the near-scale "vacuum of space" at which another gravitational source begins to dominate. The framework imposes no requirement of uniformity or symmetry, of a clean boundary separating matter from vacuum, or of any particular density profile. It requires only a mass and a radius about a chosen axis. A system may be specified, for example, as the Earth out to the mean radius of its surface. For a body such as Jupiter, which lacks a clear boundary separating surface from atmosphere, the system may instead be specified out to a chosen radius or a chosen density. For a large system, a spherical sample may be taken from within it to characterize the behavior of particular regions.
 
 System Time
+
 For a whole system (as distinct from any subsystem) the pace of time is static, and serves as the benchmark for the pace of time of other systems from the perspective of that system. A subsystem possesses different physical properties and consequently exhibits different behavior than the system as a whole. In general relativity, time dilation scales precisely with the mass-to-radius ratio; a part of a system therefore cannot be expected to share the pace of time of the whole. Because the underlying relationship is simultaneously one of inertia and density, the inertia component imparts dimensionality to time. Consequently, although the present exploration is restricted to uniform spherical systems, the framework extends to asymmetrical systems, including large low-density black holes, Kerr black holes, and the observable universe.
 
-Inertial Density
-Inertial density  as shown in eq:longinertialdensity is a fundamental system property characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as  (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where .
+Inertial Density P
+
+{Inertial density P} as shown in (eq.) is a fundamental system property characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as I/v (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where ρ = m/v.
 
 Inertial density may be characterized as the hollowness, or foaminess, of a system. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits and concentrated at the outer edge. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Conversely, a configuration of equal radius with its mass concentrated as an approximate point mass at the center represents the opposite limit: as the mass concentrates toward the center, the moment of inertia approaches zero. The uniform solid sphere lies between these limits. Subdividing such a sphere into smaller hollow spheres redistributes mass toward the periphery, so that the resulting foam-like structure retains a high moment of inertia for its volume.
 
 Mathematics of Inertial Density
-To derive the inertial density relationship, we begin with the established relationship between mass and density  as shown in eq:massdensity:
 
-where  is density,  is mass, and  is volume.
-Because mass is equivalent to linear inertia, and because density is , we define inertial density  in terms of moment of inertia over volume:
+To derive the inertial density relationship, we begin with the established relationship between mass and density ρ as shown in (eq.):
 
-where inertial density  is equal to inertia  over volume . Note, the moment of inertia  for a system is distinct about every axis for systems that are not uniform.
-For a uniform sphere, we substitute  and :
+[ ρ = (m)/(v) ]
+
+where ρ is density, m is mass, and v is volume.
+Because mass is equivalent to linear inertia, and because density is m/v, we define inertial density P in terms of moment of inertia over volume:
+
+[ Inertial Density: P = (I)/(v) ]
+
+where inertial density P is equal to inertia I over volume v. Note, the moment of inertia I for a system is distinct about every axis for systems that are not uniform.
+For a uniform sphere, we substitute I = (2)/(5)mr^2 and v = (4)/(3)π r^3:
+
+[ P = (I)/(v) = ((2)/(5)mr^2)/((4)/(3)π r^3) = (3m)/(10π r) ]
 
 Which can be simplified as follows:
 
-Therefore, for spherical systems,  can be calculated from the ratio of mass to radius multiplied by the conversion factor  as shown in eq:massinertialdensity.
+[ P = (m)/(r) × (3)/(10π) | P = (m)/(r) × 9.549296585e-2 ]
 
-DeGerlia Inertial Density For all spherical systems,  multiplied by the geometric factor  yields the inertial density. DeGerlia inertial density is a simplified analog of inertial density , equal to the mass-to-radius ratio  with the  geometric conversion factor omitted:
+Therefore, for spherical systems, P can be calculated from the ratio of mass to radius multiplied by the conversion factor (3)/(10π) as shown in (eq.).
 
-DeGerlia inertial density eq:degerliainertialdensity  is related to inertial density  by the geometric factor  as shown in eq:ptod:
+DeGerlia Inertial Density D
+{sec:inertial_density}
+For all spherical systems, m/r multiplied by the geometric factor 3/(10π) yields the inertial density. {DeGerlia inertial density} is a simplified analog of inertial density I/v, equal to the mass-to-radius ratio m/r with the 3/(10π) geometric conversion factor omitted:
 
-In a linear context, inertia is mass, and inertial density reduces directly to mass density . From this perspective, inertial density is the rotational analog of mass density, paralleling the relationship between  and . Equivalently, mass density is the linear interpretation of inertial density.
+[ DeGerlia Inertial Density: D=(m)/(r) ]
 
-Just as ordinary density () is linear inertia (mass) distributed over volume, DeGerlia inertial density is rotational inertia distributed over volume. As stated in the prior work: mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.
+DeGerlia inertial density (eq.) D = m/r is related to inertial density P by the geometric factor 3/10π as shown in (eq.):
 
-Because  is almost always used in a ratio that cancels all geometric constants, for ease of use this metric is typically preferred over the geometrically accurate inertial density .
+[ P=(3)/(10π) × D ]
 
-DeGerlia Threshold
-The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia inertial density , rather than as a value that must be recalculated for every mass.
+In a linear context, inertia is mass, and inertial density reduces directly to mass density ρ = M/V. From this perspective, inertial density is the rotational analog of mass density, paralleling the relationship between F = ma and τ = Iα. Equivalently, mass density is the linear interpretation of inertial density.
 
-Setting  (the Schwarzschild condition), the DeGerlia inertial density  becomes the threshold :
+Just as ordinary density (ρ = M/V) is linear inertia (mass) distributed over volume, DeGerlia inertial density is rotational inertia distributed over volume. As stated in the prior work: mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.
+
+Because D is almost always used in a ratio that cancels all geometric constants, for ease of use this metric is typically preferred over the geometrically accurate inertial density P.
+
+DeGerlia Threshold D_crit
+
+The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia inertial density D, rather than as a value that must be recalculated for every mass.
+
+Setting R = r_s (the Schwarzschild condition), the DeGerlia inertial density D becomes the threshold D_crit:
+
+[ D_crit = (m)/(r_s) ]
 
 Recall the Schwarzschild radius:
 
-Substitute  into the expression for :
+[ r_s = (2Gm)/(c^2) ]
 
-Insert the fundamental constants,  and :
-*
+Substitute r_s into the expression for D_crit:
 
-This is the universal constant of DeGerlia inertial density at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant, . Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
+[ D_crit = (m)/((2Gm)/(c^2)) = (m c^2)/(2Gm) = (c^2)/(2G) ]
 
-Rapid evaluation of the black hole condition. Because the threshold is a single constant, , the black hole condition may be estimated directly from the order of magnitude of . Taking the difference of the exponents of  and : a difference of  or greater guarantees the black hole condition; a difference of  or less precludes it; and a difference of exactly  is indeterminate and requires explicit calculation. For a system with  and , the exponent difference is , well below , and the system does not satisfy the black hole condition.
+Insert the fundamental constants, c = 2.99792458e8 and G = 6.67430e-11 ± 1.5e-15:
+
+[ D_crit = ((2.99792458e8)^2)/(2 × 6.67430e-11) | = (8.98755179e16)/(1.334860e-10) | = 6.73295e26 ]
+
+[ DeGerlia Threshold: D_crit = 6.73295e26 ]
+
+This is the universal constant of DeGerlia inertial density at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant, G = 6.67430e-11 ± 1.5e-15. Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
+
+Rapid evaluation of the black hole condition. Because the threshold is a single constant, D_crit ≈ 6.73295e26, the black hole condition may be estimated directly from the order of magnitude of D = M/R. Taking the difference of the exponents of M and R: a difference of 27 or greater guarantees the black hole condition; a difference of 25 or less precludes it; and a difference of exactly 26 is indeterminate and requires explicit calculation. For a system with M = 1e30 and R = 1e10, the exponent difference is 30 - 10 = 20, well below 26, and the system does not satisfy the black hole condition.
 
 DeGerlia Time Dilation
+
 DeGerlia Time Dilation is the geometric complement of gravitational time dilation:
 
-where  is the scale factor of Equation . Whereas  is the surviving proper-time rate ,  is its complement.
+[ DTD = √k ]
 
-The Linear Scale Factor The following identity relates the time-dilation ratio of two uniform spherical systems to their mass and radius.
+where k is the scale factor of Equation~(eq.). Whereas GTD = √1-k is the surviving proper-time rate dτ/dt, DTD = √k is its complement.
 
-where  are the radii,  are the masses, and  is the DeGerlia inertial density of system . The three forms in Equation  are algebraically identical;  exposes the inertia-radius structure,  is the DeGerlia inertial density  ratio, and  is the fully expanded form.
-A system's pace of time has meaning only relative to another pace of time. The scale factor  governs the relative time-dilation between two uniform spherical systems. The standard gravitational time-dilation calculation takes the Schwarzschild form , where . The  ratio  and the Schwarzschild form give the same value.
+The Linear Scale Factor k
+{sec:k}
+The following identity relates the time-dilation ratio of two uniform spherical systems to their mass and radius.
+
+[ k = (I_1)/(I_2)((R_2)/(R_1))^3 = (D_1)/(D_2) = (M_1 R_2)/(M_2 R_1) ]
+
+where R_1, R_2 are the radii, M_1, M_2 are the masses, and D_i = M_i/R_i is the DeGerlia inertial density of system i. The three forms in Equation~(eq.) are algebraically identical; (I_1/I_2)(R_2/R_1)^3 exposes the inertia-radius structure, D_1/D_2 is the DeGerlia inertial density D ratio, and M_1 R_2/(M_2 R_1) is the fully expanded form.
+A system's pace of time has meaning only relative to another pace of time. The scale factor k governs the relative time-dilation between two uniform spherical systems. The standard gravitational time-dilation calculation takes the Schwarzschild form √1 - k, where k = D/D_crit = r_s/R. The D ratio k = D_1/D_2 and the Schwarzschild form give the same value.
 Via the Schwarzschild radius, the same scale factor is:
 
-where  is the system's DeGerlia inertial density and  is its Schwarzschild radius. This is the  that appears in the standard  for GTD.
+[ k = (D)/(D_crit) = (r_s)/(R) ]
+
+where D = M/R is the system's DeGerlia inertial density and r_s = 2GM/c^2 is its Schwarzschild radius. This is the k that appears in the standard √1 - k for GTD.
 
 Time dilation is always:
 
-where  is the time-dilation factor between the two systems and  is the DeGerlia inertial density ratio for the case being computed. The specific forms are:
+[ (dτ)/(dt) = √1 - k ]
 
- (Equation ), via inertial density ratio
- (Equation ), via Schwarzschild radius
-A given numerical value of  produces the same time-dilation result irrespective of the form in which it is expressed.
+where dτ/dt is the time-dilation factor between the two systems and k is the DeGerlia inertial density ratio for the case being computed. The specific forms are:
+
+k = D_1/D_2 (Equation~(eq.)), via inertial density ratio
+k = D/D_crit = r_s/R (Equation~(eq.)), via Schwarzschild radius
+
+A given numerical value of k produces the same time-dilation result irrespective of the form in which it is expressed.
 
 Properties of DTD
 
@@ -121,111 +198,375 @@ DTD is the geometric complement of gravitational time dilation and is part of th
 
 GTD and DTD are bound by the Pythagorean identity:
 
+[ GTD^2 + DTD^2 = (1-k) + k = 1 . ]
+
 Relative Time Dilation Examples
-Tables  and  present the complete system properties and derived ratios for seven system pairs spanning the cases that follow: static mass at the Schwarzschild radius (, ), static mass at four-thirds the Schwarzschild radius (, ), static radius (), constant density (), constant inertia (), an unconstrained general case, and a classical case. Across every case, the three algebraic forms of the scale factor  (Equation ) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the precision afforded by . No case requires a separate formula. The worked examples in the following subsections demonstrate, case by case, how each column of these tables is obtained.
+{sec:expressions}{app:pair_table}
 
-Case 1: (, )
+Tables~(eq.) and~(eq.) present the complete system properties and derived ratios for seven system pairs spanning the cases that follow: static mass at the Schwarzschild radius (M=M, R ≈ r_s), static mass at four-thirds the Schwarzschild radius (M=M, R = (4)/(3)r_s), static radius (R=R), constant density (ρ=ρ), constant inertia (I=I), an unconstrained general case, and a classical case. Across every case, the three algebraic forms of the scale factor k (Equation~(eq.)) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the precision afforded by G. No case requires a separate formula. The worked examples in the following subsections demonstrate, case by case, how each column of these tables is obtained.
 
-The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
+Case 1: (M_1 = M_2, R_1 ≈ r_s)
 
-Note, this reflects the  calculation for gravitational time dilation, where we are comparing with . Because  exactly at , we set the comparison radius to , an "arbitrarily" small amount above .
-
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
-
-Case 2: (, )
+{subsec:example_static_mass_table_case_1}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}} = {R_2}{R_1\, D_{crit}}
+\]
+Note, this reflects the k calculation for gravitational time dilation, where we are comparing with r_s. Because GTD = 0 exactly at r_s, we set the comparison radius to 1.00001 r_s, an "arbitrarily" small amount above r_s.
 
-Note, This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with , we are comparing with , which equates to a gravitational time dilation of .
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+& System 1 (S_1) & System 2 (S_2) 
 
-Case 3: ()
+M ({}) & {2.00000e30} & {2.00000e30} 
+R ({}) & {2.97049e3} & {7.00000e8} 
 
-When the two systems share the same radius, the radius terms cancel in :
+}{}
+Calculate DTD for each System:
 
-The Lorentz factor has the same form as Equation , with . Since velocity is distance per unit time,  is the square of a ratio of two lengths, with the shared time unit cancelling.
+[ DTD = √k k = M/(R D_crit) | k_1 = (2.00000e30 )/((2.97049e3 )(6.73295e26 [per-mode=symbol])) = 9.9999068441e-1 | DTD_1 = √9.9999068441e-1 = 9.9999534220e-1 | k_2 = (2.00000e30 )/((7.00000e8 )(6.73295e26 [per-mode=symbol])) = 4.24352e-6 | DTD_2 = √4.24352e-6 = 2.05998e-3 | (DTD_1)/(DTD_2) = (9.9999534220e-1)/(2.05998e-3) = 4.85439e2 ]
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+Calculate GTD ratio from DTD:
 
-Case 4: ()
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(9.9999534220e-1)^2)/(√1-(2.05998e-3)^2) | = (√1-9.9999068441e-1)/(√1-4.24352e-6) | = (√9.31559e-6)/(√9.9999575648e-1) | = (3.05214e-3)/(9.9999787824e-1) = 3.05215e-3 | = 1-9.9694785e-1 ]
 
-When the two systems share the same density, , so . Substituting into :
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
 
-The DeGerlia inertial density ratio reduces to the square of the radius ratio; the linear scale factor follows as , recovering the isometric equivalence.
+[ r_s1 = r_s2 = (2GM)/(c^2) = (2(6.67430e-11 )(2.00000e30 ))/((2.99792e8 )^2) | = 2.97046e3 ]
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+Calculate k values from the r_s/R ratio:
 
-Case 5: ()
+[ k_1 = (r_s1)/(R_1) = (2.97046e3 )/(2.97049e3 ) = 9.9999000010e-1 | k_2 = (r_s2)/(R_2) = (2.97046e3 )/(7.00000e8 ) = 4.24352e-6 ]
 
-When the two systems share the same moment of inertia, , so . Substituting into :
+Calculate GTD via Schwarzschild radius ratio:
 
+[ GTD_s1 = √1-k_1 = √9.99990e-6 = 3.16226e-3 = 1-9.9683774e-1 | GTD_s2 = √1-k_2 = √9.9999575648e-1 = 9.9999787824e-1 | = 1-2.12176e-6 | (GTD_s1)/(GTD_s2) = (3.16226e-3)/(9.9999787824e-1) = 3.16227e-3 | = 1-9.9683773e-1 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-9.9683773e-1 (via r_s) | (GTD_d1)/(GTD_d2) = 1-9.9694785e-1 (via D_crit) ]
+
+Case 2: (M_1 = M_2, R_1 = (4)/(3)r_s)
+
+The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}} = {R_2}{R_1\, D_{crit}}
+\]
+Note, This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with r_s, we are comparing with (4)/(3)r_s, which equates to a gravitational time dilation of GTD = 5.00000e-1.
+
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {1.00000e30} & {1.00000e30} 
+R ({}) & {1.98031e3} & {1.00000e8} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (1.00000e30 )/((1.98031e3 )(6.73295e26 [per-mode=symbol])) = 7.50001e-1 | DTD_1 = √7.50001e-1 = 8.66026e-1 | k_2 = (1.00000e30 )/((1.00000e8 )(6.73295e26 [per-mode=symbol])) = 1.48523e-5 | DTD_2 = √1.48523e-5 = 3.85387e-3 | (DTD_1)/(DTD_2) = (8.66026e-1)/(3.85387e-3) = 2.24716e2 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(8.66026e-1)^2)/(√1-(3.85387e-3)^2) | = (√1-7.50001e-1)/(√1-1.48523e-5) | = (√2.49999e-1)/(√9.999851477e-1) | = (4.99999e-1)/(9.9999257381e-1) = 5.00003e-1 | = 1-4.99997e-1 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = r_s2 = (2GM)/(c^2) = (2(6.67430e-11 )(1.00000e30 ))/((2.99792e8 )^2) | = 1.48523e3 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.48523e3 )/(1.98031e3 ) = 7.50000e-1 | k_2 = (r_s2)/(R_2) = (1.48523e3 )/(1.00000e8 ) = 1.48523e-5 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 = √2.50000e-1 = 5.00000e-1 = 1-5.00000e-1 | GTD_s2 = √1-k_2 = √9.999851477e-1 = 9.9999257381e-1 | = 1-7.42619e-6 | (GTD_s1)/(GTD_s2) = (5.00000e-1)/(9.9999257381e-1) = 5.00004e-1 | = 1-4.99996e-1 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-4.99996e-1 (via r_s) | (GTD_d1)/(GTD_d2) = 1-4.99997e-1 (via D_crit) ]
+
+Case 3: (R_1 = R_2)
+
+When the two systems share the same radius, the radius terms cancel in k_D:
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}} = {M_1}{M_2\, D_{crit}}
+\]
+The Lorentz factor has the same form as Equation~(eq.), with k = v^2/c^2. Since velocity is distance per unit time, v^2/c^2 is the square of a ratio of two lengths, with the shared time unit cancelling.
+
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {1.00000e30} & {1.00000e24} 
+R ({}) & {1.00000e8} & {1.00000e8} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (1.00000e30 )/((1.00000e8 )(6.73295e26 [per-mode=symbol])) = 1.48523e-5 | DTD_1 = √1.48523e-5 = 3.85387e-3 | k_2 = (1.00000e24 )/((1.00000e8 )(6.73295e26 [per-mode=symbol])) = 1.48523e-11 | DTD_2 = √1.48523e-11 = 3.85387e-6 | (DTD_1)/(DTD_2) = (3.85387e-3)/(3.85387e-6) = 1.00000e3 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(3.85387e-3)^2)/(√1-(3.85387e-6)^2) | = (√1-1.48523e-5)/(√1-1.48523e-11) | = (√9.999851477e-1)/(√9.999999999851477e-1) | = (9.9999257381e-1)/(9.9999999999257383e-1) = 9.9999257381e-1 | = 1-7.42619e-6 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = (2GM_1)/(c^2) = (2(6.67430e-11 )(1.00000e30 ))/((2.99792e8 )^2) | = 1.48523e3 | r_s2 = (2GM_2)/(c^2) = (2(6.67430e-11 )(1.00000e24 ))/((2.99792e8 )^2) | = 1.48523e-3 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.48523e3 )/(1.00000e8 ) = 1.48523e-5 | k_2 = (r_s2)/(R_2) = (1.48523e-3 )/(1.00000e8 ) = 1.48523e-11 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 = √9.999851477e-1 = 9.9999257381e-1 | = 1-7.42619e-6 | GTD_s2 = √1-k_2 = √9.999999999851477e-1 | = 9.9999999999257384e-1 = 1-7.42616e-12 | (GTD_s1)/(GTD_s2) = (9.9999257381e-1)/(9.9999999999257384e-1) | = 9.9999257382e-1 = 1-7.42618e-6 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-7.42618e-6 (via r_s) | (GTD_d1)/(GTD_d2) = 1-7.42619e-6 (via D_crit) ]
+
+Case 4: (ρ_1 = ρ_2)
+
+When the two systems share the same density, M ∝ R^3, so M_1/M_2 = (R_1/R_2)^3. Substituting into k_D:
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}} = ({R_1}{R_2})^3 {R_2}{R_1\, D_{crit}} = {1}{D_{crit}}({R_1}{R_2})^2
+\]
+The DeGerlia inertial density ratio reduces to the square of the radius ratio; the linear scale factor follows as √k_D = R_1/R_2, recovering the isometric equivalence.
+
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {1.00000e30} & {1.00000e27} 
+R ({}) & {1.00000e8} & {1.00000e7} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (1.00000e30 )/((1.00000e8 )(6.73295e26 [per-mode=symbol])) = 1.48523e-5 | DTD_1 = √1.48523e-5 = 3.85387e-3 | k_2 = (1.00000e27 )/((1.00000e7 )(6.73295e26 [per-mode=symbol])) = 1.48523e-7 | DTD_2 = √1.48523e-7 = 3.85387e-4 | (DTD_1)/(DTD_2) = (3.85387e-3)/(3.85387e-4) = 1.00000e1 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(3.85387e-3)^2)/(√1-(3.85387e-4)^2) | = (√1-1.48523e-5)/(√1-1.48523e-7) | = (√9.999851477e-1)/(√9.99999851477e-1) | = (9.9999257381e-1)/(9.999999257383e-1) = 9.9999264807e-1 | = 1-7.35193e-6 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = (2GM_1)/(c^2) = (2(6.67430e-11 )(1.00000e30 ))/((2.99792e8 )^2) | = 1.48523e3 | r_s2 = (2GM_2)/(c^2) = (2(6.67430e-11 )(1.00000e27 ))/((2.99792e8 )^2) | = 1.48523e0 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.48523e3 )/(1.00000e8 ) = 1.48523e-5 | k_2 = (r_s2)/(R_2) = (1.48523e0 )/(1.00000e7 ) = 1.48523e-7 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 = √9.999851477e-1 = 9.9999257381e-1 | = 1-7.42619e-6 | GTD_s2 = √1-k_2 = √9.99999851477e-1 = 9.999999257384e-1 | = 1-7.42616e-8 | (GTD_s1)/(GTD_s2) = (9.9999257381e-1)/(9.999999257384e-1) | = 9.9999264807e-1 = 1-7.35193e-6 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-7.35193e-6 (via r_s) | (GTD_d1)/(GTD_d2) = 1-7.35193e-6 (via D_crit) ]
+
+Case 5: (I_1 = I_2)
+
+When the two systems share the same moment of inertia, M_1 R_1^2 = M_2 R_2^2, so M_1/M_2 = (R_2/R_1)^2. Substituting into k_D:
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}} = ({R_2}{R_1})^2 {R_2}{R_1\, D_{crit}} = {1}{D_{crit}}({R_2}{R_1})^3
+\]
 The DeGerlia inertial density ratio reduces to the cube of the radius ratio.
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {1.00000e32} & {1.00000e30} 
+R ({}) & {1.00000e7} & {1.00000e8} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (1.00000e32 )/((1.00000e7 )(6.73295e26 [per-mode=symbol])) = 1.48523e-2 | DTD_1 = √1.48523e-2 = 1.21870e-1 | k_2 = (1.00000e30 )/((1.00000e8 )(6.73295e26 [per-mode=symbol])) = 1.48523e-5 | DTD_2 = √1.48523e-5 = 3.85387e-3 | (DTD_1)/(DTD_2) = (1.21870e-1)/(3.85387e-3) = 3.16228e1 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(1.21870e-1)^2)/(√1-(3.85387e-3)^2) | = (√1-1.48523e-2)/(√1-1.48523e-5) | = (√9.851477e-1)/(√9.999851477e-1) | = (9.9254605e-1)/(9.9999257381e-1) = 9.9255342e-1 | = 1-7.44658e-3 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = (2GM_1)/(c^2) = (2(6.67430e-11 )(1.00000e32 ))/((2.99792e8 )^2) | = 1.48523e5 | r_s2 = (2GM_2)/(c^2) = (2(6.67430e-11 )(1.00000e30 ))/((2.99792e8 )^2) | = 1.48523e3 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.48523e5 )/(1.00000e7 ) = 1.48523e-2 | k_2 = (r_s2)/(R_2) = (1.48523e3 )/(1.00000e8 ) = 1.48523e-5 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 = √9.851477e-1 = 9.9254606e-1 = 1-7.45394e-3 | GTD_s2 = √1-k_2 = √9.999851477e-1 = 9.9999257381e-1 | = 1-7.42619e-6 | (GTD_s1)/(GTD_s2) = (9.9254606e-1)/(9.9999257381e-1) = 9.9255343e-1 | = 1-7.44657e-3 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-7.44657e-3 (via r_s) | (GTD_d1)/(GTD_d2) = 1-7.44658e-3 (via D_crit) ]
 
 Case 6: (General, unconstrained)
 
-When no constraint is applied between the systems,  retains its full form:
-
+When no constraint is applied between the systems, k_D retains its full form:
+\[
+k_{D} = {M_1 R_2}{M_2 R_1\, D_{crit}}
+\]
 Both mass and radius must be specified independently for each system.
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {1.00000e20} & {1.00000e30} 
+R ({}) & {2.00000e-7} & {1.00000e7} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (1.00000e20 )/((2.00000e-7 )(6.73295e26 [per-mode=symbol])) = 7.42617e-1 | DTD_1 = √7.42617e-1 = 8.61752e-1 | k_2 = (1.00000e30 )/((1.00000e7 )(6.73295e26 [per-mode=symbol])) = 1.48523e-4 | DTD_2 = √1.48523e-4 = 1.21870e-2 | (DTD_1)/(DTD_2) = (8.61752e-1)/(1.21870e-2) = 7.07107e1 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(8.61752e-1)^2)/(√1-(1.21870e-2)^2) | = (√1-7.42617e-1)/(√1-1.48523e-4) | = (√2.57383e-1)/(√9.99851477e-1) | = (5.07330e-1)/(9.999257356e-1) = 5.07367e-1 | = 1-4.92633e-1 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = (2GM_1)/(c^2) = (2(6.67430e-11 )(1.00000e20 ))/((2.99792e8 )^2) | = 1.48523e-7 | r_s2 = (2GM_2)/(c^2) = (2(6.67430e-11 )(1.00000e30 ))/((2.99792e8 )^2) | = 1.48523e3 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.48523e-7 )/(2.00000e-7 ) = 7.42616e-1 | k_2 = (r_s2)/(R_2) = (1.48523e3 )/(1.00000e7 ) = 1.48523e-4 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 = √2.57384e-1 = 5.07330e-1 = 1-4.92670e-1 | GTD_s2 = √1-k_2 = √9.99851477e-1 = 9.999257356e-1 | = 1-7.42644e-5 | (GTD_s1)/(GTD_s2) = (5.07330e-1)/(9.999257356e-1) = 5.07368e-1 | = 1-4.92632e-1 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-4.92632e-1 (via r_s) | (GTD_d1)/(GTD_d2) = 1-4.92633e-1 (via D_crit) ]
 
 Case 7: (Classical)
 
-78.5System properties:
-Calculate DTD for each System:*
-Calculate GTD ratio from DTD:*
-Verify by Calculating GTD from Schwarzschild Radius Ratio:Schwarzschild radii:*
-Calculate  values from the  ratio:*
-Calculate GTD via Schwarzschild radius ratio:*
-Time-dilation ratio between System 1 and System 2, computed two ways:*
+{7}{8.5}
+{}{0pt}{}{4pt}
+{}{0pt}{}{4pt}
+{}{1pt}
+{}{1.5em}
+System properties:
+{{}{0.9}{}{0pt}{}{0pt}{}{0pt}
+*{1.5em}{@{}l l@{{1.5em}} l@{}}
+
+& System 1 (S_1) & System 2 (S_2) 
+
+M ({}) & {8.00000e0} & {1.00000e0} 
+R ({}) & {2.00000e0} & {1.00000e0} 
+
+}{}
+Calculate DTD for each System:
+
+[ DTD = √k k = M/(R D_crit) | k_1 = (8.00000e0 )/((2.00000e0 )(6.73295e26 [per-mode=symbol])) = 5.94093e-27 | DTD_1 = √5.94093e-27 = 7.70774e-14 | k_2 = (1.00000e0 )/((1.00000e0 )(6.73295e26 [per-mode=symbol])) = 1.48523e-27 | DTD_2 = √1.48523e-27 = 3.85387e-14 | (DTD_1)/(DTD_2) = (7.70774e-14)/(3.85387e-14) = 2.00000e0 ]
+
+Calculate GTD ratio from DTD:
+
+[ (GTD_d1)/(GTD_d2) = (√1-DTD_1^2)/(√1-DTD_2^2) = (√1-(7.70774e-14)^2)/(√1-(3.85387e-14)^2) | = (√1-5.94093e-27)/(√1-1.48523e-27) | = (√9.9999999999999999999999999405907e-1)/(√9.9999999999999999999999999851477e-1) | = (9.9999999999999999999999999702953e-1)/(9.99999999999999999999999999257383e-1) | = 9.9999999999999999999999999777215e-1 | = 1-2.22785e-27 ]
+
+Verify by Calculating GTD from Schwarzschild Radius Ratio:
+Schwarzschild radii:
+
+[ r_s1 = (2GM_1)/(c^2) = (2(6.67430e-11 )(8.00000e0 ))/((2.99792e8 )^2) | = 1.18819e-26 | r_s2 = (2GM_2)/(c^2) = (2(6.67430e-11 )(1.00000e0 ))/((2.99792e8 )^2) | = 1.48523e-27 ]
+
+Calculate k values from the r_s/R ratio:
+
+[ k_1 = (r_s1)/(R_1) = (1.18819e-26 )/(2.00000e0 ) = 5.94093e-27 | k_2 = (r_s2)/(R_2) = (1.48523e-27 )/(1.00000e0 ) = 1.48523e-27 ]
+
+Calculate GTD via Schwarzschild radius ratio:
+
+[ GTD_s1 = √1-k_1 | = √9.9999999999999999999999999405907e-1 | = 9.9999999999999999999999999702954e-1 | = 1-2.97046e-27 | GTD_s2 = √1-k_2 | = √9.9999999999999999999999999851477e-1 | = 9.99999999999999999999999999257384e-1 | = 1-7.42616e-28 | (GTD_s1)/(GTD_s2) = (9.9999999999999999999999999702954e-1)/(9.99999999999999999999999999257384e-1) | = 9.9999999999999999999999999777215e-1 | = 1-2.22785e-27 ]
+
+Time-dilation ratio between System 1 and System 2, computed two ways:
+
+[ (GTD_s1)/(GTD_s2) = 1-2.22785e-27 (via r_s) | (GTD_d1)/(GTD_d2) = 1-2.22785e-27 (via D_crit) ]
 
 Acknowledgments
+
 This work was conducted independently and received no external funding.
 
 Conflicts of Interest
+
 The author declares no competing interests.
 
 Data Availability
-The complete source materials for this paper, including all  source files, derivation documents, and revision history, are publicly available at: https://github.com/denverdata/academic_InertialRelativity_STE_cases.
 
-rsc
+The complete source materials for this paper, including all LaTeX source files, derivation documents, and revision history, are publicly available at: https://github.com/denverdata/academic_InertialRelativity_STE_cases.
 
+References
+
+1. A. Einstein, Zur Elektrodynamik bewegter Körper, Annalen der Physik, volume 17, pages 891 to 921, 1905.
+
+2. A. Einstein, Die Feldgleichungen der Gravitation, Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften (Berlin), pages 844 to 847, 1915.
+
+3. H. Goldstein, Classical Mechanics, 2nd edition, Addison-Wesley, 1980, pages 184 to 185.
+
+4. K. Schwarzschild, Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie, Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften (Berlin), pages 189 to 196, 1916.
+
+5. J. R. Rumble, CRC Handbook of Chemistry and Physics, 100th edition, CRC Press, 2019.
+
+6. R. P. Kerr, Gravitational Field of a Spinning Mass as an Example of Algebraically Special Metrics, Physical Review Letters, volume 11, pages 237 to 238, 1963.
+
+7. T. D. DeGerlia, The Universe of Light - Exploring our Universe through the Lens of the Law of Space-Time Equivalence, DEC, 2025, pages 1 to 17, DOI: 10.55277/ResearchHub.pi9yjshm.
+
+8. T. D. DeGerlia, Introducing Inertial Density and Characterizing the Schwarzschild Condition as a Constant Threshold of Mass over Radius (m/r), DEC, 2025, pages 1 to 4, DOI: 10.55277/researchhub.0e0cgoor.
+
+9. H. Goldstein, C. Poole and J. Safko, Classical Mechanics, 3rd edition, Addison-Wesley, 2002, chapter 3, pages 70 to 71.
+
+10. E. Tiesinga, P. J. Mohr, D. B. Newell and B. N. Taylor, CODATA recommended values of the fundamental physical constants: 2018, Reviews of Modern Physics, volume 93, number 2, page 025010, 2021.
