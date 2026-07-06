@@ -14,6 +14,12 @@ if [[ -z "$TITLE" ]]; then
   exit 1
 fi
 
+# Full build sequence so citations and cross-references resolve:
+# pdflatex -> bibtex -> pdflatex -> pdflatex. A single pdflatex pass leaves
+# every \cite and \ref undefined and never builds the bibliography.
+pdflatex -interaction=nonstopmode master.tex
+bibtex master
+pdflatex -interaction=nonstopmode master.tex
 pdflatex -interaction=nonstopmode master.tex
 
 DATE="$(date +%F)"                       # YYYY-MM-DD
