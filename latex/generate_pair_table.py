@@ -211,16 +211,17 @@ LABELS = {
 # Source columns: 0=M=M (3.0e3), 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
 #                 6=Classical Static Density Example, 7=General2, 8=M=M R1=4/3 rs,
 #                 9=M=M R1≈r_s (2.97049e3)
-# Keep (new front column first): ≈r_s, 4/3 rs, R=R, P=P, I=I, General, Classical
-KEEP = [9, 8, 2, 3, 4, 5, 6]
+# Keep (new front column first): ≈r_s, 4/3 rs, R=R, P=P, Classical, I=I, General
+# Classical (col 6) is a static-density case, grouped immediately after P=P.
+KEEP = [9, 8, 2, 3, 6, 4, 5]
 COL_NAMES = [
     r'\makecell{Case 1\\$M\!=\!M$, $\sim\!r_{\mathrm{s}}$}',
     r'\makecell{Case 2\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
     r'\makecell{Case 3\\$R\!=\!R$}',
     r'\makecell{Case 4\\$\rho\!=\!\rho$}',
-    r'\makecell{Case 5\\$I\!=\!I$}',
-    r'\makecell{Case 6\\General}',
-    r'\makecell{Case 7\\Classical}',
+    r'\makecell{Case 5\\Classical}',
+    r'\makecell{Case 6\\$I\!=\!I$}',
+    r'\makecell{Case 7\\General}',
 ]
 
 SKIP_LABELS = {
