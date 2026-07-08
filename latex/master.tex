@@ -168,8 +168,6 @@ The experimental model employed in this study comprises several components. The 
 
 We begin by introducing the DeGerlia Framework and then demonstrate its complete mathematical equivalence with general relativity. We then work through a series of examples, each demonstrating a different comparative case, and in each case, we validate the result using standard gravitational time-dilation calculations.
 
-The first example is the most familiar: the case in which both systems have the same mass. Gravitational time dilation is such a case, because to calculate it, one must compare a system with an identical system at its Schwarzschild radius. This example demonstrates the two-system nature of all relativistic calculations by comparing two systems of equal mass. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation reflects the comparison of systems of equal mass, where the compared radius is the collapse-condition radius $r_{s}$. A second equal-mass calculation follows, comparing a large system to a system of equal mass at four-thirds the Schwarzschild radius, at a point known to be 50\% time dilation for any system, for which $d\tau/dt = 0.5$. Two systems of equal radius are then treated, recovering the Lorentz factor that is described under Special Relativity. Calculations are also performed for systems of equal density and equal moment of inertia, for a classical case comparing near-scale objects, and for a general unconstrained case, in which the relative pace of time may be determined between any two systems bearing no similarity to one another.
-
 \section{The DeGerlia Time Dilation Framework}
 
 \subsection{What is the DeGerlia Time Dilation Framework?}
@@ -365,7 +363,11 @@ GTD^2 + DTD^2 = 1
 
 \section{Relative Time Dilation Examples}\label{sec:expressions}\label{app:pair_table}
 
-Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete system properties and derived ratios for seven system pairs spanning the cases that follow: static mass at the Schwarzschild radius ($M=M$, $R \approx r_{s}$), static mass at four-thirds the Schwarzschild radius ($M=M$, $R = \tfrac{4}{3}r_{s}$), static radius ($R=R$), constant density ($\rho=\rho$), constant inertia ($I=I$), an unconstrained general case, and a classical case. Across every case, the three algebraic forms of the scale factor $k$ (Equation~\ref{eq:kd}) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the limit of precision imposed by $G$. No case requires a separate formula. The worked examples in the following subsections demonstrate, case by case, how each column of these tables is obtained.
+Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete system properties and derived ratios for seven system pairs spanning the cases that follow.
+
+The first is the most familiar: the case in which both systems have the same mass. Gravitational time dilation is such a case, because to calculate it, one must compare a system with an identical system at its Schwarzschild radius ($M=M$, $R \approx r_{s}$); this demonstrates the two-system nature of all relativistic calculations, where the compared radius is the collapse-condition radius $r_{s}$. A second equal-mass calculation follows, comparing a large system to a system of equal mass at four-thirds the Schwarzschild radius ($M=M$, $R = \tfrac{4}{3}r_{s}$), a point known to be 50\% time dilation for any system, for which $d\tau/dt = 0.5$. Two systems of equal radius are then treated ($R=R$), recovering the Lorentz factor described under Special Relativity. Calculations are also performed for systems of equal density ($\rho=\rho$) and equal moment of inertia ($I=I$), for a classical case comparing near-scale objects, and for a general unconstrained case, in which the relative pace of time may be determined between any two systems bearing no similarity to one another.
+
+Across every case, the three algebraic forms of the scale factor $k$ (Equation~\ref{eq:kd}) produce identical values, and the time-dilation ratio computed via the DeGerlia route agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the limit of precision imposed by $G$. No case requires a separate formula. The worked examples in the following subsections demonstrate, case by case, how each column of these tables is obtained.
 
 \newpage
 \subsection{Case 1: ($M_1 = M_2$, $R_1 \approx r_{s}$)}
@@ -787,6 +789,12 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.99851477e-1}} = \num{9.999257356e-1}\\
 
 \newpage
 \subsection{Case 7: (Classical)}
+
+When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$. Substituting into $k_{D}$:
+\[
+k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \left(\frac{R_1}{R_2}\right)^3 \cdot \frac{R_2}{R_1\, D_{crit}} = \frac{1}{D_{crit}}\left(\frac{R_1}{R_2}\right)^2
+\]
+The DeGerlia inertial density ratio reduces to the square of the radius ratio; the linear scale factor follows as $\sqrt{k_{D}} = R_1/R_2$, recovering the isometric equivalence.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
