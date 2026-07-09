@@ -331,7 +331,7 @@ This is the universal constant value of DeGerlia inertial density $D$ at which t
 
 \subsection{DeGerlia Time Dilation}
 Gravitational time dilation is the surviving proper-time rate:
-\begin{equation} \label{eq:gtd}
+\begin{equation} \label{eq:gtd}\label{eq:td_k}
 \frac{d\tau}{dt} = \mathrm{GTD} = \sqrt{1-k}
 \end{equation}
 DeGerlia Time Dilation is its Pythagorean complement, bound to GTD by
@@ -340,36 +340,17 @@ DeGerlia Time Dilation is its Pythagorean complement, bound to GTD by
 \end{equation}
 
 \subsection{The Linear Scale Factor $k$}\label{sec:k}
-The following identity relates the DeGerlia time dilation between two uniform spherical systems to their masses and radii.
-\begin{equation} \label{eq:kd}
-k  = \frac{D_1}{D_2\,D_{crit}} = \frac{M_1 R_2}{M_2 R_1\,D_{crit}}
+$k$ is a single linear scale factor: a ratio of two lengths about an axis. The same ratio that scales length scales time, which is why one quantity governs both. It is measured in three equivalent ways,
+\begin{equation} \label{eq:k}
+k = \frac{r_{s}}{R} = \frac{D}{D_{crit}} = \frac{v^2}{c^2},
 \end{equation}
-where $R_1, R_2$ are the radii, $M_1, M_2$ are the masses, $D_i = M_i/R_i$ is the DeGerlia inertial density of system $i$, and $D_{crit} = c^2/2G$. The two forms are algebraically identical: $D_1/(D_2 D_{crit})$ expresses the comparison through the inertial density ratio, and $M_1 R_2/(M_2 R_1 D_{crit})$ is its fully expanded form. This combined ratio is the scale factor for the DeGerlia time dilation $DTD = \sqrt{k}$, where the ratio of the two systems enters directly.
+the same number arrived at from the Schwarzschild radius, from the DeGerlia inertial density $D$ against its threshold $D_{crit} = c^2/2G$, or from velocity. A scale factor is inherently a comparison: $k$ always relates one system to another, whether the second system is an explicit body or a reference condition such as $D_{crit}$.
 
-The gravitational time dilation follows a different procedure. Because $GTD = \sqrt{1-k}$ carries the two systems through a nonlinear step, each system's scale factor is formed on its own,
-\begin{equation} \label{eq:ks}
-k_i = \frac{D_i}{D_{crit}} = \frac{r_{s,i}}{R_i},
-\end{equation}
-where $D_i = M_i/R_i$ is the system's DeGerlia inertial density and $r_{s,i} = 2GM_i/c^2$ is its Schwarzschild radius. Each $k_i$ yields its own gravitational time dilation $GTD_i = \sqrt{1 - k_i}$, and the comparison between the two systems is the ratio of these individual values,
+Time dilation is recovered from $k$ in the two complementary forms above, $\mathrm{GTD} = \sqrt{1-k}$ (Equation~\ref{eq:gtd}) and $\mathrm{DTD} = \sqrt{k}$ (Equation~\ref{eq:dtd}). The DTD form is a plain power of $k$, so it carries between systems freely. The GTD form is not: because of the $1-k$, each system's $k$ is formed on its own, and only then combined. Accordingly, a comparison of two systems in GTD is the ratio of their individually computed values,
 \begin{equation} \label{eq:gtd_ratio}
-\frac{GTD_1}{GTD_2} = \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}}.
+\frac{\mathrm{GTD}_1}{\mathrm{GTD}_2} = \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}},
 \end{equation}
-Equivalently, since $k_i = DTD_i^2$, the same ratio is $\sqrt{1 - DTD_1^2}\,/\,\sqrt{1 - DTD_2^2}$, the form used in the worked examples that follow.
-
-Each system's gravitational time dilation is always:
-\begin{equation} \label{eq:td_k}
-\frac{d\tau}{dt} = \sqrt{1 - k}
-\end{equation}
-where $d\tau/dt$ is the surviving proper-time rate and $k$ is that system's scale factor.
-
-\subsection{Properties of DTD}
-% TODO: trimmed list of the advantages of DTD as a representation, drawn from Paper B's Properties of DTD section.
-DTD is the geometric complement of gravitational time dilation and is part of the same general relativity. The translation between GTD and DTD is bound through the Pythagorean relationship between the two quantities.
-
-- GTD and DTD are bound by the Pythagorean identity:
-\begin{equation} \label{eq:pyth}
-GTD^2 + DTD^2 = 1 
-\end{equation}
+where $k_1$ and $k_2$ may each be formed by either route of Equation~\ref{eq:k}. The worked examples that follow compute this ratio from both the DeGerlia inertial density $D$ and the Schwarzschild radius, and confirm they agree.
 
 \section{Relative Time Dilation Examples}\label{sec:expressions}\label{app:pair_table}
 
@@ -382,9 +363,6 @@ Across every case, the time-dilation ratio computed via the DeGerlia inertial de
 \label{subsec:example_static_mass_table_case_1}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \frac{R_2}{R_1\, D_{crit}}
-\]
 Note that this reflects the $k$ calculation for gravitational time dilation, where we compare with $r_{s}$. Because $GTD = 0$ exactly at $r_{s}$, we set the comparison radius to $1.00001\,r_{s}$, an "arbitrarily" small amount above $r_{s}$.
 
 \begin{mdframed}
@@ -450,9 +428,6 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.9999575648e-1}} = \num{9.9999787824e-1}\
 \subsection{Case 2: ($M_1 = M_2$, $R_1 = \tfrac{4}{3}r_{s}$)}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \frac{R_2}{R_1\, D_{crit}}
-\]
 Note: This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{s}$, we compare with $\tfrac{4}{3}r_{s}$, which corresponds to a gravitational time dilation of $GTD = \num{5.00000e-1}$.
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
@@ -516,10 +491,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
 \newpage
 \subsection{Case 3: ($R_1 = R_2$)}
 
-When the two systems share the same radius, the radius terms cancel in $k_{D}$:
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \frac{M_1}{M_2\, D_{crit}}
-\]
+When the two systems share the same radius, the radius terms cancel.
 The Lorentz factor\cite{einstein1905} has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit canceling.
 
 \begin{mdframed}
@@ -588,10 +560,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999999999851477e-1}}\\
 \subsection{Case 4: ($\rho_1 = \rho_2$)}
 \label{subsec:example_equal_density_case_4}
 
-When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$. Substituting into $k_{D}$:
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \left(\frac{R_1}{R_2}\right)^3 \cdot \frac{R_2}{R_1\, D_{crit}} = \frac{1}{D_{crit}}\left(\frac{R_1}{R_2}\right)^2
-\]
+When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
@@ -731,10 +700,7 @@ GTD_{s2} &= \sqrt{1-k_2}\\
 \newpage
 \subsection{Case 6: ($I_1 = I_2$)}
 
-When the two systems share the same moment of inertia, $M_1 R_1^2 = M_2 R_2^2$, so $M_1/M_2 = (R_2/R_1)^2$. Substituting into $k_{D}$:
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}} = \left(\frac{R_2}{R_1}\right)^2 \cdot \frac{R_2}{R_1\, D_{crit}} = \frac{1}{D_{crit}}\left(\frac{R_2}{R_1}\right)^3
-\]
+When the two systems share the same moment of inertia, $M_1 R_1^2 = M_2 R_2^2$, so $M_1/M_2 = (R_2/R_1)^2$.
 The DeGerlia inertial density ratio reduces to the cube of the radius ratio.
 
 \begin{mdframed}
@@ -801,11 +767,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
 \newpage
 \subsection{Case 7: (General, unconstrained)}
 
-When no constraint is applied between the systems, $k_{D}$ retains its full form:
-\[
-k_{D} = \frac{M_1 R_2}{M_2 R_1\, D_{crit}}
-\]
-Both mass and radius must be specified independently for each system.
+When no constraint is applied between the systems, both mass and radius must be specified independently for each system.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
