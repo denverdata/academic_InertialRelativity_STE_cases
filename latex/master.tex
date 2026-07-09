@@ -135,11 +135,11 @@
 \vspace{0.3cm} & \vspace{0.3cm} \\
  & \noindent\large{Thomas DeGerlia\textit{$^{a}$}} \\
  & \noindent\small{Originally published: July 4, 2026 C.E.\textit{$^{b}$}} \\
- & \noindent\small{Revision 4 July 5, 2026 C.E.} \\
+ & \noindent\small{Revision 5 July 9, 2026 C.E.} \\
  & \noindent\small{OPEN RESEARCH PREPRINT - FOR PEER REVIEW} \\
 \includegraphics{head_foot/dates} & \\
  & \vspace{0.3cm} \\
- & \noindent\normalsize{ABSTRACT: In this paper, we show that time dilation is not a property of a single system but a comparison between two systems, defined solely by their relative spatial distribution of mass. Specifically stated, the time dilation between two systems is governed by the relative DeGerlia Inertial Density $D$, defined as mass divided by mean radius about the compared axis. We first exemplify this comparative nature with one of the most fundamental equivalences in general relativity, the gravitational time-dilation equation, which computes a system's time dilation relative to flat space-time: $d\tau/dt = \sqrt{1 - r_{s}/R}$. We use this reference value to validate the calculation we perform using relative $D$ alone. We then validate correct calculations for a diverse set of two-system examples, including transformed systems (similar to the gravitational time dilation above, where system 2 is a transformed version of system 1) as well as discrete system comparisons, across the classical and relativistic regimes. To conduct demonstration, we introduce the DeGerlia Time Dilation Framework (DTDF), a simple, mathematically equivalent framework fully defined by general relativity, offering a second frame from which to visualize the relative nature of time.} \\
+ & \noindent\normalsize{ABSTRACT: In this paper, we show that time dilation is not a property of a single system but a comparison between two systems, defined solely by their relative spatial distribution of mass. Specifically stated, the time dilation between two systems is governed by the relative DeGerlia Inertial Density $D$, defined as mass divided by mean radius about the compared axis. We first exemplify this comparative nature with one of the most fundamental equivalences in general relativity, the gravitational time-dilation equation, which computes a system's time dilation relative to flat space-time: $d\tau/dt = \sqrt{1 - r_{\mathrm{s}}/r}$. We use this reference value to validate the calculation we perform using relative $D$ alone. We then validate correct calculations for a diverse set of two-system examples, including transformed systems (similar to the gravitational time dilation above, where system 2 is a transformed version of system 1) as well as discrete system comparisons, across the classical and relativistic regimes. To conduct demonstration, we introduce the DeGerlia Time Dilation Framework (DTDF), a simple, mathematically equivalent framework fully defined by general relativity, offering a second frame from which to visualize the relative nature of time.} \\
  & \vspace{0.15cm} \\
  & \noindent\small{\textbf{Keywords:} time dilation, general relativity, special relativity, gravitational time dilation, Lorentz time dilation, DeGerlia inertial density, inertial density, moment of inertia, astrophysics, Schwarzschild radius, DTDF, DTD, degerlia time dilation} \\
 \end{tabular}
@@ -161,7 +161,7 @@
 \section{Introduction}
 General relativity\cite{einstein1915} is a model for describing our universe that is fundamentally comparative: no quantity has physical meaning without a comparator. The pace of time is no exception: the time dilation between two systems is a product of the systems' relative geometric mass distributions. Directly from the gravitational time dilation formula, one can derive the underlying two-system logic, and ultimately, GTD is simply a comparison between a system's pace of time relative to the pace of time of a selected benchmark system, which in this case is a system of the same mass, but at its Schwarzschild radius. The formula requires only one mass and one radius, the second system being derived directly from the first. While this is the familiar representation, it obscures the comparative nature of relativity and implies that one need not compare two systems to characterize time. That implication is incorrect: there is no privileged perspective from which to characterize time. In this paper, we evaluate the physical property responsible for relativistic time dilation and explore the underlying formulation that quantifies the relative time dilation between two systems.
 
-The relative flow of time between two systems is dictated by their relative DeGerlia inertial density $D$, and in this paper, we do a comparative analysis of relative time dilation across a variety of uniform spherical systems from classical to relativistic regimes, and show that the same $D$ ratio, $k = D_1/D_2 = M_1 R_2/(M_2 R_1)$, yields the Schwarzschild time-dilation ratio exactly across every tested case. This establishes that the relative rate of time between systems is a direct consequence of their relative mass distributions. The result makes explicit a simple relation already contained in general relativity: given two systems’ masses and radii, their relative time dilation is determined by their relative spatial distribution of mass alone.
+The relative flow of time between two systems is governed solely by their relative DeGerlia inertial density $D$. We demonstrate this across a range of uniform spherical systems, from the classical to the relativistic regime, by calculating each system’s DeGerlia time dilation from its relative $D$, converting each to its gravitational time dilation, and taking their ratio. In each case this matches the ratio obtained by computing each system’s gravitational time dilation independently from the standard Schwarzschild form, to the precision permitted by $G$. Given two systems’ masses and radii, their relative time dilation is determined by their relative spatial distribution of mass alone — a relation already contained in general relativity.
 
 \section{Experimental Model}
 
@@ -169,7 +169,7 @@ The experimental model employed in this study comprises several components. The 
 
 We begin by introducing the DeGerlia Framework and then demonstrate its complete mathematical equivalence with general relativity. We then work through a series of examples, each demonstrating a different comparative case, and in each case, we validate the result using standard gravitational time-dilation calculations.
 
-These examples demonstrate the two-system nature of all relativistic calculations. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation, for instance, reflects the comparison of a system with an identical system at its Schwarzschild radius, the collapse-condition radius $r_{s}$.
+These examples demonstrate the two-system nature of all relativistic calculations. Relativity is fundamentally concerned with how quantities appear relative to one another; gravitational time dilation, for instance, reflects the comparison of a system with an identical system at its Schwarzschild radius, the collapse-condition radius $r_{\mathrm{s}}$.
 
 \section{The DeGerlia Time Dilation Framework}
 
@@ -181,17 +181,17 @@ These examples demonstrate the two-system nature of all relativistic calculation
 Symbol & Definition / Value \\
 \midrule
 $c$ & Light Speed $\num{299792458}\,\unit{\meter\per\second}$ \\
-$D$ & DeGerlia Inertial Density $M/R_{axis}$ \\
-$D_{crit}$ & DeGerlia Threshold $c^2/2G = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$ \\
-DTD & DeGerlia Time Dilation DTD=$\sqrt{k}$  \\
+$D$ & DeGerlia Inertial Density $m/r$, where $r$ is the mean radius about a selected axis \\
+$D_{\mathrm{crit}}$ & DeGerlia Threshold $c^2/2G = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$ \\
+DTD & DeGerlia Time Dilation $\sqrt{k}$  \\
 $G$ & Gravitational Constant $\num{6.67430e-11} \pm \num{1.5e-15}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$ \\
 GTD & Gravitational Time Dilation $d\tau/dt = \sqrt{1-k}$ \\
-$k$ & Linear Scale Factor $v^2/c^2=r_{s}/R=D/D_{crit}$ \\
-$k_{D}$ & Linear Scale Factor (DeGerlia inertial density) $D/D_{crit}$ \\
-$k_{s}$ & Linear Scale Factor (Schwarzschild) $r_{s}/R$ \\
+$k$ & Linear Scale Factor $v^2/c^2=r_{\mathrm{s}}/r=D/D_{\mathrm{crit}}$ \\
+$k_{D}$ & Linear Scale Factor (DeGerlia inertial density) $D/D_{\mathrm{crit}}$ \\
+$k_{s}$ & Linear Scale Factor (Schwarzschild) $r_{\mathrm{s}}/r$ \\
 $k_{v}$ & Linear Scale Factor (velocity) $v^2/c^2$ \\
 $P$ & Inertial Density $I/V$ $=D\cdot 3/10\pi$ \\
-$r_{s}$ & Schwarzschild Radius $2GM/c^2$  \\
+$r_{\mathrm{s}}$ & Schwarzschild Radius $2Gm/c^2$  \\
 STE & Space-time Equivalence\cite{degerlia202501} $k_{D} = M_1 R_2 / M_2 R_1$ \\
 \bottomrule
 \end{tabular}
@@ -235,9 +235,9 @@ General Relativity provides the formula for calculating a system's time dilation
 \begin{equation}
 d\tau/dt = \sqrt{1-k}
 \end{equation}
-where $k = r_{s}/R = 2GM/(Rc^2)$, $M$ is the system's mass, and $R$ its radius.
+where $k = r_{\mathrm{s}}/r = 2Gm/(rc^2)$, $m$ is the system's mass, and $r$ its radius.
 
-The equation requires only a single system's mass and radius, yet $k$ is itself a ratio of two radii: the system's radius $R$ and the Schwarzschild radius $r_{s}$~\eqref{eq:schwarzschildradius} of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
+The equation requires only a single system's mass and radius, yet $k$ is itself a ratio of two radii: the system's radius $r$ and the Schwarzschild radius $r_{\mathrm{s}}$~\eqref{eq:schwarzschildradius} of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
 
 \subsection{Definition of a System}
 A ``system'' is defined as any discrete collection of particles and the space between them, or equivalently, any unit of space and the particles contained within it. The framework regards the universe not as a clean separation of discrete material systems separated by the vacuum of space, but as a gradient of material density pervasive throughout. The most extreme densities reside not within near-scale systems but within the cores of highly dense gravitational objects far from the human scale, such as black holes or subatomic particles, and form a gradient extending to the near-scale "vacuum of space" at which another gravitational source begins to dominate. The framework imposes no requirement for uniformity or symmetry, a clean boundary separating matter from vacuum, or any particular density profile. It requires only a mass and a radius about a chosen axis. A system may be specified, for example, as the Earth out to the mean radius of its surface. For a body such as Jupiter, which lacks a clear boundary separating surface from atmosphere, the system may instead be specified out to a chosen radius or density. For a large system, a spherical sample may be taken from within it to characterize the behavior of particular regions. There can be no system modeled under General Relativity that lacks either mass or radius.
@@ -246,26 +246,26 @@ A ``system'' is defined as any discrete collection of particles and the space be
 For a whole system (as distinct from any subsystem), and from that whole system's perspective, the pace of time is static and all other systems are perceived relative to that benchmark. A subsystem possesses distinct physical properties and consequently exhibits behavior different from that of the system as a whole. In general relativity, time dilation scales precisely with the relative mass-to-radius ratio; a part of a system, therefore, cannot be expected to share the pace of time of the whole.
 
 \subsection{Inertial Density $P$}
-\textbf{\textit{Inertial density $P$}} as shown in \eqref{eq:longinertialdensity} is a fundamental system property\cite{degerlia202505} characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as $I/v$ (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where $\rho = m/v$.
+\textbf{\textit{Inertial density $P$}} as shown in \eqref{eq:longinertialdensity} is a fundamental system property\cite{degerlia202505} characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as $I/V$ (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where $\rho = m/V$.
 
 Inertial density may be characterized as the hollowness, or foaminess, of a system. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits and concentrated at the outer edge. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Conversely, a configuration of equal radius with its mass concentrated as an approximate point mass at the center represents the opposite limit: as the mass concentrates toward the center, the moment of inertia approaches zero. The uniform solid sphere lies between these limits. Subdividing such a sphere into smaller hollow spheres redistributes mass toward the periphery, so that the resulting foam-like structure retains a high moment of inertia for its volume.
 
 \subsection{Mathematics of Inertial Density}
 To derive the inertial density relationship, we begin with the established relationship between mass and density $\rho$ as shown in \eqref{eq:massdensity}:
 \begin{equation}
-\rho \;=\; \frac{m}{v}
+\rho \;=\; \frac{m}{V}
 \label{eq:massdensity}
 \end{equation}
-where $\rho$ is density, $m$ is mass, and $v$ is volume.
-Because mass is equivalent to linear inertia, and because density is $m/v$, we define inertial density $P$ in terms of moment of inertia over volume:
+where $\rho$ is density, $m$ is mass, and $V$ is volume.
+Because mass is equivalent to linear inertia, and because density is $m/V$, we define inertial density $P$ in terms of moment of inertia over volume:
 \begin{equation}
-\text{Inertial Density}: P \;=\; \frac{I}{v}
+\text{Inertial Density}: P \;=\; \frac{I}{V}
 \label{eq:longinertialdensity}
 \end{equation}
-where inertial density $P$ is equal to inertia $I$ over volume $v$. Note, the moment of inertia $I$ for a system may be distinct about every axis for systems that are not uniform\cite{kerr1963}.
-For a uniform sphere\cite{goldstein1980}, we substitute $I = \frac{2}{5}mr^2$ and $v = \frac{4}{3}\pi r^3$:
+where inertial density $P$ is equal to inertia $I$ over volume $V$. Note, the moment of inertia $I$ for a system may be distinct about every axis for systems that are not uniform\cite{kerr1963}.
+For a uniform sphere\cite{goldstein1980}, we substitute $I = \frac{2}{5}mr^2$ and $V = \frac{4}{3}\pi r^3$:
 \begin{equation}
-P \;=\; \frac{I}{v} \;=\; \frac{\frac{2}{5}mr^2}{\frac{4}{3}\pi r^3} \;=\; \frac{3m}{10\pi r}
+P \;=\; \frac{I}{V} \;=\; \frac{\frac{2}{5}mr^2}{\frac{4}{3}\pi r^3} \;=\; \frac{3m}{10\pi r}
 \label{eq:sphericalP}
 \end{equation}
 Which can be simplified as follows:
@@ -277,7 +277,7 @@ P \;&=\; \frac{m}{r} \times \num{9.549296585e-2}
 Therefore, for spherical systems, $P$ can be calculated as the ratio of mass to radius, multiplied by the conversion factor $\frac{3}{10\pi}$ as shown in \eqref{eq:massinertialdensity}.
 
 \subsection{DeGerlia Inertial Density $D$}\label{sec:inertial_density}
-For all spherical systems, $m/r$ multiplied by the geometric factor $3/(10\pi)$ yields the inertial density. \textbf{\textit{DeGerlia inertial density}} is a simplified analog of inertial density $I/v$, equal to the mass-to-radius ratio $m/r$ with the $3/(10\pi)$ geometric conversion factor omitted:
+For all spherical systems, $m/r$ multiplied by the geometric factor $3/(10\pi)$ yields the inertial density. \textbf{\textit{DeGerlia inertial density}} is a simplified analog of inertial density $I/V$, equal to the mass-to-radius ratio $m/r$ with the $3/(10\pi)$ geometric conversion factor omitted:
 \begin{align}
 \boxed{\text{DeGerlia Inertial Density: } D=\frac{m}{r} }
 \label{eq:degerliainertialdensity}
@@ -287,51 +287,51 @@ DeGerlia inertial density \eqref{eq:degerliainertialdensity} $D = m/r$ is relate
     P=\frac{3}{10\pi} \times D
 \label{eq:ptod}
 \end{equation}
-In a linear context, inertia is mass, and inertial density reduces directly to mass density $\rho = M/V$. From this perspective, inertial density is the rotational analog of mass density, paralleling the relationship between $F = ma$ and $\tau = I\alpha$. Equivalently, mass density is the linear interpretation of inertial density.
+In a linear context, inertia is mass, and inertial density reduces directly to mass density $\rho = m/V$. From this perspective, inertial density is the rotational analog of mass density, paralleling the relationship between $F = ma$ and $\tau = I\alpha$. Equivalently, mass density is the linear interpretation of inertial density.
 
-Just as ordinary density ($\rho = M/V$) is linear inertia (mass) distributed over volume, DeGerlia inertial density is rotational inertia distributed over volume. As stated in the prior work, \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}
+Just as ordinary density ($\rho = m/V$) is linear inertia (mass) distributed over volume, DeGerlia inertial density is rotational inertia distributed over volume. As stated in the prior work, \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}
 
 Because $D$ is almost always used in a ratio that cancels all geometric constants, this metric is typically preferred over the geometrically accurate inertial density $P$ for ease of use.
 
-\subsection{DeGerlia Threshold $D_{crit}$}
+\subsection{DeGerlia Threshold $D_{\mathrm{crit}}$}
 The Schwarzschild condition can be expressed as a static universal constant threshold of DeGerlia inertial density $D$, rather than as a value that must be recalculated for every mass.
 
-Setting $R = r_{s}$ (the Schwarzschild condition), the DeGerlia inertial density $D$ becomes the threshold $D_{crit}$:
+Setting $r = r_{\mathrm{s}}$ (the Schwarzschild condition), the DeGerlia inertial density $D$ becomes the threshold $D_{\mathrm{crit}}$:
 \begin{equation}
-D_{crit} = \frac{m}{r_{s}}
+D_{\mathrm{crit}} = \frac{m}{r_{\mathrm{s}}}
 \label{eq:dcritdef}
 \end{equation}
 Recall the Schwarzschild radius\cite{schwarzschild1916radius}:
 \begin{equation}
-r_{s} = \frac{2Gm}{c^2}
+r_{\mathrm{s}} = \frac{2Gm}{c^2}
 \label{eq:schwarzschildradius}
 \end{equation}
-Substitute $r_{s}$ into the expression for $D_{crit}$:
+Substitute $r_{\mathrm{s}}$ into the expression for $D_{\mathrm{crit}}$:
 \begin{align}
-D_{crit} &= \frac{m}{\frac{2Gm}{c^2}} = \frac{m c^2}{2Gm} = \frac{c^2}{2G}
+D_{\mathrm{crit}} &= \frac{m}{\frac{2Gm}{c^2}} = \frac{m c^2}{2Gm} = \frac{c^2}{2G}
 \end{align}
 Insert the fundamental constants\cite{crc2019}, $c = \num{2.99792458e8}\,\unit{\meter\per\second}$ and $G = \num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$:
 \begin{align*}
-D_{crit} &= \frac{(\num{2.99792458e8})^2}{2 \times \num{6.67430e-11}}\,\unit[per-mode=symbol]{\kilogram\per\meter} \\
+D_{\mathrm{crit}} &= \frac{(\num{2.99792458e8})^2}{2 \times \num{6.67430e-11}}\,\unit[per-mode=symbol]{\kilogram\per\meter} \\
          &= \frac{\num{8.98755179e16}}{\num{1.334860e-10}} \\
          &= \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}
 \end{align*}
 \begin{equation}
-\boxed{ \text{DeGerlia Threshold: } D_{crit} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter} }
+\boxed{ \text{DeGerlia Threshold: } D_{\mathrm{crit}} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter} }
 \label{eq:criticalmassdensity}
 \end{equation}
 The DeGerlia Threshold~\eqref{eq:criticalmassdensity} is the universal constant value of DeGerlia inertial density $D$ at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant\cite{codata2018}, $G = \num{6.67430e-11} \pm \num{1.5e-15}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$. Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
 
 \begin{mdframed}
-\noindent\textbf{Rapid evaluation of the black hole condition.} For a single system, divide its mass by its radius and compare the result with the DeGerlia Threshold~\eqref{eq:criticalmassdensity}, $D_{crit} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$. If their ratio equals $1$, the system is at the black hole condition; if it is less than $1$, no collapse has occurred.
+\noindent\textbf{Rapid evaluation of the black hole condition.} For a single system, divide its mass by its radius and compare the result with the DeGerlia Threshold~\eqref{eq:criticalmassdensity}, $D_{\mathrm{crit}} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$. If their ratio equals $1$, the system is at the black hole condition; if it is less than $1$, no collapse has occurred.
 \end{mdframed}
 
 \subsection{DeGerlia Time Dilation}
 DeGerlia Time Dilation (DTD)~\eqref{eq:dtd} is the Pythagorean complement~\eqref{eq:pyth} of gravitational time dilation:
 \begin{align}
-&GTD = \sqrt{1-k} \notag\\
-&DTD = \sqrt{k} \label{eq:dtd}\\
-&GTD^2 + DTD^2 = 1 \label{eq:pyth}
+&\mathrm{GTD} = \sqrt{1-k} \notag\\
+&\mathrm{DTD} = \sqrt{k} \label{eq:dtd}\\
+&\mathrm{GTD}^2 + \mathrm{DTD}^2 = 1 \label{eq:pyth}
 \end{align}
 where $k$ is the linear scale factor.
 
@@ -342,8 +342,8 @@ The linear scale factor $k$ is a common element among all established forms of t
 \end{equation*}
 where $d\tau/dt$ is the time-dilation factor between the two systems and $k$ is the linear scale factor between the two systems. Specific forms of $k$ follow:
 \begin{itemize}
-\item $k = r_{s}/R$, the standard Schwarzschild condition.
-\item $k = D/D_{crit} = (M/R)/(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})$, via the DeGerlia inertial density against its threshold.
+\item $k = r_{\mathrm{s}}/r$, the standard Schwarzschild condition.
+\item $k = D/D_{\mathrm{crit}} = (m/r)/(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})$, via the DeGerlia inertial density against its threshold.
 \item $k = v^2/c^2$, as used in special relativity.
 \end{itemize}
 
@@ -354,11 +354,11 @@ Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete 
 Across every case, the time-dilation ratio computed via the DeGerlia inertial density ratio agrees with the gravitational time-dilation ratio computed independently from the standard Schwarzschild form, to the limit of precision imposed by $G$. No case requires a separate formula. The worked examples in the following subsections show the full calculations, case by case.
 
 \newpage
-\subsection{Case 1: ($M_1 = M_2$, $R_1 \approx r_{s}$)}
+\subsection{Case 1: ($m_1 = m_2$, $r_1 \approx r_{\mathrm{s}}$)}
 \label{subsec:example_static_mass_table_case_1}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
-Note that this reflects the $k$ calculation for gravitational time dilation, where we compare with $r_{s}$. Because $GTD = 0$ exactly at $r_{s}$, we set the comparison radius to $1.00001\,r_{s}$, an "arbitrarily" small amount above $r_{s}$.
+Note that this reflects the $k$ calculation for gravitational time dilation, where we compare with $r_{\mathrm{s}}$. Because $GTD = 0$ exactly at $r_{\mathrm{s}}$, we set the comparison radius to $1.00001\,r_{\mathrm{s}}$, an "arbitrarily" small amount above $r_{\mathrm{s}}$.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
@@ -372,13 +372,13 @@ Note that this reflects the $k$ calculation for gravitational time dilation, whe
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{2.00000e30} & \num{2.00000e30} \\
-$R$ (\unit{\meter}) & \num{2.97049e3} & \num{7.00000e8} \\
+$m$ (\unit{\kilogram}) & \num{2.00000e30} & \num{2.00000e30} \\
+$r$ (\unit{\meter}) & \num{2.97049e3} & \num{7.00000e8} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{2.97049e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{9.9999068441e-1}\\
 DTD_1 &= \sqrt{\num{9.9999068441e-1}} = \num{9.9999534220e-1}\\
 \quad k_2 &= \dfrac{\num{2.00000e30}\,\unit{\kilogram}}{(\num{7.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{4.24352e-6}\\
@@ -396,13 +396,13 @@ DTD_2 &= \sqrt{\num{4.24352e-6}} = \num{2.05998e-3}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} = r_{s2} &= \dfrac{2GM}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{2.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} = r_{\mathrm{s}2} &= \dfrac{2Gm}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{2.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{2.97046e3}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{2.97049e3}\,\unit{\meter}} &&= \num{9.9999000010e-1}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{7.00000e8}\,\unit{\meter}} &&= \num{4.24352e-6}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{2.97049e3}\,\unit{\meter}} &&= \num{9.9999000010e-1}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{2.97046e3}\,\unit{\meter}}{\num{7.00000e8}\,\unit{\meter}} &&= \num{4.24352e-6}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -414,16 +414,16 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.9999575648e-1}} = \num{9.9999787824e-1}\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{9.9683773e-1} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{9.9694785e-1} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{9.9683773e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{9.9694785e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
 \newpage
-\subsection{Case 2: ($M_1 = M_2$, $R_1 = \tfrac{4}{3}r_{s}$)}
+\subsection{Case 2: ($m_1 = m_2$, $r_1 = \tfrac{4}{3}r_{\mathrm{s}}$)}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
-Note: This reflects the $k$ calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{s}$, we compare with $\tfrac{4}{3}r_{s}$, which corresponds to a gravitational time dilation of $GTD = \num{5.00000e-1}$.
+Note: This reflects the $k$ calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{\mathrm{s}}$, we compare with $\tfrac{4}{3}r_{\mathrm{s}}$, which corresponds to a gravitational time dilation of $GTD = \num{5.00000e-1}$.
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -436,13 +436,13 @@ Note: This reflects the $k$ calculation for gravitational time dilation. However
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e30} \\
-$R$ (\unit{\meter}) & \num{1.98031e3} & \num{1.00000e8} \\
+$m$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e30} \\
+$r$ (\unit{\meter}) & \num{1.98031e3} & \num{1.00000e8} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.98031e3}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{7.50001e-1}\\
 DTD_1 &= \sqrt{\num{7.50001e-1}} = \num{8.66026e-1}\\
 \quad k_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
@@ -460,13 +460,13 @@ DTD_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} = r_{s2} &= \dfrac{2GM}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} = r_{\mathrm{s}2} &= \dfrac{2Gm}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e3}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.98031e3}\,\unit{\meter}} &&= \num{7.50000e-1}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.98031e3}\,\unit{\meter}} &&= \num{7.50000e-1}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -478,13 +478,13 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{4.99996e-1} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{4.99997e-1} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{4.99996e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{4.99997e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
 \newpage
-\subsection{Case 3: ($R_1 = R_2$)}
+\subsection{Case 3: ($r_1 = r_2$)}
 
 When the two systems share the same radius, the radius terms cancel.
 The Lorentz factor\cite{einstein1905} has the same $\sqrt{1-k}$ form, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit canceling.
@@ -501,13 +501,13 @@ The Lorentz factor\cite{einstein1905} has the same $\sqrt{1-k}$ form, with $k = 
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e24} \\
-$R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
+$m$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e24} \\
+$r$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e8} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
 DTD_1 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
 \quad k_2 &= \dfrac{\num{1.00000e24}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-11}\\
@@ -525,15 +525,15 @@ DTD_2 &= \sqrt{\num{1.48523e-11}} = \num{3.85387e-6}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} &= \dfrac{2Gm_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e3}\,\unit{\meter}\\
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e24}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}2} &= \dfrac{2Gm_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e24}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e-3}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e-3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-11}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e-3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-11}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -546,8 +546,8 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999999999851477e-1}}\\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.42618e-6} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.42619e-6} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.42618e-6} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.42619e-6} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
@@ -555,7 +555,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999999999851477e-1}}\\
 \subsection{Case 4: ($\rho_1 = \rho_2$)}
 \label{subsec:example_equal_density_case_4}
 
-When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1/R_2)^3$.
+When the two systems share the same density, $m \propto r^3$, so $m_1/m_2 = (r_1/r_2)^3$.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
@@ -569,13 +569,13 @@ When the two systems share the same density, $M \propto R^3$, so $M_1/M_2 = (R_1
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e27} \\
-$R$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e7} \\
+$m$ (\unit{\kilogram}) & \num{1.00000e30} & \num{1.00000e27} \\
+$r$ (\unit{\meter}) & \num{1.00000e8} & \num{1.00000e7} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
 DTD_1 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
 \quad k_2 &= \dfrac{\num{1.00000e27}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-7}\\
@@ -593,15 +593,15 @@ DTD_2 &= \sqrt{\num{1.48523e-7}} = \num{3.85387e-4}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} &= \dfrac{2Gm_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e3}\,\unit{\meter}\\
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e27}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}2} &= \dfrac{2Gm_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e27}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e0}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e0}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-7}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e0}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-7}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -614,8 +614,8 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.99999851477e-1}} = \num{9.999999257384e-
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.35193e-6} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.35193e-6} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.35193e-6} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.35193e-6} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
@@ -636,13 +636,13 @@ This is a static-density, isometric case that follows the same model as \hyperre
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{8.00000e0} & \num{1.00000e0} \\
-$R$ (\unit{\meter}) & \num{2.00000e0} & \num{1.00000e0} \\
+$m$ (\unit{\kilogram}) & \num{8.00000e0} & \num{1.00000e0} \\
+$r$ (\unit{\meter}) & \num{2.00000e0} & \num{1.00000e0} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{8.00000e0}\,\unit{\kilogram}}{(\num{2.00000e0}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{5.94093e-27}\\
 DTD_1 &= \sqrt{\num{5.94093e-27}} = \num{7.70774e-14}\\
 \quad k_2 &= \dfrac{\num{1.00000e0}\,\unit{\kilogram}}{(\num{1.00000e0}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-27}\\
@@ -661,15 +661,15 @@ DTD_2 &= \sqrt{\num{1.48523e-27}} = \num{3.85387e-14}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{8.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} &= \dfrac{2Gm_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{8.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.18819e-26}\,\unit{\meter}\\
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}2} &= \dfrac{2Gm_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e0}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e-27}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.18819e-26}\,\unit{\meter}}{\num{2.00000e0}\,\unit{\meter}} &&= \num{5.94093e-27}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e-27}\,\unit{\meter}}{\num{1.00000e0}\,\unit{\meter}} &&= \num{1.48523e-27}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.18819e-26}\,\unit{\meter}}{\num{2.00000e0}\,\unit{\meter}} &&= \num{5.94093e-27}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e-27}\,\unit{\meter}}{\num{1.00000e0}\,\unit{\meter}} &&= \num{1.48523e-27}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -687,15 +687,15 @@ GTD_{s2} &= \sqrt{1-k_2}\\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{2.22785e-27} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{2.22785e-27} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{2.22785e-27} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{2.22785e-27} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
 \newpage
 \subsection{Case 6: ($I_1 = I_2$)}
 
-When the two systems share the same moment of inertia, $M_1 R_1^2 = M_2 R_2^2$, so $M_1/M_2 = (R_2/R_1)^2$.
+When the two systems share the same moment of inertia, $m_1 r_1^2 = m_2 r_2^2$, so $m_1/m_2 = (r_2/r_1)^2$.
 The DeGerlia inertial density ratio reduces to the cube of the radius ratio.
 
 \begin{mdframed}
@@ -710,13 +710,13 @@ The DeGerlia inertial density ratio reduces to the cube of the radius ratio.
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e32} & \num{1.00000e30} \\
-$R$ (\unit{\meter}) & \num{1.00000e7} & \num{1.00000e8} \\
+$m$ (\unit{\kilogram}) & \num{1.00000e32} & \num{1.00000e30} \\
+$r$ (\unit{\meter}) & \num{1.00000e7} & \num{1.00000e8} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{1.00000e32}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-2}\\
 DTD_1 &= \sqrt{\num{1.48523e-2}} = \num{1.21870e-1}\\
 \quad k_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e8}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-5}\\
@@ -734,15 +734,15 @@ DTD_2 &= \sqrt{\num{1.48523e-5}} = \num{3.85387e-3}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e32}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} &= \dfrac{2Gm_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e32}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e5}\,\unit{\meter}\\
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}2} &= \dfrac{2Gm_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e3}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e5}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-2}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.48523e5}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-2}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e8}\,\unit{\meter}} &&= \num{1.48523e-5}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -754,8 +754,8 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.44657e-3} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.44658e-3} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{7.44657e-3} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{7.44658e-3} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
@@ -776,13 +776,13 @@ When no constraint is applied between the systems, both mass and radius must be 
 \toprule
  & System 1 ($S_1$) & System 2 ($S_2$) \\
 \midrule
-$M$ (\unit{\kilogram}) & \num{1.00000e20} & \num{1.00000e30} \\
-$R$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
+$m$ (\unit{\kilogram}) & \num{1.00000e20} & \num{1.00000e30} \\
+$r$ (\unit{\meter}) & \num{2.00000e-7} & \num{1.00000e7} \\
 \bottomrule
 \end{tabular}}\par\vspace{\belowdisplayskip}
 \noindent\textbf{Calculate DTD for each System:}\par
 \begin{align*}
-DTD &= \sqrt{k} \quad\text{where}\quad k = M/(R\,D_{crit})\\
+DTD &= \sqrt{k} \quad\text{where}\quad k = m/(r\,D_{\mathrm{crit}})\\
 \quad k_1 &= \dfrac{\num{1.00000e20}\,\unit{\kilogram}}{(\num{2.00000e-7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{7.42617e-1}\\
 DTD_1 &= \sqrt{\num{7.42617e-1}} = \num{8.61752e-1}\\
 \quad k_2 &= \dfrac{\num{1.00000e30}\,\unit{\kilogram}}{(\num{1.00000e7}\,\unit{\meter})(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})} = \num{1.48523e-4}\\
@@ -800,15 +800,15 @@ DTD_2 &= \sqrt{\num{1.48523e-4}} = \num{1.21870e-2}\\
 \noindent\textbf{Verify by calculating the GTD from the Schwarzschild Radius Ratio:}\par
 \noindent Schwarzschild radii:\par
 \begin{align*}
-r_{s1} &= \dfrac{2GM_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e20}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}1} &= \dfrac{2Gm_1}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e20}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e-7}\,\unit{\meter}\\
-r_{s2} &= \dfrac{2GM_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
+r_{\mathrm{s}2} &= \dfrac{2Gm_2}{c^2} = \dfrac{2(\num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared})(\num{1.00000e30}\,\unit{\kilogram})}{(\num{2.99792e8}\,\unit{\meter\per\second})^2}\\
 &= \num{1.48523e3}\,\unit{\meter}
 \end{align*}
-\noindent Calculate $k$ values from the $r_{s}/R$ ratio:\par
+\noindent Calculate $k$ values from the $r_{\mathrm{s}}/r$ ratio:\par
 \begin{align*}
-k_1 &= \dfrac{r_{s1}}{R_1} &&= \dfrac{\num{1.48523e-7}\,\unit{\meter}}{\num{2.00000e-7}\,\unit{\meter}} &&= \num{7.42616e-1}\\
-k_2 &= \dfrac{r_{s2}}{R_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-4}
+k_1 &= \dfrac{r_{\mathrm{s}1}}{r_1} &&= \dfrac{\num{1.48523e-7}\,\unit{\meter}}{\num{2.00000e-7}\,\unit{\meter}} &&= \num{7.42616e-1}\\
+k_2 &= \dfrac{r_{\mathrm{s}2}}{r_2} &&= \dfrac{\num{1.48523e3}\,\unit{\meter}}{\num{1.00000e7}\,\unit{\meter}} &&= \num{1.48523e-4}
 \end{align*}
 \noindent Calculate GTD via Schwarzschild radius ratio:\par
 \begin{align*}
@@ -820,8 +820,8 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.99851477e-1}} = \num{9.999257356e-1}\\
 \end{align*}
 \noindent\textbf{Time-dilation ratio between System 1 and System 2, computed two ways:}\par
 \begin{align*}
-&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{4.92632e-1} \quad \text{(via $r_{s}$)}\\
-&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{4.92633e-1} \quad \text{(via $D_{crit}$)}
+&\dfrac{GTD_{s1}}{GTD_{s2}} = 1-\num{4.92632e-1} \quad \text{(via $r_{\mathrm{s}}$)}\\
+&\dfrac{GTD_{d1}}{GTD_{d2}} = 1-\num{4.92633e-1} \quad \text{(via $D_{\mathrm{crit}}$)}
 \end{align*}
 \end{mdframed}
 
@@ -833,18 +833,20 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.99851477e-1}} = \num{9.999257356e-1}\\
 % \section{Analysis}
 % The reformulation is meant to carry three points, and nothing more ambitious.
 % \begin{enumerate}
-% \item It is a pace-of-time framework that is simply easier to work with. Expressed in DTD and $D$, comparing two systems is a direct ratio of geometries, with no benchmark, no subtraction-from-one, and (because $D_{crit}$ cancels) no dependence on $G$. One returns to GTD, the $\sqrt{1-k}$ form, only at the final step, to convert relative pace into relative clock time.
+% \item It is a pace-of-time framework that is simply easier to work with. Expressed in DTD and $D$, comparing two systems is a direct ratio of geometries, with no benchmark, no subtraction-from-one, and (because $D_{\mathrm{crit}}$ cancels) no dependence on $G$. One returns to GTD, the $\sqrt{1-k}$ form, only at the final step, to convert relative pace into relative clock time.
 % \item General relativity is always two-system; we merely masquerade it as one. Conventional gravitational time dilation looks like a single-system calculation only because it silently fixes the second system, the same mass at its Schwarzschild radius, where $DTD=1$. Make that benchmark explicit and the two-system structure, present all along, is plain.
 % \item Treating it as one system is a disservice to the broader mathematics. The collapse to a single system rests on presuming that some property of the hidden second system is a fixed, universal given, a presumption that obscures the real structure and perpetuates a misconception that dilutes the core principle. The honest formulation keeps both systems in view and recognizes the single-system shortcut as a convenience, not as the underlying physics.
 % \end{enumerate}
 % --- end hidden Analysis section ---
 
-% --- Hidden for now (preserved, not deleted): uncomment to restore ---
-% \section{Conclusions}
+\section{Conclusions}
 % TODO: what can be safely concluded from the work --- did it meet the hypothesis laid out? What was the analysis intended to demonstrate? Do we believe this to be a demonstration of that? No speculative hypotheses of explanation here.
-%
+
+% --- Hidden for now (preserved, not deleted): uncomment to restore ---
 % \section{Hypotheses of Explanation}
 %  Because the underlying relationship is simultaneously one of inertia and density, the inertia component imparts dimensionality to time. Consequently, although the present exploration is restricted to uniform spherical systems, the framework extends to asymmetrical systems, including large low-density black holes, Kerr black holes\cite{kerr1963}, and the observable universe.
+%
+% RAW NOTE (scale invariance): The same DTD ratio can appear at any scale, infinitely, up and down the scale continuum. The DTD ratio depends only on the two systems' relative D (D_crit cancels: k1/k2 = D1/D2), so it carries no absolute scale -- slide both systems anywhere on the mass/radius spectrum and, with relative D preserved, the DTD ratio is identical. This is exactly why the DTD ratio alone cannot recover the GTD ratio (the scale information is not in it); you need the ratio plus one absolute anchor (any one system's DTD / k / D), because D_crit fixes the scale. Single-system view of the same fact: the Schwarzschild condition is m/r = D_crit, a statement purely about the RATIO m/r hitting a universal constant, independent of absolute scale. In SI units that means mass in kg exceeds radius in meters by ~26.83 orders of magnitude (log10(D_crit) = 26.828). Any (m,r) with that ~26.83-order gap sits exactly at the localized Schwarzschild radius, regardless of the individual magnitudes (e.g. 6.73e26 kg at 1 m; 6.73 kg at 1e-26 m; 6.73e40 kg at 1e14 m all satisfy m/r = D_crit).
 %
 % \section{Further Exploration}
 % TODO

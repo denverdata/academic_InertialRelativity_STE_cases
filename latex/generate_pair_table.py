@@ -148,10 +148,10 @@ def fmt_1mx(val_str, prec):
 # LaTeX rendering for row labels — keys are the raw markdown labels
 LABELS = {
     # System Properties
-    'm_1 (kg)':       r'$M_1$ (kg)',
-    'm_2 (kg)':       r'$M_2$ (kg)',
-    'r_1 (m)':        r'$R_1$ (m)',
-    'r_2 (m)':        r'$R_2$ (m)',
+    'm_1 (kg)':       r'$m_1$ (kg)',
+    'm_2 (kg)':       r'$m_2$ (kg)',
+    'r_1 (m)':        r'$r_1$ (m)',
+    'r_2 (m)':        r'$r_2$ (m)',
     'ρ_1 (kg/m³)':    r'$\rho_1$ (kg/m$^3$)',
     'ρ_2 (kg/m³)':    r'$\rho_2$ (kg/m$^3$)',
     'I_1 (kg·m²)':    r'$I_1$ (kg$\cdot$m$^2$)',
@@ -172,15 +172,15 @@ LABELS = {
     # Derived ratios
     'dtd_1/dtd_2':                          r'$\mathrm{DTD}_1/\mathrm{DTD}_2$',
     'sqrt(D_1/D_2)':                        r'$\sqrt{D_1/D_2}$',
-    'sqrt((m_1·r_2)/(m_2·r_1))':            r'$\sqrt{(M_1 R_2)/(M_2 R_1)}$',
-    'sqrt((I_1/I_2)*(r_2/r_1)³)':           r'$\sqrt{(I_1/I_2)(R_2/R_1)^3}$',
+    'sqrt((m_1·r_2)/(m_2·r_1))':            r'$\sqrt{(m_1 r_2)/(m_2 r_1)}$',
+    'sqrt((I_1/I_2)*(r_2/r_1)³)':           r'$\sqrt{(I_1/I_2)(r_2/r_1)^3}$',
     '(I_1/I_2)^(1/5)*(ρ_1/ρ_2)^(3/10)':     r'$(I_1/I_2)^{1/5}(\rho_1/\rho_2)^{3/10}$',
 
-    '(m_2·r_1)/(m_1·r_2)':                  r'$(M_2 R_1)/(M_1 R_2)$',
-    '(m_1·r_2)/(m_2·r_1)':                  r'$(M_1 R_2)/(M_2 R_1)$',
+    '(m_2·r_1)/(m_1·r_2)':                  r'$(m_2 r_1)/(m_1 r_2)$',
+    '(m_1·r_2)/(m_2·r_1)':                  r'$(m_1 r_2)/(m_2 r_1)$',
     '(*k) D_2/D_1':                         r'$D_2/D_1$',
     '(*k) D_1/D_2':                         r'$D_1/D_2$',
-    '(I_1/I_2)*(r_2/r_1)³':                 r'$(I_1/I_2)(R_2/R_1)^3$',
+    '(I_1/I_2)*(r_2/r_1)³':                 r'$(I_1/I_2)(r_2/r_1)^3$',
 
     'k_s':                                  r'$k_{\mathrm{s}}$',
     'k_d':                                  r'$k_{\mathrm{d}}$',
@@ -190,22 +190,22 @@ LABELS = {
     'I_2/I_1':                              r'$I_2/I_1$',
     '(I_1/I_2)^(1/2)':                      r'$(I_1/I_2)^{1/2}$',
     '(I_2/I_1)^(1/2)':                      r'$(I_2/I_1)^{1/2}$',
-    'k_i=(ρ_1/ρ_2)^(1/5)*(r_1/r_2)':        r'$(\rho_1/\rho_2)^{1/5}(R_1/R_2)$',
+    'k_i=(ρ_1/ρ_2)^(1/5)*(r_1/r_2)':        r'$(\rho_1/\rho_2)^{1/5}(r_1/r_2)$',
     '(I_1/I_2)^(1/5)':                      r'$(I_1/I_2)^{1/5}$',
     '(I_2/I_1)^(1/5)':                      r'$(I_2/I_1)^{1/5}$',
-    '(dtd_1/dtd_2)²*(r_1/r_2)³':            r'$(\mathrm{DTD}_1/\mathrm{DTD}_2)^2(R_1/R_2)^3$',
+    '(dtd_1/dtd_2)²*(r_1/r_2)³':            r'$(\mathrm{DTD}_1/\mathrm{DTD}_2)^2(r_1/r_2)^3$',
 
     '(*G) gtd_1/gtd_2':                     r'$\mathrm{GTD}_{\mathrm{s}1}/\mathrm{GTD}_{\mathrm{s}2}$',
     'GTD_d_1/GTD_d_2':                      r'$\mathrm{GTD}_{\mathrm{d}1}/\mathrm{GTD}_{\mathrm{d}2}$',
     'sqrt(1-dtd_1²)/sqrt(1-dtd_2²)':        r'$\sqrt{1-\mathrm{DTD}_1^2}/\sqrt{1-\mathrm{DTD}_2^2}$',
 
-    '(*k) k_m=m_1/m_2':                     r'$M_1/M_2$',
-    '(*k) k_r=r_1/r_2':                     r'$R_1/R_2$',
-    'r_2/r_1':                              r'$R_2/R_1$',
-    'sqrt(r_2/r_1)':                        r'$\sqrt{R_2/R_1}$',
-    'sqrt(r_1/r_2)':                        r'$\sqrt{R_1/R_2}$',
-    'sqrt(m_1/m_2)':                        r'$\sqrt{M_1/M_2}$',
-    'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{M_2^2 R_2/(M_1^2 R_1)}$',
+    '(*k) k_m=m_1/m_2':                     r'$m_1/m_2$',
+    '(*k) k_r=r_1/r_2':                     r'$r_1/r_2$',
+    'r_2/r_1':                              r'$r_2/r_1$',
+    'sqrt(r_2/r_1)':                        r'$\sqrt{r_2/r_1}$',
+    'sqrt(r_1/r_2)':                        r'$\sqrt{r_1/r_2}$',
+    'sqrt(m_1/m_2)':                        r'$\sqrt{m_1/m_2}$',
+    'sqrt(m_2²r_2/(m_1²r_1))':              r'$\sqrt{m_2^2 r_2/(m_1^2 r_1)}$',
 }
 
 # Source columns: 0=M=M (3.0e3), 1=case1b, 2=R=R, 3=P=P, 4=I=I, 5=General,
@@ -215,9 +215,9 @@ LABELS = {
 # Classical (col 6) is a static-density case, grouped immediately after P=P.
 KEEP = [9, 8, 2, 3, 6, 4, 5]
 COL_NAMES = [
-    r'\makecell{Case 1\\$M\!=\!M$, $\sim\!r_{\mathrm{s}}$}',
-    r'\makecell{Case 2\\$M\!=\!M$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
-    r'\makecell{Case 3\\$R\!=\!R$}',
+    r'\makecell{Case 1\\$m\!=\!m$, $\sim\!r_{\mathrm{s}}$}',
+    r'\makecell{Case 2\\$m\!=\!m$, $\sim\!\tfrac{4}{3}r_{\mathrm{s}}$}',
+    r'\makecell{Case 3\\$r\!=\!r$}',
     r'\makecell{Case 4\\$\rho\!=\!\rho$}',
     r'\makecell{Case 5\\Classical}',
     r'\makecell{Case 6\\$I\!=\!I$}',
