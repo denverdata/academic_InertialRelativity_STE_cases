@@ -182,7 +182,7 @@ Symbol & Definition / Value \\
 \midrule
 $c$ & Light Speed $\num{299792458}\,\unit{\meter\per\second}$ \\
 $D$ & DeGerlia Inertial Density $M/R_{axis}$ \\
-$D_{crit}$ & DeGerlia Threshold $c^2/2G = \num{6.73295e26}\,\unit{\kilogram\per\meter}$ \\
+$D_{crit}$ & DeGerlia Threshold $c^2/2G = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$ \\
 DTD & DeGerlia Time Dilation DTD=$\sqrt{k}$  \\
 $G$ & Gravitational Constant $\num{6.67430e-11} \pm \num{1.5e-15}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$ \\
 GTD & Gravitational Time Dilation $d\tau/dt = \sqrt{1-k}$ \\
@@ -199,26 +199,21 @@ STE & Space-time Equivalence\cite{degerlia202501} $k_{D} = M_1 R_2 / M_2 R_1$ \\
 \subsection{What is the DeGerlia Time Dilation Framework?}
 
 First and foremost, the entirety of the principles described herein represents no deviation from general relativity. It represents a mathematically equivalent reframing useful in certain relativistic calculations. The author has simply asserted a complement to GTD, where the form of time dilation is equal to $\sqrt{k}$, instead of $\sqrt{1-k}$.
-\begin{gather*}
-GTD = d\tau/dt = \sqrt{1-k}\\
-DTD = \sqrt{k}\\
-DTD^2 + GTD^2 = 1
-\end{gather*}
 
 While equivalent to GTD mathematically, the DTD form offers a different perspective on the same physical phenomenon. It is a complementary perspective that aids in visualizing the underlying physics:
 \begin{itemize}
 \item One can convert between GTD and DTD at any time. GTD is always recoverable.
-\item $DTD$ is mathematically very easy to use and visualize, requiring only the ratio of mass to radius in comparison to a static constant to perform gravitational time dilation calculations. 
-\item $DTD$ allows for direct calculation of time dilation between two systems, without the need to reference a third system (the Schwarzschild condition)
-\item $DTD$ returns finite output over the entire range of finite input.
-\item $DTD$ represents flat spacetime as an ideal state that can only be approached.
-\item $DTD$ represents the Schwarzschild condition as the point where the gravitational escape velocity exceeds the speed of light, and an event horizon forms. While we have observed black holes, the asymptotically approached ideal state of zero time dilation is not attainable.
-\item $DTD$ reflects the singularity state as an asymptotic approach to $r=0$.
+\item $\mathrm{DTD}$ is mathematically very easy to use and visualize, requiring only the ratio of mass to radius in comparison to a static constant to perform gravitational time dilation calculations. 
+\item $\mathrm{DTD}$ allows for direct calculation of time dilation between two systems, without the need to reference a third system (the Schwarzschild condition)
+\item $\mathrm{DTD}$ returns finite output over the entire range of finite input.
+\item $\mathrm{DTD}$ represents flat spacetime as an ideal state that can only be approached.
+\item $\mathrm{DTD}$ represents the Schwarzschild condition as the point where the gravitational escape velocity exceeds the speed of light, and an event horizon forms. While we have observed black holes, the asymptotically approached ideal state of zero time dilation is not attainable.
+\item $\mathrm{DTD}$ reflects the singularity state as an asymptotic approach to $r=0$.
 \end{itemize}
 
 
 \subsection{Inertia and Moment of Inertia}
-In classical physicsnertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
+In classical physics, inertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
 In rotational dynamics, the "moment of inertia"\cite{goldstein2002} $I$ dictates how the angular motion of a system about a specific axis changes when a torque is applied, and is defined as the sum of each mass element multiplied by the square of its distance from the axis of rotation.
 \begin{equation}
 \text{Moment of Inertia: }
@@ -228,11 +223,13 @@ I = \sum_i m_i r_i^2
 Using Equation \eqref{eq:momentofinertia}, one can determine how a system's motion changes when energy is applied about an axis (torque). 
 As it pertains to linear motion, inertia ($I$) is characterized solely by the system's mass.
 
-Inertia and moment of inertia has some interesting properties. 
-1. it's dimensional. And 
-2. it's also multimodal. Dimensional means it exists. And it has a component within each of the three spatial dimensions. Multimodal means that it can be the rotational or linear. And as stated above, linear reflects just the mass, whereas rotational reflects the mass times radius squared about an axis. 
-3. If one measures the moment of inertia about a particular axis and then separates the system into different parts, and measures their individual moments of inertia about that same axis, the total is always the same.
-4. By definition, inertia dictates the delta in motion resulting from the application of a force or torque to the system. meaning inertia is the unique bridge between force and motion. Lower inertia means more motion can be achieved with the same amount of force.
+Inertia and moment of inertia has some interesting properties.
+\begin{enumerate}
+\item it's dimensional. And
+\item it's also multimodal. Dimensional means it exists. And it has a component within each of the three spatial dimensions. Multimodal means that it can be the rotational or linear. And as stated above, linear reflects just the mass, whereas rotational reflects the mass times radius squared about an axis.
+\item If one measures the moment of inertia about a particular axis and then separates the system into different parts, and measures their individual moments of inertia about that same axis, the total is always the same.
+\item By definition, inertia dictates the delta in motion resulting from the application of a force or torque to the system. meaning inertia is the unique bridge between force and motion. Lower inertia means more motion can be achieved with the same amount of force.
+\end{enumerate}
 \subsection{General Relativity and Time Dilation}
 General Relativity provides the formula for calculating a system's time dilation relative to ``flat space-time''.
 \begin{equation}
@@ -240,7 +237,7 @@ d\tau/dt = \sqrt{1-k}
 \end{equation}
 where $k = r_{s}/R = 2GM/(Rc^2)$, $M$ is the system's mass, and $R$ its radius.
 
-The equation requires only a single system's mass and radius, yet $k$ is itself a ratio of two radii: the system's radius $R$ and the Schwarzschild radius $r_{s}$ of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
+The equation requires only a single system's mass and radius, yet $k$ is itself a ratio of two radii: the system's radius $R$ and the Schwarzschild radius $r_{s}$~\eqref{eq:schwarzschildradius} of that same mass. The calculation is therefore a comparison of two systems: the system as given, and the same mass at its Schwarzschild radius.
 
 \subsection{Definition of a System}
 A ``system'' is defined as any discrete collection of particles and the space between them, or equivalently, any unit of space and the particles contained within it. The framework regards the universe not as a clean separation of discrete material systems separated by the vacuum of space, but as a gradient of material density pervasive throughout. The most extreme densities reside not within near-scale systems but within the cores of highly dense gravitational objects far from the human scale, such as black holes or subatomic particles, and form a gradient extending to the near-scale "vacuum of space" at which another gravitational source begins to dominate. The framework imposes no requirement for uniformity or symmetry, a clean boundary separating matter from vacuum, or any particular density profile. It requires only a mass and a radius about a chosen axis. A system may be specified, for example, as the Earth out to the mean radius of its surface. For a body such as Jupiter, which lacks a clear boundary separating surface from atmosphere, the system may instead be specified out to a chosen radius or density. For a large system, a spherical sample may be taken from within it to characterize the behavior of particular regions. There can be no system modeled under General Relativity that lacks either mass or radius.
@@ -315,42 +312,40 @@ D_{crit} &= \frac{m}{\frac{2Gm}{c^2}} = \frac{m c^2}{2Gm} = \frac{c^2}{2G}
 \end{align}
 Insert the fundamental constants\cite{crc2019}, $c = \num{2.99792458e8}\,\unit{\meter\per\second}$ and $G = \num{6.67430e-11}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$:
 \begin{align*}
-D_{crit} &= \frac{(\num{2.99792458e8})^2}{2 \times \num{6.67430e-11}}\,\unit{\kilogram\per\meter} \\
+D_{crit} &= \frac{(\num{2.99792458e8})^2}{2 \times \num{6.67430e-11}}\,\unit[per-mode=symbol]{\kilogram\per\meter} \\
          &= \frac{\num{8.98755179e16}}{\num{1.334860e-10}} \\
-         &= \num{6.73295e26}\,\unit{\kilogram\per\meter}
+         &= \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}
 \end{align*}
 \begin{equation}
-\boxed{ \text{DeGerlia Threshold: } D_{crit} = \num{6.73295e26}\,\unit{\kilogram\per\meter} }
+\boxed{ \text{DeGerlia Threshold: } D_{crit} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter} }
 \label{eq:criticalmassdensity}
 \end{equation}
-This is the universal constant value of DeGerlia inertial density $D$ at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant\cite{codata2018}, $G = \num{6.67430e-11} \pm \num{1.5e-15}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$. Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
+The DeGerlia Threshold~\eqref{eq:criticalmassdensity} is the universal constant value of DeGerlia inertial density $D$ at which the escape velocity equals the speed of light: the mass-over-radius threshold at which gravitational collapse (collapse of the neutron structure) occurs. Note this value is limited by the precision of the gravitational constant\cite{codata2018}, $G = \num{6.67430e-11} \pm \num{1.5e-15}\,\unit{\meter\cubed\per\kilogram\per\second\squared}$. Just as the Schwarzschild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems; examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
 
 \begin{mdframed}
-\noindent\textbf{Rapid evaluation of the black hole condition.} For a single system, divide its mass by its radius and compare the result with $D_{crit} = \num{6.73295e26}\,\unit{\kilogram\per\meter}$. If their ratio equals $1$, the system is at the black hole condition; if it is less than $1$, no collapse has occurred.
+\noindent\textbf{Rapid evaluation of the black hole condition.} For a single system, divide its mass by its radius and compare the result with the DeGerlia Threshold~\eqref{eq:criticalmassdensity}, $D_{crit} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$. If their ratio equals $1$, the system is at the black hole condition; if it is less than $1$, no collapse has occurred.
 \end{mdframed}
 
 \subsection{DeGerlia Time Dilation}
-Gravitational time dilation is the surviving proper-time rate:
-\begin{equation} \label{eq:gtd}\label{eq:td_k}
-\frac{d\tau}{dt} = \mathrm{GTD} = \sqrt{1-k}
-\end{equation}
-DeGerlia Time Dilation is its Pythagorean complement, bound to GTD by
-\begin{equation} \label{eq:dtd}
-\mathrm{DTD} = \sqrt{k}, \qquad \mathrm{GTD}^2 + \mathrm{DTD}^2 = 1.
-\end{equation}
+DeGerlia Time Dilation (DTD)~\eqref{eq:dtd} is the Pythagorean complement~\eqref{eq:pyth} of gravitational time dilation:
+\begin{align}
+&GTD = \sqrt{1-k} \notag\\
+&DTD = \sqrt{k} \label{eq:dtd}\\
+&GTD^2 + DTD^2 = 1 \label{eq:pyth}
+\end{align}
+where $k$ is the linear scale factor.
 
 \subsection{The Linear Scale Factor $k$}\label{sec:k}
-$k$ is a single linear scale factor: a ratio of two lengths about an axis. The same ratio that scales length scales time, which is why one quantity governs both. It is measured in three equivalent ways,
-\begin{equation} \label{eq:k}
-k = \frac{r_{s}}{R} = \frac{D}{D_{crit}} = \frac{v^2}{c^2},
-\end{equation}
-the same number arrived at from the Schwarzschild radius, from the DeGerlia inertial density $D$ against its threshold $D_{crit} = c^2/2G$, or from velocity. A scale factor is inherently a comparison: $k$ always relates one system to another, whether the second system is an explicit body or a reference condition such as $D_{crit}$.
-
-Time dilation is recovered from $k$ in the two complementary forms above, $\mathrm{GTD} = \sqrt{1-k}$ (Equation~\ref{eq:gtd}) and $\mathrm{DTD} = \sqrt{k}$ (Equation~\ref{eq:dtd}). The DTD form is a plain power of $k$, so it carries between systems freely. The GTD form is not: because of the $1-k$, each system's $k$ is formed on its own, and only then combined. Accordingly, a comparison of two systems in GTD is the ratio of their individually computed values,
-\begin{equation} \label{eq:gtd_ratio}
-\frac{\mathrm{GTD}_1}{\mathrm{GTD}_2} = \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}},
-\end{equation}
-where $k_1$ and $k_2$ may each be formed by either route of Equation~\ref{eq:k}. The worked examples that follow compute this ratio from both the DeGerlia inertial density $D$ and the Schwarzschild radius, and confirm they agree.
+The linear scale factor $k$ is a common element among all established forms of time dilation. Time dilation is always:
+\begin{equation*}
+\frac{d\tau}{dt} = \sqrt{1 - k}
+\end{equation*}
+where $d\tau/dt$ is the time-dilation factor between the two systems and $k$ is the linear scale factor between the two systems. Specific forms of $k$ follow:
+\begin{itemize}
+\item $k = r_{s}/R$, the standard Schwarzschild condition.
+\item $k = D/D_{crit} = (M/R)/(\num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter})$, via the DeGerlia inertial density against its threshold.
+\item $k = v^2/c^2$, as used in special relativity.
+\end{itemize}
 
 \section{Relative Time Dilation Examples}\label{sec:expressions}\label{app:pair_table}
 
@@ -428,7 +423,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.9999575648e-1}} = \num{9.9999787824e-1}\
 \subsection{Case 2: ($M_1 = M_2$, $R_1 = \tfrac{4}{3}r_{s}$)}
 
 The two identical masses cancel, reducing the DeGerlia inertial density ratio to a ratio of radii.
-Note: This reflects the k calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{s}$, we compare with $\tfrac{4}{3}r_{s}$, which corresponds to a gravitational time dilation of $GTD = \num{5.00000e-1}$.
+Note: This reflects the $k$ calculation for gravitational time dilation. However, in this case, instead of comparing with $r_{s}$, we compare with $\tfrac{4}{3}r_{s}$, which corresponds to a gravitational time dilation of $GTD = \num{5.00000e-1}$.
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
 \setlength{\abovedisplayskip}{0pt}\setlength{\belowdisplayskip}{4pt}
@@ -492,7 +487,7 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.999851477e-1}} = \num{9.9999257381e-1}\\
 \subsection{Case 3: ($R_1 = R_2$)}
 
 When the two systems share the same radius, the radius terms cancel.
-The Lorentz factor\cite{einstein1905} has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit canceling.
+The Lorentz factor\cite{einstein1905} has the same $\sqrt{1-k}$ form, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit canceling.
 
 \begin{mdframed}
 \fontsize{7}{8.5}\selectfont
