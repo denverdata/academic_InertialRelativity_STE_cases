@@ -330,35 +330,37 @@ This is the universal constant value of DeGerlia inertial density $D$ at which t
 \end{mdframed}
 
 \subsection{DeGerlia Time Dilation}
-DeGerlia Time Dilation is the Pythagorean complement of gravitational time dilation:
-\begin{equation}
-DTD = \sqrt{k}
+Gravitational time dilation is the surviving proper-time rate:
+\begin{equation} \label{eq:gtd}
+\frac{d\tau}{dt} = \mathrm{GTD} = \sqrt{1-k}
 \end{equation}
-where $k$ is the scale factor of Equation~\ref{eq:kd}. Whereas $GTD = \sqrt{1-k}$ is the surviving proper-time rate $d\tau/dt$, $DTD = \sqrt{k}$ is its complement.
+DeGerlia Time Dilation is its Pythagorean complement, bound to GTD by
+\begin{equation} \label{eq:dtd}
+\mathrm{DTD} = \sqrt{k}, \qquad \mathrm{GTD}^2 + \mathrm{DTD}^2 = 1.
+\end{equation}
 
 \subsection{The Linear Scale Factor $k$}\label{sec:k}
-The following identity relates the time-dilation ratio between two uniform spherical systems to their masses and radii.
+The following identity relates the DeGerlia time dilation between two uniform spherical systems to their masses and radii.
 \begin{equation} \label{eq:kd}
-k  = \frac{D_1}{D_2 D_crit} = \frac{M_1 R_2}{M_2 R_1 d_crit}
+k  = \frac{D_1}{D_2\,D_{crit}} = \frac{M_1 R_2}{M_2 R_1\,D_{crit}}
 \end{equation}
-where $R_1, R_2$ are the radii, $M_1, M_2$ are the masses, and $D_i = M_i/R_i$ is the DeGerlia inertial density of system $i$. The three forms in Equation~\ref{eq:kd} are algebraically identical; $(I_1/I_2)(R_2/R_1)^3$ exposes the inertia-radius structure, $D_1/D_2$ is the DeGerlia inertial density $D$ ratio, and $M_1 R_2/(M_2 R_1)$ is the fully expanded form.
-A system's pace of time has meaning only relative to another pace of time (dilation is a comparative notion). The scale factor $k$ governs the relative time dilation between two uniform spherical systems. The standard gravitational time-dilation calculation takes the Schwarzschild form $\sqrt{1 - k}$, where $k = D/D_{crit} = r_{s}/R$. The $D$ ratio $k = D_1/D_2$ and the Schwarzschild form give the same value.
-Via the Schwarzschild radius, the same scale factor is:
-\begin{equation} \label{eq:ks}
-k = \frac{D}{D_{crit}} = \frac{r_{s}}{R}
-\end{equation}
-where $D = M/R$ is the system's DeGerlia inertial density and $r_{s} = 2GM/c^2$ is its Schwarzschild radius. This is the $k$ that appears in the standard $\sqrt{1 - k}$ for GTD.
+where $R_1, R_2$ are the radii, $M_1, M_2$ are the masses, $D_i = M_i/R_i$ is the DeGerlia inertial density of system $i$, and $D_{crit} = c^2/2G$. The two forms are algebraically identical: $D_1/(D_2 D_{crit})$ expresses the comparison through the inertial density ratio, and $M_1 R_2/(M_2 R_1 D_{crit})$ is its fully expanded form. This combined ratio is the scale factor for the DeGerlia time dilation $DTD = \sqrt{k}$, where the ratio of the two systems enters directly.
 
-Time dilation is always:
+The gravitational time dilation follows a different procedure. Because $GTD = \sqrt{1-k}$ carries the two systems through a nonlinear step, each system's scale factor is formed on its own,
+\begin{equation} \label{eq:ks}
+k_i = \frac{D_i}{D_{crit}} = \frac{r_{s,i}}{R_i},
+\end{equation}
+where $D_i = M_i/R_i$ is the system's DeGerlia inertial density and $r_{s,i} = 2GM_i/c^2$ is its Schwarzschild radius. Each $k_i$ yields its own gravitational time dilation $GTD_i = \sqrt{1 - k_i}$, and the comparison between the two systems is the ratio of these individual values,
+\begin{equation} \label{eq:gtd_ratio}
+\frac{GTD_1}{GTD_2} = \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}}.
+\end{equation}
+Equivalently, since $k_i = DTD_i^2$, the same ratio is $\sqrt{1 - DTD_1^2}\,/\,\sqrt{1 - DTD_2^2}$, the form used in the worked examples that follow.
+
+Each system's gravitational time dilation is always:
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-where $d\tau/dt$ is the time-dilation factor between the two systems and $k$ is the DeGerlia inertial density ratio for the case being computed. The specific forms are:
-\begin{itemize}
-\item $k = D_1/D_2$ (Equation~\ref{eq:kd}), via inertial density ratio
-\item $k = D/D_{crit} = r_{s}/R$ (Equation~\ref{eq:ks}), via Schwarzschild radius
-\end{itemize}
-A given numerical value of $k$ produces the same time-dilation result irrespective of the form in which it is expressed.
+where $d\tau/dt$ is the surviving proper-time rate and $k$ is that system's scale factor.
 
 \subsection{Properties of DTD}
 % TODO: trimmed list of the advantages of DTD as a representation, drawn from Paper B's Properties of DTD section.
