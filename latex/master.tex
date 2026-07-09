@@ -223,12 +223,12 @@ I = \sum_i m_i r_i^2
 Using Equation \eqref{eq:momentofinertia}, one can determine how a system's motion changes when energy is applied about an axis (torque). 
 As it pertains to linear motion, inertia ($I$) is characterized solely by the system's mass.
 
-Inertia and moment of inertia has some interesting properties.
+Inertia and moment of inertia have several notable properties.
 \begin{enumerate}
-\item it's dimensional. And
-\item it's also multimodal. Dimensional means it exists. And it has a component within each of the three spatial dimensions. Multimodal means that it can be the rotational or linear. And as stated above, linear reflects just the mass, whereas rotational reflects the mass times radius squared about an axis.
-\item If one measures the moment of inertia about a particular axis and then separates the system into different parts, and measures their individual moments of inertia about that same axis, the total is always the same.
-\item By definition, inertia dictates the delta in motion resulting from the application of a force or torque to the system. meaning inertia is the unique bridge between force and motion. Lower inertia means more motion can be achieved with the same amount of force.
+\item Inertia is dimensional: it exists in, and has a component within, each of the three spatial dimensions.
+\item Inertia is multimodal: it may be linear or rotational. Linear inertia reflects the mass alone, whereas rotational inertia reflects the mass times the square of its radius about an axis.
+\item The moment of inertia is additive about a given axis: if a system is divided into parts and each part's moment of inertia is measured about that same axis, the total is unchanged.
+\item Inertia relates force to motion: it determines the change in motion produced by an applied force or torque, making it the bridge between the two. Lower inertia yields greater motion for a given force.
 \end{enumerate}
 \subsection{General Relativity and Time Dilation}
 General Relativity provides the formula for calculating a system's time dilation relative to ``flat space-time''.
@@ -248,7 +248,7 @@ For a whole system (as distinct from any subsystem), and from that whole system'
 \subsection{Inertial Density $P$}
 \textbf{\textit{Inertial density $P$}} as shown in \eqref{eq:longinertialdensity} is a fundamental system property\cite{degerlia202505} characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as $I/V$ (inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where $\rho = m/V$.
 
-Inertial density may be characterized as the hollowness, or foaminess, of a system. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits and concentrated at the outer edge. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Conversely, a configuration of equal radius with its mass concentrated as an approximate point mass at the center represents the opposite limit: as the mass concentrates toward the center, the moment of inertia approaches zero. The uniform solid sphere lies between these limits. Subdividing such a sphere into smaller hollow spheres redistributes mass toward the periphery, so that the resulting foam-like structure retains a high moment of inertia for its volume.
+Inertial density characterizes how a system's mass is distributed relative to its axis, for a given mass and volume. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Conversely, a configuration of equal radius with its mass concentrated as an approximate point mass at the center represents the opposite limit: as the mass concentrates toward the center, the moment of inertia approaches zero. The uniform solid sphere lies between these limits. What determines the inertia about a given axis is the mean radius of the mass distribution about that axis; the internal density gradient that produces a given mean radius does not enter, just as ordinary density averages over a system's internal structure and the density of any subset is obtained by evaluating that subset directly.
 
 \subsection{Mathematics of Inertial Density}
 To derive the inertial density relationship, we begin with the established relationship between mass and density $\rho$ as shown in \eqref{eq:massdensity}:
@@ -840,13 +840,23 @@ GTD_{s2} &= \sqrt{1-k_2} = \sqrt{\num{9.99851477e-1}} = \num{9.999257356e-1}\\
 % --- end hidden Analysis section ---
 
 \section{Conclusions}
-% TODO: what can be safely concluded from the work --- did it meet the hypothesis laid out? What was the analysis intended to demonstrate? Do we believe this to be a demonstration of that? No speculative hypotheses of explanation here.
+The DeGerlia time dilation framework introduces no new physics. It is a reframing of general relativity, mathematically equivalent to the standard gravitational time-dilation calculation and reproducing it across every case examined.
+
+The gravitational time-dilation formula is already a two-system relation. The scale factor $k = r_{\mathrm{s}}/r$ is a ratio of two radii --- a system's radius and the Schwarzschild radius of its own mass --- so the familiar single-system calculation is a two-system comparison in which the second system has been fixed and left unstated. Across seven cases spanning the classical and relativistic regimes, computing the relative time dilation from the systems' DeGerlia inertial density reproduces the standard Schwarzschild result exactly, to the precision permitted by $G$. The second system is therefore not an idealization to be discarded; it contributes to the result, and its contribution is exact.
+
+This selects a privileged inertial frame of reference, one tied to a particular scale. Where only that scale is in play, the single-system framing gives good results. The error is in presuming it extends --- that a quantity negligible at one scale is negligible for the system itself or at every scale. This error is not insignificant, and it grows without exception toward stronger fields: the neglected contribution of the second system is $1-\sqrt{1-k}$, which increases monotonically with $k = D/D_{\mathrm{crit}}$. Recognizing time dilation as the inherently two-system quantity it already is removes that presumption.
+
+The same structure applies to gravitational collapse. The black-hole condition is $m/r = D_{\mathrm{crit}} = \num{6.73295e26}\,\unit[per-mode=symbol]{\kilogram\per\meter}$ --- equivalently, a radius equal to the Schwarzschild radius of the mass. This is a single relation between two free quantities: for any mass there is a radius that satisfies it, and for any radius a mass. Neither is bounded, and no value of either is excluded.
+
+Time dilation is a relative comparison between two systems, already present in the standard formula.
 
 % --- Hidden for now (preserved, not deleted): uncomment to restore ---
 % \section{Hypotheses of Explanation}
 %  Because the underlying relationship is simultaneously one of inertia and density, the inertia component imparts dimensionality to time. Consequently, although the present exploration is restricted to uniform spherical systems, the framework extends to asymmetrical systems, including large low-density black holes, Kerr black holes\cite{kerr1963}, and the observable universe.
 %
 % RAW NOTE (scale invariance): The same DTD ratio can appear at any scale, infinitely, up and down the scale continuum. The DTD ratio depends only on the two systems' relative D (D_crit cancels: k1/k2 = D1/D2), so it carries no absolute scale -- slide both systems anywhere on the mass/radius spectrum and, with relative D preserved, the DTD ratio is identical. This is exactly why the DTD ratio alone cannot recover the GTD ratio (the scale information is not in it); you need the ratio plus one absolute anchor (any one system's DTD / k / D), because D_crit fixes the scale. Single-system view of the same fact: the Schwarzschild condition is m/r = D_crit, a statement purely about the RATIO m/r hitting a universal constant, independent of absolute scale. In SI units that means mass in kg exceeds radius in meters by ~26.83 orders of magnitude (log10(D_crit) = 26.828). Any (m,r) with that ~26.83-order gap sits exactly at the localized Schwarzschild radius, regardless of the individual magnitudes (e.g. 6.73e26 kg at 1 m; 6.73 kg at 1e-26 m; 6.73e40 kg at 1e14 m all satisfy m/r = D_crit).
+%
+% RAW NOTE (hollowness / foaminess -- more speculative framing of inertial density, moved here from the Inertial Density P section): Inertial density may be characterized as the hollowness, or foaminess, of a system. Consider the configuration with the greatest moment of inertia for a given volume: a thin shell, in which all mass resides at the radius, displaced as far from the axis as the geometry permits and concentrated at the outer edge. A soap bubble exemplifies this configuration; per unit volume it possesses substantial inertia despite its low mass, representing the maximum-inertia structure for its volume. Subdividing a uniform solid sphere into smaller hollow spheres redistributes mass toward the periphery, so that the resulting foam-like structure retains a high moment of inertia for its volume. (Meaning depends on holding mass and volume fixed and only reallocating where the mass sits.)
 %
 % \section{Further Exploration}
 % TODO
